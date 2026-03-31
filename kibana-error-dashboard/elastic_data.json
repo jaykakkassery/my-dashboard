@@ -1,0 +1,225 @@
+{
+  "meta": {
+    "period_label": "Last 24 hours",
+    "hours": 24,
+    "generated_at": "2026-03-30T15:38:26.661818+00:00",
+    "app": "hotel"
+  },
+  "severity_counts": {
+    "info": 5862505,
+    "warn": 110214,
+    "error": 25223
+  },
+  "top_errors": [
+    {
+      "pattern": "Error executing Sabre Search",
+      "count": 3476,
+      "logger": "net.tstllc.provider.endpoint.sabre.search.SabreSearchAPIClientImpl",
+      "method": "error"
+    },
+    {
+      "pattern": "Unexpected Throwable",
+      "count": 3476,
+      "logger": "net.tstllc.provider.endpoint.sabre.search.SabreSearchAPIClientImpl",
+      "method": "error"
+    },
+    {
+      "pattern": "No usable value for GetHotelAvailRS No usable value for HotelAvailInfos No usable value for HotelAvailInfo No usable value for HotelRateInfo No usable value for RateInfos No usable value for ConvertedRateInfo No usable value for TaxInclusive Did not \u2026",
+      "count": 1883,
+      "logger": "net.tstllc.provider.endpoint.sabre.search.SabreSearchAPIClientImpl",
+      "method": "error"
+    },
+    {
+      "pattern": "unexpected failure",
+      "count": 1725,
+      "logger": "net.tstllc.monitor.LogRecorder$",
+      "method": "exceptionErrorMetrics"
+    },
+    {
+      "pattern": "Connection reset",
+      "count": 1356,
+      "logger": "net.tstllc.provider.endpoint.sabre.search.SabreSearchAPIClientImpl",
+      "method": "error"
+    },
+    {
+      "pattern": "Error getting response",
+      "count": 1343,
+      "logger": "net.tstllc.common.logging.args.Tracking$",
+      "method": "error"
+    },
+    {
+      "pattern": "Unknown OffsetTimeUnit 'Some(Month)' for Deadline(Some(Month),Some({n}),Some(BeforeArrival),None)",
+      "count": 1190,
+      "logger": "net.tstllc.hotel.provider.service.sabre.SabreDomainMapper$",
+      "method": "error"
+    },
+    {
+      "pattern": "HotelAvailabilityV2Service - Failed to decode and requery location token:",
+      "count": 437,
+      "logger": "net.tstllc.hotel.service.availability.v2.HotelAvailabilityV2ServiceImpl",
+      "method": "error"
+    },
+    {
+      "pattern": "Failed to understand response",
+      "count": 413,
+      "logger": "net.tstllc.common.logging.args.Tracking$",
+      "method": "error"
+    },
+    {
+      "pattern": "Supplier response resulted in failure message unknown token < Near: <? is <?xml version=\"{n}\" encoding=\"utf-{n}\"?> <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML {n} Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"> <html> <head> <title>{n} \u2026",
+      "count": 407,
+      "logger": "net.tstllc.provider.endpoint.priceline.service.PricelineJsonParser",
+      "method": "applyOrElse"
+    }
+  ],
+  "top_warns": [
+    {
+      "pattern": "Received hotel ID without prefix ({n} so prefixed with HOT",
+      "count": 51856,
+      "logger": "net.tstllc.hotel.service.DAOProviderFactory$",
+      "method": "warn"
+    },
+    {
+      "pattern": "No Results Found!",
+      "count": 13789,
+      "logger": "net.tstllc.monitor.LogRecorder$",
+      "method": "businessErrorMetrics"
+    },
+    {
+      "pattern": "LocationTokenService: No properties found for location token:",
+      "count": 9543,
+      "logger": "net.tstllc.hotel.service.availability.v2.LocationTokenService",
+      "method": "warn"
+    },
+    {
+      "pattern": "LocationTokenService: No properties found for location token: MC4wfDAuMHwxMnx8aG90ZWx8",
+      "count": 4987,
+      "logger": "net.tstllc.hotel.service.availability.v2.LocationTokenService",
+      "method": "warn"
+    },
+    {
+      "pattern": "Hotel Hybrid - buildFilterMetadata with {n} properties",
+      "count": 1209,
+      "logger": "net.tstllc.hotel.service.availability.v2.HotelAvailabilityV2ServiceImpl",
+      "method": "warn"
+    },
+    {
+      "pattern": "TravelPort Search HotelError: W {n}: MAXIMUM LENGTH OF STAY EXCEEDED",
+      "count": 963,
+      "logger": "net.tstllc.hotel.adapter.tp.xml.TpHotelAvailabilityResponse",
+      "method": "warn"
+    },
+    {
+      "pattern": "No sponsored listings for: Anaheim CA cache miss and no response after long wait.",
+      "count": 919,
+      "logger": "net.tstllc.server.impl.hotel.AaaPublishingServiceImpl",
+      "method": "warn"
+    },
+    {
+      "pattern": "Got error produce response in correlation id {n} on topic-partition logstash-{n}, splitting and retrying ({n} attempts left). Error: MESSAGE_TOO_LARGE",
+      "count": 328,
+      "logger": "org.apache.kafka.clients.producer.internals.Sender",
+      "method": "info"
+    },
+    {
+      "pattern": "No sponsored listings for: Paris cache miss and no response after long wait.",
+      "count": 250,
+      "logger": "net.tstllc.server.impl.hotel.AaaPublishingServiceImpl",
+      "method": "warn"
+    },
+    {
+      "pattern": "No sponsored listings for: Las Vegas Strip NV cache miss and no response after long wait.",
+      "count": 244,
+      "logger": "net.tstllc.server.impl.hotel.AaaPublishingServiceImpl",
+      "method": "warn"
+    }
+  ],
+  "top_infos": [
+    {
+      "pattern": "Response",
+      "count": 744463,
+      "logger": "net.tstllc.common.logging.args.Tracking$",
+      "method": "info"
+    },
+    {
+      "pattern": "HttpClient.get - URL: https://api.rezserver.com/api/hotel/getExpress.Availability",
+      "count": 185825,
+      "logger": "net.tstllc.common.logging.args.Tracking$",
+      "method": "info"
+    },
+    {
+      "pattern": "HttpClient.post - URL: https://api.platform.sabre.com/v5/get/hotelavail",
+      "count": 182320,
+      "logger": "net.tstllc.common.logging.args.Tracking$",
+      "method": "info"
+    },
+    {
+      "pattern": "Rate Cache: Checking availability of cache with key: MzQuNTk1ODIwMXwtMTIwLjEzNzY0ODF8MTV8Q2hJSmhTS1NfS0JVNllBUlZzRUxCaHNvRGkwfGhvdGVsfA==ATILowestPerNight2026-{n}-{n}|{n}-{n}-{n}|{n}||false|false|falsefalse49false from: \u2026",
+      "count": 131577,
+      "logger": "net.tstllc.hotel.service.availability.v2.cache.BestAvailableCacheImpl",
+      "method": "info"
+    },
+    {
+      "pattern": "Rate Cache: Checking availability of cache with key: MzQuNTk1ODIwMXwtMTIwLjEzNzY0ODF8MTV8Q2hJSmhTS1NfS0JVNllBUlZzRUxCaHNvRGkwfGhvdGVsfA==EAN_RAPIDLowestPerNight2026-{n}-{n}|{n}-{n}-{n}|{n}||false|false|falsefalse49false from: \u2026",
+      "count": 131577,
+      "logger": "net.tstllc.hotel.service.availability.v2.cache.BestAvailableCacheImpl",
+      "method": "info"
+    },
+    {
+      "pattern": "Rate Cache: Checking availability of cache with key: MzQuNTk1ODIwMXwtMTIwLjEzNzY0ODF8MTV8Q2hJSmhTS1NfS0JVNllBUlZzRUxCaHNvRGkwfGhvdGVsfA==HB_APITUDELowestPerNight2026-{n}-{n}|{n}-{n}-{n}|{n}||false|false|falsefalse49false from: \u2026",
+      "count": 131577,
+      "logger": "net.tstllc.hotel.service.availability.v2.cache.BestAvailableCacheImpl",
+      "method": "info"
+    },
+    {
+      "pattern": "Rate Cache: Checking availability of cache with key: MzQuNTk1ODIwMXwtMTIwLjEzNzY0ODF8MTV8Q2hJSmhTS1NfS0JVNllBUlZzRUxCaHNvRGkwfGhvdGVsfA==PRICELINE_HOTELLowestPerNight2026-{n}-{n}|{n}-{n}-{n}|{n}||false|false|falsefalse49false from: \u2026",
+      "count": 131577,
+      "logger": "net.tstllc.hotel.service.availability.v2.cache.BestAvailableCacheImpl",
+      "method": "info"
+    },
+    {
+      "pattern": "Rate Cache: Checking availability of cache with key: MzQuNTk1ODIwMXwtMTIwLjEzNzY0ODF8MTV8Q2hJSmhTS1NfS0JVNllBUlZzRUxCaHNvRGkwfGhvdGVsfA==SABRE_HOTELLowestPerNight2026-{n}-{n}|{n}-{n}-{n}|{n}||false|false|falsefalse49false from: \u2026",
+      "count": 131577,
+      "logger": "net.tstllc.hotel.service.availability.v2.cache.BestAvailableCacheImpl",
+      "method": "info"
+    },
+    {
+      "pattern": "Rate Cache: Checking availability of cache with key: NDMuNjQ1NDg0MnwtNzkuMzgwODMwMXwyMHxDaElKS1FEek9BNDFLNGdSYWpRRGR5ekQ5OTB8aG90ZWx8EAN_RAPIDLowestPerNight2026-{n}-{n}|{n}-{n}-{n}|{n}||false|false|falsefalse7true from: \u2026",
+      "count": 131577,
+      "logger": "net.tstllc.hotel.service.availability.v2.cache.BestAvailableCacheImpl",
+      "method": "info"
+    },
+    {
+      "pattern": "Rate Cache: Checking availability of cache with key: NDMuNjQ1NDg0MnwtNzkuMzgwODMwMXwyMHxDaElKS1FEek9BNDFLNGdSYWpRRGR5ekQ5OTB8aG90ZWx8SABRE_HOTELLowestPerNight2026-{n}-{n}|{n}-{n}-{n}|{n}||false|false|falsefalse7true from: \u2026",
+      "count": 131577,
+      "logger": "net.tstllc.hotel.service.availability.v2.cache.BestAvailableCacheImpl",
+      "method": "info"
+    }
+  ],
+  "new_errors": [],
+  "new_warns": [
+    {
+      "pattern": "Filtering Sabre rate for hotel HOT-{n}: sum mismatch. Expected nights={n}, actual nights={n}. Expected subtotal={n}, actual daily rate sum={n}.",
+      "count": 3,
+      "logger": "net.tstllc.hotel.provider.service.sabre.DailyRateValidator$",
+      "method": "warn"
+    },
+    {
+      "pattern": "Filtering Sabre rate for hotel HOT-{n}: night count mismatch, sum mismatch. Expected nights={n}, actual nights={n}. Expected subtotal={n}, actual daily rate sum={n}.",
+      "count": 2,
+      "logger": "net.tstllc.hotel.provider.service.sabre.DailyRateValidator$",
+      "method": "warn"
+    },
+    {
+      "pattern": "Failure retrieving cache data from redis with prefix HOT:PROV:APT:",
+      "count": 1,
+      "logger": "net.tstllc.service.scalacache.redis.ScalaRedisCacheSync",
+      "method": "warn"
+    }
+  ],
+  "index_size_gb": 254.15,
+  "index_size_method": "estimated",
+  "total_doc_count": 227412997,
+  "total_error_count": 25223,
+  "total_warn_count": 110214
+}
