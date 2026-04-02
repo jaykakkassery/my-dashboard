@@ -308,7 +308,7 @@
   </div>
   <div class="header-right">
     <div class="period-pill">Last 12 hours</div>
-    <div class="gen-time">Generated 2026-04-02 17:48 EST</div>
+    <div class="gen-time">Generated 2026-04-02 18:45 EST</div>
   </div>
 </header>
 
@@ -318,23 +318,23 @@
   <div class="stat-row">
     <div class="stat-card c-error">
       <div class="stat-label">Errors</div>
-      <div class="stat-value">9,463</div>
+      <div class="stat-value">10,412</div>
     </div>
     <div class="stat-card c-warn">
       <div class="stat-label">Warnings</div>
-      <div class="stat-value">73,350</div>
+      <div class="stat-value">77,574</div>
     </div>
     <div class="stat-card c-info">
       <div class="stat-label">Info</div>
-      <div class="stat-value">3,835,276</div>
+      <div class="stat-value">4,058,282</div>
     </div>
     <div class="stat-card c-total">
       <div class="stat-label">Total Logs</div>
-      <div class="stat-value">3,918,089</div>
+      <div class="stat-value">4,146,268</div>
     </div>
     <div class="stat-card c-size">
       <div class="stat-label">Index Size</div>
-      <div class="stat-value">221.73 GB ~est<div class="stat-sub">198,400,619 docs</div></div>
+      <div class="stat-value">222.06 GB ~est<div class="stat-sub">198,693,981 docs</div></div>
     </div>
   </div>
 
@@ -343,12 +343,12 @@
     <h3>Log Volume Breakdown</h3>
     
     <div class="sev-bar-wrap">
-      <div class="sev-segment seg-error" style="width:0.2%" title="Error 0.2%"></div>
+      <div class="sev-segment seg-error" style="width:0.3%" title="Error 0.3%"></div>
       <div class="sev-segment seg-warn"  style="width:1.9%" title="Warn 1.9%"></div>
       <div class="sev-segment seg-info"  style="width:97.9%" title="Info 97.9%"></div>
     </div>
     <div class="sev-legend">
-      <span class="dot dot-error"></span>Error 0.2%&nbsp;&nbsp;
+      <span class="dot dot-error"></span>Error 0.3%&nbsp;&nbsp;
       <span class="dot dot-warn"></span>Warn 1.9%&nbsp;&nbsp;
       <span class="dot dot-info"></span>Info 97.9%
     </div>
@@ -368,6 +368,24 @@
         <tr>
           <td class="rank">#1</td>
           <td class="msg-cell">
+            <div class="msg-text">Error executing Sabre Search</div>
+            <div class="bar-bg"><div class="bar-fill badge-error" style="width:100%"></div></div>
+          </td>
+          <td><span class="badge badge-error">1,219</span></td>
+        </tr>
+
+        <tr>
+          <td class="rank">#2</td>
+          <td class="msg-cell">
+            <div class="msg-text">Unexpected Throwable</div>
+            <div class="bar-bg"><div class="bar-fill badge-error" style="width:100%"></div></div>
+          </td>
+          <td><span class="badge badge-error">1,219</span></td>
+        </tr>
+
+        <tr>
+          <td class="rank">#3</td>
+          <td class="msg-cell">
             <div class="msg-text">Supplier response resulted in failure message unknown token</div>
             <div class="bar-bg"><div class="bar-fill badge-error" style="width:100%"></div></div>
           </td>
@@ -375,84 +393,66 @@
         </tr>
 
         <tr>
-          <td class="rank">#2</td>
-          <td class="msg-cell">
-            <div class="msg-text">unexpected failure</div>
-            <div class="bar-bg"><div class="bar-fill badge-error" style="width:95%"></div></div>
-          </td>
-          <td><span class="badge badge-error">1,152</span></td>
-        </tr>
-
-        <tr>
-          <td class="rank">#3</td>
-          <td class="msg-cell">
-            <div class="msg-text">Error executing Sabre Search</div>
-            <div class="bar-bg"><div class="bar-fill badge-error" style="width:88%"></div></div>
-          </td>
-          <td><span class="badge badge-error">1,066</span></td>
-        </tr>
-
-        <tr>
           <td class="rank">#4</td>
           <td class="msg-cell">
-            <div class="msg-text">Unexpected Throwable</div>
-            <div class="bar-bg"><div class="bar-fill badge-error" style="width:88%"></div></div>
+            <div class="msg-text">unexpected failure</div>
+            <div class="bar-bg"><div class="bar-fill badge-error" style="width:99%"></div></div>
           </td>
-          <td><span class="badge badge-error">1,066</span></td>
+          <td><span class="badge badge-error">1,211</span></td>
         </tr>
 
         <tr>
           <td class="rank">#5</td>
           <td class="msg-cell">
             <div class="msg-text">No usable value for GetHotelAvailRS</div>
-            <div class="bar-bg"><div class="bar-fill badge-error" style="width:78%"></div></div>
+            <div class="bar-bg"><div class="bar-fill badge-error" style="width:83%"></div></div>
           </td>
-          <td><span class="badge badge-error">942</span></td>
+          <td><span class="badge badge-error">1,015</span></td>
         </tr>
 
         <tr>
           <td class="rank">#6</td>
           <td class="msg-cell">
             <div class="msg-text">HotelAvailabilityV2Service - Failed to decode and requery location token:</div>
-            <div class="bar-bg"><div class="bar-fill badge-error" style="width:68%"></div></div>
+            <div class="bar-bg"><div class="bar-fill badge-error" style="width:69%"></div></div>
           </td>
-          <td><span class="badge badge-error">824</span></td>
+          <td><span class="badge badge-error">846</span></td>
         </tr>
 
         <tr>
           <td class="rank">#7</td>
           <td class="msg-cell">
             <div class="msg-text">Unknown OffsetTimeUnit 'Some(Month)' for Deadline(Some(Month),Some({n}),Some(BeforeArrival),None)</div>
-            <div class="bar-bg"><div class="bar-fill badge-error" style="width:49%"></div></div>
+            <div class="bar-bg"><div class="bar-fill badge-error" style="width:57%"></div></div>
           </td>
-          <td><span class="badge badge-error">592</span></td>
+          <td><span class="badge badge-error">698</span></td>
         </tr>
 
         <tr>
           <td class="rank">#8</td>
           <td class="msg-cell">
             <div class="msg-text">Error getting response</div>
-            <div class="bar-bg"><div class="bar-fill badge-error" style="width:34%"></div></div>
+            <div class="bar-bg"><div class="bar-fill badge-error" style="width:35%"></div></div>
           </td>
-          <td><span class="badge badge-error">418</span></td>
+          <td><span class="badge badge-error">426</span></td>
         </tr>
 
         <tr>
           <td class="rank">#9</td>
           <td class="msg-cell">
             <div class="msg-text">failure fetching available rates for net.tstllc.hotel.service.rates.ToggledHotelRateProvider@25fcbd73</div>
-            <div class="bar-bg"><div class="bar-fill badge-error" style="width:15%"></div></div>
+            <div class="bar-bg"><div class="bar-fill badge-error" style="width:16%"></div></div>
           </td>
-          <td><span class="badge badge-error">182</span></td>
+          <td><span class="badge badge-error">189</span></td>
         </tr>
 
         <tr>
           <td class="rank">#10</td>
           <td class="msg-cell">
             <div class="msg-text">failure fetching available rates for net.tstllc.hotel.service.rates.ToggledHotelRateProvider@1bfd5d8a</div>
-            <div class="bar-bg"><div class="bar-fill badge-error" style="width:14%"></div></div>
+            <div class="bar-bg"><div class="bar-fill badge-error" style="width:15%"></div></div>
           </td>
-          <td><span class="badge badge-error">176</span></td>
+          <td><span class="badge badge-error">186</span></td>
         </tr></tbody>
       </table>
     </div>
@@ -471,7 +471,7 @@
             <div class="msg-text">Received hotel ID without prefix ({n} so prefixed with HOT</div>
             <div class="bar-bg"><div class="bar-fill badge-warn" style="width:100%"></div></div>
           </td>
-          <td><span class="badge badge-warn">31,090</span></td>
+          <td><span class="badge badge-warn">32,905</span></td>
         </tr>
 
         <tr>
@@ -480,7 +480,7 @@
             <div class="msg-text">No Results Found!</div>
             <div class="bar-bg"><div class="bar-fill badge-warn" style="width:35%"></div></div>
           </td>
-          <td><span class="badge badge-warn">10,880</span></td>
+          <td><span class="badge badge-warn">11,678</span></td>
         </tr>
 
         <tr>
@@ -489,7 +489,7 @@
             <div class="msg-text">LocationTokenService: No properties found for location token:</div>
             <div class="bar-bg"><div class="bar-fill badge-warn" style="width:27%"></div></div>
           </td>
-          <td><span class="badge badge-warn">8,506</span></td>
+          <td><span class="badge badge-warn">8,938</span></td>
         </tr>
 
         <tr>
@@ -498,7 +498,7 @@
             <div class="msg-text">LocationTokenService: No properties found for location token: MC4wfDAuMHwxMnx8aG90ZWx8</div>
             <div class="bar-bg"><div class="bar-fill badge-warn" style="width:12%"></div></div>
           </td>
-          <td><span class="badge badge-warn">3,707</span></td>
+          <td><span class="badge badge-warn">4,022</span></td>
         </tr>
 
         <tr>
@@ -507,16 +507,16 @@
             <div class="msg-text">Hotel Hybrid - buildFilterMetadata with {n} properties</div>
             <div class="bar-bg"><div class="bar-fill badge-warn" style="width:2%"></div></div>
           </td>
-          <td><span class="badge badge-warn">686</span></td>
+          <td><span class="badge badge-warn">738</span></td>
         </tr>
 
         <tr>
           <td class="rank">#6</td>
           <td class="msg-cell">
-            <div class="msg-text">TravelPort Search HotelError: W {n}: MAXIMUM LENGTH OF STAY EXCEEDED</div>
-            <div class="bar-bg"><div class="bar-fill badge-warn" style="width:1%"></div></div>
+            <div class="msg-text">No sponsored listings for: Anaheim CA cache miss and no response after long wait.</div>
+            <div class="bar-bg"><div class="bar-fill badge-warn" style="width:2%"></div></div>
           </td>
-          <td><span class="badge badge-warn">340</span></td>
+          <td><span class="badge badge-warn">521</span></td>
         </tr>
 
         <tr>
@@ -525,16 +525,16 @@
             <div class="msg-text">TravelPort Search HotelError: W {n}: MINIMUM LENGTH OF STAY REQUIRED</div>
             <div class="bar-bg"><div class="bar-fill badge-warn" style="width:1%"></div></div>
           </td>
-          <td><span class="badge badge-warn">330</span></td>
+          <td><span class="badge badge-warn">362</span></td>
         </tr>
 
         <tr>
           <td class="rank">#8</td>
           <td class="msg-cell">
-            <div class="msg-text">Got error produce response in correlation id {n} on topic-partition logstash-{n}, splitting and retrying ({n} attempts left). Error: MESSAGE_TOO_LARGE</div>
+            <div class="msg-text">TravelPort Search HotelError: W {n}: MAXIMUM LENGTH OF STAY EXCEEDED</div>
             <div class="bar-bg"><div class="bar-fill badge-warn" style="width:1%"></div></div>
           </td>
-          <td><span class="badge badge-warn">260</span></td>
+          <td><span class="badge badge-warn">341</span></td>
         </tr>
 
         <tr>
@@ -543,16 +543,16 @@
             <div class="msg-text">TravelPort Search HotelError: W {n}: CLOSED TO ARRIVAL ON DATE REQUESTED</div>
             <div class="bar-bg"><div class="bar-fill badge-warn" style="width:1%"></div></div>
           </td>
-          <td><span class="badge badge-warn">249</span></td>
+          <td><span class="badge badge-warn">290</span></td>
         </tr>
 
         <tr>
           <td class="rank">#10</td>
           <td class="msg-cell">
-            <div class="msg-text">No sponsored listings for: Covent Garden cache miss and no response after long wait.</div>
-            <div class="bar-bg"><div class="bar-fill badge-warn" style="width:0%"></div></div>
+            <div class="msg-text">Got error produce response in correlation id {n} on topic-partition logstash-{n}, splitting and retrying ({n} attempts left). Error: MESSAGE_TOO_LARGE</div>
+            <div class="bar-bg"><div class="bar-fill badge-warn" style="width:1%"></div></div>
           </td>
-          <td><span class="badge badge-warn">138</span></td>
+          <td><span class="badge badge-warn">278</span></td>
         </tr></tbody>
       </table>
     </div>
@@ -574,88 +574,88 @@
             <div class="msg-text">Response</div>
             <div class="bar-bg"><div class="bar-fill badge-info" style="width:100%"></div></div>
           </td>
-          <td><span class="badge badge-info">523,800</span></td>
+          <td><span class="badge badge-info">554,291</span></td>
         </tr>
 
         <tr>
           <td class="rank">#2</td>
           <td class="msg-cell">
-            <div class="msg-text">HttpClient.post - URL: {url}</div>
-            <div class="bar-bg"><div class="bar-fill badge-info" style="width:20%"></div></div>
+            <div class="msg-text">Rate Cache: Checking availability of cache with key:</div>
+            <div class="bar-bg"><div class="bar-fill badge-info" style="width:15%"></div></div>
           </td>
-          <td><span class="badge badge-info">106,565</span></td>
+          <td><span class="badge badge-info">82,231</span></td>
         </tr>
 
         <tr>
           <td class="rank">#3</td>
           <td class="msg-cell">
-            <div class="msg-text">Rate Cache: Checking availability of cache with key:</div>
-            <div class="bar-bg"><div class="bar-fill badge-info" style="width:15%"></div></div>
+            <div class="msg-text">inspection: msg: , txt: , errmsg: , rules: , errors: List(), links: List()</div>
+            <div class="bar-bg"><div class="bar-fill badge-info" style="width:12%"></div></div>
           </td>
-          <td><span class="badge badge-info">77,215</span></td>
+          <td><span class="badge badge-info">69,206</span></td>
         </tr>
 
         <tr>
           <td class="rank">#4</td>
           <td class="msg-cell">
-            <div class="msg-text">HttpClient.get - URL: {url}</div>
-            <div class="bar-bg"><div class="bar-fill badge-info" style="width:14%"></div></div>
+            <div class="msg-text">HotelAvailabilityV2Service.getFilters()</div>
+            <div class="bar-bg"><div class="bar-fill badge-info" style="width:9%"></div></div>
           </td>
-          <td><span class="badge badge-info">73,301</span></td>
+          <td><span class="badge badge-info">47,632</span></td>
         </tr>
 
         <tr>
           <td class="rank">#5</td>
           <td class="msg-cell">
-            <div class="msg-text">inspection: msg: , txt: , errmsg: , rules: , errors: List(), links: List()</div>
-            <div class="bar-bg"><div class="bar-fill badge-info" style="width:13%"></div></div>
+            <div class="msg-text">HttpClient.post - URL: {url}</div>
+            <div class="bar-bg"><div class="bar-fill badge-info" style="width:8%"></div></div>
           </td>
-          <td><span class="badge badge-info">67,807</span></td>
+          <td><span class="badge badge-info">43,586</span></td>
         </tr>
 
         <tr>
           <td class="rank">#6</td>
           <td class="msg-cell">
-            <div class="msg-text">HotelAvailabilityV2Service.getFilters()</div>
-            <div class="bar-bg"><div class="bar-fill badge-info" style="width:9%"></div></div>
+            <div class="msg-text">HotelAvailabilityV2Service.GetHotels() time</div>
+            <div class="bar-bg"><div class="bar-fill badge-info" style="width:7%"></div></div>
           </td>
-          <td><span class="badge badge-info">44,980</span></td>
+          <td><span class="badge badge-info">40,167</span></td>
         </tr>
 
         <tr>
           <td class="rank">#7</td>
           <td class="msg-cell">
-            <div class="msg-text">HotelAvailabilityV2Service.GetHotels() time</div>
+            <div class="msg-text">HotelSearchRatesContoller.rates()</div>
             <div class="bar-bg"><div class="bar-fill badge-info" style="width:7%"></div></div>
           </td>
-          <td><span class="badge badge-info">37,991</span></td>
+          <td><span class="badge badge-info">36,491</span></td>
         </tr>
 
         <tr>
           <td class="rank">#8</td>
           <td class="msg-cell">
-            <div class="msg-text">HotelSearchRatesContoller.rates()</div>
-            <div class="bar-bg"><div class="bar-fill badge-info" style="width:7%"></div></div>
+            <div class="msg-text">getImages: {n} totalTime: {n} ms photoTime: {n} masterTime: {n} ms processImageTime {n} ms</div>
+            <div class="bar-bg"><div class="bar-fill badge-info" style="width:6%"></div></div>
           </td>
-          <td><span class="badge badge-info">34,358</span></td>
+          <td><span class="badge badge-info">30,609</span></td>
         </tr>
 
         <tr>
           <td class="rank">#9</td>
           <td class="msg-cell">
-            <div class="msg-text">getImages: {n} totalTime: {n} ms photoTime: {n} masterTime: {n} ms processImageTime {n} ms</div>
-            <div class="bar-bg"><div class="bar-fill badge-info" style="width:6%"></div></div>
+            <div class="msg-text">Filtered property count {n}</div>
+            <div class="bar-bg"><div class="bar-fill badge-info" style="width:5%"></div></div>
           </td>
-          <td><span class="badge badge-info">28,823</span></td>
+          <td><span class="badge badge-info">30,215</span></td>
         </tr>
 
         <tr>
           <td class="rank">#10</td>
           <td class="msg-cell">
-            <div class="msg-text">Filtered property count {n}</div>
+            <div class="msg-text">Total properties.. {n} hotels {n} vrbos..{n}</div>
             <div class="bar-bg"><div class="bar-fill badge-info" style="width:5%"></div></div>
           </td>
-          <td><span class="badge badge-info">28,601</span></td>
+          <td><span class="badge badge-info">29,321</span></td>
         </tr></tbody>
     </table>
   </div>
@@ -674,17 +674,17 @@
         <tr>
           <td class="rank">#1</td>
           <td class="msg-cell">
-            <div class="msg-text">Unknown OffsetTimeUnit 'Some(Month)' for Deadline(Some(Month),Some({n}),Some(BeforeArrival),None)</div>
+            <div class="msg-text">Exception occurred while converting Result with headers [</div>
           </td>
-          <td><span class="badge badge-error">8,643</span></td>
+          <td><span class="badge badge-error">1,219</span></td>
         </tr>
 
         <tr>
           <td class="rank">#2</td>
           <td class="msg-cell">
-            <div class="msg-text">Unexpected error. java.lang.IndexOutOfBoundsException: {n} {n}</div>
+            <div class="msg-text">Error getting locations: …</div>
           </td>
-          <td><span class="badge badge-error">133</span></td>
+          <td><span class="badge badge-error">170</span></td>
         </tr>
 
         <tr>
@@ -708,23 +708,23 @@
           <td class="msg-cell">
             <div class="msg-text">Error while fetching place details java.sql.SQLException: Illegal mix of collations (latin1_swedish_ci,IMPLICIT) and (utf8mb4_0900_ai_ci,COERCIBLE) for operation '=' …</div>
           </td>
-          <td><span class="badge badge-error">49</span></td>
+          <td><span class="badge badge-error">48</span></td>
         </tr>
 
         <tr>
           <td class="rank">#6</td>
           <td class="msg-cell">
-            <div class="msg-text">Cancel Failed: This reservation cannot be cancelled online. Some reservations may not be cancelled once in full penalty. For additional assistance, please contact us or the hotel directly.</div>
+            <div class="msg-text">Google places blew up on location: …</div>
           </td>
-          <td><span class="badge badge-error">10</span></td>
+          <td><span class="badge badge-error">21</span></td>
         </tr>
 
         <tr>
           <td class="rank">#7</td>
           <td class="msg-cell">
-            <div class="msg-text">Refund with total in response {n}</div>
+            <div class="msg-text">Cancel Failed: This reservation cannot be cancelled online. Some reservations may not be cancelled once in full penalty. For additional assistance, please contact us or the hotel directly.</div>
           </td>
-          <td><span class="badge badge-error">8</span></td>
+          <td><span class="badge badge-error">10</span></td>
         </tr>
 
         <tr>
@@ -764,49 +764,49 @@
         <tr>
           <td class="rank">#1</td>
           <td class="msg-cell">
-            <div class="msg-text">Received hotel ID without prefix ({n} so prefixed with HOT</div>
+            <div class="msg-text">Got error produce response in correlation id {n} on topic-partition logstash-{n}, splitting and retrying ({n} attempts left). Error: MESSAGE_TOO_LARGE</div>
           </td>
-          <td><span class="badge badge-warn">357,121</span></td>
+          <td><span class="badge badge-warn">2,706</span></td>
         </tr>
 
         <tr>
           <td class="rank">#2</td>
           <td class="msg-cell">
-            <div class="msg-text">invalid deep link List(FormError(room[{n}].adults,List(error.number),List()))</div>
+            <div class="msg-text">Got error produce response in correlation id {n} on topic-partition logstash-{n}, splitting and retrying ({n} attempts left). Error: MESSAGE_TOO_LARGE</div>
           </td>
-          <td><span class="badge badge-warn">9,637</span></td>
+          <td><span class="badge badge-warn">399</span></td>
         </tr>
 
         <tr>
           <td class="rank">#3</td>
           <td class="msg-cell">
-            <div class="msg-text">Hotel Hybrid - buildFilterMetadata with {n} properties</div>
+            <div class="msg-text">Bad Check Rate Response from Supplier {"auditData":{"processTime":"{n}","timestamp":"{n}-{n}-{n} …</div>
           </td>
-          <td><span class="badge badge-warn">8,037</span></td>
+          <td><span class="badge badge-warn">388</span></td>
         </tr>
 
         <tr>
           <td class="rank">#4</td>
           <td class="msg-cell">
-            <div class="msg-text">TravelPort Search HotelError: W {n}: MAXIMUM LENGTH OF STAY EXCEEDED</div>
+            <div class="msg-text">Failed to deserialize Trip Advisor Content from {“hotelId”: {n},“tripAdvisorPartnerId”: “{n}”,“createDateTime”: {“dateTimeString”: “{n}-{n}-09T05:{n}:{n}.981Z”},“lastUpdateTime”: {“dateTimeString”: …</div>
           </td>
-          <td><span class="badge badge-warn">3,635</span></td>
+          <td><span class="badge badge-warn">124</span></td>
         </tr>
 
         <tr>
           <td class="rank">#5</td>
           <td class="msg-cell">
-            <div class="msg-text">TravelPort Search HotelError: W {n}: MINIMUM LENGTH OF STAY REQUIRED</div>
+            <div class="msg-text">Got error produce response in correlation id {n} on topic-partition logstash-{n}, splitting and retrying ({n} attempts left). Error: MESSAGE_TOO_LARGE</div>
           </td>
-          <td><span class="badge badge-warn">3,255</span></td>
+          <td><span class="badge badge-warn">90</span></td>
         </tr>
 
         <tr>
           <td class="rank">#6</td>
           <td class="msg-cell">
-            <div class="msg-text">TravelPort Search HotelError: W {n}: CLOSED TO ARRIVAL ON DATE REQUESTED</div>
+            <div class="msg-text">Flyway upgrade recommended: MySQL {n} is newer than this version of Flyway and support has not been tested. The latest supported version of MySQL is {n}.</div>
           </td>
-          <td><span class="badge badge-warn">3,159</span></td>
+          <td><span class="badge badge-warn">67</span></td>
         </tr>
 
         <tr>
@@ -814,15 +814,15 @@
           <td class="msg-cell">
             <div class="msg-text">Got error produce response in correlation id {n} on topic-partition logstash-{n}, splitting and retrying ({n} attempts left). Error: MESSAGE_TOO_LARGE</div>
           </td>
-          <td><span class="badge badge-warn">2,709</span></td>
+          <td><span class="badge badge-warn">63</span></td>
         </tr>
 
         <tr>
           <td class="rank">#8</td>
           <td class="msg-cell">
-            <div class="msg-text">Illegal request, responding with status '{n} HTTP Version Not Supported': The server does not support the HTTP protocol version used in the request.</div>
+            <div class="msg-text">Could not parse this text. Revise the regex ? Some(CXL: CANCELS ALWAYS CHARGED-CXL FEE FULL STAY-INCL TAX-FEES-CANCELLATION RESULT IN A FULL AMOUNT PENALTY) HOT-{n}</div>
           </td>
-          <td><span class="badge badge-warn">1,835</span></td>
+          <td><span class="badge badge-warn">56</span></td>
         </tr>
 
         <tr>
@@ -830,15 +830,15 @@
           <td class="msg-cell">
             <div class="msg-text">Got error produce response in correlation id {n} on topic-partition logstash-{n}, splitting and retrying ({n} attempts left). Error: MESSAGE_TOO_LARGE</div>
           </td>
-          <td><span class="badge badge-warn">395</span></td>
+          <td><span class="badge badge-warn">37</span></td>
         </tr>
 
         <tr>
           <td class="rank">#10</td>
           <td class="msg-cell">
-            <div class="msg-text">Bad Check Rate Response from Supplier {"auditData":{"processTime":"{n}","timestamp":"{n}-{n}-{n} …</div>
+            <div class="msg-text">Got error produce response in correlation id {n} on topic-partition logstash-{n}, splitting and retrying ({n} attempts left). Error: MESSAGE_TOO_LARGE</div>
           </td>
-          <td><span class="badge badge-warn">386</span></td>
+          <td><span class="badge badge-warn">32</span></td>
         </tr></tbody>
       </table>
     </div>
@@ -847,7 +847,7 @@
 
 </main>
 
-<footer>TST Hotel Log Dashboard · Auto-generated · 2026-04-02 17:48 EST · @fields.app: hotel · env: green / blue</footer>
+<footer>TST Hotel Log Dashboard · Auto-generated · 2026-04-02 18:45 EST · @fields.app: hotel · env: green / blue</footer>
 
 </body>
 </html>
