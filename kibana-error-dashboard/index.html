@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Hotel Log Dashboard · Last 48 hours</title>
+<title>Hotel Log Dashboard · Last 12 hours</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;600;700&display=swap" rel="stylesheet"/>
 <style>
@@ -307,8 +307,8 @@
     <div class="sub">TST · Elasticsearch · HOTEL · Production</div>
   </div>
   <div class="header-right">
-    <div class="period-pill">Last 48 hours</div>
-    <div class="gen-time">Generated 2026-04-02 19:03 EST</div>
+    <div class="period-pill">Last 12 hours</div>
+    <div class="gen-time">Generated 2026-04-03 14:39 EST</div>
   </div>
 </header>
 
@@ -318,23 +318,23 @@
   <div class="stat-row">
     <div class="stat-card c-error">
       <div class="stat-label">Errors</div>
-      <div class="stat-value">118,175</div>
+      <div class="stat-value">5,373</div>
     </div>
     <div class="stat-card c-warn">
       <div class="stat-label">Warnings</div>
-      <div class="stat-value">321,690</div>
+      <div class="stat-value">46,004</div>
     </div>
     <div class="stat-card c-info">
       <div class="stat-label">Info</div>
-      <div class="stat-value">20,619,499</div>
+      <div class="stat-value">2,568,176</div>
     </div>
     <div class="stat-card c-total">
       <div class="stat-label">Total Logs</div>
-      <div class="stat-value">21,059,364</div>
+      <div class="stat-value">2,619,553</div>
     </div>
     <div class="stat-card c-size">
       <div class="stat-label">Index Size</div>
-      <div class="stat-value">222.15 GB ~est<div class="stat-sub">198,779,804 docs</div></div>
+      <div class="stat-value">226.93 GB ~est<div class="stat-sub">203,054,801 docs</div></div>
     </div>
   </div>
 
@@ -343,14 +343,14 @@
     <h3>Log Volume Breakdown</h3>
     
     <div class="sev-bar-wrap">
-      <div class="sev-segment seg-error" style="width:0.6%" title="Error 0.6%"></div>
-      <div class="sev-segment seg-warn"  style="width:1.5%" title="Warn 1.5%"></div>
-      <div class="sev-segment seg-info"  style="width:97.9%" title="Info 97.9%"></div>
+      <div class="sev-segment seg-error" style="width:0.2%" title="Error 0.2%"></div>
+      <div class="sev-segment seg-warn"  style="width:1.8%" title="Warn 1.8%"></div>
+      <div class="sev-segment seg-info"  style="width:98.0%" title="Info 98.0%"></div>
     </div>
     <div class="sev-legend">
-      <span class="dot dot-error"></span>Error 0.6%&nbsp;&nbsp;
-      <span class="dot dot-warn"></span>Warn 1.5%&nbsp;&nbsp;
-      <span class="dot dot-info"></span>Info 97.9%
+      <span class="dot dot-error"></span>Error 0.2%&nbsp;&nbsp;
+      <span class="dot dot-warn"></span>Warn 1.8%&nbsp;&nbsp;
+      <span class="dot dot-info"></span>Info 98.0%
     </div>
   </div>
 
@@ -368,91 +368,91 @@
         <tr>
           <td class="rank">#1</td>
           <td class="msg-cell">
-            <div class="msg-text">Error executing Sabre Search</div>
+            <div class="msg-text">unexpected failure</div>
             <div class="bar-bg"><div class="bar-fill badge-error" style="width:100%"></div></div>
           </td>
-          <td><span class="badge badge-error">5,592</span></td>
+          <td><span class="badge badge-error">952</span></td>
         </tr>
 
         <tr>
           <td class="rank">#2</td>
           <td class="msg-cell">
-            <div class="msg-text">Unexpected Throwable</div>
-            <div class="bar-bg"><div class="bar-fill badge-error" style="width:100%"></div></div>
+            <div class="msg-text">Error executing Sabre Search</div>
+            <div class="bar-bg"><div class="bar-fill badge-error" style="width:59%"></div></div>
           </td>
-          <td><span class="badge badge-error">5,592</span></td>
+          <td><span class="badge badge-error">561</span></td>
         </tr>
 
         <tr>
           <td class="rank">#3</td>
           <td class="msg-cell">
-            <div class="msg-text">unexpected failure</div>
-            <div class="bar-bg"><div class="bar-fill badge-error" style="width:98%"></div></div>
+            <div class="msg-text">Unexpected Throwable</div>
+            <div class="bar-bg"><div class="bar-fill badge-error" style="width:59%"></div></div>
           </td>
-          <td><span class="badge badge-error">5,493</span></td>
+          <td><span class="badge badge-error">561</span></td>
         </tr>
 
         <tr>
           <td class="rank">#4</td>
           <td class="msg-cell">
-            <div class="msg-text">No usable value for GetHotelAvailRS</div>
-            <div class="bar-bg"><div class="bar-fill badge-error" style="width:55%"></div></div>
+            <div class="msg-text">HotelAvailabilityV2Service - Failed to decode and requery location token:</div>
+            <div class="bar-bg"><div class="bar-fill badge-error" style="width:57%"></div></div>
           </td>
-          <td><span class="badge badge-error">3,099</span></td>
+          <td><span class="badge badge-error">538</span></td>
         </tr>
 
         <tr>
           <td class="rank">#5</td>
           <td class="msg-cell">
             <div class="msg-text">Error getting response</div>
-            <div class="bar-bg"><div class="bar-fill badge-error" style="width:46%"></div></div>
+            <div class="bar-bg"><div class="bar-fill badge-error" style="width:51%"></div></div>
           </td>
-          <td><span class="badge badge-error">2,588</span></td>
+          <td><span class="badge badge-error">490</span></td>
         </tr>
 
         <tr>
           <td class="rank">#6</td>
           <td class="msg-cell">
-            <div class="msg-text">Unknown OffsetTimeUnit 'Some …</div>
-            <div class="bar-bg"><div class="bar-fill badge-error" style="width:39%"></div></div>
+            <div class="msg-text">Connection reset</div>
+            <div class="bar-bg"><div class="bar-fill badge-error" style="width:44%"></div></div>
           </td>
-          <td><span class="badge badge-error">2,208</span></td>
+          <td><span class="badge badge-error">418</span></td>
         </tr>
 
         <tr>
           <td class="rank">#7</td>
           <td class="msg-cell">
-            <div class="msg-text">HotelAvailabilityV2Service - Failed to decode and requery location token:</div>
-            <div class="bar-bg"><div class="bar-fill badge-error" style="width:35%"></div></div>
+            <div class="msg-text">Unknown OffsetTimeUnit 'Some …</div>
+            <div class="bar-bg"><div class="bar-fill badge-error" style="width:28%"></div></div>
           </td>
-          <td><span class="badge badge-error">1,942</span></td>
+          <td><span class="badge badge-error">268</span></td>
         </tr>
 
         <tr>
           <td class="rank">#8</td>
           <td class="msg-cell">
-            <div class="msg-text">Connection reset</div>
-            <div class="bar-bg"><div class="bar-fill badge-error" style="width:32%"></div></div>
+            <div class="msg-text">failure fetching available rates for net.tstllc.hotel.service.rates.ToggledHotelRateProvider@2dd0347e</div>
+            <div class="bar-bg"><div class="bar-fill badge-error" style="width:11%"></div></div>
           </td>
-          <td><span class="badge badge-error">1,785</span></td>
+          <td><span class="badge badge-error">102</span></td>
         </tr>
 
         <tr>
           <td class="rank">#9</td>
           <td class="msg-cell">
-            <div class="msg-text">Supplier response resulted in failure message unknown token</div>
-            <div class="bar-bg"><div class="bar-fill badge-error" style="width:22%"></div></div>
+            <div class="msg-text">Hybrid Rate Select: Some rates could not be retrieved -- List …</div>
+            <div class="bar-bg"><div class="bar-fill badge-error" style="width:10%"></div></div>
           </td>
-          <td><span class="badge badge-error">1,222</span></td>
+          <td><span class="badge badge-error">98</span></td>
         </tr>
 
         <tr>
           <td class="rank">#10</td>
           <td class="msg-cell">
-            <div class="msg-text">Exception occurred while converting Result with headers [</div>
-            <div class="bar-bg"><div class="bar-fill badge-error" style="width:16%"></div></div>
+            <div class="msg-text">failure fetching available rates for net.tstllc.hotel.service.rates.ToggledHotelRateProvider@65981ea1</div>
+            <div class="bar-bg"><div class="bar-fill badge-error" style="width:10%"></div></div>
           </td>
-          <td><span class="badge badge-error">918</span></td>
+          <td><span class="badge badge-error">93</span></td>
         </tr></tbody>
       </table>
     </div>
@@ -471,88 +471,88 @@
             <div class="msg-text">Received hotel ID without prefix …</div>
             <div class="bar-bg"><div class="bar-fill badge-warn" style="width:100%"></div></div>
           </td>
-          <td><span class="badge badge-warn">115,245</span></td>
+          <td><span class="badge badge-warn">20,879</span></td>
         </tr>
 
         <tr>
           <td class="rank">#2</td>
           <td class="msg-cell">
-            <div class="msg-text">Cookie failed message authentication check</div>
-            <div class="bar-bg"><div class="bar-fill badge-warn" style="width:48%"></div></div>
+            <div class="msg-text">No Results Found!</div>
+            <div class="bar-bg"><div class="bar-fill badge-warn" style="width:31%"></div></div>
           </td>
-          <td><span class="badge badge-warn">55,261</span></td>
+          <td><span class="badge badge-warn">6,487</span></td>
         </tr>
 
         <tr>
           <td class="rank">#3</td>
           <td class="msg-cell">
-            <div class="msg-text">No Results Found!</div>
-            <div class="bar-bg"><div class="bar-fill badge-warn" style="width:31%"></div></div>
+            <div class="msg-text">LocationTokenService: No properties found for location token:</div>
+            <div class="bar-bg"><div class="bar-fill badge-warn" style="width:22%"></div></div>
           </td>
-          <td><span class="badge badge-warn">35,783</span></td>
+          <td><span class="badge badge-warn">4,651</span></td>
         </tr>
 
         <tr>
           <td class="rank">#4</td>
           <td class="msg-cell">
-            <div class="msg-text">LocationTokenService: No properties found for location token:</div>
-            <div class="bar-bg"><div class="bar-fill badge-warn" style="width:22%"></div></div>
+            <div class="msg-text">LocationTokenService: No properties found for location token: MC4wfDAuMHwxMnx8aG90ZWx8</div>
+            <div class="bar-bg"><div class="bar-fill badge-warn" style="width:8%"></div></div>
           </td>
-          <td><span class="badge badge-warn">25,792</span></td>
+          <td><span class="badge badge-warn">1,714</span></td>
         </tr>
 
         <tr>
           <td class="rank">#5</td>
           <td class="msg-cell">
-            <div class="msg-text">LocationTokenService: No properties found for location token: MC4wfDAuMHwxMnx8aG90ZWx8</div>
-            <div class="bar-bg"><div class="bar-fill badge-warn" style="width:11%"></div></div>
+            <div class="msg-text">Filtering Sabre rate for hotel HOT- …</div>
+            <div class="bar-bg"><div class="bar-fill badge-warn" style="width:3%"></div></div>
           </td>
-          <td><span class="badge badge-warn">12,170</span></td>
+          <td><span class="badge badge-warn">669</span></td>
         </tr>
 
         <tr>
           <td class="rank">#6</td>
           <td class="msg-cell">
-            <div class="msg-text">Illegal request, responding with status ' …</div>
-            <div class="bar-bg"><div class="bar-fill badge-warn" style="width:8%"></div></div>
+            <div class="msg-text">Could not parse this text. Revise the regex ? Some …</div>
+            <div class="bar-bg"><div class="bar-fill badge-warn" style="width:3%"></div></div>
           </td>
-          <td><span class="badge badge-warn">8,917</span></td>
+          <td><span class="badge badge-warn">617</span></td>
         </tr>
 
         <tr>
           <td class="rank">#7</td>
           <td class="msg-cell">
-            <div class="msg-text">invalid deep link List …</div>
-            <div class="bar-bg"><div class="bar-fill badge-warn" style="width:5%"></div></div>
+            <div class="msg-text">Hotel Hybrid - buildFilterMetadata with …</div>
+            <div class="bar-bg"><div class="bar-fill badge-warn" style="width:3%"></div></div>
           </td>
-          <td><span class="badge badge-warn">5,746</span></td>
+          <td><span class="badge badge-warn">586</span></td>
         </tr>
 
         <tr>
           <td class="rank">#8</td>
           <td class="msg-cell">
-            <div class="msg-text">Could not parse this text. Revise the regex ? Some …</div>
-            <div class="bar-bg"><div class="bar-fill badge-warn" style="width:3%"></div></div>
+            <div class="msg-text">No sponsored listings for: Anaheim CA cache miss and no response after long wait.</div>
+            <div class="bar-bg"><div class="bar-fill badge-warn" style="width:1%"></div></div>
           </td>
-          <td><span class="badge badge-warn">3,610</span></td>
+          <td><span class="badge badge-warn">283</span></td>
         </tr>
 
         <tr>
           <td class="rank">#9</td>
           <td class="msg-cell">
-            <div class="msg-text">Filtering Sabre rate for hotel HOT- …</div>
-            <div class="bar-bg"><div class="bar-fill badge-warn" style="width:3%"></div></div>
+            <div class="msg-text">No sponsored listings for: Covent Garden cache miss and no response after long wait.</div>
+            <div class="bar-bg"><div class="bar-fill badge-warn" style="width:1%"></div></div>
           </td>
-          <td><span class="badge badge-warn">3,426</span></td>
+          <td><span class="badge badge-warn">168</span></td>
         </tr>
 
         <tr>
           <td class="rank">#10</td>
           <td class="msg-cell">
-            <div class="msg-text">Hotel Hybrid - buildFilterMetadata with …</div>
-            <div class="bar-bg"><div class="bar-fill badge-warn" style="width:2%"></div></div>
+            <div class="msg-text">Got error produce response in correlation id …</div>
+            <div class="bar-bg"><div class="bar-fill badge-warn" style="width:1%"></div></div>
           </td>
-          <td><span class="badge badge-warn">2,200</span></td>
+          <td><span class="badge badge-warn">135</span></td>
         </tr></tbody>
       </table>
     </div>
@@ -574,88 +574,88 @@
             <div class="msg-text">Response</div>
             <div class="bar-bg"><div class="bar-fill badge-info" style="width:100%"></div></div>
           </td>
-          <td><span class="badge badge-info">1,694,855</span></td>
+          <td><span class="badge badge-info">336,234</span></td>
         </tr>
 
         <tr>
           <td class="rank">#2</td>
           <td class="msg-cell">
-            <div class="msg-text">Rate Cache: Caching with key ATILowestPerNight2026- …</div>
-            <div class="bar-bg"><div class="bar-fill badge-info" style="width:30%"></div></div>
+            <div class="msg-text">HttpClient.post - URL: {url}</div>
+            <div class="bar-bg"><div class="bar-fill badge-info" style="width:23%"></div></div>
           </td>
-          <td><span class="badge badge-info">508,526</span></td>
+          <td><span class="badge badge-info">77,047</span></td>
         </tr>
 
         <tr>
           <td class="rank">#3</td>
           <td class="msg-cell">
-            <div class="msg-text">Rate Cache: Caching with key SABRE_HOTELLowestPerNight2026- …</div>
-            <div class="bar-bg"><div class="bar-fill badge-info" style="width:30%"></div></div>
+            <div class="msg-text">Rate Cache: Checking availability of cache with key:</div>
+            <div class="bar-bg"><div class="bar-fill badge-info" style="width:16%"></div></div>
           </td>
-          <td><span class="badge badge-info">508,526</span></td>
+          <td><span class="badge badge-info">52,721</span></td>
         </tr>
 
         <tr>
           <td class="rank">#4</td>
           <td class="msg-cell">
-            <div class="msg-text">Rate Cache: Checking availability of cache with key:</div>
-            <div class="bar-bg"><div class="bar-fill badge-info" style="width:16%"></div></div>
+            <div class="msg-text">HttpClient.get - URL: {url}</div>
+            <div class="bar-bg"><div class="bar-fill badge-info" style="width:15%"></div></div>
           </td>
-          <td><span class="badge badge-info">265,192</span></td>
+          <td><span class="badge badge-info">49,148</span></td>
         </tr>
 
         <tr>
           <td class="rank">#5</td>
           <td class="msg-cell">
-            <div class="msg-text">HttpClient.get - URL: {url}</div>
-            <div class="bar-bg"><div class="bar-fill badge-info" style="width:14%"></div></div>
+            <div class="msg-text">HotelAvailabilityV2Service.getFilters()</div>
+            <div class="bar-bg"><div class="bar-fill badge-info" style="width:9%"></div></div>
           </td>
-          <td><span class="badge badge-info">237,813</span></td>
+          <td><span class="badge badge-info">31,488</span></td>
         </tr>
 
         <tr>
           <td class="rank">#6</td>
           <td class="msg-cell">
-            <div class="msg-text">Rate Cache: Caching with key BEDS_ONLINELowestPerNight2026- …</div>
-            <div class="bar-bg"><div class="bar-fill badge-info" style="width:12%"></div></div>
+            <div class="msg-text">inspection: msg: , txt: , errmsg: , rules: , errors: List …</div>
+            <div class="bar-bg"><div class="bar-fill badge-info" style="width:8%"></div></div>
           </td>
-          <td><span class="badge badge-info">202,787</span></td>
+          <td><span class="badge badge-info">26,586</span></td>
         </tr>
 
         <tr>
           <td class="rank">#7</td>
           <td class="msg-cell">
-            <div class="msg-text">inspection: msg: , txt: , errmsg: , rules: , errors: List …</div>
-            <div class="bar-bg"><div class="bar-fill badge-info" style="width:10%"></div></div>
+            <div class="msg-text">HotelAvailabilityV2Service.GetHotels() time</div>
+            <div class="bar-bg"><div class="bar-fill badge-info" style="width:8%"></div></div>
           </td>
-          <td><span class="badge badge-info">177,295</span></td>
+          <td><span class="badge badge-info">26,128</span></td>
         </tr>
 
         <tr>
           <td class="rank">#8</td>
           <td class="msg-cell">
-            <div class="msg-text">HotelAvailabilityV2Service.getFilters()</div>
-            <div class="bar-bg"><div class="bar-fill badge-info" style="width:9%"></div></div>
+            <div class="msg-text">HotelSearchRatesContoller.rates()</div>
+            <div class="bar-bg"><div class="bar-fill badge-info" style="width:7%"></div></div>
           </td>
-          <td><span class="badge badge-info">152,983</span></td>
+          <td><span class="badge badge-info">23,989</span></td>
         </tr>
 
         <tr>
           <td class="rank">#9</td>
           <td class="msg-cell">
-            <div class="msg-text">HttpClient.post - URL: {url}</div>
-            <div class="bar-bg"><div class="bar-fill badge-info" style="width:8%"></div></div>
+            <div class="msg-text">getImages: {n} totalTime: {n} ms photoTime: {n} masterTime: {n} ms processImageTime {n} ms</div>
+            <div class="bar-bg"><div class="bar-fill badge-info" style="width:6%"></div></div>
           </td>
-          <td><span class="badge badge-info">136,131</span></td>
+          <td><span class="badge badge-info">20,020</span></td>
         </tr>
 
         <tr>
           <td class="rank">#10</td>
           <td class="msg-cell">
-            <div class="msg-text">HotelAvailabilityV2Service.GetHotels() time</div>
-            <div class="bar-bg"><div class="bar-fill badge-info" style="width:8%"></div></div>
+            <div class="msg-text">serialVersionUID mismatch due to …</div>
+            <div class="bar-bg"><div class="bar-fill badge-info" style="width:6%"></div></div>
           </td>
-          <td><span class="badge badge-info">127,148</span></td>
+          <td><span class="badge badge-info">19,439</span></td>
         </tr></tbody>
     </table>
   </div>
@@ -676,11 +676,19 @@
           <td class="msg-cell">
             <div class="msg-text">Cancel Failed: This reservation cannot be cancelled online. Some reservations may not be cancelled once in full penalty. For additional assistance, please contact us or the hotel directly.</div>
           </td>
-          <td><span class="badge badge-error">10</span></td>
+          <td><span class="badge badge-error">11</span></td>
         </tr>
 
         <tr>
           <td class="rank">#2</td>
+          <td class="msg-cell">
+            <div class="msg-text">Exception occurred when requesting place detail for place ID ChIJpdZYwbDIRT4R0zDtL-03UYU for Hamad International Airport (DOH), Doha, QA</div>
+          </td>
+          <td><span class="badge badge-error">10</span></td>
+        </tr>
+
+        <tr>
+          <td class="rank">#3</td>
           <td class="msg-cell">
             <div class="msg-text">Missing required credential for ACSC.hfCH.Sabre_Hotel.clientSecret in adapter credential schema net.tstllc.common.model.adapter.credentials.schema.SabreHotelCredentials …</div>
           </td>
@@ -688,7 +696,7 @@
         </tr>
 
         <tr>
-          <td class="rank">#3</td>
+          <td class="rank">#4</td>
           <td class="msg-cell">
             <div class="msg-text">Exception occurred when requesting place detail for place ID ChIJUawNdwBBzTYRurzZZk155Ig for Sapa, Vietnam, Sa Pa, Lao Cai, Vietnam</div>
           </td>
@@ -696,17 +704,9 @@
         </tr>
 
         <tr>
-          <td class="rank">#4</td>
-          <td class="msg-cell">
-            <div class="msg-text">Missing required credential for ANM.rn7S.Sabre_Hotel.clientSecret in adapter credential schema net.tstllc.common.model.adapter.credentials.schema.SabreHotelCredentials …</div>
-          </td>
-          <td><span class="badge badge-error">4</span></td>
-        </tr>
-
-        <tr>
           <td class="rank">#5</td>
           <td class="msg-cell">
-            <div class="msg-text">Invalid token response</div>
+            <div class="msg-text">Missing required credential for ANM.rn7S.Sabre_Hotel.clientSecret in adapter credential schema net.tstllc.common.model.adapter.credentials.schema.SabreHotelCredentials …</div>
           </td>
           <td><span class="badge badge-error">4</span></td>
         </tr>
@@ -722,7 +722,7 @@
         <tr>
           <td class="rank">#7</td>
           <td class="msg-cell">
-            <div class="msg-text">Missing required credential for AEC.z2P1.Sabre_Hotel.clientSecret in adapter credential schema net.tstllc.common.model.adapter.credentials.schema.SabreHotelCredentials …</div>
+            <div class="msg-text">Missing required credential for AMO.Sc9N.Sabre_Hotel.clientSecret in adapter credential schema net.tstllc.common.model.adapter.credentials.schema.SabreHotelCredentials …</div>
           </td>
           <td><span class="badge badge-error">3</span></td>
         </tr>
@@ -730,7 +730,7 @@
         <tr>
           <td class="rank">#8</td>
           <td class="msg-cell">
-            <div class="msg-text">Missing required credential for AMO.Sc9N.Sabre_Hotel.clientSecret in adapter credential schema net.tstllc.common.model.adapter.credentials.schema.SabreHotelCredentials …</div>
+            <div class="msg-text">Missing required credential for AMO.Sc9N.Sabre_Hotel.epr in adapter credential schema net.tstllc.common.model.adapter.credentials.schema.SabreHotelCredentials …</div>
           </td>
           <td><span class="badge badge-error">3</span></td>
         </tr>
@@ -738,7 +738,7 @@
         <tr>
           <td class="rank">#9</td>
           <td class="msg-cell">
-            <div class="msg-text">Missing required credential for AMO.Sc9N.Sabre_Hotel.epr in adapter credential schema net.tstllc.common.model.adapter.credentials.schema.SabreHotelCredentials …</div>
+            <div class="msg-text">Missing required credential for AMO.Sc9N.Sabre_Hotel.pcc in adapter credential schema net.tstllc.common.model.adapter.credentials.schema.SabreHotelCredentials …</div>
           </td>
           <td><span class="badge badge-error">3</span></td>
         </tr>
@@ -746,9 +746,9 @@
         <tr>
           <td class="rank">#10</td>
           <td class="msg-cell">
-            <div class="msg-text">Missing required credential for AMO.Sc9N.Sabre_Hotel.pcc in adapter credential schema net.tstllc.common.model.adapter.credentials.schema.SabreHotelCredentials …</div>
+            <div class="msg-text">Missing required credential for AEC.z2P1.Sabre_Hotel.clientSecret in adapter credential schema net.tstllc.common.model.adapter.credentials.schema.SabreHotelCredentials …</div>
           </td>
-          <td><span class="badge badge-error">3</span></td>
+          <td><span class="badge badge-error">2</span></td>
         </tr></tbody>
       </table>
     </div>
@@ -764,61 +764,37 @@
         <tr>
           <td class="rank">#1</td>
           <td class="msg-cell">
-            <div class="msg-text">Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.</div>
+            <div class="msg-text">LocationTokenService: No properties found for location token: NDMuODA0MTMzNHwtMTIwLjU1NDIwMTJ8MTV8Q2hJSlZXcWZtM3h1azFRUmRyZ0xldHRsVEgwfGhvdGVsfA==</div>
           </td>
-          <td><span class="badge badge-warn">268</span></td>
+          <td><span class="badge badge-warn">481</span></td>
         </tr>
 
         <tr>
           <td class="rank">#2</td>
           <td class="msg-cell">
-            <div class="msg-text">LocationTokenService: No properties found for location token: NTMuNzI2NjY4M3wtMTI3LjY0NzYyMDZ8MTV8Q2hJSnIycHJxc2RtZWxNUi1mSG5OLWxCRzRnfGhvdGVsfA==</div>
+            <div class="msg-text">LocationTokenService: No properties found for location token: MjQuMjV8LTc2LjB8MTV8Q2hJSm1Yd0d1S3kwTVlrUl9WWG5aRThtZ3I0fGhvdGVsfA==</div>
           </td>
-          <td><span class="badge badge-warn">218</span></td>
+          <td><span class="badge badge-warn">346</span></td>
         </tr>
 
         <tr>
           <td class="rank">#3</td>
           <td class="msg-cell">
-            <div class="msg-text">LocationTokenService: No properties found for location token: MjIuNjQ5NTA0NHwtNzguOTc5NzI3MDk5OTk5OTl8MTV8Q2hJSlRSX1Q2RFdWS29rUm9iV05KUFVsbkpNfGhvdGVsfA==</div>
+            <div class="msg-text">Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.</div>
           </td>
-          <td><span class="badge badge-warn">84</span></td>
+          <td><span class="badge badge-warn">316</span></td>
         </tr>
 
         <tr>
           <td class="rank">#4</td>
           <td class="msg-cell">
-            <div class="msg-text">LocationTokenService: No properties found for location token: NTEuMDcwOTU5NDQ2NzY5MzF8LTExNy40OTI3MDE0Mzk5NDg4fDE1fHxob3RlbHw=</div>
+            <div class="msg-text">LocationTokenService: No properties found for location token: NDMuNDI5NjI1N3wtMTEzLjUzMTQwMzd8MTV8Q2hJSnZXMk00aVFUcWxRUk5IcEJ6akxibTNnfGhvdGVsfA==</div>
           </td>
-          <td><span class="badge badge-warn">40</span></td>
+          <td><span class="badge badge-warn">14</span></td>
         </tr>
 
         <tr>
           <td class="rank">#5</td>
-          <td class="msg-cell">
-            <div class="msg-text">LocationTokenService: No properties found for location token: NTEuMDcwOTU5NDQ2NzY5MzF8LTExNy40OTI3MDE0Mzk5NDg4fDE1fHxob3RlbHw=,NTEuMDcwOTU5NDQ2NzY5MzF8LTExNy40OTI3MDE0Mzk5NDg4fDE1fHxob3RlbHw=</div>
-          </td>
-          <td><span class="badge badge-warn">21</span></td>
-        </tr>
-
-        <tr>
-          <td class="rank">#6</td>
-          <td class="msg-cell">
-            <div class="msg-text">No sponsored listings for: Fontainebleau FL cache miss and no response after long wait.</div>
-          </td>
-          <td><span class="badge badge-warn">7</span></td>
-        </tr>
-
-        <tr>
-          <td class="rank">#7</td>
-          <td class="msg-cell">
-            <div class="msg-text">Rate Cache: No Cache found for cache key: MzYuMTcxNTYzfC0xMTUuMTM5MTAwOXwyMHxDaElKMFgzMXBJSzN2b0FSbzNtejFlYlZ6RG98aG90ZWx8EAN_RAPIDLowestPerNight2026- …</div>
-          </td>
-          <td><span class="badge badge-warn">6</span></td>
-        </tr>
-
-        <tr>
-          <td class="rank">#8</td>
           <td class="msg-cell">
             <div class="msg-text">Rate Cache: No Cache found for cache key: MzYuMTcxNTYzfC0xMTUuMTM5MTAwOXwyMHxDaElKMFgzMXBJSzN2b0FSbzNtejFlYlZ6RG98aG90ZWx8HB_APITUDELowestPerNight2026- …</div>
           </td>
@@ -826,19 +802,43 @@
         </tr>
 
         <tr>
+          <td class="rank">#6</td>
+          <td class="msg-cell">
+            <div class="msg-text">Rate Cache: No Cache found for cache key: MzYuMTcxNTYzfC0xMTUuMTM5MTAwOXwyMHxDaElKMFgzMXBJSzN2b0FSbzNtejFlYlZ6RG98aG90ZWx8SABRE_HOTELLowestPerNight2026- …</div>
+          </td>
+          <td><span class="badge badge-warn">5</span></td>
+        </tr>
+
+        <tr>
+          <td class="rank">#7</td>
+          <td class="msg-cell">
+            <div class="msg-text">Rate Cache: No Cache found for cache key: MzYuMTcxNTYzfC0xMTUuMTM5MTAwOXwyMHxDaElKMFgzMXBJSzN2b0FSbzNtejFlYlZ6RG98aG90ZWx8BEDS_ONLINELowestPerNight2026- …</div>
+          </td>
+          <td><span class="badge badge-warn">4</span></td>
+        </tr>
+
+        <tr>
+          <td class="rank">#8</td>
+          <td class="msg-cell">
+            <div class="msg-text">Rate Cache: No Cache found for cache key: MzYuMTcxNTYzfC0xMTUuMTM5MTAwOXwyMHxDaElKMFgzMXBJSzN2b0FSbzNtejFlYlZ6RG98aG90ZWx8EAN_RAPIDLowestPerNight2026- …</div>
+          </td>
+          <td><span class="badge badge-warn">4</span></td>
+        </tr>
+
+        <tr>
           <td class="rank">#9</td>
           <td class="msg-cell">
-            <div class="msg-text">Failed to fetch rate rules for 000ATAD. The rate will be ignored.</div>
+            <div class="msg-text">Rate Cache: No Cache found for cache key: NDAuMzEzNDYxNXwtNzMuOTgwMjQ0M3wxNXxDaElKc1JFUEhoTXV3b2tScFVaNEJnNUpRbEF8aG90ZWx8ATILowestPerNight2026- …</div>
           </td>
-          <td><span class="badge badge-warn">3</span></td>
+          <td><span class="badge badge-warn">4</span></td>
         </tr>
 
         <tr>
           <td class="rank">#10</td>
           <td class="msg-cell">
-            <div class="msg-text">Failed to fetch rate rules for 000AABW. The rate will be ignored.</div>
+            <div class="msg-text">Rate Cache: No Cache found for cache key: NDAuMzEzNDYxNXwtNzMuOTgwMjQ0M3wxNXxDaElKc1JFUEhoTXV3b2tScFVaNEJnNUpRbEF8aG90ZWx8BEDS_ONLINELowestPerNight2026- …</div>
           </td>
-          <td><span class="badge badge-warn">2</span></td>
+          <td><span class="badge badge-warn">4</span></td>
         </tr></tbody>
       </table>
     </div>
@@ -847,7 +847,7 @@
 
 </main>
 
-<footer>TST Hotel Log Dashboard · Auto-generated · 2026-04-02 19:03 EST · @fields.app: hotel · env: green / blue</footer>
+<footer>TST Hotel Log Dashboard · Auto-generated · 2026-04-03 14:39 EST · @fields.app: hotel · env: green / blue</footer>
 
 </body>
 </html>
