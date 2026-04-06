@@ -1,5 +1,5 @@
 {
-  "query_timestamp": "2026-04-06 15:23:35 EDT",
+  "query_timestamp": "2026-04-06 15:31:32 EDT",
   "parameters": {
     "min_weighting": 200,
     "months_inactive": 2
@@ -13,7 +13,8 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2024-07-08 17:37:56",
       "actual_booking_count": 4366,
-      "weighting": 4388
+      "weighting": 4388,
+      "possible_reason": "As of the latest available information, Mirage Las Vegas has not closed permanently, been renovated, rebranded, or changed ownership. No recent update..."
     },
     {
       "hotel_id": 409374,
@@ -22,7 +23,8 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2021-08-30 01:44:51",
       "actual_booking_count": 1821,
-      "weighting": 2107
+      "weighting": 2107,
+      "possible_reason": "The MGM Grand Hotel & Casino in Las Vegas has not closed permanently. It has undergone renovations and expansions over the years but has not been rebr..."
     },
     {
       "hotel_id": 56542,
@@ -31,7 +33,8 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2025-01-30 00:45:32",
       "actual_booking_count": 1933,
-      "weighting": 1975
+      "weighting": 1975,
+      "possible_reason": ""
     },
     {
       "hotel_id": 10981,
@@ -40,7 +43,8 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2024-05-16 18:48:34",
       "actual_booking_count": 1560,
-      "weighting": 1498
+      "weighting": 1498,
+      "possible_reason": ""
     },
     {
       "hotel_id": 19510,
@@ -49,7 +53,8 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2024-05-22 19:17:42",
       "actual_booking_count": 798,
-      "weighting": 748
+      "weighting": 748,
+      "possible_reason": ""
     },
     {
       "hotel_id": 55157,
@@ -58,7 +63,8 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-02-02 17:13:45",
       "actual_booking_count": 804,
-      "weighting": 732
+      "weighting": 732,
+      "possible_reason": ""
     },
     {
       "hotel_id": 76638,
@@ -67,7 +73,8 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-02-02 21:06:11",
       "actual_booking_count": 632,
-      "weighting": 629
+      "weighting": 629,
+      "possible_reason": ""
     },
     {
       "hotel_id": 78859,
@@ -76,7 +83,8 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2025-12-04 02:25:27",
       "actual_booking_count": 569,
-      "weighting": 547
+      "weighting": 547,
+      "possible_reason": ""
     },
     {
       "hotel_id": 3304583,
@@ -85,7 +93,8 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-01-24 00:17:37",
       "actual_booking_count": 1,
-      "weighting": 535
+      "weighting": 535,
+      "possible_reason": ""
     },
     {
       "hotel_id": 1685,
@@ -94,7 +103,8 @@
       "hotel_address_country_code": "CA",
       "last_booking_date": "2025-06-08 22:09:26",
       "actual_booking_count": 553,
-      "weighting": 521
+      "weighting": 521,
+      "possible_reason": ""
     },
     {
       "hotel_id": 73671,
@@ -103,7 +113,8 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2022-07-19 20:54:23",
       "actual_booking_count": 553,
-      "weighting": 506
+      "weighting": 506,
+      "possible_reason": "The Showboat Hotel in Atlantic City, US has not closed permanently. It has undergone renovations and is currently open for business. The hotel has not..."
     },
     {
       "hotel_id": 60853,
@@ -112,7 +123,8 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2025-08-31 01:06:03",
       "actual_booking_count": 509,
-      "weighting": 498
+      "weighting": 498,
+      "possible_reason": ""
     },
     {
       "hotel_id": 25499,
@@ -121,7 +133,8 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2023-10-12 00:17:51",
       "actual_booking_count": 499,
-      "weighting": 495
+      "weighting": 495,
+      "possible_reason": ""
     },
     {
       "hotel_id": 62318,
@@ -130,7 +143,8 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2025-11-29 14:42:49",
       "actual_booking_count": 486,
-      "weighting": 479
+      "weighting": 479,
+      "possible_reason": ""
     },
     {
       "hotel_id": 82488,
@@ -139,7 +153,8 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-02-05 15:25:02",
       "actual_booking_count": 483,
-      "weighting": 469
+      "weighting": 469,
+      "possible_reason": ""
     },
     {
       "hotel_id": 120342,
@@ -148,7 +163,8 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2025-08-09 14:41:18",
       "actual_booking_count": 460,
-      "weighting": 455
+      "weighting": 455,
+      "possible_reason": ""
     },
     {
       "hotel_id": 10656,
@@ -157,7 +173,8 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2025-08-05 19:35:15",
       "actual_booking_count": 461,
-      "weighting": 437
+      "weighting": 437,
+      "possible_reason": ""
     },
     {
       "hotel_id": 8460,
@@ -166,7 +183,8 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-01-29 19:40:44",
       "actual_booking_count": 454,
-      "weighting": 433
+      "weighting": 433,
+      "possible_reason": ""
     },
     {
       "hotel_id": 1611180,
@@ -175,7 +193,8 @@
       "hotel_address_country_code": "CA",
       "last_booking_date": "2025-03-18 21:33:51",
       "actual_booking_count": 13,
-      "weighting": 425
+      "weighting": 425,
+      "possible_reason": ""
     },
     {
       "hotel_id": 29265,
@@ -184,7 +203,8 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2025-12-09 03:45:12",
       "actual_booking_count": 425,
-      "weighting": 424
+      "weighting": 424,
+      "possible_reason": ""
     },
     {
       "hotel_id": 3295711,
@@ -193,7 +213,8 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-01-29 19:43:13",
       "actual_booking_count": 8,
-      "weighting": 424
+      "weighting": 424,
+      "possible_reason": ""
     },
     {
       "hotel_id": 51668,
@@ -202,7 +223,8 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2025-12-07 17:51:51",
       "actual_booking_count": 428,
-      "weighting": 419
+      "weighting": 419,
+      "possible_reason": ""
     },
     {
       "hotel_id": 3294431,
@@ -211,7 +233,8 @@
       "hotel_address_country_code": "CA",
       "last_booking_date": "2025-12-24 01:05:58",
       "actual_booking_count": 2,
-      "weighting": 417
+      "weighting": 417,
+      "possible_reason": ""
     },
     {
       "hotel_id": 87195,
@@ -220,7 +243,8 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2025-12-22 20:18:50",
       "actual_booking_count": 423,
-      "weighting": 416
+      "weighting": 416,
+      "possible_reason": ""
     },
     {
       "hotel_id": 33969,
@@ -229,7 +253,8 @@
       "hotel_address_country_code": "CA",
       "last_booking_date": "2024-05-16 01:10:33",
       "actual_booking_count": 487,
-      "weighting": 414
+      "weighting": 414,
+      "possible_reason": ""
     },
     {
       "hotel_id": 1152,
@@ -238,7 +263,8 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2020-03-11 19:50:32",
       "actual_booking_count": 436,
-      "weighting": 407
+      "weighting": 407,
+      "possible_reason": ""
     },
     {
       "hotel_id": 3294651,
@@ -247,7 +273,8 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-01-14 05:09:37",
       "actual_booking_count": 2,
-      "weighting": 406
+      "weighting": 406,
+      "possible_reason": ""
     },
     {
       "hotel_id": 79666,
@@ -256,7 +283,8 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2023-03-05 20:08:07",
       "actual_booking_count": 411,
-      "weighting": 398
+      "weighting": 398,
+      "possible_reason": ""
     },
     {
       "hotel_id": 79120,
@@ -265,7 +293,8 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2025-12-05 05:23:44",
       "actual_booking_count": 413,
-      "weighting": 397
+      "weighting": 397,
+      "possible_reason": ""
     },
     {
       "hotel_id": 808,
@@ -274,7 +303,8 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2025-02-22 21:00:52",
       "actual_booking_count": 407,
-      "weighting": 394
+      "weighting": 394,
+      "possible_reason": ""
     },
     {
       "hotel_id": 16244,
@@ -283,7 +313,8 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2025-12-05 02:32:29",
       "actual_booking_count": 414,
-      "weighting": 393
+      "weighting": 393,
+      "possible_reason": ""
     },
     {
       "hotel_id": 790,
@@ -292,7 +323,8 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2024-05-16 19:59:00",
       "actual_booking_count": 393,
-      "weighting": 389
+      "weighting": 389,
+      "possible_reason": ""
     },
     {
       "hotel_id": 86508,
@@ -301,7 +333,8 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2025-06-26 17:13:37",
       "actual_booking_count": 399,
-      "weighting": 389
+      "weighting": 389,
+      "possible_reason": ""
     },
     {
       "hotel_id": 79683,
@@ -310,7 +343,8 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2025-12-13 22:19:31",
       "actual_booking_count": 414,
-      "weighting": 389
+      "weighting": 389,
+      "possible_reason": ""
     },
     {
       "hotel_id": 16780,
@@ -319,7 +353,8 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2025-12-05 00:48:20",
       "actual_booking_count": 397,
-      "weighting": 386
+      "weighting": 386,
+      "possible_reason": ""
     },
     {
       "hotel_id": 75350,
@@ -328,7 +363,8 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2022-11-28 01:11:45",
       "actual_booking_count": 412,
-      "weighting": 383
+      "weighting": 383,
+      "possible_reason": ""
     },
     {
       "hotel_id": 28762,
@@ -337,7 +373,8 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2024-05-16 02:17:23",
       "actual_booking_count": 424,
-      "weighting": 380
+      "weighting": 380,
+      "possible_reason": "The Washington Hilton in Washington, D.C., US has not closed permanently, been renovated, or rebranded. There is no information indicating a change in..."
     },
     {
       "hotel_id": 407257,
@@ -346,7 +383,8 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2024-05-13 15:20:48",
       "actual_booking_count": 367,
-      "weighting": 375
+      "weighting": 375,
+      "possible_reason": ""
     },
     {
       "hotel_id": 83310,
@@ -355,7 +393,8 @@
       "hotel_address_country_code": "CA",
       "last_booking_date": "2024-07-15 16:46:27",
       "actual_booking_count": 378,
-      "weighting": 369
+      "weighting": 369,
+      "possible_reason": ""
     },
     {
       "hotel_id": 81798,
@@ -364,7 +403,8 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2024-10-30 23:47:21",
       "actual_booking_count": 375,
-      "weighting": 368
+      "weighting": 368,
+      "possible_reason": ""
     },
     {
       "hotel_id": 389334,
@@ -373,7 +413,8 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2024-05-12 00:15:07",
       "actual_booking_count": 415,
-      "weighting": 367
+      "weighting": 367,
+      "possible_reason": ""
     },
     {
       "hotel_id": 427890,
@@ -382,7 +423,8 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-01-20 20:07:12",
       "actual_booking_count": 381,
-      "weighting": 365
+      "weighting": 365,
+      "possible_reason": ""
     },
     {
       "hotel_id": 68054,
@@ -391,7 +433,8 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-02-02 00:09:47",
       "actual_booking_count": 376,
-      "weighting": 365
+      "weighting": 365,
+      "possible_reason": ""
     },
     {
       "hotel_id": 10265,
@@ -400,7 +443,8 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2025-09-11 01:43:50",
       "actual_booking_count": 362,
-      "weighting": 358
+      "weighting": 358,
+      "possible_reason": ""
     },
     {
       "hotel_id": 20402,
@@ -409,7 +453,8 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2025-12-13 20:05:55",
       "actual_booking_count": 351,
-      "weighting": 358
+      "weighting": 358,
+      "possible_reason": ""
     },
     {
       "hotel_id": 27952,
@@ -418,7 +463,8 @@
       "hotel_address_country_code": "CA",
       "last_booking_date": "2026-01-17 01:10:25",
       "actual_booking_count": 363,
-      "weighting": 358
+      "weighting": 358,
+      "possible_reason": ""
     },
     {
       "hotel_id": 48810,
@@ -427,7 +473,8 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2025-09-18 23:32:48",
       "actual_booking_count": 415,
-      "weighting": 349
+      "weighting": 349,
+      "possible_reason": ""
     },
     {
       "hotel_id": 42660,
@@ -436,7 +483,8 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-02-05 21:46:55",
       "actual_booking_count": 369,
-      "weighting": 348
+      "weighting": 348,
+      "possible_reason": ""
     },
     {
       "hotel_id": 32074,
@@ -445,7 +493,8 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2025-11-04 21:58:40",
       "actual_booking_count": 397,
-      "weighting": 345
+      "weighting": 345,
+      "possible_reason": ""
     },
     {
       "hotel_id": 76092,
@@ -454,7 +503,8 @@
       "hotel_address_country_code": "CA",
       "last_booking_date": "2026-01-04 23:30:19",
       "actual_booking_count": 352,
-      "weighting": 344
+      "weighting": 344,
+      "possible_reason": ""
     },
     {
       "hotel_id": 30755,
