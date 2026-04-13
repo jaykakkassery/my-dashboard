@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Hotel Log Dashboard · Last 1 days</title>
+<title>Hotel Log Dashboard · Last 6 hours</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;600;700&display=swap" rel="stylesheet"/>
 <style>
@@ -307,8 +307,8 @@
     <div class="sub">TST · Elasticsearch · HOTEL · Production</div>
   </div>
   <div class="header-right">
-    <div class="period-pill">Last 1 days</div>
-    <div class="gen-time">Generated 2026-04-13 13:58 EST</div>
+    <div class="period-pill">Last 6 hours</div>
+    <div class="gen-time">Generated 2026-04-13 14:06 EST</div>
   </div>
 </header>
 
@@ -318,23 +318,23 @@
   <div class="stat-row">
     <div class="stat-card c-error">
       <div class="stat-label">Errors</div>
-      <div class="stat-value">6,602</div>
+      <div class="stat-value">4,023</div>
     </div>
     <div class="stat-card c-warn">
       <div class="stat-label">Warnings</div>
-      <div class="stat-value">106,990</div>
+      <div class="stat-value">41,000</div>
     </div>
     <div class="stat-card c-info">
       <div class="stat-label">Info</div>
-      <div class="stat-value">5,602,777</div>
+      <div class="stat-value">2,102,762</div>
     </div>
     <div class="stat-card c-total">
       <div class="stat-label">Total Logs</div>
-      <div class="stat-value">5,716,369</div>
+      <div class="stat-value">2,147,785</div>
     </div>
     <div class="stat-card c-size">
       <div class="stat-label">Index Size</div>
-      <div class="stat-value">233.70 GB ~est<div class="stat-sub">209,109,815 docs</div></div>
+      <div class="stat-value">233.76 GB ~est<div class="stat-sub">209,164,855 docs</div></div>
     </div>
   </div>
 
@@ -343,14 +343,14 @@
     <h3>Log Volume Breakdown</h3>
     
     <div class="sev-bar-wrap">
-      <div class="sev-segment seg-error" style="width:0.1%" title="Error 0.1%"></div>
+      <div class="sev-segment seg-error" style="width:0.2%" title="Error 0.2%"></div>
       <div class="sev-segment seg-warn"  style="width:1.9%" title="Warn 1.9%"></div>
-      <div class="sev-segment seg-info"  style="width:98.0%" title="Info 98.0%"></div>
+      <div class="sev-segment seg-info"  style="width:97.9%" title="Info 97.9%"></div>
     </div>
     <div class="sev-legend">
-      <span class="dot dot-error"></span>Error 0.1%&nbsp;&nbsp;
+      <span class="dot dot-error"></span>Error 0.2%&nbsp;&nbsp;
       <span class="dot dot-warn"></span>Warn 1.9%&nbsp;&nbsp;
-      <span class="dot dot-info"></span>Info 98.0%
+      <span class="dot dot-info"></span>Info 97.9%
     </div>
   </div>
 
@@ -371,88 +371,88 @@
             <div class="msg-text">java.net.SocketException: Connection reset</div>
             <div class="bar-bg"><div class="bar-fill badge-error" style="width:100%"></div></div>
           </td>
-          <td><span class="badge badge-error">1,443</span></td>
+          <td><span class="badge badge-error">1,448</span></td>
         </tr>
 
         <tr>
           <td class="rank">#2</td>
           <td class="msg-cell">
             <div class="msg-text">HotelAvailabilityV2Service - Failed to decode and requery location token:</div>
-            <div class="bar-bg"><div class="bar-fill badge-error" style="width:88%"></div></div>
+            <div class="bar-bg"><div class="bar-fill badge-error" style="width:80%"></div></div>
           </td>
-          <td><span class="badge badge-error">1,267</span></td>
+          <td><span class="badge badge-error">1,160</span></td>
         </tr>
 
         <tr>
           <td class="rank">#3</td>
           <td class="msg-cell">
-            <div class="msg-text">org.joda.money.CurrencyMismatchException: Currencies differ: CAD/USD</div>
-            <div class="bar-bg"><div class="bar-fill badge-error" style="width:73%"></div></div>
+            <div class="msg-text">Connection reset</div>
+            <div class="bar-bg"><div class="bar-fill badge-error" style="width:26%"></div></div>
           </td>
-          <td><span class="badge badge-error">1,058</span></td>
+          <td><span class="badge badge-error">383</span></td>
         </tr>
 
         <tr>
           <td class="rank">#4</td>
           <td class="msg-cell">
-            <div class="msg-text">Connection reset</div>
-            <div class="bar-bg"><div class="bar-fill badge-error" style="width:27%"></div></div>
+            <div class="msg-text">play.api.UnexpectedException: Unexpected exception …</div>
+            <div class="bar-bg"><div class="bar-fill badge-error" style="width:9%"></div></div>
           </td>
-          <td><span class="badge badge-error">389</span></td>
+          <td><span class="badge badge-error">124</span></td>
         </tr>
 
         <tr>
           <td class="rank">#5</td>
           <td class="msg-cell">
-            <div class="msg-text">play.api.UnexpectedException: Unexpected exception …</div>
-            <div class="bar-bg"><div class="bar-fill badge-error" style="width:24%"></div></div>
+            <div class="msg-text">Hybrid Rate Select: Some rates could not be retrieved -- List …</div>
+            <div class="bar-bg"><div class="bar-fill badge-error" style="width:5%"></div></div>
           </td>
-          <td><span class="badge badge-error">346</span></td>
+          <td><span class="badge badge-error">78</span></td>
         </tr>
 
         <tr>
           <td class="rank">#6</td>
           <td class="msg-cell">
-            <div class="msg-text">Hybrid Rate Select: Some rates could not be retrieved -- List …</div>
-            <div class="bar-bg"><div class="bar-fill badge-error" style="width:18%"></div></div>
+            <div class="msg-text">java.util.concurrent.TimeoutException: Request timeout to api.rezserver.com/ …</div>
+            <div class="bar-bg"><div class="bar-fill badge-error" style="width:4%"></div></div>
           </td>
-          <td><span class="badge badge-error">263</span></td>
+          <td><span class="badge badge-error">60</span></td>
         </tr>
 
         <tr>
           <td class="rank">#7</td>
           <td class="msg-cell">
-            <div class="msg-text">net.liftweb.json.MappingException: No usable value for GetHotelDetailsRS</div>
-            <div class="bar-bg"><div class="bar-fill badge-error" style="width:12%"></div></div>
+            <div class="msg-text">java.io.IOException: {n}:Internal Server Error</div>
+            <div class="bar-bg"><div class="bar-fill badge-error" style="width:3%"></div></div>
           </td>
-          <td><span class="badge badge-error">171</span></td>
+          <td><span class="badge badge-error">50</span></td>
         </tr>
 
         <tr>
           <td class="rank">#8</td>
           <td class="msg-cell">
             <div class="msg-text">Booking failed</div>
-            <div class="bar-bg"><div class="bar-fill badge-error" style="width:9%"></div></div>
+            <div class="bar-bg"><div class="bar-fill badge-error" style="width:3%"></div></div>
           </td>
-          <td><span class="badge badge-error">129</span></td>
+          <td><span class="badge badge-error">43</span></td>
         </tr>
 
         <tr>
           <td class="rank">#9</td>
           <td class="msg-cell">
-            <div class="msg-text">net.liftweb.json.MappingException: No usable value for HotelDetailsInfo</div>
-            <div class="bar-bg"><div class="bar-fill badge-error" style="width:8%"></div></div>
+            <div class="msg-text">Unknown OffsetTimeUnit 'Some …</div>
+            <div class="bar-bg"><div class="bar-fill badge-error" style="width:3%"></div></div>
           </td>
-          <td><span class="badge badge-error">114</span></td>
+          <td><span class="badge badge-error">42</span></td>
         </tr>
 
         <tr>
           <td class="rank">#10</td>
           <td class="msg-cell">
-            <div class="msg-text">ppn bundle is empty. failed to retrieve from cache PropertyAvailabilityRequest …</div>
-            <div class="bar-bg"><div class="bar-fill badge-error" style="width:6%"></div></div>
+            <div class="msg-text">Unexpected error. java.lang.IndexOutOfBoundsException: {n} {n}</div>
+            <div class="bar-bg"><div class="bar-fill badge-error" style="width:2%"></div></div>
           </td>
-          <td><span class="badge badge-error">85</span></td>
+          <td><span class="badge badge-error">31</span></td>
         </tr></tbody>
       </table>
     </div>
@@ -471,88 +471,88 @@
             <div class="msg-text">Received hotel ID without prefix …</div>
             <div class="bar-bg"><div class="bar-fill badge-warn" style="width:100%"></div></div>
           </td>
-          <td><span class="badge badge-warn">45,590</span></td>
+          <td><span class="badge badge-warn">15,773</span></td>
         </tr>
 
         <tr>
           <td class="rank">#2</td>
           <td class="msg-cell">
-            <div class="msg-text">No Results Found!</div>
-            <div class="bar-bg"><div class="bar-fill badge-warn" style="width:34%"></div></div>
+            <div class="msg-text">LocationTokenService: No properties found for location token:</div>
+            <div class="bar-bg"><div class="bar-fill badge-warn" style="width:45%"></div></div>
           </td>
-          <td><span class="badge badge-warn">15,454</span></td>
+          <td><span class="badge badge-warn">7,066</span></td>
         </tr>
 
         <tr>
           <td class="rank">#3</td>
           <td class="msg-cell">
-            <div class="msg-text">LocationTokenService: No properties found for location token:</div>
-            <div class="bar-bg"><div class="bar-fill badge-warn" style="width:28%"></div></div>
+            <div class="msg-text">No Results Found!</div>
+            <div class="bar-bg"><div class="bar-fill badge-warn" style="width:39%"></div></div>
           </td>
-          <td><span class="badge badge-warn">12,896</span></td>
+          <td><span class="badge badge-warn">6,170</span></td>
         </tr>
 
         <tr>
           <td class="rank">#4</td>
           <td class="msg-cell">
-            <div class="msg-text">LocationTokenService: No properties found for location token: MC4wfDAuMHwxMnx8aG90ZWx8</div>
-            <div class="bar-bg"><div class="bar-fill badge-warn" style="width:12%"></div></div>
+            <div class="msg-text">Hotel Hybrid - buildFilterMetadata with …</div>
+            <div class="bar-bg"><div class="bar-fill badge-warn" style="width:2%"></div></div>
           </td>
-          <td><span class="badge badge-warn">5,297</span></td>
+          <td><span class="badge badge-warn">379</span></td>
         </tr>
 
         <tr>
           <td class="rank">#5</td>
           <td class="msg-cell">
-            <div class="msg-text">Hotel Hybrid - buildFilterMetadata with …</div>
+            <div class="msg-text">Filtering Sabre rate for hotel HOT- …</div>
             <div class="bar-bg"><div class="bar-fill badge-warn" style="width:2%"></div></div>
           </td>
-          <td><span class="badge badge-warn">1,055</span></td>
+          <td><span class="badge badge-warn">343</span></td>
         </tr>
 
         <tr>
           <td class="rank">#6</td>
           <td class="msg-cell">
-            <div class="msg-text">Filtering Sabre rate for hotel HOT- …</div>
+            <div class="msg-text">No sponsored listings for: Anaheim CA cache miss and no response after long wait.</div>
             <div class="bar-bg"><div class="bar-fill badge-warn" style="width:2%"></div></div>
           </td>
-          <td><span class="badge badge-warn">1,005</span></td>
+          <td><span class="badge badge-warn">240</span></td>
         </tr>
 
         <tr>
           <td class="rank">#7</td>
           <td class="msg-cell">
-            <div class="msg-text">No sponsored listings for: Anaheim CA cache miss and no response after long wait.</div>
+            <div class="msg-text">Got error produce response in correlation id …</div>
             <div class="bar-bg"><div class="bar-fill badge-warn" style="width:2%"></div></div>
           </td>
-          <td><span class="badge badge-warn">684</span></td>
+          <td><span class="badge badge-warn">240</span></td>
         </tr>
 
         <tr>
           <td class="rank">#8</td>
           <td class="msg-cell">
-            <div class="msg-text">Got error produce response in correlation id …</div>
+            <div class="msg-text">TravelPort Search HotelError: W …</div>
             <div class="bar-bg"><div class="bar-fill badge-warn" style="width:1%"></div></div>
           </td>
-          <td><span class="badge badge-warn">513</span></td>
+          <td><span class="badge badge-warn">230</span></td>
         </tr>
 
         <tr>
           <td class="rank">#9</td>
           <td class="msg-cell">
-            <div class="msg-text">LocationTokenService: No properties found for location token: MjEuNjk0MDI1fC03MS43OTc5Mjh8MTV8Q2hJSmRXdTd2bFZmUzRrUjNzR05Bb0RIRVg0fGhvdGVsfA==</div>
+            <div class="msg-text">Unable to retrieve cached search criteria to make sponsored listings call</div>
             <div class="bar-bg"><div class="bar-fill badge-warn" style="width:1%"></div></div>
           </td>
-          <td><span class="badge badge-warn">245</span></td>
+          <td><span class="badge badge-warn">185</span></td>
         </tr>
 
         <tr>
           <td class="rank">#10</td>
           <td class="msg-cell">
-            <div class="msg-text">Unable to retrieve cached search criteria to make sponsored listings call</div>
+            <div class="msg-text">{n} bad request, response = {</div>
             <div class="bar-bg"><div class="bar-fill badge-warn" style="width:1%"></div></div>
           </td>
-          <td><span class="badge badge-warn">238</span></td>
+          <td><span class="badge badge-warn">87</span></td>
         </tr></tbody>
       </table>
     </div>
@@ -574,34 +574,34 @@
             <div class="msg-text">Response</div>
             <div class="bar-bg"><div class="bar-fill badge-info" style="width:100%"></div></div>
           </td>
-          <td><span class="badge badge-info">742,881</span></td>
+          <td><span class="badge badge-info">281,927</span></td>
         </tr>
 
         <tr>
           <td class="rank">#2</td>
           <td class="msg-cell">
-            <div class="msg-text">Rate Cache: Checking availability of cache with key:</div>
-            <div class="bar-bg"><div class="bar-fill badge-info" style="width:17%"></div></div>
+            <div class="msg-text">HttpClient.get - URL: {url}</div>
+            <div class="bar-bg"><div class="bar-fill badge-info" style="width:24%"></div></div>
           </td>
-          <td><span class="badge badge-info">129,822</span></td>
+          <td><span class="badge badge-info">68,486</span></td>
         </tr>
 
         <tr>
           <td class="rank">#3</td>
           <td class="msg-cell">
-            <div class="msg-text">HotelAvailabilityV2Service.getFilters()</div>
-            <div class="bar-bg"><div class="bar-fill badge-info" style="width:10%"></div></div>
+            <div class="msg-text">Rate Cache: Checking availability of cache with key:</div>
+            <div class="bar-bg"><div class="bar-fill badge-info" style="width:16%"></div></div>
           </td>
-          <td><span class="badge badge-info">76,415</span></td>
+          <td><span class="badge badge-info">45,389</span></td>
         </tr>
 
         <tr>
           <td class="rank">#4</td>
           <td class="msg-cell">
-            <div class="msg-text">HttpClient.post - URL: {url}</div>
-            <div class="bar-bg"><div class="bar-fill badge-info" style="width:9%"></div></div>
+            <div class="msg-text">HotelAvailabilityV2Service.getFilters()</div>
+            <div class="bar-bg"><div class="bar-fill badge-info" style="width:10%"></div></div>
           </td>
-          <td><span class="badge badge-info">65,363</span></td>
+          <td><span class="badge badge-info">28,299</span></td>
         </tr>
 
         <tr>
@@ -610,16 +610,16 @@
             <div class="msg-text">HotelAvailabilityV2Service.GetHotels() time</div>
             <div class="bar-bg"><div class="bar-fill badge-info" style="width:8%"></div></div>
           </td>
-          <td><span class="badge badge-info">61,167</span></td>
+          <td><span class="badge badge-info">23,083</span></td>
         </tr>
 
         <tr>
           <td class="rank">#6</td>
           <td class="msg-cell">
             <div class="msg-text">HotelSearchRatesContoller.rates()</div>
-            <div class="bar-bg"><div class="bar-fill badge-info" style="width:8%"></div></div>
+            <div class="bar-bg"><div class="bar-fill badge-info" style="width:7%"></div></div>
           </td>
-          <td><span class="badge badge-info">56,410</span></td>
+          <td><span class="badge badge-info">20,006</span></td>
         </tr>
 
         <tr>
@@ -628,7 +628,7 @@
             <div class="msg-text">getImages: {n} totalTime: {n} ms photoTime: {n} masterTime: {n} ms processImageTime {n} ms</div>
             <div class="bar-bg"><div class="bar-fill badge-info" style="width:6%"></div></div>
           </td>
-          <td><span class="badge badge-info">48,191</span></td>
+          <td><span class="badge badge-info">17,186</span></td>
         </tr>
 
         <tr>
@@ -637,7 +637,7 @@
             <div class="msg-text">Total properties.. {n} hotels {n} vrbos..{n}</div>
             <div class="bar-bg"><div class="bar-fill badge-info" style="width:6%"></div></div>
           </td>
-          <td><span class="badge badge-info">43,131</span></td>
+          <td><span class="badge badge-info">16,563</span></td>
         </tr>
 
         <tr>
@@ -646,7 +646,7 @@
             <div class="msg-text">Filtered property count {n}</div>
             <div class="bar-bg"><div class="bar-fill badge-info" style="width:6%"></div></div>
           </td>
-          <td><span class="badge badge-info">40,997</span></td>
+          <td><span class="badge badge-info">15,541</span></td>
         </tr>
 
         <tr>
@@ -655,7 +655,7 @@
             <div class="msg-text">KeyDisclaimer Call... false</div>
             <div class="bar-bg"><div class="bar-fill badge-info" style="width:5%"></div></div>
           </td>
-          <td><span class="badge badge-info">37,053</span></td>
+          <td><span class="badge badge-info">13,766</span></td>
         </tr></tbody>
     </table>
   </div>
@@ -684,7 +684,7 @@
           <td class="msg-cell">
             <div class="msg-text">play.api.UnexpectedException: Unexpected exception …</div>
           </td>
-          <td><span class="badge badge-error">3,061</span></td>
+          <td><span class="badge badge-error">3,062</span></td>
         </tr>
 
         <tr>
@@ -766,7 +766,7 @@
           <td class="msg-cell">
             <div class="msg-text">LocationTokenService: No properties found for location token: NTQuNTI1OTYxNHwxNS4yNTUxMTg3fDE1fENoSUpoZHF0ejRhSTdVWVJlZkQ4cy1hWjczSXxob3RlbHw=</div>
           </td>
-          <td><span class="badge badge-warn">2,422</span></td>
+          <td><span class="badge badge-warn">2,416</span></td>
         </tr>
 
         <tr>
@@ -782,7 +782,7 @@
           <td class="msg-cell">
             <div class="msg-text">No sponsored listings for: Santa Barbara CA cache miss and no response after long wait.</div>
           </td>
-          <td><span class="badge badge-warn">1,058</span></td>
+          <td><span class="badge badge-warn">1,059</span></td>
         </tr>
 
         <tr>
@@ -814,7 +814,7 @@
           <td class="msg-cell">
             <div class="msg-text">LocationTokenService: No properties found for location token: MjIuNjQ5NTA0NHwtNzguOTc5NzI3MDk5OTk5OTl8MTV8Q2hJSlRSX1Q2RFdWS29rUm9iV05KUFVsbkpNfGhvdGVsfA==</div>
           </td>
-          <td><span class="badge badge-warn">120</span></td>
+          <td><span class="badge badge-warn">114</span></td>
         </tr>
 
         <tr>
@@ -847,7 +847,7 @@
 
 </main>
 
-<footer>TST Hotel Log Dashboard · Auto-generated · 2026-04-13 13:58 EST · @fields.app: hotel · env: green / blue</footer>
+<footer>TST Hotel Log Dashboard · Auto-generated · 2026-04-13 14:06 EST · @fields.app: hotel · env: green / blue</footer>
 
 </body>
 </html>
