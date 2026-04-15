@@ -1,0 +1,2403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expedia Campaign Integration - Interactive Prototype</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --primary-dark: #1e40af;
+            --primary-light: #3b82f6;
+            --accent: #60a5fa;
+            --accent-light: #93c5fd;
+            --success: #2563eb;
+            --bg: #f8fafc;
+            --bg-light: #ffffff;
+            --bg-card: #ffffff;
+            --text: #1e293b;
+            --text-dim: #64748b;
+            --border: #cbd5e1;
+            --glow: rgba(59, 130, 246, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Animated Background */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.03;
+        }
+
+        .grid-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(var(--border) 1px, transparent 1px),
+                linear-gradient(90deg, var(--border) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: gridMove 20s linear infinite;
+        }
+
+        @keyframes gridMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            padding: 3rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 3px solid var(--accent);
+            color: white;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, var(--glow) 0%, transparent 70%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+
+        h1 {
+            font-family: 'Archivo', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            position: relative;
+            animation: slideDown 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--accent-light);
+            position: relative;
+            animation: slideDown 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.2s backwards;
+        }
+
+        nav {
+            background: var(--bg-card);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-btn {
+            background: var(--bg-card);
+            border: 2px solid var(--border);
+            color: var(--text);
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: var(--primary-light);
+            transition: width 0.5s, height 0.5s, top 0.5s, left 0.5s;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+
+        .nav-btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .nav-btn:hover {
+            border-color: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(30, 58, 138, 0.2);
+        }
+
+        .nav-btn.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+            box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .section {
+            display: none;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .card:hover {
+            border-color: var(--primary-light);
+            box-shadow: 0 8px 24px rgba(30, 58, 138, 0.12);
+            transform: translateY(-2px);
+        }
+
+        h2 {
+            font-family: 'Archivo', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        h3 {
+            font-family: 'Archivo', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .flow-diagram {
+            background: var(--bg);
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            position: relative;
+        }
+
+        .flow-step {
+            background: var(--bg-card);
+            border: 2px solid var(--primary-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            position: relative;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .flow-step:hover {
+            border-color: var(--primary);
+            box-shadow: 0 4px 16px rgba(30, 58, 138, 0.15);
+            transform: scale(1.02);
+        }
+
+        .flow-arrow {
+            text-align: center;
+            color: var(--primary);
+            font-size: 2rem;
+            margin: 0.5rem 0;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .api-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        @media (max-width: 968px) {
+            .api-section {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .param-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            font-size: 0.85rem;
+        }
+
+        .param-table th {
+            background: var(--primary);
+            color: white;
+            padding: 0.75rem;
+            text-align: left;
+            font-weight: 600;
+            border: 1px solid var(--primary);
+        }
+
+        .param-table td {
+            padding: 0.75rem;
+            border: 1px solid var(--border);
+            background: var(--bg-card);
+        }
+
+        .param-table tr:hover td {
+            background: var(--bg);
+        }
+
+        code {
+            background: var(--bg);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            color: var(--primary);
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.9em;
+        }
+
+        pre {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1rem 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+            font-family: 'Consolas', 'Monaco', monospace;
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+        }
+
+        .badge.required {
+            background: #e91e63;
+        }
+
+        .badge.optional {
+            background: #607d8b;
+        }
+
+        .campaign-card {
+            background: linear-gradient(135deg, var(--bg-card), var(--bg));
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .campaign-card:hover {
+            border-color: var(--primary);
+            transform: translateX(10px);
+            box-shadow: 0 4px 16px rgba(30, 58, 138, 0.15);
+        }
+
+        .campaign-title {
+            font-family: 'Archivo', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .campaign-meta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .meta-item {
+            background: var(--bg);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            border: 1px solid var(--border);
+        }
+
+        .strategy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .strategy-card {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border: 2px solid var(--primary);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            color: white;
+        }
+
+        .strategy-card::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            right: -50px;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+            opacity: 0.3;
+        }
+
+        .strategy-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 32px rgba(30, 58, 138, 0.25);
+        }
+
+        .strategy-title {
+            font-family: 'Archivo', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .icon {
+            font-size: 2rem;
+            margin-right: 0.5rem;
+        }
+
+        .interactive-demo {
+            background: var(--bg);
+            border: 2px solid var(--primary-light);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .demo-controls {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .demo-input {
+            flex: 1;
+            min-width: 200px;
+            background: var(--bg-card);
+            border: 2px solid var(--border);
+            color: var(--text);
+            padding: 0.75rem;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .demo-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px var(--glow);
+        }
+
+        .demo-btn {
+            background: var(--primary);
+            border: none;
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .demo-btn:hover {
+            background: var(--primary-dark);
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
+        }
+
+        .demo-output {
+            background: var(--bg-card);
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            min-height: 200px;
+            font-size: 0.85rem;
+            overflow-x: auto;
+        }
+
+        .highlight {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 3rem;
+            margin: 2rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, var(--primary), var(--accent));
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-left: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -3rem;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--primary);
+            border: 3px solid var(--bg);
+            box-shadow: 0 0 0 3px var(--primary-light);
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .comparison-item {
+            background: var(--bg-card);
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .comparison-item:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .vs-badge {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            margin: 1rem 0;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .animate-in {
+            animation: slideInLeft 0.6s ease-out backwards;
+        }
+
+        .animate-in:nth-child(1) { animation-delay: 0.1s; }
+        .animate-in:nth-child(2) { animation-delay: 0.2s; }
+        .animate-in:nth-child(3) { animation-delay: 0.3s; }
+        .animate-in:nth-child(4) { animation-delay: 0.4s; }
+        .animate-in:nth-child(5) { animation-delay: 0.5s; }
+
+        footer {
+            background: var(--bg-card);
+            border-top: 2px solid var(--border);
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+            color: var(--text-dim);
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="grid-pattern"></div>
+    </div>
+
+    <header>
+        <h1>🚀 Expedia Campaign Integration</h1>
+        <p class="subtitle">Interactive Workflow Prototype & API Documentation</p>
+    </header>
+
+    <nav>
+        <button class="nav-btn active" onclick="showSection('overview')">📊 Overview</button>
+        <button class="nav-btn" onclick="showSection('flow')">🔄 Complete Flow</button>
+        <button class="nav-btn" onclick="showSection('campaigns')">📢 GET /campaigns</button>
+        <button class="nav-btn" onclick="showSection('promotions')">🏨 GET /promotions</button>
+        <button class="nav-btn" onclick="showSection('strategies')">💡 Implementation Strategies</button>
+        <button class="nav-btn" onclick="showSection('demo')">🎮 Interactive Demo</button>
+    </nav>
+
+    <div class="container">
+        <!-- Overview Section -->
+        <section id="overview" class="section active">
+            <div class="card">
+                <h2><span class="icon">🎯</span> What This Prototype Shows</h2>
+                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                    This interactive prototype demonstrates the complete implementation workflow for integrating 
+                    Expedia's Merchandising API to power campaign-based hotel deal shopping. It shows you:
+                </p>
+                <ul style="font-size: 1rem; line-height: 2;">
+                    <li>✅ Complete API request/response flow with all parameters</li>
+                    <li>✅ UI/UX flow diagrams for customer-facing pages</li>
+                    <li>✅ Multiple implementation strategies (homepage banners, email campaigns, mobile-only deals)</li>
+                    <li>✅ Live parameter examples you can test</li>
+                    <li>✅ Best practices for displaying campaigns and promotions</li>
+                </ul>
+            </div>
+
+            <div class="comparison-grid">
+                <div class="comparison-item animate-in">
+                    <h3 style="color: var(--accent); font-size: 1.3rem;">🔍 Step 1: Discovery</h3>
+                    <p>User browses available campaigns based on their travel preferences</p>
+                    <code style="display: block; margin-top: 1rem;">GET /campaigns</code>
+                </div>
+                <div class="comparison-item animate-in">
+                    <h3 style="color: var(--accent); font-size: 1.3rem;">🎯 Step 2: Selection</h3>
+                    <p>User picks a campaign and sees specific hotel deals</p>
+                    <code style="display: block; margin-top: 1rem;">GET /promotions</code>
+                </div>
+                <div class="comparison-item animate-in">
+                    <h3 style="color: var(--accent); font-size: 1.3rem;">🏨 Step 3: Details</h3>
+                    <p>System fetches hotel photos, amenities, and info</p>
+                    <code style="display: block; margin-top: 1rem;">Property Content API</code>
+                </div>
+                <div class="comparison-item animate-in">
+                    <h3 style="color: var(--accent); font-size: 1.3rem;">💰 Step 4: Booking</h3>
+                    <p>User sees live pricing and completes reservation</p>
+                    <code style="display: block; margin-top: 1rem;">GET /availability → POST /bookings</code>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Key Integration Points</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h4 style="color: var(--primary);">Campaign Discovery Page</h4>
+                        <p>Where users browse all active sales and promotions</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4 style="color: var(--primary);">Hotel Results Page</h4>
+                        <p>Displays ranked hotel deals within selected campaign</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4 style="color: var(--primary);">Property Detail Page</h4>
+                        <p>Shows full hotel information with live pricing</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4 style="color: var(--primary);">Booking Flow</h4>
+                        <p>Standard reservation process with campaign discount applied</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Complete Flow Section -->
+        <section id="flow" class="section">
+            <div class="card">
+                <h2><span class="icon">🔄</span> End-to-End Integration Flow</h2>
+                
+                <div class="flow-diagram">
+                    <div class="flow-step" onclick="showSection('campaigns')">
+                        <h3>👤 User Landing</h3>
+                        <p><strong>Trigger:</strong> User visits "Hotel Deals" or "Campaigns" page</p>
+                        <p><strong>Capture from User:</strong></p>
+                        <ul>
+                            <li>Travel dates (optional)</li>
+                            <li>Deal preference: Flash sale or always-on (optional)</li>
+                            <li>Minimum discount filter (optional)</li>
+                        </ul>
+                    </div>
+
+                    <div class="flow-arrow">⬇️</div>
+
+                    <div class="flow-step" onclick="showSection('campaigns')">
+                        <h3>📡 API Call: GET /campaigns</h3>
+                        <p><strong>Request Parameters:</strong></p>
+                        <pre>language: en-US (required)
+bookable_start: 2026-04-01 (optional)
+bookable_end: 2026-04-30 (optional)
+stay_start: 2026-07-01 (optional)
+stay_end: 2026-07-31 (optional)
+lifetime: limited_time_offer | evergreen (optional)
+min_discount: 20 (optional)
+blockout_dates: false (optional)</pre>
+                        
+                        <p style="margin-top: 1rem;"><strong>Response Returns:</strong></p>
+                        <ul>
+                            <li>Campaign ID, name, type (LTO vs Evergreen)</li>
+                            <li>Bookable window, travel window</li>
+                            <li>Discount range (min/max)</li>
+                            <li>Property count</li>
+                            <li>Marketing assets (images, headlines, copy)</li>
+                        </ul>
+                    </div>
+
+                    <div class="flow-arrow">⬇️</div>
+
+                    <div class="flow-step">
+                        <h3>🎨 UI Rendering: Campaign Cards</h3>
+                        <p><strong>Display Elements:</strong></p>
+                        <ul>
+                            <li>Campaign banner image from <code>assets.thematic_images</code></li>
+                            <li>Headline from <code>suggested_copy.headline</code></li>
+                            <li>Countdown timer: <code>bookable_end - today</code></li>
+                            <li>Discount badge: "Up to {max_discount}% off"</li>
+                            <li>Property count: "{property_count} hotels participating"</li>
+                        </ul>
+                    </div>
+
+                    <div class="flow-arrow">⬇️</div>
+
+                    <div class="flow-step" onclick="showSection('promotions')">
+                        <h3>🖱️ User Selection</h3>
+                        <p><strong>Action:</strong> User clicks on a campaign card</p>
+                        <p><strong>Additional Filters (Optional):</strong></p>
+                        <ul>
+                            <li>Destination (city/region)</li>
+                            <li>Star rating</li>
+                            <li>Amenities (pool, WiFi, etc.)</li>
+                        </ul>
+                    </div>
+
+                    <div class="flow-arrow">⬇️</div>
+
+                    <div class="flow-step" onclick="showSection('promotions')">
+                        <h3>📡 API Call: GET /promotions</h3>
+                        <p><strong>Request Parameters:</strong></p>
+                        <pre>language: en-US (required)
+campaign_id: CAMP_SUMMER2026 (required - from previous step)
+region_id: 3000 (optional - Paris)
+min_star_rating: 3 (optional)
+min_discount: 20 (optional)
+sort_by: promotion (optional - ML ranking)</pre>
+                        
+                        <p style="margin-top: 1rem;"><strong>Response Returns:</strong></p>
+                        <ul>
+                            <li>Property IDs + Deal IDs</li>
+                            <li>Specific discount per hotel (e.g., 35% off)</li>
+                            <li>ML relevancy score (1-10,000)</li>
+                            <li>Bookable/stay dates, blackout dates</li>
+                            <li>Member-only or mobile-only flags</li>
+                            <li>Tokenized link to Property Content API</li>
+                        </ul>
+                    </div>
+
+                    <div class="flow-arrow">⬇️</div>
+
+                    <div class="flow-step">
+                        <h3>🏨 Property Content Fetch</h3>
+                        <p><strong>For Each Hotel Deal:</strong></p>
+                        <pre>GET Property Content API
+  ?token={property_content_link}
+  
+Returns:
+  - Hotel name, address
+  - Photos, amenities
+  - Star rating, reviews
+  - Description</pre>
+                    </div>
+
+                    <div class="flow-arrow">⬇️</div>
+
+                    <div class="flow-step">
+                        <h3>🎨 UI Rendering: Hotel Deal Cards</h3>
+                        <p><strong>Display Elements:</strong></p>
+                        <ul>
+                            <li>Hotel photo + name (from Property Content API)</li>
+                            <li>Discount badge: "35% OFF" (from Promotions API)</li>
+                            <li>Stay date restrictions (if any)</li>
+                            <li>"Member Exclusive" or "Mobile Only" badge</li>
+                            <li><strong>Note:</strong> Actual prices come from GET /availability, not from promotions</li>
+                        </ul>
+                    </div>
+
+                    <div class="flow-arrow">⬇️</div>
+
+                    <div class="flow-step">
+                        <h3>🗓️ User Action: Date Selection</h3>
+                        <p><strong>Capture:</strong> Check-in and check-out dates within campaign stay window</p>
+                    </div>
+
+                    <div class="flow-arrow">⬇️</div>
+
+                    <div class="flow-step">
+                        <h3>📡 API Call: GET /availability</h3>
+                        <p><strong>Request Parameters:</strong></p>
+                        <pre>property_id: from promotions response
+check_in: 2026-07-15
+check_out: 2026-07-18
+deal: true (enables campaign pricing)
+adults: 2
+rooms: 1</pre>
+                        
+                        <p style="margin-top: 1rem;"><strong>Response Returns:</strong></p>
+                        <ul>
+                            <li>Live room availability</li>
+                            <li>Final pricing with discount applied</li>
+                            <li>Cancellation policy</li>
+                            <li>Room type options</li>
+                        </ul>
+                    </div>
+
+                    <div class="flow-arrow">⬇️</div>
+
+                    <div class="flow-step">
+                        <h3>💳 Booking Completion</h3>
+                        <p><strong>Final Step:</strong> POST /bookings with selected room and dates</p>
+                        <p><strong>Result:</strong> Confirmed reservation with campaign discount applied ✅</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Campaigns API Section -->
+        <section id="campaigns" class="section">
+            <div class="card">
+                <h2><span class="icon">📢</span> GET /campaigns API Details</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 2rem;">
+                    The Campaigns endpoint is your "discovery" layer. It returns a list of active sales/promotions 
+                    that you can display to users. Think of it as browsing the catalog of available deals.
+                </p>
+
+                <h3>📥 Request Parameters</h3>
+                <table class="param-table">
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Type</th>
+                            <th>Required?</th>
+                            <th>Description</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>language</code></td>
+                            <td>string</td>
+                            <td><span class="badge required">Required</span></td>
+                            <td>BCP47 language code. Currently only en-US supported</td>
+                            <td><code>en-US</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>bookable_start</code></td>
+                            <td>date</td>
+                            <td><span class="badge optional">Optional</span></td>
+                            <td>Return campaigns bookable on or after this date</td>
+                            <td><code>2026-04-01</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>bookable_end</code></td>
+                            <td>date</td>
+                            <td><span class="badge optional">Optional</span></td>
+                            <td>Return campaigns bookable on or before this date</td>
+                            <td><code>2026-04-30</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>stay_start</code></td>
+                            <td>date</td>
+                            <td><span class="badge optional">Optional</span></td>
+                            <td>Return campaigns with stay window starting on/after this date</td>
+                            <td><code>2026-07-01</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>stay_end</code></td>
+                            <td>date</td>
+                            <td><span class="badge optional">Optional</span></td>
+                            <td>Return campaigns with stay window ending on/before this date</td>
+                            <td><code>2026-07-31</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>lifetime</code></td>
+                            <td>enum</td>
+                            <td><span class="badge optional">Optional</span></td>
+                            <td>Filter by campaign type: limited_time_offer or evergreen</td>
+                            <td><code>limited_time_offer</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>min_discount</code></td>
+                            <td>number</td>
+                            <td><span class="badge optional">Optional</span></td>
+                            <td>Only return campaigns with min discount at/above this value</td>
+                            <td><code>20</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>blockout_dates</code></td>
+                            <td>boolean</td>
+                            <td><span class="badge optional">Optional</span></td>
+                            <td>true = only WITH blackouts, false = only WITHOUT blackouts</td>
+                            <td><code>false</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 style="margin-top: 2rem;">📤 Response Parameters</h3>
+                <table class="param-table">
+                    <thead>
+                        <tr>
+                            <th>Field</th>
+                            <th>Type</th>
+                            <th>Description</th>
+                            <th>How to Use in UI</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>id</code></td>
+                            <td>string</td>
+                            <td>Unique campaign identifier</td>
+                            <td>Pass to GET /promotions to fetch hotels in this campaign</td>
+                        </tr>
+                        <tr>
+                            <td><code>name</code></td>
+                            <td>string</td>
+                            <td>Campaign name (e.g., "Summer Flash Sale 2026")</td>
+                            <td>Display as campaign title/heading</td>
+                        </tr>
+                        <tr>
+                            <td><code>lifetime</code></td>
+                            <td>enum</td>
+                            <td>limited_time_offer or evergreen</td>
+                            <td>Show urgency badges: "Limited Time!" vs "Always On"</td>
+                        </tr>
+                        <tr>
+                            <td><code>bookable_start</code></td>
+                            <td>date</td>
+                            <td>When users can start booking</td>
+                            <td>Calculate days until campaign opens</td>
+                        </tr>
+                        <tr>
+                            <td><code>bookable_end</code></td>
+                            <td>date</td>
+                            <td>Last day users can book</td>
+                            <td>Countdown timer: "X days left to book!"</td>
+                        </tr>
+                        <tr>
+                            <td><code>stay_start</code></td>
+                            <td>date</td>
+                            <td>Earliest check-in date</td>
+                            <td>Show travel window: "Stay Jun–Aug 2026"</td>
+                        </tr>
+                        <tr>
+                            <td><code>stay_end</code></td>
+                            <td>date</td>
+                            <td>Latest check-out date</td>
+                            <td>Show travel window: "Stay Jun–Aug 2026"</td>
+                        </tr>
+                        <tr>
+                            <td><code>min_discount</code></td>
+                            <td>number</td>
+                            <td>Lowest discount in campaign (e.g., 10)</td>
+                            <td>Show "From 10% off" messaging</td>
+                        </tr>
+                        <tr>
+                            <td><code>max_discount</code></td>
+                            <td>number</td>
+                            <td>Highest discount in campaign (e.g., 60)</td>
+                            <td>Banner headline: "Up to 60% OFF!"</td>
+                        </tr>
+                        <tr>
+                            <td><code>property_count</code></td>
+                            <td>number</td>
+                            <td>Number of participating hotels</td>
+                            <td>Show "4,820 hotels participating"</td>
+                        </tr>
+                        <tr>
+                            <td><code>assets.thematic_images</code></td>
+                            <td>array</td>
+                            <td>Expedia-curated banner images</td>
+                            <td>Use as campaign card/banner background images</td>
+                        </tr>
+                        <tr>
+                            <td><code>assets.destination_images</code></td>
+                            <td>array</td>
+                            <td>Destination photography</td>
+                            <td>Use in location-specific sections</td>
+                        </tr>
+                        <tr>
+                            <td><code>assets.suggested_copy.headline</code></td>
+                            <td>string</td>
+                            <td>Pre-written headline</td>
+                            <td>Use as campaign card title</td>
+                        </tr>
+                        <tr>
+                            <td><code>assets.suggested_copy.subheadline</code></td>
+                            <td>string</td>
+                            <td>Supporting text</td>
+                            <td>Use as campaign card subtitle/description</td>
+                        </tr>
+                        <tr>
+                            <td><code>blockout_dates</code></td>
+                            <td>boolean</td>
+                            <td>Whether campaign has date restrictions</td>
+                            <td>Show warning: "Some dates may be excluded"</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 style="margin-top: 2rem;">💡 Example Request</h3>
+                <pre>GET https://api.expediagroup.com/merchandising/v1/campaigns
+  ?language=en-US
+  &bookable_start=2026-03-11
+  &bookable_end=2026-04-30
+  &stay_start=2026-07-01
+  &stay_end=2026-07-31
+  &lifetime=limited_time_offer
+  &min_discount=20
+  &blockout_dates=false</pre>
+
+                <h3>✅ Example Response (Simplified)</h3>
+                <pre>{
+  "campaigns": [
+    {
+      "id": "CAMP_SUMMER2026",
+      "name": "Summer Flash Sale 2026",
+      "lifetime": "limited_time_offer",
+      "bookable_start": "2026-04-01",
+      "bookable_end": "2026-04-30",
+      "stay_start": "2026-06-01",
+      "stay_end": "2026-08-31",
+      "min_discount": 15,
+      "max_discount": 60,
+      "property_count": 4820,
+      "blockout_dates": false,
+      "assets": {
+        "thematic_images": [
+          {
+            "url": "https://example.com/summer-sale-banner.jpg",
+            "width": 1200,
+            "height": 400
+          }
+        ],
+        "suggested_copy": {
+          "headline": "Summer Savings — Up to 60% Off",
+          "subheadline": "Book by April 30. Stay Jun–Aug."
+        }
+      }
+    }
+  ]
+}</pre>
+            </div>
+
+            <div class="card">
+                <h3>🎯 Real Campaign Examples</h3>
+                
+                <div class="campaign-card">
+                    <div class="campaign-title">🏖️ Summer Flash Sale 2026</div>
+                    <p><strong>Type:</strong> Limited Time Offer</p>
+                    <p><strong>Headline:</strong> "Summer Savings — Up to 60% Off"</p>
+                    <div class="campaign-meta">
+                        <div class="meta-item">📅 Book: Apr 1–30</div>
+                        <div class="meta-item">✈️ Travel: Jun 1–Aug 31</div>
+                        <div class="meta-item">💰 15–60% off</div>
+                        <div class="meta-item">🏨 4,820 hotels</div>
+                    </div>
+                    <p style="margin-top: 1rem; color: var(--text-dim);">
+                        <strong>Best for:</strong> Homepage banner with countdown. Email campaigns in early April.
+                    </p>
+                </div>
+
+                <div class="campaign-card">
+                    <div class="campaign-title">🌅 Early Bird Escape 2026</div>
+                    <p><strong>Type:</strong> Limited Time Offer (2-week window!)</p>
+                    <p><strong>Headline:</strong> "Book Early, Save Big — Up to 45% Off"</p>
+                    <div class="campaign-meta">
+                        <div class="meta-item">📅 Book: Mar 11–25</div>
+                        <div class="meta-item">✈️ Travel: May 1–Sep 30</div>
+                        <div class="meta-item">💰 20–45% off</div>
+                        <div class="meta-item">🏨 2,100 hotels</div>
+                    </div>
+                    <p style="margin-top: 1rem; color: var(--text-dim);">
+                        <strong>Best for:</strong> Email to past customers. "Only 14 days to book!"
+                    </p>
+                </div>
+
+                <div class="campaign-card">
+                    <div class="campaign-title">🎉 Weekend Getaway Deals</div>
+                    <p><strong>Type:</strong> Evergreen (Always On)</p>
+                    <p><strong>Headline:</strong> "Spontaneous Weekend? We've Got Deals."</p>
+                    <div class="campaign-meta">
+                        <div class="meta-item">📅 Book: Anytime</div>
+                        <div class="meta-item">✈️ Travel: Anytime</div>
+                        <div class="meta-item">💰 10–40% off</div>
+                        <div class="meta-item">🏨 12,300 hotels</div>
+                    </div>
+                    <p style="margin-top: 1rem; color: var(--text-dim);">
+                        <strong>Best for:</strong> Permanent "Deals" section. App widget. No campaign management needed.
+                    </p>
+                </div>
+
+                <div class="campaign-card">
+                    <div class="campaign-title">👥 Member Exclusive Flash Sale</div>
+                    <p><strong>Type:</strong> Limited Time Offer (72 hours!)</p>
+                    <p><strong>Headline:</strong> "Members Save 25–55%"</p>
+                    <div class="campaign-meta">
+                        <div class="meta-item">📅 Book: Mar 20–22</div>
+                        <div class="meta-item">✈️ Travel: Apr 1–Jun 30</div>
+                        <div class="meta-item">💰 25–55% off</div>
+                        <div class="meta-item">🏨 1,800 hotels</div>
+                        <div class="meta-item">🔒 Members Only</div>
+                    </div>
+                    <p style="margin-top: 1rem; color: var(--text-dim);">
+                        <strong>Best for:</strong> Push notification to logged-in users only.
+                    </p>
+                </div>
+
+                <div class="campaign-card">
+                    <div class="campaign-title">📱 Mobile App Weekend Flash</div>
+                    <p><strong>Type:</strong> Limited Time Offer (Recurring Weekly)</p>
+                    <p><strong>Headline:</strong> "App-Only Savings This Weekend"</p>
+                    <div class="campaign-meta">
+                        <div class="meta-item">📅 Book: Fri–Sun only</div>
+                        <div class="meta-item">✈️ Travel: Any future dates</div>
+                        <div class="meta-item">💰 15–50% off</div>
+                        <div class="meta-item">🏨 3,400 hotels</div>
+                        <div class="meta-item">📱 Mobile Only</div>
+                    </div>
+                    <p style="margin-top: 1rem; color: var(--text-dim);">
+                        <strong>Best for:</strong> In-app banners. Drives mobile bookings and app downloads.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Promotions API Section -->
+        <section id="promotions" class="section">
+            <div class="card">
+                <h2><span class="icon">🏨</span> GET /promotions API Details</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 2rem;">
+                    After the user selects a campaign, you call the Promotions endpoint to get the actual 
+                    hotel deals inside that campaign. This returns a ranked list of properties with ML-powered 
+                    relevancy scoring.
+                </p>
+
+                <h3>📥 Request Parameters</h3>
+                <table class="param-table">
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Type</th>
+                            <th>Required?</th>
+                            <th>Description</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>language</code></td>
+                            <td>string</td>
+                            <td><span class="badge required">Required</span></td>
+                            <td>BCP47 language code</td>
+                            <td><code>en-US</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>campaign_id</code></td>
+                            <td>string</td>
+                            <td><span class="badge required">Required</span></td>
+                            <td>Campaign ID from GET /campaigns response</td>
+                            <td><code>CAMP_SUMMER2026</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>region_id</code></td>
+                            <td>string</td>
+                            <td><span class="badge optional">Optional</span></td>
+                            <td>Filter by city region (from Geography API). Only city-type regions work.</td>
+                            <td><code>3000</code> (Paris)</td>
+                        </tr>
+                        <tr>
+                            <td><code>min_star_rating</code></td>
+                            <td>number</td>
+                            <td><span class="badge optional">Optional</span></td>
+                            <td>Minimum hotel star rating (1-5)</td>
+                            <td><code>3</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>min_discount</code></td>
+                            <td>number</td>
+                            <td><span class="badge optional">Optional</span></td>
+                            <td>Only return deals with discount at/above this value</td>
+                            <td><code>20</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>sort_by</code></td>
+                            <td>enum</td>
+                            <td><span class="badge optional">Optional</span></td>
+                            <td>Ranking method: "promotion" (ML score) or "discount" (highest % first)</td>
+                            <td><code>promotion</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 style="margin-top: 2rem;">📤 Response Parameters</h3>
+                <table class="param-table">
+                    <thead>
+                        <tr>
+                            <th>Field</th>
+                            <th>Type</th>
+                            <th>Description</th>
+                            <th>How to Use in UI</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>property_id</code></td>
+                            <td>string</td>
+                            <td>Unique hotel identifier</td>
+                            <td>Pass to Property Content API and Availability API</td>
+                        </tr>
+                        <tr>
+                            <td><code>deal_id</code></td>
+                            <td>string</td>
+                            <td>Unique promotion identifier</td>
+                            <td>Track which specific deal user clicked on</td>
+                        </tr>
+                        <tr>
+                            <td><code>campaign_id</code></td>
+                            <td>string</td>
+                            <td>Parent campaign ID</td>
+                            <td>Reference back to campaign details</td>
+                        </tr>
+                        <tr>
+                            <td><code>discount</code></td>
+                            <td>number</td>
+                            <td>Discount percentage for THIS hotel (e.g., 35)</td>
+                            <td>Display badge: "35% OFF"</td>
+                        </tr>
+                        <tr>
+                            <td><code>score</code></td>
+                            <td>number</td>
+                            <td>ML relevancy score (1–10,000). Higher = more likely to convert</td>
+                            <td>Used for ranking. Not shown to user.</td>
+                        </tr>
+                        <tr>
+                            <td><code>bookable_start</code></td>
+                            <td>date</td>
+                            <td>When this deal becomes bookable</td>
+                            <td>Show "Available starting Apr 1"</td>
+                        </tr>
+                        <tr>
+                            <td><code>bookable_end</code></td>
+                            <td>date</td>
+                            <td>Last day to book this deal</td>
+                            <td>Countdown: "Book within X days"</td>
+                        </tr>
+                        <tr>
+                            <td><code>stay_start</code></td>
+                            <td>date</td>
+                            <td>Earliest check-in date for this deal</td>
+                            <td>Date picker constraint</td>
+                        </tr>
+                        <tr>
+                            <td><code>stay_end</code></td>
+                            <td>date</td>
+                            <td>Latest check-out date for this deal</td>
+                            <td>Date picker constraint</td>
+                        </tr>
+                        <tr>
+                            <td><code>blackout_dates</code></td>
+                            <td>array</td>
+                            <td>Dates excluded from the deal</td>
+                            <td>Disable these dates in date picker. Show "Some dates excluded"</td>
+                        </tr>
+                        <tr>
+                            <td><code>member_only</code></td>
+                            <td>boolean</td>
+                            <td>Whether deal requires membership</td>
+                            <td>Show "Members Only" badge. Hide if user not logged in.</td>
+                        </tr>
+                        <tr>
+                            <td><code>mobile_only</code></td>
+                            <td>boolean</td>
+                            <td>Whether deal is mobile app exclusive</td>
+                            <td>Show "Mobile App Exclusive" badge</td>
+                        </tr>
+                        <tr>
+                            <td><code>property_content_link</code></td>
+                            <td>string</td>
+                            <td>Tokenized URL to Property Content API</td>
+                            <td>Fetch hotel name, photos, amenities, address</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 style="margin-top: 2rem;">💡 Example Request</h3>
+                <pre>GET https://api.expediagroup.com/merchandising/v1/promotions
+  ?language=en-US
+  &campaign_id=CAMP_SUMMER2026
+  &region_id=3000
+  &min_star_rating=3
+  &min_discount=20
+  &sort_by=promotion</pre>
+
+                <h3>✅ Example Response (Simplified)</h3>
+                <pre>{
+  "promotions": [
+    {
+      "property_id": "12345",
+      "deal_id": "DEAL_12345_SUMMER",
+      "campaign_id": "CAMP_SUMMER2026",
+      "discount": 35,
+      "score": 8450,
+      "bookable_start": "2026-04-01",
+      "bookable_end": "2026-04-30",
+      "stay_start": "2026-06-01",
+      "stay_end": "2026-08-31",
+      "blackout_dates": ["2026-07-04", "2026-07-14"],
+      "member_only": false,
+      "mobile_only": false,
+      "property_content_link": "https://api.expediagroup.com/content/v3/properties/12345?token=abc123"
+    },
+    {
+      "property_id": "67890",
+      "deal_id": "DEAL_67890_SUMMER",
+      "campaign_id": "CAMP_SUMMER2026",
+      "discount": 42,
+      "score": 7820,
+      "bookable_start": "2026-04-01",
+      "bookable_end": "2026-04-30",
+      "stay_start": "2026-06-01",
+      "stay_end": "2026-08-31",
+      "blackout_dates": [],
+      "member_only": true,
+      "mobile_only": false,
+      "property_content_link": "https://api.expediagroup.com/content/v3/properties/67890?token=def456"
+    }
+  ]
+}</pre>
+            </div>
+
+            <div class="card">
+                <h3>🔗 Next Steps: Property Content Fetch</h3>
+                <p>For each promotion, you call the tokenized <code>property_content_link</code> to get:</p>
+                <ul style="margin-top: 1rem; line-height: 2;">
+                    <li>🏨 <strong>Hotel name</strong> and address</li>
+                    <li>📸 <strong>Photos</strong> (hero images, room photos, amenity photos)</li>
+                    <li>⭐ <strong>Star rating</strong> and guest review scores</li>
+                    <li>🛎️ <strong>Amenities</strong> (WiFi, pool, parking, gym, etc.)</li>
+                    <li>📝 <strong>Description</strong> and key features</li>
+                </ul>
+                <p style="margin-top: 1.5rem;">
+                    This data combines with the discount from promotions to create your hotel deal card UI.
+                </p>
+
+                <div style="background: var(--bg-light); border: 2px solid var(--accent); border-radius: 8px; padding: 1.5rem; margin-top: 2rem;">
+                    <h4 style="color: var(--accent); margin-bottom: 1rem;">Example Hotel Deal Card</h4>
+                    <div style="display: grid; grid-template-columns: 200px 1fr; gap: 1rem;">
+                        <div style="background: var(--bg-card); height: 150px; display: flex; align-items: center; justify-content: center; border-radius: 8px; border: 1px solid var(--border);">
+                            [Hotel Photo]
+                        </div>
+                        <div>
+                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem;">
+                                <h4 style="margin: 0; color: var(--text);">Le Grand Hotel Paris</h4>
+                                <span class="badge" style="background: var(--success);">35% OFF</span>
+                            </div>
+                            <p style="color: var(--text-dim); margin: 0.5rem 0;">⭐⭐⭐⭐ • Central Paris • 8.5/10 rating</p>
+                            <p style="margin: 0.5rem 0;">✓ Free WiFi • Pool • Spa • Restaurant</p>
+                            <p style="margin: 0.5rem 0; color: var(--text-dim); font-size: 0.9rem;">
+                                35% discount available • Select dates to see pricing
+                            </p>
+                            <p style="font-size: 0.85rem; color: var(--text-dim); margin-top: 1rem;">
+                                Valid Jun 1–Aug 31 • Book by Apr 30
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Strategies Section -->
+        <section id="strategies" class="section">
+            <div class="card">
+                <h2><span class="icon">💡</span> Implementation Strategies</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 2rem;">
+                    Visual examples of how to implement campaigns across different channels.
+                </p>
+            </div>
+
+            <!-- Homepage Strategy -->
+            <div class="card">
+                <h3>🏠 Homepage Hero Banner + Campaign Cards</h3>
+                <p style="margin-bottom: 1.5rem;"><strong>Strategy:</strong> Feature top Limited Time Offer in hero section with additional campaigns below</p>
+                
+                <div style="border: 2px solid var(--border); border-radius: 12px; overflow: hidden; background: white;">
+                    <!-- Hero Banner -->
+                    <div style="background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); padding: 3rem 2rem; color: white; position: relative; overflow: hidden;">
+                        <div style="position: absolute; top: 10px; right: 20px; background: rgba(255, 255, 255, 0.2); padding: 0.5rem 1rem; border-radius: 20px; backdrop-filter: blur(10px);">
+                            ⏰ 19 days left to book
+                        </div>
+                        <div style="max-width: 600px;">
+                            <div style="background: #ef4444; color: white; display: inline-block; padding: 0.3rem 0.8rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600; margin-bottom: 0.5rem;">LIMITED TIME OFFER</div>
+                            <h2 style="font-size: 2.5rem; margin: 0.5rem 0; font-weight: 700;">Summer Savings — Up to 60% Off</h2>
+                            <p style="font-size: 1.1rem; margin: 1rem 0; opacity: 0.95;">Book by April 30. Travel June–August 2026</p>
+                            <p style="font-size: 0.9rem; margin-bottom: 1.5rem; opacity: 0.85;">4,820 hotels participating worldwide</p>
+                            <button onclick="showPromotionResults()" style="background: white; color: #1e3a8a; border: none; padding: 1rem 2rem; border-radius: 8px; font-weight: 600; font-size: 1rem; cursor: pointer;">View All Deals →</button>
+                        </div>
+                    </div>
+
+                    <!-- Campaign Cards Grid -->
+                    <div style="padding: 2rem; background: #f8fafc;">
+                        <h3 style="margin-bottom: 1.5rem; color: #1e293b;">More Deals & Promotions</h3>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                            
+                            <!-- Card 1 -->
+                            <div style="background: white; border: 2px solid #e2e8f0; border-radius: 12px; overflow: hidden; transition: all 0.3s;">
+                                <div style="background: linear-gradient(135deg, #059669, #10b981); height: 120px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">
+                                    🌅
+                                </div>
+                                <div style="padding: 1.5rem;">
+                                    <div style="background: #f59e0b; color: white; display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.7rem; font-weight: 600; margin-bottom: 0.5rem;">FLASH SALE</div>
+                                    <h4 style="margin: 0.5rem 0; font-size: 1.2rem; color: #1e293b;">Early Bird Escape 2026</h4>
+                                    <p style="font-size: 0.85rem; color: #64748b; margin: 0.5rem 0;">Book Mar 11–25 • Travel May–Sep</p>
+                                    <div style="margin: 1rem 0; padding-top: 1rem; border-top: 1px solid #e2e8f0;">
+                                        <div style="font-size: 1.5rem; font-weight: 700; color: #059669;">Up to 45% OFF</div>
+                                        <div style="font-size: 0.8rem; color: #64748b; margin-top: 0.25rem;">2,100 hotels</div>
+                                    </div>
+                                    <button onclick="showPromotionResults()" style="width: 100%; background: #1e3a8a; color: white; border: none; padding: 0.75rem; border-radius: 6px; font-weight: 600; cursor: pointer;">Browse Deals</button>
+                                </div>
+                            </div>
+
+                            <!-- Card 2 -->
+                            <div style="background: white; border: 2px solid #e2e8f0; border-radius: 12px; overflow: hidden;">
+                                <div style="background: linear-gradient(135deg, #7c3aed, #a78bfa); height: 120px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">
+                                    🎉
+                                </div>
+                                <div style="padding: 1.5rem;">
+                                    <div style="background: #10b981; color: white; display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.7rem; font-weight: 600; margin-bottom: 0.5rem;">ALWAYS ON</div>
+                                    <h4 style="margin: 0.5rem 0; font-size: 1.2rem; color: #1e293b;">Weekend Getaway Deals</h4>
+                                    <p style="font-size: 0.85rem; color: #64748b; margin: 0.5rem 0;">Book anytime • Travel anytime</p>
+                                    <div style="margin: 1rem 0; padding-top: 1rem; border-top: 1px solid #e2e8f0;">
+                                        <div style="font-size: 1.5rem; font-weight: 700; color: #7c3aed;">Up to 40% OFF</div>
+                                        <div style="font-size: 0.8rem; color: #64748b; margin-top: 0.25rem;">12,300 hotels</div>
+                                    </div>
+                                    <button onclick="showPromotionResults()" style="width: 100%; background: #1e3a8a; color: white; border: none; padding: 0.75rem; border-radius: 6px; font-weight: 600; cursor: pointer;">Browse Deals</button>
+                                </div>
+                            </div>
+
+                            <!-- Card 3 -->
+                            <div style="background: white; border: 2px solid #e2e8f0; border-radius: 12px; overflow: hidden;">
+                                <div style="background: linear-gradient(135deg, #dc2626, #f87171); height: 120px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">
+                                    👥
+                                </div>
+                                <div style="padding: 1.5rem;">
+                                    <div style="background: #8b5cf6; color: white; display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.7rem; font-weight: 600; margin-bottom: 0.5rem;">MEMBERS ONLY</div>
+                                    <h4 style="margin: 0.5rem 0; font-size: 1.2rem; color: #1e293b;">Member Exclusive Flash</h4>
+                                    <p style="font-size: 0.85rem; color: #64748b; margin: 0.5rem 0;">Book Mar 20–22 • Travel Apr–Jun</p>
+                                    <div style="margin: 1rem 0; padding-top: 1rem; border-top: 1px solid #e2e8f0;">
+                                        <div style="font-size: 1.5rem; font-weight: 700; color: #dc2626;">Up to 55% OFF</div>
+                                        <div style="font-size: 0.8rem; color: #64748b; margin-top: 0.25rem;">1,800 hotels</div>
+                                    </div>
+                                    <button onclick="showPromotionResults()" style="width: 100%; background: #1e3a8a; color: white; border: none; padding: 0.75rem; border-radius: 6px; font-weight: 600; cursor: pointer;">Sign In to View</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <p style="margin-top: 1.5rem; padding: 1rem; background: var(--bg); border-left: 4px solid var(--primary); border-radius: 4px;">
+                    <strong>Implementation:</strong> Call GET /campaigns with <code>lifetime=limited_time_offer</code>, sort by <code>max_discount</code> descending. Use top campaign for hero banner, next 3-6 for cards below. <strong>When user clicks any "Browse Deals" button, call GET /promotions with that campaign's ID to show hotel results.</strong>
+                </p>
+            </div>
+
+            <!-- Promotion Results Page (What user sees after clicking campaign) -->
+            <div class="card" id="promotionResults" style="display: none;">
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                    <button onclick="hidePromotionResults()" style="background: #e2e8f0; border: none; padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer; font-weight: 600; color: #1e293b;">← Back to Campaigns</button>
+                    <h3 style="margin: 0;">📍 Promotion Results: Summer Flash Sale Hotels</h3>
+                </div>
+                <p style="margin-bottom: 1.5rem;"><strong>What happens:</strong> User clicked "View All Deals" on Summer Flash Sale campaign → System calls GET /promotions with <code>campaign_id=CAMP_SUMMER2026</code></p>
+                
+                <div style="border: 2px solid var(--border); border-radius: 12px; overflow: hidden; background: white;">
+                    <!-- Campaign Context Bar -->
+                    <div style="background: linear-gradient(135deg, #1e3a8a, #3b82f6); color: white; padding: 1.5rem 2rem;">
+                        <div style="display: flex; align-items: center; justify-content: space-between;">
+                            <div>
+                                <div style="font-size: 0.85rem; opacity: 0.9; margin-bottom: 0.25rem;">YOU'RE VIEWING DEALS FROM:</div>
+                                <h3 style="margin: 0; font-size: 1.8rem; font-weight: 700;">Summer Flash Sale 2026</h3>
+                                <div style="font-size: 0.95rem; opacity: 0.95; margin-top: 0.5rem;">Up to 60% off • Book by Apr 30 • Travel Jun–Aug</div>
+                            </div>
+                            <div style="text-align: center; background: rgba(255,255,255,0.2); padding: 1rem; border-radius: 8px; backdrop-filter: blur(10px);">
+                                <div style="font-size: 2rem; font-weight: 700;">4,820</div>
+                                <div style="font-size: 0.85rem; opacity: 0.9;">Hotels Found</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Filters Bar -->
+                    <div style="background: #f8fafc; padding: 1.25rem 2rem; border-bottom: 1px solid #e2e8f0;">
+                        <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+                            <select style="padding: 0.625rem 1rem; border: 2px solid #cbd5e1; border-radius: 6px; background: white; font-size: 0.9rem;">
+                                <option>Sort by: ML Score (Recommended)</option>
+                                <option>Sort by: Highest Discount</option>
+                                <option>Sort by: Price</option>
+                            </select>
+                            <select style="padding: 0.625rem 1rem; border: 2px solid #cbd5e1; border-radius: 6px; background: white; font-size: 0.9rem;">
+                                <option>Destination: All</option>
+                                <option>Paris</option>
+                                <option>London</option>
+                                <option>New York</option>
+                            </select>
+                            <select style="padding: 0.625rem 1rem; border: 2px solid #cbd5e1; border-radius: 6px; background: white; font-size: 0.9rem;">
+                                <option>Star Rating: All</option>
+                                <option>5 Stars</option>
+                                <option>4+ Stars</option>
+                                <option>3+ Stars</option>
+                            </select>
+                            <select style="padding: 0.625rem 1rem; border: 2px solid #cbd5e1; border-radius: 6px; background: white; font-size: 0.9rem;">
+                                <option>Min Discount: Any</option>
+                                <option>20%+</option>
+                                <option>30%+</option>
+                                <option>40%+</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Hotel Results from GET /promotions -->
+                    <div style="padding: 2rem;">
+                        <div style="font-size: 0.9rem; color: #64748b; margin-bottom: 1.5rem;">
+                            Showing top results ranked by ML score • Deals personalized for you
+                        </div>
+
+                        <!-- Hotel 1 - Highest ML Score -->
+                        <div style="display: flex; gap: 1.5rem; padding: 1.5rem; border: 2px solid #3b82f6; border-radius: 12px; margin-bottom: 1.5rem; background: #eff6ff;">
+                            <div style="width: 250px; height: 180px; background: linear-gradient(135deg, #93c5fd, #3b82f6); border-radius: 8px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem; position: relative;">
+                                🏨
+                                <div style="position: absolute; top: 10px; left: 10px; background: #1e3a8a; color: white; padding: 0.3rem 0.6rem; border-radius: 4px; font-size: 0.7rem; font-weight: 600;">TOP PICK</div>
+                            </div>
+                            <div style="flex: 1;">
+                                <div style="display: flex; align-items: start; justify-content: space-between; margin-bottom: 0.75rem;">
+                                    <div style="flex: 1;">
+                                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+                                            <h4 style="margin: 0; font-size: 1.4rem; color: #1e293b;">Le Grand Hotel Paris</h4>
+                                            <div style="background: #dc2626; color: white; padding: 0.4rem 0.9rem; border-radius: 6px; font-weight: 700; font-size: 0.9rem;">35% OFF</div>
+                                        </div>
+                                        <div style="color: #64748b; font-size: 0.95rem; margin-bottom: 0.5rem;">⭐⭐⭐⭐ • Central Paris • 8.5/10 (2,450 reviews)</div>
+                                    </div>
+                                    <div style="text-align: right; margin-left: 1rem;">
+                                        <div style="font-size: 0.75rem; color: #64748b; margin-bottom: 0.25rem;">ML Score</div>
+                                        <div style="background: #1e3a8a; color: white; padding: 0.5rem 1rem; border-radius: 6px; font-weight: 700; font-size: 1.1rem;">8,450</div>
+                                    </div>
+                                </div>
+                                <div style="color: #64748b; font-size: 0.95rem; margin-bottom: 1rem;">
+                                    ✓ Free WiFi • Pool • Spa • Restaurant • Airport Shuttle • Gym
+                                </div>
+                                <div style="background: white; border-left: 4px solid #3b82f6; padding: 1rem; border-radius: 4px; margin-bottom: 1rem;">
+                                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; font-size: 0.85rem;">
+                                        <div>
+                                            <div style="color: #64748b; margin-bottom: 0.25rem;">Campaign ID</div>
+                                            <div style="font-weight: 600; color: #1e293b; font-family: monospace;">CAMP_SUMMER2026</div>
+                                        </div>
+                                        <div>
+                                            <div style="color: #64748b; margin-bottom: 0.25rem;">Deal ID</div>
+                                            <div style="font-weight: 600; color: #1e293b; font-family: monospace;">DEAL_12345_SUMMER</div>
+                                        </div>
+                                        <div>
+                                            <div style="color: #64748b; margin-bottom: 0.25rem;">Property ID</div>
+                                            <div style="font-weight: 600; color: #1e293b; font-family: monospace;">12345</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="display: flex; align-items: center; justify-content: space-between; gap: 1rem;">
+                                    <div>
+                                        <div style="font-size: 0.85rem; color: #64748b;">Valid Jun 1–Aug 31 • Book by Apr 30</div>
+                                        <div style="font-size: 0.85rem; color: #64748b; margin-top: 0.25rem;">Select dates to see final pricing with 35% discount applied</div>
+                                    </div>
+                                    <button style="background: #1e3a8a; color: white; border: none; padding: 0.875rem 2rem; border-radius: 6px; font-weight: 600; cursor: pointer; white-space: nowrap;">View Details →</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hotel 2 -->
+                        <div style="display: flex; gap: 1.5rem; padding: 1.5rem; border: 2px solid #e2e8f0; border-radius: 12px; margin-bottom: 1.5rem; background: white;">
+                            <div style="width: 250px; height: 180px; background: linear-gradient(135deg, #a78bfa, #7c3aed); border-radius: 8px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;">
+                                🏛️
+                            </div>
+                            <div style="flex: 1;">
+                                <div style="display: flex; align-items: start; justify-content: space-between; margin-bottom: 0.75rem;">
+                                    <div style="flex: 1;">
+                                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+                                            <h4 style="margin: 0; font-size: 1.4rem; color: #1e293b;">Hotel Eiffel Seine</h4>
+                                            <div style="background: #dc2626; color: white; padding: 0.4rem 0.9rem; border-radius: 6px; font-weight: 700; font-size: 0.9rem;">42% OFF</div>
+                                            <div style="background: #8b5cf6; color: white; padding: 0.3rem 0.7rem; border-radius: 4px; font-weight: 600; font-size: 0.75rem;">MEMBERS ONLY</div>
+                                        </div>
+                                        <div style="color: #64748b; font-size: 0.95rem; margin-bottom: 0.5rem;">⭐⭐⭐⭐⭐ • Near Eiffel Tower • 9.2/10 (1,823 reviews)</div>
+                                    </div>
+                                    <div style="text-align: right; margin-left: 1rem;">
+                                        <div style="font-size: 0.75rem; color: #64748b; margin-bottom: 0.25rem;">ML Score</div>
+                                        <div style="background: #64748b; color: white; padding: 0.5rem 1rem; border-radius: 6px; font-weight: 700; font-size: 1.1rem;">7,820</div>
+                                    </div>
+                                </div>
+                                <div style="color: #64748b; font-size: 0.95rem; margin-bottom: 1rem;">
+                                    ✓ Free WiFi • Gym • Rooftop Bar • Concierge • Room Service
+                                </div>
+                                <div style="background: #f8fafc; border-left: 4px solid #cbd5e1; padding: 1rem; border-radius: 4px; margin-bottom: 1rem;">
+                                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; font-size: 0.85rem;">
+                                        <div>
+                                            <div style="color: #64748b; margin-bottom: 0.25rem;">Campaign ID</div>
+                                            <div style="font-weight: 600; color: #1e293b; font-family: monospace;">CAMP_SUMMER2026</div>
+                                        </div>
+                                        <div>
+                                            <div style="color: #64748b; margin-bottom: 0.25rem;">Deal ID</div>
+                                            <div style="font-weight: 600; color: #1e293b; font-family: monospace;">DEAL_67890_SUMMER</div>
+                                        </div>
+                                        <div>
+                                            <div style="color: #64748b; margin-bottom: 0.25rem;">Property ID</div>
+                                            <div style="font-weight: 600; color: #1e293b; font-family: monospace;">67890</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="display: flex; align-items: center; justify-content: space-between; gap: 1rem;">
+                                    <div>
+                                        <div style="font-size: 0.85rem; color: #64748b;">Valid Jun 1–Aug 31 • Book by Apr 30</div>
+                                        <div style="font-size: 0.85rem; color: #64748b; margin-top: 0.25rem;">Select dates to see final pricing with 42% discount applied</div>
+                                    </div>
+                                    <button style="background: #1e3a8a; color: white; border: none; padding: 0.875rem 2rem; border-radius: 6px; font-weight: 600; cursor: pointer; white-space: nowrap;">View Details →</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hotel 3 -->
+                        <div style="display: flex; gap: 1.5rem; padding: 1.5rem; border: 2px solid #e2e8f0; border-radius: 12px; background: white;">
+                            <div style="width: 250px; height: 180px; background: linear-gradient(135deg, #fbbf24, #f59e0b); border-radius: 8px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;">
+                                🌟
+                            </div>
+                            <div style="flex: 1;">
+                                <div style="display: flex; align-items: start; justify-content: space-between; margin-bottom: 0.75rem;">
+                                    <div style="flex: 1;">
+                                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+                                            <h4 style="margin: 0; font-size: 1.4rem; color: #1e293b;">Montmartre Boutique Hotel</h4>
+                                            <div style="background: #dc2626; color: white; padding: 0.4rem 0.9rem; border-radius: 6px; font-weight: 700; font-size: 0.9rem;">28% OFF</div>
+                                        </div>
+                                        <div style="color: #64748b; font-size: 0.95rem; margin-bottom: 0.5rem;">⭐⭐⭐⭐ • Montmartre • 8.1/10 (987 reviews)</div>
+                                    </div>
+                                    <div style="text-align: right; margin-left: 1rem;">
+                                        <div style="font-size: 0.75rem; color: #64748b; margin-bottom: 0.25rem;">ML Score</div>
+                                        <div style="background: #64748b; color: white; padding: 0.5rem 1rem; border-radius: 6px; font-weight: 700; font-size: 1.1rem;">6,340</div>
+                                    </div>
+                                </div>
+                                <div style="color: #64748b; font-size: 0.95rem; margin-bottom: 1rem;">
+                                    ✓ Free WiFi • Breakfast Included • Terrace • Bar
+                                </div>
+                                <div style="background: #f8fafc; border-left: 4px solid #cbd5e1; padding: 1rem; border-radius: 4px; margin-bottom: 1rem;">
+                                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; font-size: 0.85rem;">
+                                        <div>
+                                            <div style="color: #64748b; margin-bottom: 0.25rem;">Campaign ID</div>
+                                            <div style="font-weight: 600; color: #1e293b; font-family: monospace;">CAMP_SUMMER2026</div>
+                                        </div>
+                                        <div>
+                                            <div style="color: #64748b; margin-bottom: 0.25rem;">Deal ID</div>
+                                            <div style="font-weight: 600; color: #1e293b; font-family: monospace;">DEAL_11223_SUMMER</div>
+                                        </div>
+                                        <div>
+                                            <div style="color: #64748b; margin-bottom: 0.25rem;">Property ID</div>
+                                            <div style="font-weight: 600; color: #1e293b; font-family: monospace;">11223</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="display: flex; align-items: center; justify-content: space-between; gap: 1rem;">
+                                    <div>
+                                        <div style="font-size: 0.85rem; color: #64748b;">Valid Jun 1–Aug 31 • Book by Apr 30</div>
+                                        <div style="font-size: 0.85rem; color: #64748b; margin-top: 0.25rem;">Select dates to see final pricing with 28% discount applied</div>
+                                    </div>
+                                    <button style="background: #1e3a8a; color: white; border: none; padding: 0.875rem 2rem; border-radius: 6px; font-weight: 600; cursor: pointer; white-space: nowrap;">View Details →</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #e2e8f0;">
+                            <button style="background: white; border: 2px solid #1e3a8a; color: #1e3a8a; padding: 0.875rem 2rem; border-radius: 6px; font-weight: 600; cursor: pointer;">Load More Hotels (4,817 remaining)</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 1.5rem; padding: 1.5rem; background: #eff6ff; border-left: 4px solid var(--primary); border-radius: 4px;">
+                    <h4 style="margin: 0 0 1rem 0; color: var(--primary);">🔗 How the Connection Works</h4>
+                    <div style="font-size: 0.95rem; line-height: 1.8;">
+                        <p style="margin: 0 0 0.75rem 0;"><strong>Step 1:</strong> User clicks "View All Deals" on Summer Flash Sale campaign card</p>
+                        <p style="margin: 0 0 0.75rem 0;"><strong>Step 2:</strong> System calls <code>GET /promotions?campaign_id=CAMP_SUMMER2026&sort_by=promotion</code></p>
+                        <p style="margin: 0 0 0.75rem 0;"><strong>Step 3:</strong> API returns ranked list of hotels with:</p>
+                        <ul style="margin: 0.5rem 0 0.75rem 1.5rem; padding: 0;">
+                            <li>Property IDs, Deal IDs, Campaign ID</li>
+                            <li>Specific discount for each hotel (35%, 42%, 28%)</li>
+                            <li>ML scores for ranking (8450, 7820, 6340)</li>
+                            <li>Deal restrictions (member-only flags, blackout dates)</li>
+                            <li>Property content links to fetch hotel details</li>
+                        </ul>
+                        <p style="margin: 0 0 0.75rem 0;"><strong>Step 4:</strong> For each hotel, fetch details using Property Content API via <code>property_content_link</code></p>
+                        <p style="margin: 0;"><strong>Step 5:</strong> Display ranked results with discount badges, ML scores, and CTAs to view availability/pricing</p>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                function showPromotionResults() {
+                    document.getElementById('promotionResults').style.display = 'block';
+                    document.getElementById('promotionResults').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+                
+                function hidePromotionResults() {
+                    document.getElementById('promotionResults').style.display = 'none';
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            </script>
+
+            <!-- Email Campaign -->
+            <div class="card">
+                <h3>📧 Email Campaign Template</h3>
+                <p style="margin-bottom: 1.5rem;"><strong>Strategy:</strong> Personalized email featuring 2-3 relevant campaigns with clear CTAs</p>
+                
+                <div style="border: 2px solid var(--border); border-radius: 12px; overflow: hidden; background: white; max-width: 600px; margin: 0 auto;">
+                    <!-- Email Header -->
+                    <div style="background: #1e3a8a; color: white; padding: 2rem; text-align: center;">
+                        <div style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;">✈️ YourTravel.com</div>
+                        <div style="font-size: 0.9rem; opacity: 0.9;">Exclusive Deals Just for You</div>
+                    </div>
+
+                    <!-- Email Body -->
+                    <div style="padding: 2rem; background: #f8fafc;">
+                        <p style="font-size: 1rem; color: #1e293b; margin-bottom: 1.5rem;">Hi Sarah,</p>
+                        <p style="font-size: 1rem; color: #1e293b; margin-bottom: 1.5rem;">We've found some amazing deals perfect for your summer travel plans! 🌴</p>
+
+                        <!-- Deal 1 -->
+                        <div style="background: white; border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem; border-left: 4px solid #3b82f6;">
+                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.75rem;">
+                                <div>
+                                    <div style="color: #ef4444; font-weight: 700; font-size: 0.75rem; margin-bottom: 0.25rem;">⏰ ENDING SOON - 19 DAYS LEFT</div>
+                                    <h4 style="margin: 0; font-size: 1.3rem; color: #1e3a8a;">Summer Flash Sale</h4>
+                                </div>
+                                <div style="background: #059669; color: white; padding: 0.5rem 1rem; border-radius: 6px; font-weight: 700; white-space: nowrap;">60% OFF</div>
+                            </div>
+                            <p style="color: #64748b; font-size: 0.9rem; margin: 0.5rem 0;">Save up to 60% on 4,820 hotels worldwide</p>
+                            <p style="color: #64748b; font-size: 0.85rem; margin: 0.5rem 0;">📅 Book by Apr 30 • Travel Jun–Aug 2026</p>
+                            <button style="width: 100%; background: #1e3a8a; color: white; border: none; padding: 0.875rem; border-radius: 6px; font-weight: 600; margin-top: 1rem; cursor: pointer; font-size: 0.95rem;">View Summer Deals →</button>
+                        </div>
+
+                        <!-- Deal 2 -->
+                        <div style="background: white; border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem; border-left: 4px solid #7c3aed;">
+                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.75rem;">
+                                <div>
+                                    <div style="color: #059669; font-weight: 700; font-size: 0.75rem; margin-bottom: 0.25rem;">✨ POPULAR CHOICE</div>
+                                    <h4 style="margin: 0; font-size: 1.3rem; color: #1e3a8a;">Weekend Getaways</h4>
+                                </div>
+                                <div style="background: #7c3aed; color: white; padding: 0.5rem 1rem; border-radius: 6px; font-weight: 700; white-space: nowrap;">40% OFF</div>
+                            </div>
+                            <p style="color: #64748b; font-size: 0.9rem; margin: 0.5rem 0;">Perfect for spontaneous trips</p>
+                            <p style="color: #64748b; font-size: 0.85rem; margin: 0.5rem 0;">📅 Book anytime • 12,300 hotels available</p>
+                            <button style="width: 100%; background: #7c3aed; color: white; border: none; padding: 0.875rem; border-radius: 6px; font-weight: 600; margin-top: 1rem; cursor: pointer; font-size: 0.95rem;">Explore Getaways →</button>
+                        </div>
+
+                        <div style="background: #fff8e1; border-left: 4px solid #f59e0b; padding: 1rem; border-radius: 4px; margin-top: 2rem;">
+                            <p style="margin: 0; font-size: 0.85rem; color: #78350f;"><strong>💡 Pro Tip:</strong> Deals go fast! Book early for the best selection.</p>
+                        </div>
+                    </div>
+
+                    <!-- Email Footer -->
+                    <div style="background: #1e293b; color: #94a3b8; padding: 1.5rem; text-align: center; font-size: 0.8rem;">
+                        <p style="margin: 0.5rem 0;">You're receiving this because you subscribed to our deals newsletter.</p>
+                        <p style="margin: 0.5rem 0;"><a href="#" style="color: #60a5fa; text-decoration: none;">Unsubscribe</a> | <a href="#" style="color: #60a5fa; text-decoration: none;">Preferences</a></p>
+                    </div>
+                </div>
+                <p style="margin-top: 1.5rem; padding: 1rem; background: var(--bg); border-left: 4px solid var(--primary); border-radius: 4px;">
+                    <strong>Implementation:</strong> Filter campaigns by user's past destinations or search history. Use <code>suggested_copy.headline</code> and <code>thematic_images</code>. Send when <code>bookable_start</code> approaches or when deals match user preferences.
+                </p>
+            </div>
+
+            <!-- Push Notification -->
+            <div class="card">
+                <h3>📱 Push Notification Examples</h3>
+                <p style="margin-bottom: 1.5rem;"><strong>Strategy:</strong> Time-sensitive alerts for exclusive deals with urgency</p>
+                
+                <div style="max-width: 400px; margin: 0 auto;">
+                    <!-- iOS Style Notification 1 -->
+                    <div style="background: white; border-radius: 12px; padding: 1.25rem; margin-bottom: 1rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); border: 1px solid #e2e8f0;">
+                        <div style="display: flex; align-items: start; gap: 1rem;">
+                            <div style="background: #1e3a8a; color: white; width: 48px; height: 48px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
+                                ✈️
+                            </div>
+                            <div style="flex: 1; min-width: 0;">
+                                <div style="font-weight: 600; font-size: 0.9rem; color: #1e293b; margin-bottom: 0.25rem;">YourTravel • Members Only</div>
+                                <div style="font-weight: 700; font-size: 1rem; color: #1e293b; margin-bottom: 0.25rem;">🔥 Flash Sale: 55% Off Hotels</div>
+                                <div style="font-size: 0.9rem; color: #64748b; line-height: 1.4;">72 hours only! Exclusive deals for members. Book spring travel now.</div>
+                            </div>
+                        </div>
+                        <div style="font-size: 0.75rem; color: #94a3b8; margin-top: 0.75rem; text-align: right;">2 minutes ago</div>
+                    </div>
+
+                    <!-- iOS Style Notification 2 -->
+                    <div style="background: white; border-radius: 12px; padding: 1.25rem; margin-bottom: 1rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); border: 1px solid #e2e8f0;">
+                        <div style="display: flex; align-items: start; gap: 1rem;">
+                            <div style="background: #dc2626; color: white; width: 48px; height: 48px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
+                                ⏰
+                            </div>
+                            <div style="flex: 1; min-width: 0;">
+                                <div style="font-weight: 600; font-size: 0.9rem; color: #1e293b; margin-bottom: 0.25rem;">YourTravel • Limited Time</div>
+                                <div style="font-weight: 700; font-size: 1rem; color: #1e293b; margin-bottom: 0.25rem;">Last Chance: Summer Sale Ends Tonight</div>
+                                <div style="font-size: 0.9rem; color: #64748b; line-height: 1.4;">Up to 60% off 4,820 hotels. Don't miss out!</div>
+                            </div>
+                        </div>
+                        <div style="font-size: 0.75rem; color: #94a3b8; margin-top: 0.75rem; text-align: right;">1 hour ago</div>
+                    </div>
+
+                    <!-- Android Style Notification -->
+                    <div style="background: #1e293b; border-radius: 8px; padding: 1rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);">
+                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+                            <div style="background: #1e3a8a; color: white; width: 24px; height: 24px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; flex-shrink: 0;">
+                                ✈️
+                            </div>
+                            <div style="font-weight: 600; font-size: 0.85rem; color: white;">YourTravel</div>
+                            <div style="font-size: 0.7rem; color: #94a3b8; margin-left: auto;">now</div>
+                        </div>
+                        <div style="color: white; font-size: 0.95rem; font-weight: 600; margin-bottom: 0.25rem;">Weekend Flash: 40% Off Getaways</div>
+                        <div style="color: #cbd5e1; font-size: 0.85rem; line-height: 1.4;">Book this weekend only. Perfect for spontaneous trips!</div>
+                    </div>
+                </div>
+                <p style="margin-top: 1.5rem; padding: 1rem; background: var(--bg); border-left: 4px solid var(--primary); border-radius: 4px;">
+                    <strong>Implementation:</strong> Monitor campaigns with <code>member_only=true</code> or <code>mobile_only=true</code>. Send push when <code>bookable_start</code> arrives or when <code>bookable_end - today &lt; 7 days</code>. Personalize with campaign name and max discount.
+                </p>
+            </div>
+
+            <!-- Destination-Specific -->
+            <div class="card">
+                <h3>🎯 Destination-Specific Campaign Display</h3>
+                <p style="margin-bottom: 1.5rem;"><strong>Strategy:</strong> Show campaign banner when user searches for a specific destination</p>
+                
+                <div style="border: 2px solid var(--border); border-radius: 12px; overflow: hidden; background: white;">
+                    <!-- Search Bar -->
+                    <div style="background: #f8fafc; padding: 1.5rem; border-bottom: 1px solid #e2e8f0;">
+                        <div style="display: flex; gap: 1rem; align-items: center;">
+                            <input type="text" value="Paris, France" disabled style="flex: 1; padding: 0.875rem; border: 2px solid #cbd5e1; border-radius: 8px; font-size: 1rem; background: white;">
+                            <input type="date" value="2026-07-15" disabled style="padding: 0.875rem; border: 2px solid #cbd5e1; border-radius: 8px; font-size: 1rem; background: white;">
+                            <input type="date" value="2026-07-18" disabled style="padding: 0.875rem; border: 2px solid #cbd5e1; border-radius: 8px; font-size: 1rem; background: white;">
+                            <button style="background: #1e3a8a; color: white; padding: 0.875rem 2rem; border: none; border-radius: 8px; font-weight: 600; cursor: pointer;">Search</button>
+                        </div>
+                    </div>
+
+                    <!-- Campaign Alert Banner -->
+                    <div style="background: linear-gradient(135deg, #059669, #10b981); color: white; padding: 1.5rem 2rem;">
+                        <div style="display: flex; align-items: center; gap: 1.5rem;">
+                            <div style="font-size: 3rem;">🎉</div>
+                            <div style="flex: 1;">
+                                <div style="font-size: 0.85rem; font-weight: 600; margin-bottom: 0.25rem; opacity: 0.9;">SPECIAL OFFER FOR PARIS</div>
+                                <div style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;">Summer Flash Sale: Up to 60% Off Paris Hotels</div>
+                                <div style="font-size: 0.95rem; opacity: 0.95;">Valid for your travel dates • 287 participating hotels in Paris</div>
+                            </div>
+                            <div style="text-align: center;">
+                                <div style="background: rgba(255, 255, 255, 0.3); backdrop-filter: blur(10px); padding: 1rem; border-radius: 8px; margin-bottom: 0.5rem;">
+                                    <div style="font-size: 2rem; font-weight: 700;">287</div>
+                                    <div style="font-size: 0.8rem; opacity: 0.9;">Hotels on Sale</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hotel Results with Deal Badges -->
+                    <div style="padding: 2rem;">
+                        <h4 style="margin-bottom: 1.5rem; color: #1e293b;">Hotels in Paris <span style="color: #64748b; font-weight: 400; font-size: 0.9rem;">(Showing deals first)</span></h4>
+                        
+                        <!-- Hotel 1 -->
+                        <div style="display: flex; gap: 1.5rem; padding: 1.5rem; border: 2px solid #10b981; border-radius: 12px; margin-bottom: 1rem; background: #f0fdf4;">
+                            <div style="width: 200px; height: 150px; background: linear-gradient(135deg, #cbd5e1, #94a3b8); border-radius: 8px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                                🏨
+                            </div>
+                            <div style="flex: 1;">
+                                <div style="display: flex; align-items: start; justify-content: space-between; margin-bottom: 0.5rem;">
+                                    <div>
+                                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+                                            <h4 style="margin: 0; font-size: 1.3rem; color: #1e293b;">Le Grand Hotel Paris</h4>
+                                            <div style="background: #dc2626; color: white; padding: 0.3rem 0.8rem; border-radius: 6px; font-weight: 700; font-size: 0.85rem;">35% OFF</div>
+                                        </div>
+                                        <div style="color: #64748b; font-size: 0.9rem; margin-bottom: 0.5rem;">⭐⭐⭐⭐ • Central Paris • 8.5/10 (2,450 reviews)</div>
+                                    </div>
+                                </div>
+                                <div style="color: #64748b; font-size: 0.9rem; margin-bottom: 1rem;">✓ Free WiFi • Pool • Spa • Restaurant • Airport Shuttle</div>
+                                <div style="background: #dcfce7; border-left: 4px solid #10b981; padding: 0.75rem; border-radius: 4px; margin-bottom: 1rem;">
+                                    <div style="font-size: 0.85rem; color: #166534; font-weight: 600;">🎉 Summer Flash Sale: 35% discount applied to your dates</div>
+                                </div>
+                                <div style="display: flex; align-items: center; justify-content: space-between;">
+                                    <div style="font-size: 0.85rem; color: #64748b;">Select dates to see pricing</div>
+                                    <button style="background: #1e3a8a; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 600; cursor: pointer;">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hotel 2 -->
+                        <div style="display: flex; gap: 1.5rem; padding: 1.5rem; border: 2px solid #10b981; border-radius: 12px; margin-bottom: 1rem; background: #f0fdf4;">
+                            <div style="width: 200px; height: 150px; background: linear-gradient(135deg, #a78bfa, #7c3aed); border-radius: 8px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                                🏛️
+                            </div>
+                            <div style="flex: 1;">
+                                <div style="display: flex; align-items: start; justify-content: space-between; margin-bottom: 0.5rem;">
+                                    <div>
+                                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+                                            <h4 style="margin: 0; font-size: 1.3rem; color: #1e293b;">Hotel Eiffel Seine</h4>
+                                            <div style="background: #dc2626; color: white; padding: 0.3rem 0.8rem; border-radius: 6px; font-weight: 700; font-size: 0.85rem;">42% OFF</div>
+                                        </div>
+                                        <div style="color: #64748b; font-size: 0.9rem; margin-bottom: 0.5rem;">⭐⭐⭐⭐⭐ • Near Eiffel Tower • 9.2/10 (1,823 reviews)</div>
+                                    </div>
+                                </div>
+                                <div style="color: #64748b; font-size: 0.9rem; margin-bottom: 1rem;">✓ Free WiFi • Gym • Rooftop Bar • Concierge</div>
+                                <div style="background: #dcfce7; border-left: 4px solid #10b981; padding: 0.75rem; border-radius: 4px; margin-bottom: 1rem;">
+                                    <div style="font-size: 0.85rem; color: #166534; font-weight: 600;">🎉 Summer Flash Sale: 42% discount applied to your dates</div>
+                                </div>
+                                <div style="display: flex; align-items: center; justify-content: space-between;">
+                                    <div style="font-size: 0.85rem; color: #64748b;">Select dates to see pricing</div>
+                                    <button style="background: #1e3a8a; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 600; cursor: pointer;">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Regular Hotel (No Deal) -->
+                        <div style="display: flex; gap: 1.5rem; padding: 1.5rem; border: 1px solid #e2e8f0; border-radius: 12px; opacity: 0.7;">
+                            <div style="width: 200px; height: 150px; background: linear-gradient(135deg, #e2e8f0, #cbd5e1); border-radius: 8px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                                🏢
+                            </div>
+                            <div style="flex: 1;">
+                                <h4 style="margin: 0 0 0.5rem 0; font-size: 1.3rem; color: #1e293b;">Paris Boutique Hotel</h4>
+                                <div style="color: #64748b; font-size: 0.9rem; margin-bottom: 0.5rem;">⭐⭐⭐ • Latin Quarter • 7.8/10 (956 reviews)</div>
+                                <div style="color: #64748b; font-size: 0.9rem; margin-bottom: 1rem;">✓ Free WiFi • Breakfast Included</div>
+                                <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 2rem;">
+                                    <div style="font-size: 0.85rem; color: #64748b;">Standard pricing</div>
+                                    <button style="background: #64748b; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 600; cursor: pointer;">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p style="margin-top: 1.5rem; padding: 1rem; background: var(--bg); border-left: 4px solid var(--primary); border-radius: 4px;">
+                    <strong>Implementation:</strong> When user searches destination, call GET /promotions with <code>campaign_id</code> (from current campaigns) + <code>region_id</code> (from user search). Display prominent banner if deals exist for that destination, then sort results with deal hotels first.
+                </p>
+            </div>
+
+            <!-- Dynamic Widget -->
+            <div class="card">
+                <h3>🎨 Dynamic Widget / Carousel</h3>
+                <p style="margin-bottom: 1.5rem;"><strong>Strategy:</strong> Auto-rotating deal carousel on homepage or app that updates daily</p>
+                
+                <div style="border: 2px solid var(--border); border-radius: 12px; overflow: hidden; background: #f8fafc; padding: 2rem;">
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem;">
+                        <h3 style="margin: 0; color: #1e293b;">Today's Featured Deals</h3>
+                        <div style="display: flex; gap: 0.5rem;">
+                            <button style="background: white; border: 2px solid #cbd5e1; color: #64748b; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 1.2rem; display: flex; align-items: center; justify-content: center;">‹</button>
+                            <button style="background: white; border: 2px solid #cbd5e1; color: #64748b; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 1.2rem; display: flex; align-items: center; justify-content: center;">›</button>
+                        </div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+                        <!-- Widget Card 1 -->
+                        <div style="background: linear-gradient(135deg, #1e3a8a, #3b82f6); border-radius: 12px; padding: 1.5rem; color: white; position: relative; overflow: hidden;">
+                            <div style="position: absolute; top: -20px; right: -20px; font-size: 6rem; opacity: 0.1;">🏖️</div>
+                            <div style="position: relative;">
+                                <div style="background: rgba(255, 255, 255, 0.3); display: inline-block; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.7rem; font-weight: 600; margin-bottom: 0.75rem;">LIMITED TIME</div>
+                                <h4 style="margin: 0 0 0.5rem 0; font-size: 1.2rem; font-weight: 700;">Summer Flash Sale</h4>
+                                <div style="font-size: 2.5rem; font-weight: 700; margin: 1rem 0;">60%</div>
+                                <div style="font-size: 0.85rem; opacity: 0.9; margin-bottom: 1rem;">Save up to 60% off</div>
+                                <div style="font-size: 0.75rem; opacity: 0.8;">4,820 hotels • Ends in 19 days</div>
+                            </div>
+                        </div>
+
+                        <!-- Widget Card 2 -->
+                        <div style="background: linear-gradient(135deg, #059669, #10b981); border-radius: 12px; padding: 1.5rem; color: white; position: relative; overflow: hidden;">
+                            <div style="position: absolute; top: -20px; right: -20px; font-size: 6rem; opacity: 0.1;">🌅</div>
+                            <div style="position: relative;">
+                                <div style="background: rgba(255, 255, 255, 0.3); display: inline-block; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.7rem; font-weight: 600; margin-bottom: 0.75rem;">FLASH SALE</div>
+                                <h4 style="margin: 0 0 0.5rem 0; font-size: 1.2rem; font-weight: 700;">Early Bird Escape</h4>
+                                <div style="font-size: 2.5rem; font-weight: 700; margin: 1rem 0;">45%</div>
+                                <div style="font-size: 0.85rem; opacity: 0.9; margin-bottom: 1rem;">Save up to 45% off</div>
+                                <div style="font-size: 0.75rem; opacity: 0.8;">2,100 hotels • 14 days left</div>
+                            </div>
+                        </div>
+
+                        <!-- Widget Card 3 -->
+                        <div style="background: linear-gradient(135deg, #7c3aed, #a78bfa); border-radius: 12px; padding: 1.5rem; color: white; position: relative; overflow: hidden;">
+                            <div style="position: absolute; top: -20px; right: -20px; font-size: 6rem; opacity: 0.1;">🎉</div>
+                            <div style="position: relative;">
+                                <div style="background: rgba(255, 255, 255, 0.3); display: inline-block; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.7rem; font-weight: 600; margin-bottom: 0.75rem;">ALWAYS ON</div>
+                                <h4 style="margin: 0 0 0.5rem 0; font-size: 1.2rem; font-weight: 700;">Weekend Getaways</h4>
+                                <div style="font-size: 2.5rem; font-weight: 700; margin: 1rem 0;">40%</div>
+                                <div style="font-size: 0.85rem; opacity: 0.9; margin-bottom: 1rem;">Save up to 40% off</div>
+                                <div style="font-size: 0.75rem; opacity: 0.8;">12,300 hotels • Ongoing</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 1.5rem;">
+                        <div style="display: inline-flex; gap: 0.5rem;">
+                            <div style="width: 8px; height: 8px; border-radius: 50%; background: #1e3a8a;"></div>
+                            <div style="width: 8px; height: 8px; border-radius: 50%; background: #cbd5e1;"></div>
+                            <div style="width: 8px; height: 8px; border-radius: 50%; background: #cbd5e1;"></div>
+                        </div>
+                    </div>
+                </div>
+                <p style="margin-top: 1.5rem; padding: 1rem; background: var(--bg); border-left: 4px solid var(--primary); border-radius: 4px;">
+                    <strong>Implementation:</strong> Call GET /campaigns for evergreen campaigns, cache results for 24 hours. Use <code>thematic_images</code> as backgrounds. Auto-rotate every 5 seconds. Update content daily without requiring manual updates.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>⚡ Key Benefits</h3>
+                <div class="comparison-grid">
+                    <div class="comparison-item">
+                        <h4 style="color: var(--primary);">📈 Revenue Impact</h4>
+                        <p>ML-ranked deals = higher conversion rates. Expedia's algorithm optimizes for YOUR users.</p>
+                    </div>
+                    <div class="comparison-item">
+                        <h4 style="color: var(--primary);">⏱️ Time to Market</h4>
+                        <p>2 API endpoints = full campaign system. No manual deal curation needed.</p>
+                    </div>
+                    <div class="comparison-item">
+                        <h4 style="color: var(--primary);">🎯 Personalization</h4>
+                        <p>Filter campaigns by user behavior, location, and travel dates for hyper-relevant offers.</p>
+                    </div>
+                    <div class="comparison-item">
+                        <h4 style="color: var(--primary);">🔄 Always Fresh</h4>
+                        <p>Expedia manages campaign inventory. You just display it. Auto-updates daily.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Demo Section -->
+        <section id="demo" class="section">
+            <div class="card">
+                <h2><span class="icon">🎮</span> Interactive API Demo</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 2rem;">
+                    Build API requests in real-time and see the expected response structure.
+                </p>
+            </div>
+
+            <div class="interactive-demo">
+                <h3 style="margin-bottom: 1.5rem;">Campaign API Request Builder</h3>
+                <div class="demo-controls">
+                    <input type="date" id="bookableStart" class="demo-input" placeholder="Bookable Start">
+                    <input type="date" id="bookableEnd" class="demo-input" placeholder="Bookable End">
+                    <input type="date" id="stayStart" class="demo-input" placeholder="Stay Start">
+                    <input type="date" id="stayEnd" class="demo-input" placeholder="Stay End">
+                </div>
+                <div class="demo-controls">
+                    <select id="lifetime" class="demo-input">
+                        <option value="">Campaign Type (Any)</option>
+                        <option value="limited_time_offer">Limited Time Offer</option>
+                        <option value="evergreen">Evergreen</option>
+                    </select>
+                    <input type="number" id="minDiscount" class="demo-input" placeholder="Min Discount %" min="0" max="100">
+                    <select id="blockoutDates" class="demo-input">
+                        <option value="">Blackout Dates (Any)</option>
+                        <option value="true">With Blackouts</option>
+                        <option value="false">Without Blackouts</option>
+                    </select>
+                </div>
+                <button class="demo-btn" onclick="buildCampaignRequest()">Generate API Request</button>
+
+                <div id="campaignOutput" class="demo-output" style="margin-top: 1.5rem;">
+                    <p style="color: var(--text-dim);">Configure parameters above and click "Generate API Request"</p>
+                </div>
+            </div>
+
+            <div class="interactive-demo" style="margin-top: 2rem;">
+                <h3 style="margin-bottom: 1.5rem;">Promotion API Request Builder</h3>
+                <div class="demo-controls">
+                    <input type="text" id="campaignId" class="demo-input" placeholder="Campaign ID (e.g., CAMP_SUMMER2026)" value="CAMP_SUMMER2026">
+                    <input type="text" id="regionId" class="demo-input" placeholder="Region ID (e.g., 3000 for Paris)">
+                </div>
+                <div class="demo-controls">
+                    <select id="minStarRating" class="demo-input">
+                        <option value="">Star Rating (Any)</option>
+                        <option value="3">3+ Stars</option>
+                        <option value="4">4+ Stars</option>
+                        <option value="5">5 Stars Only</option>
+                    </select>
+                    <input type="number" id="minPromotionDiscount" class="demo-input" placeholder="Min Discount %" min="0" max="100">
+                    <select id="sortBy" class="demo-input">
+                        <option value="promotion">Sort by ML Score</option>
+                        <option value="discount">Sort by Discount %</option>
+                    </select>
+                </div>
+                <button class="demo-btn" onclick="buildPromotionRequest()">Generate API Request</button>
+
+                <div id="promotionOutput" class="demo-output" style="margin-top: 1.5rem;">
+                    <p style="color: var(--text-dim);">Configure parameters above and click "Generate API Request"</p>
+                </div>
+            </div>
+
+            <div class="card" style="margin-top: 2rem;">
+                <h3>🔗 Full Workflow Simulation</h3>
+                <p style="margin-bottom: 1.5rem;">Click through the workflow to see how data flows from one API to the next:</p>
+                
+                <div class="flow-step" onclick="simulateStep1()">
+                    <h4>Step 1: User Arrives → Call GET /campaigns</h4>
+                    <p>Click to simulate API response</p>
+                </div>
+                <div id="step1Output" style="display: none; margin: 1rem 0; padding: 1rem; background: var(--bg-light); border-radius: 8px; border: 1px solid var(--border);"></div>
+
+                <div class="flow-arrow">⬇️</div>
+
+                <div class="flow-step" onclick="simulateStep2()">
+                    <h4>Step 2: User Clicks Campaign → Call GET /promotions</h4>
+                    <p>Click to simulate API response</p>
+                </div>
+                <div id="step2Output" style="display: none; margin: 1rem 0; padding: 1rem; background: var(--bg-light); border-radius: 8px; border: 1px solid var(--border);"></div>
+
+                <div class="flow-arrow">⬇️</div>
+
+                <div class="flow-step" onclick="simulateStep3()">
+                    <h4>Step 3: Fetch Hotel Details → Property Content API</h4>
+                    <p>Click to simulate API response</p>
+                </div>
+                <div id="step3Output" style="display: none; margin: 1rem 0; padding: 1rem; background: var(--bg-light); border-radius: 8px; border: 1px solid var(--border);"></div>
+
+                <div class="flow-arrow">⬇️</div>
+
+                <div class="flow-step" onclick="simulateStep4()">
+                    <h4>Step 4: User Selects Dates → Call GET /availability</h4>
+                    <p>Click to simulate API response</p>
+                </div>
+                <div id="step4Output" style="display: none; margin: 1rem 0; padding: 1rem; background: var(--bg-light); border-radius: 8px; border: 1px solid var(--border);"></div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>Expedia Campaign Integration Prototype</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Interactive demonstration of Merchandising API workflows</p>
+    </footer>
+
+    <script>
+        // Navigation
+        function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+            event.target.classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Campaign API Request Builder
+        function buildCampaignRequest() {
+            const params = [];
+            params.push('language=en-US');
+            
+            const bookableStart = document.getElementById('bookableStart').value;
+            const bookableEnd = document.getElementById('bookableEnd').value;
+            const stayStart = document.getElementById('stayStart').value;
+            const stayEnd = document.getElementById('stayEnd').value;
+            const lifetime = document.getElementById('lifetime').value;
+            const minDiscount = document.getElementById('minDiscount').value;
+            const blockoutDates = document.getElementById('blockoutDates').value;
+
+            if (bookableStart) params.push(`bookable_start=${bookableStart}`);
+            if (bookableEnd) params.push(`bookable_end=${bookableEnd}`);
+            if (stayStart) params.push(`stay_start=${stayStart}`);
+            if (stayEnd) params.push(`stay_end=${stayEnd}`);
+            if (lifetime) params.push(`lifetime=${lifetime}`);
+            if (minDiscount) params.push(`min_discount=${minDiscount}`);
+            if (blockoutDates) params.push(`blockout_dates=${blockoutDates}`);
+
+            const requestUrl = `GET /campaigns\n  ?${params.join('\n  &')}`;
+            
+            const exampleResponse = {
+                campaigns: [
+                    {
+                        id: "CAMP_SUMMER2026",
+                        name: "Summer Flash Sale 2026",
+                        lifetime: lifetime || "limited_time_offer",
+                        bookable_start: bookableStart || "2026-04-01",
+                        bookable_end: bookableEnd || "2026-04-30",
+                        stay_start: stayStart || "2026-06-01",
+                        stay_end: stayEnd || "2026-08-31",
+                        min_discount: parseInt(minDiscount) || 15,
+                        max_discount: 60,
+                        property_count: 4820,
+                        blockout_dates: blockoutDates === "true",
+                        assets: {
+                            thematic_images: [{url: "https://example.com/banner.jpg"}],
+                            suggested_copy: {
+                                headline: "Summer Savings — Up to 60% Off",
+                                subheadline: "Book by April 30. Stay Jun–Aug."
+                            }
+                        }
+                    }
+                ]
+            };
+
+            const output = document.getElementById('campaignOutput');
+            output.innerHTML = `
+                <div style="margin-bottom: 1.5rem;">
+                    <h4 style="color: var(--primary); margin-bottom: 0.5rem;">📡 API Request</h4>
+                    <pre style="margin: 0;">${requestUrl}</pre>
+                </div>
+                <div>
+                    <h4 style="color: var(--success); margin-bottom: 0.5rem;">✅ Example Response</h4>
+                    <pre style="margin: 0;">${JSON.stringify(exampleResponse, null, 2)}</pre>
+                </div>
+            `;
+        }
+
+        // Promotion API Request Builder
+        function buildPromotionRequest() {
+            const params = [];
+            params.push('language=en-US');
+            
+            const campaignId = document.getElementById('campaignId').value;
+            const regionId = document.getElementById('regionId').value;
+            const minStarRating = document.getElementById('minStarRating').value;
+            const minPromotionDiscount = document.getElementById('minPromotionDiscount').value;
+            const sortBy = document.getElementById('sortBy').value;
+
+            if (campaignId) params.push(`campaign_id=${campaignId}`);
+            if (regionId) params.push(`region_id=${regionId}`);
+            if (minStarRating) params.push(`min_star_rating=${minStarRating}`);
+            if (minPromotionDiscount) params.push(`min_discount=${minPromotionDiscount}`);
+            if (sortBy) params.push(`sort_by=${sortBy}`);
+
+            const requestUrl = `GET /promotions\n  ?${params.join('\n  &')}`;
+            
+            const exampleResponse = {
+                promotions: [
+                    {
+                        property_id: "12345",
+                        deal_id: "DEAL_12345_SUMMER",
+                        campaign_id: campaignId || "CAMP_SUMMER2026",
+                        discount: parseInt(minPromotionDiscount) || 35,
+                        score: 8450,
+                        bookable_start: "2026-04-01",
+                        bookable_end: "2026-04-30",
+                        stay_start: "2026-06-01",
+                        stay_end: "2026-08-31",
+                        blackout_dates: ["2026-07-04"],
+                        member_only: false,
+                        mobile_only: false,
+                        property_content_link: "https://api.expediagroup.com/content/v3/properties/12345?token=abc123"
+                    }
+                ]
+            };
+
+            const output = document.getElementById('promotionOutput');
+            output.innerHTML = `
+                <div style="margin-bottom: 1.5rem;">
+                    <h4 style="color: var(--primary); margin-bottom: 0.5rem;">📡 API Request</h4>
+                    <pre style="margin: 0;">${requestUrl}</pre>
+                </div>
+                <div>
+                    <h4 style="color: var(--success); margin-bottom: 0.5rem;">✅ Example Response</h4>
+                    <pre style="margin: 0;">${JSON.stringify(exampleResponse, null, 2)}</pre>
+                </div>
+            `;
+        }
+
+        // Workflow Simulation
+        function simulateStep1() {
+            const output = document.getElementById('step1Output');
+            output.style.display = 'block';
+            output.innerHTML = `
+                <h4 style="color: var(--primary);">Campaign API Response:</h4>
+                <pre style="font-size: 0.8rem;">{
+  "campaigns": [
+    {
+      "id": "CAMP_SUMMER2026",
+      "name": "Summer Flash Sale 2026",
+      "max_discount": 60,
+      "property_count": 4820,
+      "assets": {
+        "suggested_copy": {
+          "headline": "Summer Savings — Up to 60% Off"
+        }
+      }
+    }
+  ]
+}</pre>
+                <p style="margin-top: 1rem; color: var(--success);">✅ User sees campaign card with "Summer Flash Sale" and "Up to 60% OFF" badge</p>
+            `;
+        }
+
+        function simulateStep2() {
+            const output = document.getElementById('step2Output');
+            output.style.display = 'block';
+            output.innerHTML = `
+                <h4 style="color: var(--primary);">Promotions API Response (using campaign_id from Step 1):</h4>
+                <pre style="font-size: 0.8rem;">{
+  "promotions": [
+    {
+      "property_id": "12345",
+      "discount": 35,
+      "score": 8450,
+      "property_content_link": "https://api.expediagroup.com/.../12345?token=abc"
+    },
+    {
+      "property_id": "67890",
+      "discount": 42,
+      "score": 7820,
+      "property_content_link": "https://api.expediagroup.com/.../67890?token=def"
+    }
+  ]
+}</pre>
+                <p style="margin-top: 1rem; color: var(--success);">✅ System has hotel IDs and discount percentages. Prices will come from Availability API in Step 4.</p>
+            `;
+        }
+
+        function simulateStep3() {
+            const output = document.getElementById('step3Output');
+            output.style.display = 'block';
+            output.innerHTML = `
+                <h4 style="color: var(--primary);">Property Content API Response (for property_id 12345):</h4>
+                <pre style="font-size: 0.8rem;">{
+  "name": "Le Grand Hotel Paris",
+  "star_rating": 4,
+  "address": "123 Rue de Rivoli, Paris",
+  "images": [
+    {"url": "https://images.expedia.com/hotel-12345-1.jpg"}
+  ],
+  "amenities": ["WiFi", "Pool", "Spa", "Restaurant"],
+  "review_score": 8.5
+}</pre>
+                <p style="margin-top: 1rem; color: var(--success);">✅ User sees hotel card: "Le Grand Hotel Paris • 4⭐ • 35% OFF" (no price yet - need to select dates)</p>
+            `;
+        }
+
+        function simulateStep4() {
+            const output = document.getElementById('step4Output');
+            output.style.display = 'block';
+            output.innerHTML = `
+                <h4 style="color: var(--primary);">Availability API Response (with deal=true parameter):</h4>
+                <pre style="font-size: 0.8rem;">{
+  "rooms": [
+    {
+      "room_type": "Deluxe King",
+      "original_price": 300,
+      "discounted_price": 195,
+      "available": true,
+      "cancellation_policy": "Free cancellation until 24h before"
+    }
+  ]
+}</pre>
+                <p style="margin-top: 1rem; color: var(--success);">✅ NOW user sees live pricing with discount applied: $300 → $195/night (35% off) → Ready to book!</p>
+            `;
+        }
+
+        // Set default dates
+        window.addEventListener('DOMContentLoaded', () => {
+            const today = new Date();
+            const nextMonth = new Date(today.getFullYear(), today.getMonth() + 1, 1);
+            const twoMonthsLater = new Date(today.getFullYear(), today.getMonth() + 3, 0);
+            
+            document.getElementById('bookableStart').value = today.toISOString().split('T')[0];
+            document.getElementById('bookableEnd').value = nextMonth.toISOString().split('T')[0];
+            document.getElementById('stayStart').value = new Date(today.getFullYear(), today.getMonth() + 4, 1).toISOString().split('T')[0];
+            document.getElementById('stayEnd').value = new Date(today.getFullYear(), today.getMonth() + 6, 0).toISOString().split('T')[0];
+        });
+    </script>
+</body>
+</html>

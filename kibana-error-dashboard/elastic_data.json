@@ -1,225 +1,378 @@
 {
   "meta": {
-    "period_label": "Last 24 hours",
+    "period_label": "Last 1 days",
     "hours": 24,
-    "generated_at": "2026-03-30T15:38:26.661818+00:00",
+    "generated_at": "2026-04-15T15:49:08.990313+00:00",
     "app": "hotel"
   },
   "severity_counts": {
-    "info": 5862505,
-    "warn": 110214,
-    "error": 25223
+    "info": 5813636,
+    "warn": 120824,
+    "error": 6516
   },
   "top_errors": [
     {
-      "pattern": "Error executing Sabre Search",
-      "count": 3476,
-      "logger": "net.tstllc.provider.endpoint.sabre.search.SabreSearchAPIClientImpl",
-      "method": "error"
-    },
-    {
-      "pattern": "Unexpected Throwable",
-      "count": 3476,
-      "logger": "net.tstllc.provider.endpoint.sabre.search.SabreSearchAPIClientImpl",
-      "method": "error"
-    },
-    {
-      "pattern": "No usable value for GetHotelAvailRS No usable value for HotelAvailInfos No usable value for HotelAvailInfo No usable value for HotelRateInfo No usable value for RateInfos No usable value for ConvertedRateInfo No usable value for TaxInclusive Did not \u2026",
-      "count": 1883,
-      "logger": "net.tstllc.provider.endpoint.sabre.search.SabreSearchAPIClientImpl",
-      "method": "error"
-    },
-    {
-      "pattern": "unexpected failure",
-      "count": 1725,
-      "logger": "net.tstllc.monitor.LogRecorder$",
-      "method": "exceptionErrorMetrics"
-    },
-    {
-      "pattern": "Connection reset",
-      "count": 1356,
-      "logger": "net.tstllc.provider.endpoint.sabre.search.SabreSearchAPIClientImpl",
-      "method": "error"
-    },
-    {
-      "pattern": "Error getting response",
-      "count": 1343,
-      "logger": "net.tstllc.common.logging.args.Tracking$",
-      "method": "error"
-    },
-    {
-      "pattern": "Unknown OffsetTimeUnit 'Some(Month)' for Deadline(Some(Month),Some({n}),Some(BeforeArrival),None)",
-      "count": 1190,
-      "logger": "net.tstllc.hotel.provider.service.sabre.SabreDomainMapper$",
-      "method": "error"
-    },
-    {
       "pattern": "HotelAvailabilityV2Service - Failed to decode and requery location token:",
-      "count": 437,
+      "count": 1794,
       "logger": "net.tstllc.hotel.service.availability.v2.HotelAvailabilityV2ServiceImpl",
-      "method": "error"
+      "method": "error",
+      "raw_sample": "HotelAvailabilityV2Service - Failed to decode and requery location token:"
+    },
+    {
+      "pattern": "java.net.SocketException: Connection reset",
+      "count": 456,
+      "logger": "net.tstllc.monitor.LogRecorder$",
+      "method": "exceptionErrorMetrics",
+      "raw_sample": "java.net.SocketException: Connection reset"
+    },
+    {
+      "pattern": "java.util.concurrent.TimeoutException: Request timeout to api.rezserver.com/ \u2026",
+      "count": 430,
+      "logger": "net.tstllc.monitor.LogRecorder$",
+      "method": "exceptionErrorMetrics",
+      "raw_sample": "java.util.concurrent.TimeoutException: Request timeout to api.rezserver.com/151.101.130.150:443 after 8000 ms"
+    },
+    {
+      "pattern": "Hybrid Rate Select: Some rates could not be retrieved -- List \u2026",
+      "count": 340,
+      "logger": "net.tstllc.hotel.web.controllers.HotelRoomRatesController",
+      "method": "error",
+      "raw_sample": "Hybrid Rate Select: Some rates could not be retrieved -- List() -- Params: HOT-56001, 5a27703825c09ad375c5bb4021b5e42d6f71ba66da487dc0eb7553f94df5f515,SABRE_HOTEL, SearchRate(2026-05-14,2026-05-17,2,ArraySeq(),true,false,true,None,false,ArraySeq(),List(RoomConfig(2,ArraySeq())))"
+    },
+    {
+      "pattern": "play.api.UnexpectedException: Unexpected exception \u2026",
+      "count": 293,
+      "logger": "net.tstllc.hotel.web.HotelHttpErrorHandler",
+      "method": "logServerError",
+      "raw_sample": "play.api.UnexpectedException: Unexpected exception[CurrencyMismatchException: Currencies differ: GBP/USD]"
+    },
+    {
+      "pattern": "Booking failed",
+      "count": 209,
+      "logger": "net.tstllc.server.impl.hotel.BookingStrategyImpl",
+      "method": "error",
+      "raw_sample": "Booking failed"
     },
     {
       "pattern": "Failed to understand response",
-      "count": 413,
+      "count": 125,
       "logger": "net.tstllc.common.logging.args.Tracking$",
-      "method": "error"
+      "method": "error",
+      "raw_sample": "Failed to understand response"
     },
     {
-      "pattern": "Supplier response resulted in failure message unknown token < Near: <? is <?xml version=\"{n}\" encoding=\"utf-{n}\"?> <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML {n} Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"> <html> <head> <title>{n} \u2026",
-      "count": 407,
+      "pattern": "net.liftweb.json.JsonParser$ParseException: unknown token",
+      "count": 118,
       "logger": "net.tstllc.provider.endpoint.priceline.service.PricelineJsonParser",
-      "method": "applyOrElse"
+      "method": "applyOrElse",
+      "raw_sample": "net.liftweb.json.JsonParser$ParseException: unknown token <"
+    },
+    {
+      "pattern": "ppn bundle is empty. failed to retrieve from cache PropertyAvailabilityRequest \u2026",
+      "count": 107,
+      "logger": "net.tstllc.provider.endpoint.priceline.PricelineSearchAPIClientImpl",
+      "method": "buildDynamicParams",
+      "raw_sample": "ppn bundle is empty. failed to retrieve from cache PropertyAvailabilityRequest(2026-09-25,2026-09-26,List(Occupancy(2,ArraySeq())),List(709037331),false,true,Some(63FEFAA8DB5F4237BA25D06435327C8E6E0C6A7F))"
+    },
+    {
+      "pattern": "Connection reset",
+      "count": 84,
+      "logger": "net.tstllc.provider.endpoint.sabre.search.SabreSearchAPIClientImpl",
+      "method": "error",
+      "raw_sample": "Connection reset"
     }
   ],
   "top_warns": [
     {
-      "pattern": "Received hotel ID without prefix ({n} so prefixed with HOT",
-      "count": 51856,
+      "pattern": "Received hotel ID without prefix \u2026",
+      "count": 51512,
       "logger": "net.tstllc.hotel.service.DAOProviderFactory$",
-      "method": "warn"
+      "method": "warn",
+      "raw_sample": "Received hotel ID without prefix (4482 so prefixed with HOT"
     },
     {
       "pattern": "No Results Found!",
-      "count": 13789,
+      "count": 17597,
       "logger": "net.tstllc.monitor.LogRecorder$",
-      "method": "businessErrorMetrics"
+      "method": "businessErrorMetrics",
+      "raw_sample": "No Results Found!"
     },
     {
       "pattern": "LocationTokenService: No properties found for location token:",
-      "count": 9543,
+      "count": 17043,
       "logger": "net.tstllc.hotel.service.availability.v2.LocationTokenService",
-      "method": "warn"
+      "method": "warn",
+      "raw_sample": "LocationTokenService: No properties found for location token:"
     },
     {
       "pattern": "LocationTokenService: No properties found for location token: MC4wfDAuMHwxMnx8aG90ZWx8",
-      "count": 4987,
+      "count": 6723,
       "logger": "net.tstllc.hotel.service.availability.v2.LocationTokenService",
-      "method": "warn"
+      "method": "warn",
+      "raw_sample": "LocationTokenService: No properties found for location token: MC4wfDAuMHwxMnx8aG90ZWx8"
     },
     {
-      "pattern": "Hotel Hybrid - buildFilterMetadata with {n} properties",
-      "count": 1209,
+      "pattern": "Filtering Sabre rate for hotel HOT- \u2026",
+      "count": 1882,
+      "logger": "net.tstllc.hotel.provider.service.sabre.DailyRateValidator$",
+      "method": "warn",
+      "raw_sample": "Filtering Sabre rate for hotel HOT-3289218: sum mismatch. Expected nights=18, actual nights=18. Expected subtotal=2335.1, actual daily rate sum=2325.5999999999995."
+    },
+    {
+      "pattern": "Hotel Hybrid - buildFilterMetadata with \u2026",
+      "count": 1358,
       "logger": "net.tstllc.hotel.service.availability.v2.HotelAvailabilityV2ServiceImpl",
-      "method": "warn"
-    },
-    {
-      "pattern": "TravelPort Search HotelError: W {n}: MAXIMUM LENGTH OF STAY EXCEEDED",
-      "count": 963,
-      "logger": "net.tstllc.hotel.adapter.tp.xml.TpHotelAvailabilityResponse",
-      "method": "warn"
+      "method": "warn",
+      "raw_sample": "Hotel Hybrid - buildFilterMetadata with 3265 properties"
     },
     {
       "pattern": "No sponsored listings for: Anaheim CA cache miss and no response after long wait.",
-      "count": 919,
+      "count": 822,
       "logger": "net.tstllc.server.impl.hotel.AaaPublishingServiceImpl",
-      "method": "warn"
+      "method": "warn",
+      "raw_sample": "No sponsored listings for: Anaheim CA cache miss and no response after long wait."
     },
     {
-      "pattern": "Got error produce response in correlation id {n} on topic-partition logstash-{n}, splitting and retrying ({n} attempts left). Error: MESSAGE_TOO_LARGE",
-      "count": 328,
+      "pattern": "Got error produce response in correlation id \u2026",
+      "count": 604,
       "logger": "org.apache.kafka.clients.producer.internals.Sender",
-      "method": "info"
+      "method": "info",
+      "raw_sample": "Got error produce response in correlation id 887495 on topic-partition logstash-0, splitting and retrying (0 attempts left). Error: MESSAGE_TOO_LARGE"
     },
     {
-      "pattern": "No sponsored listings for: Paris cache miss and no response after long wait.",
-      "count": 250,
-      "logger": "net.tstllc.server.impl.hotel.AaaPublishingServiceImpl",
-      "method": "warn"
+      "pattern": "LocationTokenService: No properties found for location token: NTQuNTI1OTYxNHwxNS4yNTUxMTg3fDE1fENoSUpoZHF0ejRhSTdVWVJlZkQ4cy1hWjczSXxob3RlbHw=",
+      "count": 512,
+      "logger": "net.tstllc.hotel.service.availability.v2.LocationTokenService",
+      "method": "warn",
+      "raw_sample": "LocationTokenService: No properties found for location token: NTQuNTI1OTYxNHwxNS4yNTUxMTg3fDE1fENoSUpoZHF0ejRhSTdVWVJlZkQ4cy1hWjczSXxob3RlbHw="
     },
     {
       "pattern": "No sponsored listings for: Las Vegas Strip NV cache miss and no response after long wait.",
-      "count": 244,
+      "count": 287,
       "logger": "net.tstllc.server.impl.hotel.AaaPublishingServiceImpl",
-      "method": "warn"
+      "method": "warn",
+      "raw_sample": "No sponsored listings for: Las Vegas Strip NV cache miss and no response after long wait."
     }
   ],
   "top_infos": [
     {
       "pattern": "Response",
-      "count": 744463,
+      "count": 774037,
       "logger": "net.tstllc.common.logging.args.Tracking$",
-      "method": "info"
+      "method": "info",
+      "raw_sample": "Response"
     },
     {
-      "pattern": "HttpClient.get - URL: https://api.rezserver.com/api/hotel/getExpress.Availability",
-      "count": 185825,
+      "pattern": "HttpClient.post - URL: {url}",
+      "count": 194749,
       "logger": "net.tstllc.common.logging.args.Tracking$",
-      "method": "info"
+      "method": "info",
+      "raw_sample": "HttpClient.post - URL: https://api.platform.sabre.com/v5/get/hotelavail"
     },
     {
-      "pattern": "HttpClient.post - URL: https://api.platform.sabre.com/v5/get/hotelavail",
-      "count": 182320,
+      "pattern": "HttpClient.get - URL: {url}",
+      "count": 188048,
       "logger": "net.tstllc.common.logging.args.Tracking$",
-      "method": "info"
+      "method": "info",
+      "raw_sample": "HttpClient.get - URL: https://api.rezserver.com/api/hotel/getExpress.Availability"
     },
     {
-      "pattern": "Rate Cache: Checking availability of cache with key: MzQuNTk1ODIwMXwtMTIwLjEzNzY0ODF8MTV8Q2hJSmhTS1NfS0JVNllBUlZzRUxCaHNvRGkwfGhvdGVsfA==ATILowestPerNight2026-{n}-{n}|{n}-{n}-{n}|{n}||false|false|falsefalse49false from: \u2026",
-      "count": 131577,
+      "pattern": "Rate Cache: Checking availability of cache with key:",
+      "count": 132695,
       "logger": "net.tstllc.hotel.service.availability.v2.cache.BestAvailableCacheImpl",
-      "method": "info"
+      "method": "info",
+      "raw_sample": "Rate Cache: Checking availability of cache with key: \n NDQuODgyNTAyNnwtNjMuNTE1MTc1MDk5OTk5OTl8MTV8Q2hJSlc0ekxNVy1BV1VzUmd6b0dDNDR6Q19vfGhvdGVsfA==EAN_RAPIDLowestPerNight2026-09-29|2026-09-30|3||false|false|falsetrue39false from: \n NDQuODgyNTAyNnwtNjMuNTE1MTc1MDk5OTk5OTl8MTV8Q2hJSlc0ekxNVy1BV1VzUmd6b0dDNDR6Q19vfGhvdGVsfA== EAN_RAPID HotelPriceOptions(true,LowestPerNight) 2026-09-29 2026-09-30 RoomConfig(3,List()) false Some(false) 39 false\n Result: true"
     },
     {
-      "pattern": "Rate Cache: Checking availability of cache with key: MzQuNTk1ODIwMXwtMTIwLjEzNzY0ODF8MTV8Q2hJSmhTS1NfS0JVNllBUlZzRUxCaHNvRGkwfGhvdGVsfA==EAN_RAPIDLowestPerNight2026-{n}-{n}|{n}-{n}-{n}|{n}||false|false|falsefalse49false from: \u2026",
-      "count": 131577,
-      "logger": "net.tstllc.hotel.service.availability.v2.cache.BestAvailableCacheImpl",
-      "method": "info"
+      "pattern": "HotelAvailabilityV2Service.getFilters()",
+      "count": 77040,
+      "logger": "net.tstllc.hotel.service.availability.v2.HotelAvailabilityV2ServiceImpl",
+      "method": "info",
+      "raw_sample": "HotelAvailabilityV2Service.getFilters()\nPropTime: 4 ms\nFilterTime: 2476 ms\nPreferredTime: -7 ms\nPreferrredFamilyTime: 0 ms\nFilterTime: 7 ms"
     },
     {
-      "pattern": "Rate Cache: Checking availability of cache with key: MzQuNTk1ODIwMXwtMTIwLjEzNzY0ODF8MTV8Q2hJSmhTS1NfS0JVNllBUlZzRUxCaHNvRGkwfGhvdGVsfA==HB_APITUDELowestPerNight2026-{n}-{n}|{n}-{n}-{n}|{n}||false|false|falsefalse49false from: \u2026",
-      "count": 131577,
-      "logger": "net.tstllc.hotel.service.availability.v2.cache.BestAvailableCacheImpl",
-      "method": "info"
+      "pattern": "HotelAvailabilityV2Service.GetHotels() time",
+      "count": 64803,
+      "logger": "net.tstllc.hotel.service.availability.v2.HotelAvailabilityV2ServiceImpl",
+      "method": "info",
+      "raw_sample": "HotelAvailabilityV2Service.GetHotels() time\nPullTime: 8 ms\nFilterTime: 25 ms\nLeadTime: 66 ms\nSortTime: 2 ms\nOrderTime: 0 ms\nYieldTime: 1 ms"
     },
     {
-      "pattern": "Rate Cache: Checking availability of cache with key: MzQuNTk1ODIwMXwtMTIwLjEzNzY0ODF8MTV8Q2hJSmhTS1NfS0JVNllBUlZzRUxCaHNvRGkwfGhvdGVsfA==PRICELINE_HOTELLowestPerNight2026-{n}-{n}|{n}-{n}-{n}|{n}||false|false|falsefalse49false from: \u2026",
-      "count": 131577,
-      "logger": "net.tstllc.hotel.service.availability.v2.cache.BestAvailableCacheImpl",
-      "method": "info"
+      "pattern": "HotelSearchRatesContoller.rates()",
+      "count": 59310,
+      "logger": "net.tstllc.hotel.web.controllers.availability.v2.HotelSearchRatesController",
+      "method": "info",
+      "raw_sample": "HotelSearchRatesContoller.rates()\nRatesTime: 10 ms"
     },
     {
-      "pattern": "Rate Cache: Checking availability of cache with key: MzQuNTk1ODIwMXwtMTIwLjEzNzY0ODF8MTV8Q2hJSmhTS1NfS0JVNllBUlZzRUxCaHNvRGkwfGhvdGVsfA==SABRE_HOTELLowestPerNight2026-{n}-{n}|{n}-{n}-{n}|{n}||false|false|falsefalse49false from: \u2026",
-      "count": 131577,
-      "logger": "net.tstllc.hotel.service.availability.v2.cache.BestAvailableCacheImpl",
-      "method": "info"
+      "pattern": "getImages: {n} totalTime: {n} ms photoTime: {n} masterTime: {n} ms processImageTime {n} ms",
+      "count": 48535,
+      "logger": "net.tstllc.hotel.service.availability.v2.HotelDataServiceImpl",
+      "method": "info",
+      "raw_sample": "getImages: 4 totalTime: 6 ms  photoTime: 4  masterTime: 2 ms processImageTime 0 ms"
     },
     {
-      "pattern": "Rate Cache: Checking availability of cache with key: NDMuNjQ1NDg0MnwtNzkuMzgwODMwMXwyMHxDaElKS1FEek9BNDFLNGdSYWpRRGR5ekQ5OTB8aG90ZWx8EAN_RAPIDLowestPerNight2026-{n}-{n}|{n}-{n}-{n}|{n}||false|false|falsefalse7true from: \u2026",
-      "count": 131577,
-      "logger": "net.tstllc.hotel.service.availability.v2.cache.BestAvailableCacheImpl",
-      "method": "info"
+      "pattern": "Total properties.. {n} hotels {n} vrbos..{n}",
+      "count": 44552,
+      "logger": "net.tstllc.hotel.provider.service.rapid.RapidBestPriceProviderService",
+      "method": "bestAvailablePrices",
+      "raw_sample": "Total properties.. 35 hotels 35 vrbos..0"
     },
     {
-      "pattern": "Rate Cache: Checking availability of cache with key: NDMuNjQ1NDg0MnwtNzkuMzgwODMwMXwyMHxDaElKS1FEek9BNDFLNGdSYWpRRGR5ekQ5OTB8aG90ZWx8SABRE_HOTELLowestPerNight2026-{n}-{n}|{n}-{n}-{n}|{n}||false|false|falsefalse7true from: \u2026",
-      "count": 131577,
-      "logger": "net.tstllc.hotel.service.availability.v2.cache.BestAvailableCacheImpl",
-      "method": "info"
+      "pattern": "Filtered property count {n}",
+      "count": 43292,
+      "logger": "net.tstllc.hotel.service.availability.v2.HotelAvailabilityV2ServiceImpl",
+      "method": "filterOutBadProperties",
+      "raw_sample": "Filtered property count 1"
     }
   ],
-  "new_errors": [],
+  "new_errors": [
+    {
+      "pattern": "play.api.UnexpectedException: Unexpected exception \u2026",
+      "count": 177336,
+      "logger": "net.tstllc.hotel.web.HotelHttpErrorHandler",
+      "method": "logServerError",
+      "raw_sample": "play.api.UnexpectedException: Unexpected exception[InvalidPropertyIdException: Invalid property ID: hotels]"
+    },
+    {
+      "pattern": "org.xml.sax.SAXParseException: The element type \"HR\" must be terminated by the matching end-tag \"",
+      "count": 7562,
+      "logger": "net.tstllc.hotel.provider.service.ati.AtiBestPriceProviderService",
+      "method": "error",
+      "raw_sample": "org.xml.sax.SAXParseException: The element type \"HR\" must be terminated by the matching end-tag \"</HR>\"."
+    },
+    {
+      "pattern": "com.mysql.cj.jdbc.exceptions.MySQLTransactionRollbackException: Lock wait timeout exceeded; try restarting transaction",
+      "count": 40,
+      "logger": "util",
+      "method": "error",
+      "raw_sample": "com.mysql.cj.jdbc.exceptions.MySQLTransactionRollbackException: Lock wait timeout exceeded; try restarting transaction"
+    },
+    {
+      "pattern": "play.api.libs.json.JsResultException: JsResultException \u2026",
+      "count": 27,
+      "logger": "net.tstllc.common.web.services.GooglePlacesServiceImpl",
+      "method": "error",
+      "raw_sample": "play.api.libs.json.JsResultException: JsResultException(errors:List((,List(JsonValidationError(List('result' is undefined on object: {\"error_message\":\"\",\"html_attributions\":[],\"status\":\"DEADLINE_EXCEEDED\"}),ArraySeq())))))"
+    },
+    {
+      "pattern": "Missing required credential for TST.HQ.Sabre_Hotel.epr in adapter credential schema net.tstllc.common.model.adapter.credentials.schema.SabreHotelCredentials \u2026",
+      "count": 6,
+      "logger": "net.tstllc.server.impl.admin.AdapterCredentialServiceImpl",
+      "method": "error",
+      "raw_sample": "Missing required credential for TST.HQ.Sabre_Hotel.epr in adapter credential schema net.tstllc.common.model.adapter.credentials.schema.SabreHotelCredentials$@1c49e26c for licenseeId -> 0 | adapterId -> Some(62) | name -> epr | branchId -> Some(1)!"
+    },
+    {
+      "pattern": "Missing required credential for TST.HQ.Sabre_Hotel.group in adapter credential schema net.tstllc.common.model.adapter.credentials.schema.SabreHotelCredentials \u2026",
+      "count": 6,
+      "logger": "net.tstllc.server.impl.admin.AdapterCredentialServiceImpl",
+      "method": "error",
+      "raw_sample": "Missing required credential for TST.HQ.Sabre_Hotel.group in adapter credential schema net.tstllc.common.model.adapter.credentials.schema.SabreHotelCredentials$@1c49e26c for licenseeId -> 0 | adapterId -> Some(62) | name -> group | branchId -> Some(1)!"
+    },
+    {
+      "pattern": "Missing required credential for TST.HQ.Sabre_Hotel.pcc in adapter credential schema net.tstllc.common.model.adapter.credentials.schema.SabreHotelCredentials \u2026",
+      "count": 6,
+      "logger": "net.tstllc.server.impl.admin.AdapterCredentialServiceImpl",
+      "method": "error",
+      "raw_sample": "Missing required credential for TST.HQ.Sabre_Hotel.pcc in adapter credential schema net.tstllc.common.model.adapter.credentials.schema.SabreHotelCredentials$@1c49e26c for licenseeId -> 0 | adapterId -> Some(62) | name -> pcc | branchId -> Some(1)!"
+    },
+    {
+      "pattern": "Cancel Failed: This reservation cannot be cancelled online. Some reservations may not be cancelled once in full penalty. For additional assistance, please contact us or the hotel directly.",
+      "count": 6,
+      "logger": "net.tstllc.hotel.web.controllers.HotelConfirmationController",
+      "method": "$anonfun$cancelReservation$3",
+      "raw_sample": "Cancel Failed: This reservation cannot be cancelled online. Some reservations may not be cancelled once in full penalty. For additional assistance, please contact us or the hotel directly."
+    },
+    {
+      "pattern": "net.tstllc.common.exception.CancelFailedException: The hotel is not able to process an online cancellation for this reservation and should be called directly to cancel. When calling the hotel, please \u2026",
+      "count": 6,
+      "logger": "net.tstllc.server.adapter.tpgws.hotel.TpHotelAdapter",
+      "method": "error",
+      "raw_sample": "net.tstllc.common.exception.CancelFailedException: The hotel is not able to process an online cancellation for this reservation and should be called directly to cancel. When calling the hotel, please ask for a cancellation confirmation number. We apologize for any inconvenience."
+    },
+    {
+      "pattern": "net.tstllc.common.exception.CancelFailedException: INVALID_DATA - The booking has already been cancelled.",
+      "count": 2,
+      "logger": "net.tstllc.hotel.web.controllers.HotelConfirmationController",
+      "method": "error",
+      "raw_sample": "net.tstllc.common.exception.CancelFailedException: INVALID_DATA - The booking has already been cancelled."
+    }
+  ],
   "new_warns": [
     {
-      "pattern": "Filtering Sabre rate for hotel HOT-{n}: sum mismatch. Expected nights={n}, actual nights={n}. Expected subtotal={n}, actual daily rate sum={n}.",
-      "count": 3,
-      "logger": "net.tstllc.hotel.provider.service.sabre.DailyRateValidator$",
-      "method": "warn"
+      "pattern": "Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.",
+      "count": 120,
+      "logger": "com.zaxxer.hikari.util.DriverDataSource",
+      "method": "<init>",
+      "raw_sample": "Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation."
     },
     {
-      "pattern": "Filtering Sabre rate for hotel HOT-{n}: night count mismatch, sum mismatch. Expected nights={n}, actual nights={n}. Expected subtotal={n}, actual daily rate sum={n}.",
-      "count": 2,
-      "logger": "net.tstllc.hotel.provider.service.sabre.DailyRateValidator$",
-      "method": "warn"
+      "pattern": "LocationTokenService: No properties found for location token: NDEuODgzMjV8LTg3LjYzMjM4Nzl8MTB8Q2hJSjdjdjAwRHdzRG9nUkFNREFDYTJtNEs4fGhvdGVsfA==,U3RvcmVkUG9seWdvbjozOTA2NDl8aG90ZWx8",
+      "count": 22,
+      "logger": "net.tstllc.hotel.service.availability.v2.LocationTokenService",
+      "method": "warn",
+      "raw_sample": "LocationTokenService: No properties found for location token: NDEuODgzMjV8LTg3LjYzMjM4Nzl8MTB8Q2hJSjdjdjAwRHdzRG9nUkFNREFDYTJtNEs4fGhvdGVsfA==,U3RvcmVkUG9seWdvbjozOTA2NDl8aG90ZWx8"
     },
     {
-      "pattern": "Failure retrieving cache data from redis with prefix HOT:PROV:APT:",
-      "count": 1,
-      "logger": "net.tstllc.service.scalacache.redis.ScalaRedisCacheSync",
-      "method": "warn"
+      "pattern": "Daily rates do not sum to for property Four Seasons Hotel Toronto and for roomRate MjAyNjA0MTZ8MjAyNjA0MTl8V3wyNTd8MTE0NDQzfERCTC5LRy1TVXxJRF9CMkJfNDh8Uk98SEJHM0ZSUHwxfjF+MHxAUkVDSEVDS0BmYWxzZQ== and \u2026",
+      "count": 16,
+      "logger": "net.tstllc.hotel.web.trip.HotelPriceFactory",
+      "method": "warn",
+      "raw_sample": "Daily rates do not sum to for property Four Seasons Hotel Toronto and for roomRate MjAyNjA0MTZ8MjAyNjA0MTl8V3wyNTd8MTE0NDQzfERCTC5LRy1TVXxJRF9CMkJfNDh8Uk98SEJHM0ZSUHwxfjF+MHxAUkVDSEVDS0BmYWxzZQ== and provider HB Apitude"
+    },
+    {
+      "pattern": "Failed to fetch rate rules for C2TPRO. The rate will be ignored.",
+      "count": 16,
+      "logger": "net.tstllc.server.adapter.tpgws.hotel.TpHotelAdapter",
+      "method": "warn",
+      "raw_sample": "Failed to fetch rate rules for C2TPRO. The rate will be ignored."
+    },
+    {
+      "pattern": "error.date.future, error.date.future",
+      "count": 14,
+      "logger": "net.tstllc.hotel.web.controllers.details.HotelDetailsDataController",
+      "method": "$anonfun$ratesData$2",
+      "raw_sample": "error.date.future, error.date.future"
+    },
+    {
+      "pattern": "Failed to fetch rate rules for A11PRO. The rate will be ignored.",
+      "count": 12,
+      "logger": "net.tstllc.server.adapter.tpgws.hotel.TpHotelAdapter",
+      "method": "warn",
+      "raw_sample": "Failed to fetch rate rules for A11PRO. The rate will be ignored."
+    },
+    {
+      "pattern": "Failed to fetch rate rules for B2DPRO. The rate will be ignored.",
+      "count": 12,
+      "logger": "net.tstllc.server.adapter.tpgws.hotel.TpHotelAdapter",
+      "method": "warn",
+      "raw_sample": "Failed to fetch rate rules for B2DPRO. The rate will be ignored."
+    },
+    {
+      "pattern": "net.tstllc.common.exception.BookingFailedException: The GWS booking request returned errors: INVALID - CREDIT CARD - R357: F",
+      "count": 10,
+      "logger": "net.tstllc.server.impl.hotel.HotelServiceImpl",
+      "method": "applyOrElse",
+      "raw_sample": "net.tstllc.common.exception.BookingFailedException: The GWS booking request returned errors:  INVALID - CREDIT CARD - R357:  F"
+    },
+    {
+      "pattern": "Rate Cache: No Cache found for cache key: MjguNTM4MzgzMnwtODEuMzc4OTI2OXwxNXxDaElKZDd6Tl90aHo1NGdSbnItbFBBYXl3d298aG90ZWx8U3RvcmVkUG9seWdvbjozOTA0NDQ=BEDS_ONLINELowestPerNight2026- \u2026",
+      "count": 6,
+      "logger": "net.tstllc.hotel.service.availability.v2.cache.BestAvailableCacheImpl",
+      "method": "warn",
+      "raw_sample": "Rate Cache: No Cache found for cache key: MjguNTM4MzgzMnwtODEuMzc4OTI2OXwxNXxDaElKZDd6Tl90aHo1NGdSbnItbFBBYXl3d298aG90ZWx8U3RvcmVkUG9seWdvbjozOTA0NDQ=BEDS_ONLINELowestPerNight2026-04-17|2026-04-18|2||false|false|falsefalse72true"
+    },
+    {
+      "pattern": "Rate Cache: No Cache found for cache key: MjguNTM4MzgzMnwtODEuMzc4OTI2OXwxNXxDaElKZDd6Tl90aHo1NGdSbnItbFBBYXl3d298aG90ZWx8U3RvcmVkUG9seWdvbjozOTA0NDQ=PRICELINE_HOTELLowestPerNight2026- \u2026",
+      "count": 6,
+      "logger": "net.tstllc.hotel.service.availability.v2.cache.BestAvailableCacheImpl",
+      "method": "warn",
+      "raw_sample": "Rate Cache: No Cache found for cache key: MjguNTM4MzgzMnwtODEuMzc4OTI2OXwxNXxDaElKZDd6Tl90aHo1NGdSbnItbFBBYXl3d298aG90ZWx8U3RvcmVkUG9seWdvbjozOTA0NDQ=PRICELINE_HOTELLowestPerNight2026-04-17|2026-04-18|2||false|false|falsefalse72true"
     }
   ],
-  "index_size_gb": 254.15,
+  "index_size_gb": 236.68,
   "index_size_method": "estimated",
-  "total_doc_count": 227412997,
-  "total_error_count": 25223,
-  "total_warn_count": 110214
+  "total_doc_count": 211774898,
+  "total_error_count": 6516,
+  "total_warn_count": 120824
 }

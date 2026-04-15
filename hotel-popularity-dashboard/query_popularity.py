@@ -8,6 +8,7 @@ import sys
 import json
 import argparse
 from datetime import datetime
+import pytz
 import mysql.connector
 from mysql.connector import Error
 
@@ -27,12 +28,12 @@ def get_db_connection():
         sys.exit(1)
 
 
-def query_inactive_popular_hotels(min_weighting=50, months_inactive=2):
+def query_inactive_popular_hotels(min_weighting=200, months_inactive=2):
     """
     Query hotels with high popularity but no recent bookings.
     
     Args:
-        min_weighting: Minimum weighting threshold (default: 50)
+        min_weighting: Minimum weighting threshold (default: 200)
         months_inactive: Months without bookings (default: 2)
     
     Returns:
@@ -44,20 +45,48 @@ def query_inactive_popular_hotels(min_weighting=50, months_inactive=2):
     query = f"""
         SELECT 
             hp.hotel_id,
-            hb.hotel_name,
-            hb.hotel_address_city,
-            hb.hotel_address_country_code,
-            MAX(tb.create_date) as last_booking_date,
+            (SELECT hotel_name 
+             FROM book.HOTEL_BOOKING_V2 
+             WHERE hotel_id = hp.hotel_id 
+               AND hotel_name IS NOT NULL 
+             ORDER BY travel_booking_id DESC 
+             LIMIT 1) as hotel_name,
+            (SELECT hotel_address_city 
+             FROM book.HOTEL_BOOKING_V2 
+             WHERE hotel_id = hp.hotel_id 
+               AND hotel_address_city IS NOT NULL 
+             ORDER BY travel_booking_id DESC 
+             LIMIT 1) as hotel_address_city,
+            (SELECT hotel_address_country_code 
+             FROM book.HOTEL_BOOKING_V2 
+             WHERE hotel_id = hp.hotel_id 
+               AND hotel_address_country_code IS NOT NULL 
+             ORDER BY travel_booking_id DESC 
+             LIMIT 1) as hotel_address_country_code,
+            (SELECT MAX(tb.create_date) 
+             FROM book.HOTEL_BOOKING_V2 hb 
+             INNER JOIN book.TRAVEL_BOOKING tb ON hb.travel_booking_id = tb.id 
+             WHERE hb.hotel_id = hp.hotel_id AND tb.product_type = 'hotel') as last_booking_date,
+            (SELECT COUNT(*) 
+             FROM book.HOTEL_BOOKING_V2 
+             WHERE hotel_id = hp.hotel_id) as actual_booking_count,
             hp.weighting
         FROM TST.HOTEL_POPULARITY hp
-        INNER JOIN book.HOTEL_BOOKING_V2 hb ON hp.hotel_id = hb.hotel_id
-        INNER JOIN book.TRAVEL_BOOKING tb ON hb.travel_booking_id = tb.id
         WHERE hp.weighting >= %s
-          AND tb.product_type = 'hotel'
-        GROUP BY hp.hotel_id, hb.hotel_name, hb.hotel_address_city, 
-                 hb.hotel_address_country_code, hp.weighting
-        HAVING MAX(tb.create_date) < DATE_SUB(NOW(), INTERVAL %s MONTH)
-        ORDER BY last_booking_date ASC, hp.weighting DESC
+          AND NOT EXISTS (
+              SELECT 1 
+              FROM book.HOTEL_BOOKING_V2 hb
+              INNER JOIN book.TRAVEL_BOOKING tb ON hb.travel_booking_id = tb.id
+              WHERE hb.hotel_id = hp.hotel_id 
+                AND tb.product_type = 'hotel'
+                AND tb.create_date >= DATE_SUB(NOW(), INTERVAL %s MONTH)
+          )
+          AND EXISTS (
+              SELECT 1
+              FROM book.HOTEL_BOOKING_V2 hb
+              WHERE hb.hotel_id = hp.hotel_id
+          )
+        ORDER BY hp.weighting DESC, last_booking_date ASC
     """
     
     try:
@@ -85,8 +114,8 @@ def main():
     parser.add_argument(
         '--min-weighting',
         type=int,
-        default=50,
-        help='Minimum popularity weighting threshold (default: 50)'
+        default=200,
+        help='Minimum popularity weighting threshold (default: 200)'
     )
     parser.add_argument(
         '--months-inactive',
@@ -120,9 +149,13 @@ def main():
         months_inactive=args.months_inactive
     )
     
+    # Get current time in EST
+    est = pytz.timezone('America/New_York')
+    current_time_est = datetime.now(est).strftime('%Y-%m-%d %H:%M:%S %Z')
+    
     # Prepare output data
     output_data = {
-        'query_timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+        'query_timestamp': current_time_est,
         'parameters': {
             'min_weighting': args.min_weighting,
             'months_inactive': args.months_inactive

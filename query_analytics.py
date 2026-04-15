@@ -254,18 +254,33 @@ def run_query(creds, interval_hours, licensee_id=None, adapter_name=None):
         """, filter_params + success_params)
         hourly_rows = cursor.fetchall()
 
-        # ── 5. Top 10 failure reasons (deduplicated)
+        # ── 5. Top 10 failure reasons (deduplicated) with adapter names
         cursor.execute(f"""
             {cte}
             SELECT
                 status_reason,
-                COUNT(*) AS count
+                COUNT(*) AS count,
+                GROUP_CONCAT(DISTINCT adapter_name ORDER BY adapter_name SEPARATOR ', ') AS adapters
             FROM true_failures
             GROUP BY status_reason
             ORDER BY count DESC
             LIMIT 10
         """, filter_params)
         failure_reasons = cursor.fetchall()
+
+        # ── 5b. CC failure count
+        cursor.execute(f"""
+            {cte}
+            SELECT COUNT(*) AS cc_failed
+            FROM true_failures
+            WHERE LOWER(status_reason) REGEXP 'payment|credit.?card|\\bcc\\b|card|insufficient.?fund|billing|cvv|card.?decline|invalid.?card|card.?error|transaction.?fail'
+        """, filter_params)
+        cc_failed = int(cursor.fetchone()["cc_failed"])
+
+        non_cc_failed      = true_failed - cc_failed
+        non_cc_total       = successful + non_cc_failed
+        non_cc_failure_pct = round((non_cc_failed / non_cc_total * 100), 2) if non_cc_total > 0 else 0
+        cc_pct_of_failures = round((cc_failed / true_failed * 100), 2) if true_failed > 0 else 0
 
         # ── 6. Per-licensee breakdown
         if not licensee_id:
@@ -321,11 +336,15 @@ def run_query(creds, interval_hours, licensee_id=None, adapter_name=None):
                 "adapter_name": adapter_name or "all"
             },
             "summary": {
-                "total":       total,
-                "successful":  successful,
-                "failed":      true_failed,
-                "failure_pct": failure_pct,
-                "success_pct": round(100 - failure_pct, 2)
+                "total":               total,
+                "successful":          successful,
+                "failed":              true_failed,
+                "failure_pct":         failure_pct,
+                "success_pct":         round(100 - failure_pct, 2),
+                "cc_failed":           cc_failed,
+                "cc_pct_of_failures":  cc_pct_of_failures,
+                "non_cc_failed":       non_cc_failed,
+                "non_cc_failure_pct":  non_cc_failure_pct,
             },
             "by_adapter": [
                 {
@@ -359,7 +378,7 @@ def run_query(creds, interval_hours, licensee_id=None, adapter_name=None):
                 for r in hourly_rows
             ],
             "top_failure_reasons": [
-                {"reason": r["status_reason"], "count": int(r["count"])}
+                {"reason": r["status_reason"], "count": int(r["count"]), "adapters": r["adapters"] or ""}
                 for r in failure_reasons
             ]
         }

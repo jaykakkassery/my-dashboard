@@ -87,15 +87,17 @@ def generate_html(data):
         for i, r in enumerate(failure_reasons, 1):
             pct = round(r['count'] / summary['failed'] * 100, 1) if summary['failed'] > 0 else 0
             color = "#ef4444" if pct > 30 else "#f59e0b" if pct > 10 else "#94a3b8"
+            adapters = r.get('adapters', '')
             failure_rows_html += f"""
             <tr>
                 <td style="color:#64748b;font-size:0.75rem">{i}</td>
                 <td style="color:#e2e8f0;word-break:break-word">{r['reason']}</td>
+                <td style="color:#94a3b8;font-size:0.72rem;font-family:var(--mono)">{adapters}</td>
                 <td style="text-align:right;color:{color};font-weight:500">{r['count']:,}</td>
                 <td style="text-align:right;color:{color}">{pct}%</td>
             </tr>"""
     else:
-        failure_rows_html = '<tr><td colspan="4" style="text-align:center;color:#64748b;padding:2rem">No failures in this period ✅</td></tr>'
+        failure_rows_html = '<tr><td colspan="5" style="text-align:center;color:#64748b;padding:2rem">No failures in this period ✅</td></tr>'
 
     # Adapter breakdown table
     adapter_rows_html = ""
@@ -249,7 +251,7 @@ def generate_html(data):
 </div>
 
 <!-- KPI Row -->
-<div class="kpi-grid">
+<div class="kpi-grid" style="grid-template-columns:repeat(6,1fr)">
   <div class="kpi total">
     <div class="kpi-label">Total Bookings</div>
     <div class="kpi-value">{summary['total']:,}</div>
@@ -261,14 +263,24 @@ def generate_html(data):
     <div class="kpi-sub">{summary['success_pct']}% success rate</div>
   </div>
   <div class="kpi failed">
-    <div class="kpi-label">True Failures</div>
+    <div class="kpi-label">Total Failures</div>
     <div class="kpi-value">{summary['failed']:,}</div>
-    <div class="kpi-sub">unrecovered · {summary['failure_pct']}% rate</div>
+    <div class="kpi-sub">unrecovered failures</div>
   </div>
   <div class="kpi rate">
-    <div class="kpi-label">Failure Rate</div>
+    <div class="kpi-label">Total Failure Rate</div>
     <div class="kpi-value">{summary['failure_pct']}%</div>
     <div class="kpi-sub">{'↑ needs attention' if failure_pct > 5 else '↓ within normal range'}</div>
+  </div>
+  <div class="kpi failed">
+    <div class="kpi-label">Total CC Failures</div>
+    <div class="kpi-value">{summary['cc_failed']:,}</div>
+    <div class="kpi-sub">{summary['cc_pct_of_failures']}% of all failures</div>
+  </div>
+  <div class="kpi rate">
+    <div class="kpi-label">Failure Rate (excl. CC)</div>
+    <div class="kpi-value">{summary['non_cc_failure_pct']}%</div>
+    <div class="kpi-sub">{summary['non_cc_failed']:,} non-CC failures</div>
   </div>
 </div>
 
@@ -294,7 +306,7 @@ def generate_html(data):
 <div class="table-card">
   <div class="chart-title">Top 10 Failure Reasons</div>
   <table class="failure-table">
-    <thead><tr><th>#</th><th>Failure Reason</th><th>Count</th><th>% of Failures</th></tr></thead>
+    <thead><tr><th>#</th><th>Failure Reason</th><th>Adapters</th><th>Count</th><th>% of Failures</th></tr></thead>
     <tbody>{failure_rows_html}</tbody>
   </table>
 </div>
