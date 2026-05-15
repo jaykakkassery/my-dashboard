@@ -37,13 +37,13 @@
   .kpi.total::before   { background:var(--accent); }
   .kpi.success::before { background:var(--success); }
   .kpi.failed::before  { background:var(--danger); }
-  .kpi.rate::before    { background:#ef4444; }
+  .kpi.rate::before    { background:#f59e0b; }
   .kpi-label { font-size:0.72rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted); margin-bottom:0.5rem; }
   .kpi-value { font-size:2.2rem; font-weight:600; font-family:var(--mono); letter-spacing:-0.03em; line-height:1; }
   .kpi.total   .kpi-value { color:#fff; }
   .kpi.success .kpi-value { color:var(--success); }
   .kpi.failed  .kpi-value { color:var(--danger); }
-  .kpi.rate    .kpi-value { color:#ef4444; }
+  .kpi.rate    .kpi-value { color:#f59e0b; }
   .kpi-sub { font-size:0.72rem; color:var(--muted); margin-top:6px; font-family:var(--mono); }
 
   .charts-grid { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1rem; }
@@ -73,12 +73,12 @@
 <div class="header">
   <div class="header-left">
     <h1>TST Hotel Booking Analytics</h1>
-    <p>Generated: 2026-05-15 12:40:09 PM EST</p>
+    <p>Generated: 2026-05-15 12:42:11 PM EST</p>
   </div>
   <div class="header-right">
-    <div><span class="range-badge">Last 2 hours</span></div>
-    <span class="badge badge-danger">
-      Critical
+    <div><span class="range-badge">Last 5 hours</span></div>
+    <span class="badge badge-warning">
+      Degraded
     </span>
   </div>
 </div>
@@ -100,33 +100,33 @@
 <div class="kpi-grid" style="grid-template-columns:repeat(6,1fr)">
   <div class="kpi total">
     <div class="kpi-label">Total Bookings</div>
-    <div class="kpi-value">255</div>
-    <div class="kpi-sub">hotel · last 2 hours</div>
+    <div class="kpi-value">496</div>
+    <div class="kpi-sub">hotel · last 5 hours</div>
   </div>
   <div class="kpi success">
     <div class="kpi-label">Successful</div>
-    <div class="kpi-value">202</div>
-    <div class="kpi-sub">79.22% success rate</div>
+    <div class="kpi-value">433</div>
+    <div class="kpi-sub">87.3% success rate</div>
   </div>
   <div class="kpi failed">
     <div class="kpi-label">Total Failures</div>
-    <div class="kpi-value">53</div>
+    <div class="kpi-value">63</div>
     <div class="kpi-sub">unrecovered failures</div>
   </div>
   <div class="kpi rate">
     <div class="kpi-label">Total Failure Rate</div>
-    <div class="kpi-value">20.78%</div>
+    <div class="kpi-value">12.7%</div>
     <div class="kpi-sub">↑ needs attention</div>
   </div>
   <div class="kpi failed">
     <div class="kpi-label">Total CC Failures</div>
-    <div class="kpi-value">3</div>
-    <div class="kpi-sub">5.66% of all failures</div>
+    <div class="kpi-value">5</div>
+    <div class="kpi-sub">7.94% of all failures</div>
   </div>
   <div class="kpi rate">
     <div class="kpi-label">Failure Rate (excl. CC)</div>
-    <div class="kpi-value">19.84%</div>
-    <div class="kpi-sub">50 non-CC failures</div>
+    <div class="kpi-value">11.81%</div>
+    <div class="kpi-sub">58 non-CC failures</div>
   </div>
 </div>
 
@@ -159,70 +159,70 @@
                 <td style="color:#e2e8f0;word-break:break-word">Pnr has not been created successfully, see remaining messages for detailsEnhancedhotelbookrq: unable to perform hotel booking step. see below messages for details.. updatereservationrq: com.sabre.universalservices.base.exception.applicationmomexcepti</td>
                 <td style="color:#94a3b8;font-size:0.72rem;font-family:var(--mono)">SABRE_HOTEL</td>
                 <td style="text-align:right;color:#f59e0b;font-weight:500">11</td>
-                <td style="text-align:right;color:#f59e0b">20.8%</td>
+                <td style="text-align:right;color:#f59e0b">17.5%</td>
             </tr>
             <tr>
                 <td style="color:#64748b;font-size:0.75rem">2</td>
                 <td style="color:#e2e8f0;word-break:break-word">Pnr has not been created successfully, see remaining messages for detailsEnhancedairbookrq: com.sabre.universalservices.base.exception.applicationmomexception: errors.mom.usg_mom_service_provider_infrastructure_error. service provider invocation fail</td>
                 <td style="color:#94a3b8;font-size:0.72rem;font-family:var(--mono)">SABRE_HOTEL</td>
-                <td style="text-align:right;color:#f59e0b;font-weight:500">10</td>
-                <td style="text-align:right;color:#f59e0b">18.9%</td>
+                <td style="text-align:right;color:#f59e0b;font-weight:500">11</td>
+                <td style="text-align:right;color:#f59e0b">17.5%</td>
             </tr>
             <tr>
                 <td style="color:#64748b;font-size:0.75rem">3</td>
                 <td style="color:#e2e8f0;word-break:break-word">Pnr has not been created successfully, see remaining messages for detailsEnhancedhotelbookrq: unable to perform gethotelratekeydetailsrq call. see below messages for details. gethotelratekeydetailsrq: com.sabre.universalservices.base.session.sessione</td>
                 <td style="color:#94a3b8;font-size:0.72rem;font-family:var(--mono)">SABRE_HOTEL</td>
                 <td style="text-align:right;color:#94a3b8;font-weight:500">4</td>
-                <td style="text-align:right;color:#94a3b8">7.5%</td>
+                <td style="text-align:right;color:#94a3b8">6.3%</td>
             </tr>
             <tr>
                 <td style="color:#64748b;font-size:0.75rem">4</td>
                 <td style="color:#e2e8f0;word-break:break-word">Provided card number is invalid.</td>
                 <td style="color:#94a3b8;font-size:0.72rem;font-family:var(--mono)">EAN_RAPID</td>
-                <td style="text-align:right;color:#94a3b8;font-weight:500">3</td>
-                <td style="text-align:right;color:#94a3b8">5.7%</td>
+                <td style="text-align:right;color:#94a3b8;font-weight:500">4</td>
+                <td style="text-align:right;color:#94a3b8">6.3%</td>
             </tr>
             <tr>
                 <td style="color:#64748b;font-size:0.75rem">5</td>
-                <td style="color:#e2e8f0;word-break:break-word">Pnr has not been created successfully, see remaining messages for detailsEnhancedhotelbookrq: unable to perform hotel booking step. see below messages for details.. updatereservationrq: $invalid cc checksum$ (code: 3009)</td>
-                <td style="color:#94a3b8;font-size:0.72rem;font-family:var(--mono)">SABRE_HOTEL</td>
-                <td style="text-align:right;color:#94a3b8;font-weight:500">3</td>
-                <td style="text-align:right;color:#94a3b8">5.7%</td>
+                <td style="color:#e2e8f0;word-break:break-word">This room rate is no longer available. Please select another room.</td>
+                <td style="color:#94a3b8;font-size:0.72rem;font-family:var(--mono)">ATI</td>
+                <td style="text-align:right;color:#94a3b8;font-weight:500">4</td>
+                <td style="text-align:right;color:#94a3b8">6.3%</td>
             </tr>
             <tr>
                 <td style="color:#64748b;font-size:0.75rem">6</td>
                 <td style="color:#e2e8f0;word-break:break-word">Pnr has not been created successfully, see remaining messages for detailsEnhancedhotelbookrq: unable to perform gethotelratekeydetailsrq call. see below messages for details. gethotelratekeydetailsrq: authentication error</td>
                 <td style="color:#94a3b8;font-size:0.72rem;font-family:var(--mono)">SABRE_HOTEL</td>
                 <td style="text-align:right;color:#94a3b8;font-weight:500">3</td>
-                <td style="text-align:right;color:#94a3b8">5.7%</td>
+                <td style="text-align:right;color:#94a3b8">4.8%</td>
             </tr>
             <tr>
                 <td style="color:#64748b;font-size:0.75rem">7</td>
-                <td style="color:#e2e8f0;word-break:break-word">Hotel.Express.Book: Booking failed due to CC failure</td>
-                <td style="color:#94a3b8;font-size:0.72rem;font-family:var(--mono)">PRICELINE_HOTEL</td>
-                <td style="text-align:right;color:#94a3b8;font-weight:500">2</td>
-                <td style="text-align:right;color:#94a3b8">3.8%</td>
+                <td style="color:#e2e8f0;word-break:break-word">Pnr has not been created successfully, see remaining messages for detailsEnhancedhotelbookrq: unable to perform hotel booking step. see below messages for details.. updatereservationrq: $invalid cc checksum$ (code: 3009)</td>
+                <td style="color:#94a3b8;font-size:0.72rem;font-family:var(--mono)">SABRE_HOTEL</td>
+                <td style="text-align:right;color:#94a3b8;font-weight:500">3</td>
+                <td style="text-align:right;color:#94a3b8">4.8%</td>
             </tr>
             <tr>
                 <td style="color:#64748b;font-size:0.75rem">8</td>
-                <td style="color:#e2e8f0;word-break:break-word">Pnr has not been created successfully, see remaining messages for detailsTravelitineraryaddinfollsrq: com.sabre.universalservices.base.session.sessionexception: errors.session.usg_invalid_security_token. invalid or expired binary security token: shar</td>
-                <td style="color:#94a3b8;font-size:0.72rem;font-family:var(--mono)">SABRE_HOTEL</td>
-                <td style="text-align:right;color:#94a3b8;font-weight:500">2</td>
-                <td style="text-align:right;color:#94a3b8">3.8%</td>
+                <td style="color:#e2e8f0;word-break:break-word">Hotel.Express.Book: Requested room is not available</td>
+                <td style="color:#94a3b8;font-size:0.72rem;font-family:var(--mono)">PRICELINE_HOTEL</td>
+                <td style="text-align:right;color:#94a3b8;font-weight:500">3</td>
+                <td style="text-align:right;color:#94a3b8">4.8%</td>
             </tr>
             <tr>
                 <td style="color:#64748b;font-size:0.75rem">9</td>
-                <td style="color:#e2e8f0;word-break:break-word">Pnr has not been created successfully, see remaining messages for detailsEnhancedhotelbookrq: unable to perform hotel booking step. see below messages for details.. updatereservationrq: agency address is required (code: 5002)</td>
-                <td style="color:#94a3b8;font-size:0.72rem;font-family:var(--mono)">SABRE_HOTEL</td>
+                <td style="color:#e2e8f0;word-break:break-word">Hotel.Express.Book: Booking failed due to CC failure</td>
+                <td style="color:#94a3b8;font-size:0.72rem;font-family:var(--mono)">PRICELINE_HOTEL</td>
                 <td style="text-align:right;color:#94a3b8;font-weight:500">2</td>
-                <td style="text-align:right;color:#94a3b8">3.8%</td>
+                <td style="text-align:right;color:#94a3b8">3.2%</td>
             </tr>
             <tr>
                 <td style="color:#64748b;font-size:0.75rem">10</td>
-                <td style="color:#e2e8f0;word-break:break-word">Pnr has not been created successfully, see remaining messages for detailsEnhancedendtransactionrq: unable to recover from endtransactionllsrq error. please see below messages for details. endtransactionllsrq: system at peak use - retry in 5 seconds -</td>
+                <td style="color:#e2e8f0;word-break:break-word">Pnr has not been created successfully, see remaining messages for detailsEnhancedhotelbookrq: unable to perform hotel booking step. see below messages for details.. updatereservationrq: agency address is required (code: 5002)</td>
                 <td style="color:#94a3b8;font-size:0.72rem;font-family:var(--mono)">SABRE_HOTEL</td>
                 <td style="text-align:right;color:#94a3b8;font-weight:500">2</td>
-                <td style="text-align:right;color:#94a3b8">3.8%</td>
+                <td style="text-align:right;color:#94a3b8">3.2%</td>
             </tr></tbody>
   </table>
 </div>
@@ -235,61 +235,61 @@
     <tbody>
         <tr>
             <td style="color:#e2e8f0;font-weight:500">SABRE_HOTEL</td>
-            <td>124</td>
-            <td style="color:#10b981">82</td>
-            <td style="color:#ef4444">42</td>
+            <td>223</td>
+            <td style="color:#10b981">179</td>
+            <td style="color:#ef4444">44</td>
             <td>
                 <div class="pct-bar-wrap">
-                    <div class="pct-bar"><div class="pct-bar-fill" style="width:33.87%;background:#ef4444"></div></div>
-                    <span class="pct-label" style="color:#ef4444">33.87%</span>
+                    <div class="pct-bar"><div class="pct-bar-fill" style="width:19.73%;background:#f59e0b"></div></div>
+                    <span class="pct-label" style="color:#f59e0b">19.73%</span>
                 </div>
             </td>
         </tr>
         <tr>
             <td style="color:#e2e8f0;font-weight:500">EAN_RAPID</td>
-            <td>74</td>
-            <td style="color:#10b981">70</td>
-            <td style="color:#ef4444">4</td>
+            <td>156</td>
+            <td style="color:#10b981">149</td>
+            <td style="color:#ef4444">7</td>
             <td>
                 <div class="pct-bar-wrap">
-                    <div class="pct-bar"><div class="pct-bar-fill" style="width:5.41%;background:#f59e0b"></div></div>
-                    <span class="pct-label" style="color:#f59e0b">5.41%</span>
+                    <div class="pct-bar"><div class="pct-bar-fill" style="width:4.49%;background:#10b981"></div></div>
+                    <span class="pct-label" style="color:#10b981">4.49%</span>
                 </div>
             </td>
         </tr>
         <tr>
             <td style="color:#e2e8f0;font-weight:500">PRICELINE_HOTEL</td>
-            <td>46</td>
-            <td style="color:#10b981">40</td>
-            <td style="color:#ef4444">6</td>
+            <td>89</td>
+            <td style="color:#10b981">81</td>
+            <td style="color:#ef4444">8</td>
             <td>
                 <div class="pct-bar-wrap">
-                    <div class="pct-bar"><div class="pct-bar-fill" style="width:13.04%;background:#f59e0b"></div></div>
-                    <span class="pct-label" style="color:#f59e0b">13.04%</span>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td style="color:#e2e8f0;font-weight:500">BEDS_ONLINE</td>
-            <td>6</td>
-            <td style="color:#10b981">6</td>
-            <td style="color:#ef4444">0</td>
-            <td>
-                <div class="pct-bar-wrap">
-                    <div class="pct-bar"><div class="pct-bar-fill" style="width:0.0%;background:#10b981"></div></div>
-                    <span class="pct-label" style="color:#10b981">0.0%</span>
+                    <div class="pct-bar"><div class="pct-bar-fill" style="width:8.99%;background:#f59e0b"></div></div>
+                    <span class="pct-label" style="color:#f59e0b">8.99%</span>
                 </div>
             </td>
         </tr>
         <tr>
             <td style="color:#e2e8f0;font-weight:500">ATI</td>
-            <td>3</td>
-            <td style="color:#10b981">2</td>
-            <td style="color:#ef4444">1</td>
+            <td>14</td>
+            <td style="color:#10b981">10</td>
+            <td style="color:#ef4444">4</td>
             <td>
                 <div class="pct-bar-wrap">
-                    <div class="pct-bar"><div class="pct-bar-fill" style="width:33.33%;background:#ef4444"></div></div>
-                    <span class="pct-label" style="color:#ef4444">33.33%</span>
+                    <div class="pct-bar"><div class="pct-bar-fill" style="width:28.57%;background:#ef4444"></div></div>
+                    <span class="pct-label" style="color:#ef4444">28.57%</span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="color:#e2e8f0;font-weight:500">BEDS_ONLINE</td>
+            <td>12</td>
+            <td style="color:#10b981">12</td>
+            <td style="color:#ef4444">0</td>
+            <td>
+                <div class="pct-bar-wrap">
+                    <div class="pct-bar"><div class="pct-bar-fill" style="width:0.0%;background:#10b981"></div></div>
+                    <span class="pct-label" style="color:#10b981">0.0%</span>
                 </div>
             </td>
         </tr>
@@ -321,121 +321,121 @@
             <tbody>
             <tr>
                 <td style="color:#e2e8f0;font-weight:500;font-family:var(--mono)">1</td>
-                <td>53</td>
-                <td style="color:#10b981">40</td>
-                <td style="color:#ef4444">13</td>
+                <td>116</td>
+                <td style="color:#10b981">101</td>
+                <td style="color:#ef4444">15</td>
                 <td>
                     <div class="pct-bar-wrap">
-                        <div class="pct-bar"><div class="pct-bar-fill" style="width:24.53%;background:#ef4444"></div></div>
-                        <span class="pct-label" style="color:#ef4444">24.53%</span>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td style="color:#e2e8f0;font-weight:500;font-family:var(--mono)">34</td>
-                <td>27</td>
-                <td style="color:#10b981">19</td>
-                <td style="color:#ef4444">8</td>
-                <td>
-                    <div class="pct-bar-wrap">
-                        <div class="pct-bar"><div class="pct-bar-fill" style="width:29.63%;background:#ef4444"></div></div>
-                        <span class="pct-label" style="color:#ef4444">29.63%</span>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td style="color:#e2e8f0;font-weight:500;font-family:var(--mono)">40</td>
-                <td>24</td>
-                <td style="color:#10b981">18</td>
-                <td style="color:#ef4444">6</td>
-                <td>
-                    <div class="pct-bar-wrap">
-                        <div class="pct-bar"><div class="pct-bar-fill" style="width:25.0%;background:#ef4444"></div></div>
-                        <span class="pct-label" style="color:#ef4444">25.0%</span>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td style="color:#e2e8f0;font-weight:500;font-family:var(--mono)">57</td>
-                <td>22</td>
-                <td style="color:#10b981">18</td>
-                <td style="color:#ef4444">4</td>
-                <td>
-                    <div class="pct-bar-wrap">
-                        <div class="pct-bar"><div class="pct-bar-fill" style="width:18.18%;background:#f59e0b"></div></div>
-                        <span class="pct-label" style="color:#f59e0b">18.18%</span>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td style="color:#e2e8f0;font-weight:500;font-family:var(--mono)">49</td>
-                <td>22</td>
-                <td style="color:#10b981">18</td>
-                <td style="color:#ef4444">4</td>
-                <td>
-                    <div class="pct-bar-wrap">
-                        <div class="pct-bar"><div class="pct-bar-fill" style="width:18.18%;background:#f59e0b"></div></div>
-                        <span class="pct-label" style="color:#f59e0b">18.18%</span>
+                        <div class="pct-bar"><div class="pct-bar-fill" style="width:12.93%;background:#f59e0b"></div></div>
+                        <span class="pct-label" style="color:#f59e0b">12.93%</span>
                     </div>
                 </td>
             </tr>
             <tr>
                 <td style="color:#e2e8f0;font-weight:500;font-family:var(--mono)">72</td>
-                <td>20</td>
-                <td style="color:#10b981">15</td>
-                <td style="color:#ef4444">5</td>
+                <td>68</td>
+                <td style="color:#10b981">61</td>
+                <td style="color:#ef4444">7</td>
                 <td>
                     <div class="pct-bar-wrap">
-                        <div class="pct-bar"><div class="pct-bar-fill" style="width:25.0%;background:#ef4444"></div></div>
-                        <span class="pct-label" style="color:#ef4444">25.0%</span>
+                        <div class="pct-bar"><div class="pct-bar-fill" style="width:10.29%;background:#f59e0b"></div></div>
+                        <span class="pct-label" style="color:#f59e0b">10.29%</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="color:#e2e8f0;font-weight:500;font-family:var(--mono)">40</td>
+                <td>42</td>
+                <td style="color:#10b981">35</td>
+                <td style="color:#ef4444">7</td>
+                <td>
+                    <div class="pct-bar-wrap">
+                        <div class="pct-bar"><div class="pct-bar-fill" style="width:16.67%;background:#f59e0b"></div></div>
+                        <span class="pct-label" style="color:#f59e0b">16.67%</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="color:#e2e8f0;font-weight:500;font-family:var(--mono)">49</td>
+                <td>38</td>
+                <td style="color:#10b981">30</td>
+                <td style="color:#ef4444">8</td>
+                <td>
+                    <div class="pct-bar-wrap">
+                        <div class="pct-bar"><div class="pct-bar-fill" style="width:21.05%;background:#ef4444"></div></div>
+                        <span class="pct-label" style="color:#ef4444">21.05%</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="color:#e2e8f0;font-weight:500;font-family:var(--mono)">34</td>
+                <td>37</td>
+                <td style="color:#10b981">28</td>
+                <td style="color:#ef4444">9</td>
+                <td>
+                    <div class="pct-bar-wrap">
+                        <div class="pct-bar"><div class="pct-bar-fill" style="width:24.32%;background:#ef4444"></div></div>
+                        <span class="pct-label" style="color:#ef4444">24.32%</span>
                     </div>
                 </td>
             </tr>
             <tr>
                 <td style="color:#e2e8f0;font-weight:500;font-family:var(--mono)">50</td>
-                <td>17</td>
-                <td style="color:#10b981">14</td>
-                <td style="color:#ef4444">3</td>
+                <td>30</td>
+                <td style="color:#10b981">28</td>
+                <td style="color:#ef4444">2</td>
                 <td>
                     <div class="pct-bar-wrap">
-                        <div class="pct-bar"><div class="pct-bar-fill" style="width:17.65%;background:#f59e0b"></div></div>
-                        <span class="pct-label" style="color:#f59e0b">17.65%</span>
+                        <div class="pct-bar"><div class="pct-bar-fill" style="width:6.67%;background:#f59e0b"></div></div>
+                        <span class="pct-label" style="color:#f59e0b">6.67%</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="color:#e2e8f0;font-weight:500;font-family:var(--mono)">57</td>
+                <td>29</td>
+                <td style="color:#10b981">25</td>
+                <td style="color:#ef4444">4</td>
+                <td>
+                    <div class="pct-bar-wrap">
+                        <div class="pct-bar"><div class="pct-bar-fill" style="width:13.79%;background:#f59e0b"></div></div>
+                        <span class="pct-label" style="color:#f59e0b">13.79%</span>
                     </div>
                 </td>
             </tr>
             <tr>
                 <td style="color:#e2e8f0;font-weight:500;font-family:var(--mono)">39</td>
-                <td>17</td>
-                <td style="color:#10b981">14</td>
+                <td>24</td>
+                <td style="color:#10b981">21</td>
                 <td style="color:#ef4444">3</td>
                 <td>
                     <div class="pct-bar-wrap">
-                        <div class="pct-bar"><div class="pct-bar-fill" style="width:17.65%;background:#f59e0b"></div></div>
-                        <span class="pct-label" style="color:#f59e0b">17.65%</span>
+                        <div class="pct-bar"><div class="pct-bar-fill" style="width:12.5%;background:#f59e0b"></div></div>
+                        <span class="pct-label" style="color:#f59e0b">12.5%</span>
                     </div>
                 </td>
             </tr>
             <tr>
                 <td style="color:#e2e8f0;font-weight:500;font-family:var(--mono)">3</td>
-                <td>13</td>
-                <td style="color:#10b981">11</td>
+                <td>22</td>
+                <td style="color:#10b981">20</td>
                 <td style="color:#ef4444">2</td>
                 <td>
                     <div class="pct-bar-wrap">
-                        <div class="pct-bar"><div class="pct-bar-fill" style="width:15.38%;background:#f59e0b"></div></div>
-                        <span class="pct-label" style="color:#f59e0b">15.38%</span>
+                        <div class="pct-bar"><div class="pct-bar-fill" style="width:9.09%;background:#f59e0b"></div></div>
+                        <span class="pct-label" style="color:#f59e0b">9.09%</span>
                     </div>
                 </td>
             </tr>
             <tr>
                 <td style="color:#e2e8f0;font-weight:500;font-family:var(--mono)">55</td>
-                <td>7</td>
-                <td style="color:#10b981">5</td>
+                <td>15</td>
+                <td style="color:#10b981">13</td>
                 <td style="color:#ef4444">2</td>
                 <td>
                     <div class="pct-bar-wrap">
-                        <div class="pct-bar"><div class="pct-bar-fill" style="width:28.57%;background:#ef4444"></div></div>
-                        <span class="pct-label" style="color:#ef4444">28.57%</span>
+                        <div class="pct-bar"><div class="pct-bar-fill" style="width:13.33%;background:#f59e0b"></div></div>
+                        <span class="pct-label" style="color:#f59e0b">13.33%</span>
                     </div>
                 </td>
             </tr></tbody>
@@ -456,10 +456,10 @@ Chart.defaults.font.size = 11;
 new Chart(document.getElementById('hourlyChart'), {
   type:'bar',
   data:{
-    labels:["05/15 10AM", "05/15 11AM", "05/15 12PM"],
+    labels:["05/15 07AM", "05/15 08AM", "05/15 09AM", "05/15 10AM", "05/15 11AM", "05/15 12PM"],
     datasets:[
-      {label:'Successful',data:[33, 93, 76],backgroundColor:'rgba(16,185,129,0.7)',borderRadius:3,stack:'s'},
-      {label:'Failed',    data:[6, 25, 22], backgroundColor:'rgba(239,68,68,0.7)', borderRadius:3,stack:'s'}
+      {label:'Successful',data:[7, 72, 80, 96, 93, 85],backgroundColor:'rgba(16,185,129,0.7)',borderRadius:3,stack:'s'},
+      {label:'Failed',    data:[0, 3, 2, 10, 25, 23], backgroundColor:'rgba(239,68,68,0.7)', borderRadius:3,stack:'s'}
     ]
   },
   options:{responsive:true,maintainAspectRatio:false,
@@ -476,7 +476,7 @@ new Chart(document.getElementById('donutChart'), {
   data:{
     labels:['Successful','Failed'],
     datasets:[{
-      data:[202,53],
+      data:[433,63],
       backgroundColor:['rgba(16,185,129,0.8)','rgba(239,68,68,0.8)'],
       borderColor:['#10b981','#ef4444'],borderWidth:1,hoverOffset:6
     }]
@@ -484,7 +484,7 @@ new Chart(document.getElementById('donutChart'), {
   options:{responsive:true,maintainAspectRatio:false,cutout:'72%',
     plugins:{
       legend:{position:'bottom',labels:{padding:16,boxWidth:10}},
-      tooltip:{callbacks:{label:(ctx)=>` ${ctx.label}: ${ctx.parsed.toLocaleString()} (${((ctx.parsed/255)*100).toFixed(1)}%)`}}
+      tooltip:{callbacks:{label:(ctx)=>` ${ctx.label}: ${ctx.parsed.toLocaleString()} (${((ctx.parsed/496)*100).toFixed(1)}%)`}}
     }
   }
 });
@@ -492,10 +492,10 @@ new Chart(document.getElementById('donutChart'), {
 new Chart(document.getElementById('adapterChart'), {
   type:'bar',
   data:{
-    labels:["SABRE_HOTEL", "EAN_RAPID", "PRICELINE_HOTEL", "BEDS_ONLINE", "ATI", "GWS"],
+    labels:["SABRE_HOTEL", "EAN_RAPID", "PRICELINE_HOTEL", "ATI", "BEDS_ONLINE", "GWS"],
     datasets:[
-      {label:'Successful',data:[82, 70, 40, 6, 2, 2],backgroundColor:'rgba(16,185,129,0.7)',borderRadius:4},
-      {label:'Failed',    data:[42, 4, 6, 0, 1, 0], backgroundColor:'rgba(239,68,68,0.7)', borderRadius:4}
+      {label:'Successful',data:[179, 149, 81, 10, 12, 2],backgroundColor:'rgba(16,185,129,0.7)',borderRadius:4},
+      {label:'Failed',    data:[44, 7, 8, 4, 0, 0], backgroundColor:'rgba(239,68,68,0.7)', borderRadius:4}
     ]
   },
   options:{responsive:true,maintainAspectRatio:false,
