@@ -16,7 +16,7 @@ compatibility:
     - pip packages: mysql-connector-python
 ---
 
-# Booking Analytics Skill
+# Booking Analytics Skill...
 
 Queries TST MySQL TRAVEL_BOOKING table for hotel booking success/failure
 in the last 24 hours and generates an HTML dashboard with charts.
