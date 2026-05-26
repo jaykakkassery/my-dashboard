@@ -411,6 +411,10 @@ def main():
         adapter_name=args.adapter_name
     )
 
+    if result.get("status") == "error":
+        print(json.dumps(result, indent=2, cls=SafeEncoder))
+        sys.exit(1)
+
     with open(args.output, "w") as f:
         json.dump(result, f, indent=2, cls=SafeEncoder)
 
