@@ -105,6 +105,14 @@ fi
 echo "[1/4] Querying database ($LABEL$FILTER_LABEL)..."
 python3 "$SCRIPT_DIR/query_analytics.py" $PYTHON_ARGS --output "$ANALYTICS_JSON"
 
+# ── Archive existing index.html ────────────────────────────────
+if [ -f "$DASHBOARD_OUT" ]; then
+  ARCHIVE_TIMESTAMP=$(date '+%Y%m%d_%H%M%S')
+  ARCHIVE_OUT="${DASHBOARD_REPO}/index_${ARCHIVE_TIMESTAMP}.html"
+  mv "$DASHBOARD_OUT" "$ARCHIVE_OUT"
+  echo "Archived existing dashboard → index_${ARCHIVE_TIMESTAMP}.html"
+fi
+
 # ── Step 2: Generate dashboard ─────────────────────────────────
 echo "[2/4] Generating dashboard..."
 python3 "$SCRIPT_DIR/generate_dashboard.py" \
@@ -114,7 +122,7 @@ python3 "$SCRIPT_DIR/generate_dashboard.py" \
 # ── Step 3: Push to GitHub ─────────────────────────────────────
 echo "[3/4] Pushing to GitHub Pages..."
 cd "$DASHBOARD_REPO"
-git add index.html
+git add index.html index_*.html
 git commit -m "Dashboard refresh ($LABEL$FILTER_LABEL) - $(date '+%Y-%m-%d %H:%M:%S')"
 git push origin gh-pages
 

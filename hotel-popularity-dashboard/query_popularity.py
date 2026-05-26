@@ -20,12 +20,50 @@ def get_db_connection():
             host=os.environ.get('TST_DB_HOST'),
             user=os.environ.get('TST_DB_USER'),
             password=os.environ.get('TST_DB_PASSWORD'),
-            database='book'  # Start with book database
+            database='book'
         )
         return connection
     except Error as e:
         print(f"Error connecting to MySQL: {e}", file=sys.stderr)
         sys.exit(1)
+
+
+def get_hotel_db_connection():
+    """Create connection to hotel master DB on staging host."""
+    try:
+        connection = mysql.connector.connect(
+            host='mysql.hotel-staging.infra.tstllc.net',
+            user=os.environ.get('HOTELDB_USERNAME'),
+            password=os.environ.get('HOTELDB_PASSWORD'),
+            database='hoteldataload'
+        )
+        return connection
+    except Error as e:
+        print(f"Warning: Could not connect to hotel master DB: {e}", file=sys.stderr)
+        return None
+
+
+def fetch_active_status(hotel_ids):
+    """Fetch is_active flag from TST_Hotel_Master for the given hotel IDs."""
+    if not hotel_ids:
+        return {}
+    connection = get_hotel_db_connection()
+    if not connection:
+        return {}
+    try:
+        cursor = connection.cursor(dictionary=True)
+        placeholders = ','.join(['%s'] * len(hotel_ids))
+        cursor.execute(
+            f"SELECT id, active FROM hoteldataload.TST_Hotel_Master WHERE id IN ({placeholders})",
+            hotel_ids
+        )
+        return {row['id']: row['active'] for row in cursor.fetchall()}
+    except Error as e:
+        print(f"Warning: Could not fetch active status: {e}", file=sys.stderr)
+        return {}
+    finally:
+        cursor.close()
+        connection.close()
 
 
 def query_inactive_popular_hotels(min_weighting=200, months_inactive=2):
@@ -97,7 +135,13 @@ def query_inactive_popular_hotels(min_weighting=200, months_inactive=2):
         for row in results:
             if row['last_booking_date']:
                 row['last_booking_date'] = row['last_booking_date'].strftime('%Y-%m-%d %H:%M:%S')
-        
+
+        # Enrich with is_active from TST_Hotel_Master
+        hotel_ids = [row['hotel_id'] for row in results]
+        active_map = fetch_active_status(hotel_ids)
+        for row in results:
+            row['is_active'] = active_map.get(row['hotel_id'])
+
         return results
     except Error as e:
         print(f"Error executing query: {e}", file=sys.stderr)

@@ -256,6 +256,33 @@
             color: #5a5d6a;
         }
 
+        .badge-active {
+            background: #4caf50;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .badge-inactive {
+            background: #e74c3c;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .badge-unknown {
+            background: #5a5d6a;
+            color: #ccc;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
         .empty-state {
             text-align: center;
             padding: 60px 20px;
@@ -310,7 +337,7 @@
             <div class="meta-info">
                 <div class="meta-item">
                     <span class="meta-label">Last Updated:</span>
-                    <span>2026-05-15 16:16:53 EDT</span>
+                    <span>2026-05-15 17:03:25 EDT</span>
                 </div>
                 <div class="meta-item">
                     <span class="meta-label">Min Weighting:</span>
@@ -450,6 +477,7 @@
                     <th>Last Booking Date</th>
                     <th>Weighting</th>
                     <th>Actual Count</th>
+                    <th>Active in Master</th>
                     <th>Possible Reason</th>
                 </tr>
             </thead>
@@ -463,6 +491,7 @@
                 <td><span class="date date-old">2024-07-08 17:37:56</span><br><small style="color: #8a8f98;">(675 days ago)</small></td>
                 <td><span class="weighting">4388</span></td>
                 <td><span class="count-mismatch">4366</span></td>
+                <td><span class="badge-inactive">Inactive</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -474,6 +503,7 @@
                 <td><span class="date date-old">2021-08-30 01:44:51</span><br><small style="color: #8a8f98;">(1719 days ago)</small></td>
                 <td><span class="weighting">2107</span></td>
                 <td><span class="count-mismatch">1820</span></td>
+                <td><span class="badge-inactive">Inactive</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -485,6 +515,7 @@
                 <td><span class="date date-old">2025-01-30 00:45:32</span><br><small style="color: #8a8f98;">(470 days ago)</small></td>
                 <td><span class="weighting">1975</span></td>
                 <td><span class="count-mismatch">1933</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -496,6 +527,7 @@
                 <td><span class="date date-old">2024-05-16 18:48:34</span><br><small style="color: #8a8f98;">(728 days ago)</small></td>
                 <td><span class="weighting">1498</span></td>
                 <td><span class="count-mismatch">1559</span></td>
+                <td><span class="badge-unknown">Unknown</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -507,6 +539,7 @@
                 <td><span class="date date-old">2024-05-22 19:17:42</span><br><small style="color: #8a8f98;">(722 days ago)</small></td>
                 <td><span class="weighting">748</span></td>
                 <td><span class="count-mismatch">798</span></td>
+                <td><span class="badge-inactive">Inactive</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -518,6 +551,7 @@
                 <td><span class="date date-old">2026-02-02 17:13:45</span><br><small style="color: #8a8f98;">(101 days ago)</small></td>
                 <td><span class="weighting">732</span></td>
                 <td><span class="count-mismatch">804</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -529,6 +563,7 @@
                 <td><span class="date date-old">2026-02-25 23:02:13</span><br><small style="color: #8a8f98;">(78 days ago)</small></td>
                 <td><span class="weighting">567</span></td>
                 <td><span class="count-mismatch">575</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -540,6 +575,7 @@
                 <td><span class="date date-old">2025-12-04 02:25:27</span><br><small style="color: #8a8f98;">(162 days ago)</small></td>
                 <td><span class="weighting">547</span></td>
                 <td><span class="count-mismatch">569</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -551,6 +587,7 @@
                 <td><span class="date date-old">2026-02-12 15:51:01</span><br><small style="color: #8a8f98;">(92 days ago)</small></td>
                 <td><span class="weighting">522</span></td>
                 <td><span class="count-mismatch">538</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -559,9 +596,10 @@
                 <td><span class="hotel-name">Hotolos</span></td>
                 <td><span class="location">Hollywood</span></td>
                 <td><span class="country-code">US</span></td>
-                <td><span class="date date-old">2026-02-13 17:02:14</span><br><small style="color: #8a8f98;">(90 days ago)</small></td>
+                <td><span class="date date-old">2026-02-13 17:02:14</span><br><small style="color: #8a8f98;">(91 days ago)</small></td>
                 <td><span class="weighting">522</span></td>
                 <td><span class="count-mismatch">541</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -573,6 +611,7 @@
                 <td><span class="date date-old">2025-06-08 22:09:26</span><br><small style="color: #8a8f98;">(340 days ago)</small></td>
                 <td><span class="weighting">521</span></td>
                 <td><span class="count-mismatch">553</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -584,6 +623,7 @@
                 <td><span class="date date-old">2022-07-19 20:54:23</span><br><small style="color: #8a8f98;">(1395 days ago)</small></td>
                 <td><span class="weighting">506</span></td>
                 <td><span class="count-mismatch">553</span></td>
+                <td><span class="badge-inactive">Inactive</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -595,6 +635,7 @@
                 <td><span class="date date-old">2023-10-12 00:17:51</span><br><small style="color: #8a8f98;">(946 days ago)</small></td>
                 <td><span class="weighting">495</span></td>
                 <td><span class="count-mismatch">499</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -606,6 +647,7 @@
                 <td><span class="date date-old">2025-08-09 14:41:18</span><br><small style="color: #8a8f98;">(279 days ago)</small></td>
                 <td><span class="weighting">455</span></td>
                 <td><span class="count-mismatch">460</span></td>
+                <td><span class="badge-inactive">Inactive</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -617,6 +659,7 @@
                 <td><span class="date date-old">2025-08-05 19:35:15</span><br><small style="color: #8a8f98;">(282 days ago)</small></td>
                 <td><span class="weighting">437</span></td>
                 <td><span class="count-mismatch">461</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -628,6 +671,7 @@
                 <td><span class="date date-old">2026-03-06 11:02:36</span><br><small style="color: #8a8f98;">(70 days ago)</small></td>
                 <td><span class="weighting">436</span></td>
                 <td><span class="count-mismatch">469</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -639,6 +683,7 @@
                 <td><span class="date date-old">2026-02-26 16:02:48</span><br><small style="color: #8a8f98;">(78 days ago)</small></td>
                 <td><span class="weighting">435</span></td>
                 <td><span class="count-mismatch">457</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -650,6 +695,7 @@
                 <td><span class="date date-old">2026-01-29 19:40:44</span><br><small style="color: #8a8f98;">(105 days ago)</small></td>
                 <td><span class="weighting">433</span></td>
                 <td><span class="count-mismatch">454</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -661,6 +707,7 @@
                 <td><span class="date date-old">2026-02-10 14:33:31</span><br><small style="color: #8a8f98;">(94 days ago)</small></td>
                 <td><span class="weighting">427</span></td>
                 <td><span class="count-mismatch">403</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -672,6 +719,7 @@
                 <td><span class="date date-old">2026-01-29 19:43:13</span><br><small style="color: #8a8f98;">(105 days ago)</small></td>
                 <td><span class="weighting">424</span></td>
                 <td><span class="count-mismatch">8</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -683,6 +731,7 @@
                 <td><span class="date date-old">2025-12-07 17:51:51</span><br><small style="color: #8a8f98;">(158 days ago)</small></td>
                 <td><span class="weighting">419</span></td>
                 <td><span class="count-mismatch">428</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -694,6 +743,7 @@
                 <td><span class="date date-old">2025-12-22 20:18:50</span><br><small style="color: #8a8f98;">(143 days ago)</small></td>
                 <td><span class="weighting">416</span></td>
                 <td><span class="count-mismatch">423</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -705,6 +755,7 @@
                 <td><span class="date date-old">2024-05-16 01:10:33</span><br><small style="color: #8a8f98;">(729 days ago)</small></td>
                 <td><span class="weighting">414</span></td>
                 <td><span class="count-mismatch">487</span></td>
+                <td><span class="badge-unknown">Unknown</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -716,6 +767,7 @@
                 <td><span class="date date-old">2020-03-11 19:50:32</span><br><small style="color: #8a8f98;">(2255 days ago)</small></td>
                 <td><span class="weighting">407</span></td>
                 <td><span class="count-mismatch">436</span></td>
+                <td><span class="badge-inactive">Inactive</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -727,6 +779,7 @@
                 <td><span class="date date-old">2023-03-05 20:08:07</span><br><small style="color: #8a8f98;">(1166 days ago)</small></td>
                 <td><span class="weighting">398</span></td>
                 <td><span class="count-mismatch">411</span></td>
+                <td><span class="badge-inactive">Inactive</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -738,6 +791,7 @@
                 <td><span class="date date-old">2025-02-22 21:00:52</span><br><small style="color: #8a8f98;">(446 days ago)</small></td>
                 <td><span class="weighting">394</span></td>
                 <td><span class="count-mismatch">407</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -749,6 +803,7 @@
                 <td><span class="date date-old">2025-12-05 02:32:29</span><br><small style="color: #8a8f98;">(161 days ago)</small></td>
                 <td><span class="weighting">393</span></td>
                 <td><span class="count-mismatch">414</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -760,6 +815,7 @@
                 <td><span class="date date-old">2024-05-16 19:59:00</span><br><small style="color: #8a8f98;">(728 days ago)</small></td>
                 <td><span class="weighting">389</span></td>
                 <td><span class="count-mismatch">393</span></td>
+                <td><span class="badge-unknown">Unknown</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -771,6 +827,7 @@
                 <td><span class="date date-old">2022-11-28 01:11:45</span><br><small style="color: #8a8f98;">(1264 days ago)</small></td>
                 <td><span class="weighting">383</span></td>
                 <td><span class="count-mismatch">412</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -782,6 +839,7 @@
                 <td><span class="date date-old">2024-05-16 02:17:23</span><br><small style="color: #8a8f98;">(729 days ago)</small></td>
                 <td><span class="weighting">380</span></td>
                 <td><span class="count-mismatch">424</span></td>
+                <td><span class="badge-unknown">Unknown</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -793,6 +851,7 @@
                 <td><span class="date date-old">2026-03-13 02:02:26</span><br><small style="color: #8a8f98;">(63 days ago)</small></td>
                 <td><span class="weighting">377</span></td>
                 <td><span class="count-mismatch">399</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -804,6 +863,7 @@
                 <td><span class="date date-old">2024-05-13 15:20:48</span><br><small style="color: #8a8f98;">(732 days ago)</small></td>
                 <td><span class="weighting">375</span></td>
                 <td><span class="count-mismatch">367</span></td>
+                <td><span class="badge-unknown">Unknown</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -815,6 +875,7 @@
                 <td><span class="date date-old">2026-02-09 22:54:45</span><br><small style="color: #8a8f98;">(94 days ago)</small></td>
                 <td><span class="weighting">374</span></td>
                 <td><span class="count-mismatch">347</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -826,6 +887,7 @@
                 <td><span class="date date-old">2026-03-15 02:19:17</span><br><small style="color: #8a8f98;">(61 days ago)</small></td>
                 <td><span class="weighting">371</span></td>
                 <td><span class="count-mismatch">13</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -834,9 +896,10 @@
                 <td><span class="hotel-name">Mount Robson Inn</span></td>
                 <td><span class="location">Jasper</span></td>
                 <td><span class="country-code">CA</span></td>
-                <td><span class="date date-old">2024-07-15 16:46:27</span><br><small style="color: #8a8f98;">(668 days ago)</small></td>
+                <td><span class="date date-old">2024-07-15 16:46:27</span><br><small style="color: #8a8f98;">(669 days ago)</small></td>
                 <td><span class="weighting">369</span></td>
                 <td><span class="count-mismatch">378</span></td>
+                <td><span class="badge-inactive">Inactive</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -848,6 +911,7 @@
                 <td><span class="date date-old">2024-10-30 23:47:21</span><br><small style="color: #8a8f98;">(561 days ago)</small></td>
                 <td><span class="weighting">368</span></td>
                 <td><span class="count-mismatch">375</span></td>
+                <td><span class="badge-inactive">Inactive</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -859,6 +923,7 @@
                 <td><span class="date date-old">2024-05-12 00:15:07</span><br><small style="color: #8a8f98;">(733 days ago)</small></td>
                 <td><span class="weighting">367</span></td>
                 <td><span class="count-mismatch">415</span></td>
+                <td><span class="badge-unknown">Unknown</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -870,6 +935,7 @@
                 <td><span class="date date-old">2026-03-12 04:45:41</span><br><small style="color: #8a8f98;">(64 days ago)</small></td>
                 <td><span class="weighting">360</span></td>
                 <td><span class="count-mismatch">370</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -881,6 +947,7 @@
                 <td><span class="date date-old">2026-01-17 01:10:25</span><br><small style="color: #8a8f98;">(118 days ago)</small></td>
                 <td><span class="weighting">358</span></td>
                 <td><span class="count-mismatch">363</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -892,6 +959,7 @@
                 <td><span class="date date-old">2026-03-05 17:41:08</span><br><small style="color: #8a8f98;">(70 days ago)</small></td>
                 <td><span class="weighting">352</span></td>
                 <td><span class="count-mismatch">357</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -903,6 +971,7 @@
                 <td><span class="date date-old">2025-09-18 23:32:48</span><br><small style="color: #8a8f98;">(238 days ago)</small></td>
                 <td><span class="weighting">349</span></td>
                 <td><span class="count-mismatch">415</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -914,6 +983,7 @@
                 <td><span class="date date-old">2025-11-04 21:58:40</span><br><small style="color: #8a8f98;">(191 days ago)</small></td>
                 <td><span class="weighting">345</span></td>
                 <td><span class="count-mismatch">397</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -925,6 +995,7 @@
                 <td><span class="date date-old">2025-12-18 12:34:59</span><br><small style="color: #8a8f98;">(148 days ago)</small></td>
                 <td><span class="weighting">339</span></td>
                 <td><span class="count-mismatch">346</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -936,6 +1007,7 @@
                 <td><span class="date date-old">2026-02-06 15:23:14</span><br><small style="color: #8a8f98;">(98 days ago)</small></td>
                 <td><span class="weighting">335</span></td>
                 <td><span class="count-mismatch">2</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -947,6 +1019,7 @@
                 <td><span class="date date-old">2026-03-04 21:58:01</span><br><small style="color: #8a8f98;">(71 days ago)</small></td>
                 <td><span class="weighting">334</span></td>
                 <td><span class="count-mismatch">345</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -958,6 +1031,7 @@
                 <td><span class="date date-old">2026-03-05 19:05:11</span><br><small style="color: #8a8f98;">(70 days ago)</small></td>
                 <td><span class="weighting">334</span></td>
                 <td><span class="count-mismatch">338</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -969,6 +1043,7 @@
                 <td><span class="date date-old">2026-02-09 23:59:36</span><br><small style="color: #8a8f98;">(94 days ago)</small></td>
                 <td><span class="weighting">330</span></td>
                 <td><span class="count-mismatch">334</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -980,6 +1055,7 @@
                 <td><span class="date date-old">2025-07-27 20:28:52</span><br><small style="color: #8a8f98;">(291 days ago)</small></td>
                 <td><span class="weighting">319</span></td>
                 <td><span class="count-mismatch">334</span></td>
+                <td><span class="badge-inactive">Inactive</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -991,6 +1067,7 @@
                 <td><span class="date date-old">2025-08-09 15:01:24</span><br><small style="color: #8a8f98;">(279 days ago)</small></td>
                 <td><span class="weighting">317</span></td>
                 <td><span class="count-mismatch">335</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1002,6 +1079,7 @@
                 <td><span class="date date-old">2026-02-07 00:51:38</span><br><small style="color: #8a8f98;">(97 days ago)</small></td>
                 <td><span class="weighting">313</span></td>
                 <td><span class="count-mismatch">327</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1013,6 +1091,7 @@
                 <td><span class="date date-old">2025-10-10 14:44:09</span><br><small style="color: #8a8f98;">(217 days ago)</small></td>
                 <td><span class="weighting">310</span></td>
                 <td><span class="count-mismatch">326</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1024,6 +1103,7 @@
                 <td><span class="date date-old">2026-03-04 03:46:58</span><br><small style="color: #8a8f98;">(72 days ago)</small></td>
                 <td><span class="weighting">310</span></td>
                 <td><span class="count-mismatch">324</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1035,6 +1115,7 @@
                 <td><span class="date date-old">2020-07-26 04:54:40</span><br><small style="color: #8a8f98;">(2119 days ago)</small></td>
                 <td><span class="weighting">307</span></td>
                 <td><span class="count-mismatch">333</span></td>
+                <td><span class="badge-inactive">Inactive</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1046,6 +1127,7 @@
                 <td><span class="date date-old">2025-08-15 01:31:32</span><br><small style="color: #8a8f98;">(273 days ago)</small></td>
                 <td><span class="weighting">306</span></td>
                 <td><span class="count-mismatch">367</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1057,6 +1139,7 @@
                 <td><span class="date date-old">2026-03-10 01:06:55</span><br><small style="color: #8a8f98;">(66 days ago)</small></td>
                 <td><span class="weighting">304</span></td>
                 <td><span class="count-mismatch">310</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1068,6 +1151,7 @@
                 <td><span class="date date-old">2025-10-13 04:36:37</span><br><small style="color: #8a8f98;">(214 days ago)</small></td>
                 <td><span class="weighting">303</span></td>
                 <td><span class="count-mismatch">6</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1079,6 +1163,7 @@
                 <td><span class="date date-old">2022-01-04 00:44:43</span><br><small style="color: #8a8f98;">(1592 days ago)</small></td>
                 <td><span class="weighting">302</span></td>
                 <td><span class="count-mismatch">331</span></td>
+                <td><span class="badge-inactive">Inactive</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1087,9 +1172,10 @@
                 <td><span class="hotel-name">Homewood Suites by Hilton Santa Maria</span></td>
                 <td><span class="location">Santa Maria</span></td>
                 <td><span class="country-code">US</span></td>
-                <td><span class="date date-old">2026-02-08 16:56:23</span><br><small style="color: #8a8f98;">(95 days ago)</small></td>
+                <td><span class="date date-old">2026-02-08 16:56:23</span><br><small style="color: #8a8f98;">(96 days ago)</small></td>
                 <td><span class="weighting">299</span></td>
                 <td><span class="count-mismatch">311</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1101,6 +1187,7 @@
                 <td><span class="date date-old">2024-03-22 20:47:36</span><br><small style="color: #8a8f98;">(783 days ago)</small></td>
                 <td><span class="weighting">297</span></td>
                 <td><span class="count-mismatch">304</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1112,6 +1199,7 @@
                 <td><span class="date date-old">2025-09-01 20:01:17</span><br><small style="color: #8a8f98;">(255 days ago)</small></td>
                 <td><span class="weighting">292</span></td>
                 <td><span class="count-mismatch">324</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1123,6 +1211,7 @@
                 <td><span class="date date-old">2026-02-05 15:52:06</span><br><small style="color: #8a8f98;">(99 days ago)</small></td>
                 <td><span class="weighting">292</span></td>
                 <td><span class="count-mismatch">300</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1134,6 +1223,7 @@
                 <td><span class="date date-old">2026-02-16 23:32:52</span><br><small style="color: #8a8f98;">(87 days ago)</small></td>
                 <td><span class="weighting">292</span></td>
                 <td><span class="count-mismatch">313</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1145,6 +1235,7 @@
                 <td><span class="date date-old">2026-02-27 04:18:18</span><br><small style="color: #8a8f98;">(77 days ago)</small></td>
                 <td><span class="weighting">290</span></td>
                 <td><span class="count-mismatch">299</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1156,6 +1247,7 @@
                 <td><span class="date date-old">2026-02-25 05:37:07</span><br><small style="color: #8a8f98;">(79 days ago)</small></td>
                 <td><span class="weighting">289</span></td>
                 <td><span class="count-mismatch">299</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1167,6 +1259,7 @@
                 <td><span class="date date-old">2026-02-25 17:45:17</span><br><small style="color: #8a8f98;">(78 days ago)</small></td>
                 <td><span class="weighting">286</span></td>
                 <td><span class="count-mismatch">296</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1178,6 +1271,7 @@
                 <td><span class="date date-old">2022-09-16 17:16:02</span><br><small style="color: #8a8f98;">(1336 days ago)</small></td>
                 <td><span class="weighting">283</span></td>
                 <td><span class="count-mismatch">284</span></td>
+                <td><span class="badge-inactive">Inactive</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1189,6 +1283,7 @@
                 <td><span class="date date-old">2026-03-11 22:49:24</span><br><small style="color: #8a8f98;">(64 days ago)</small></td>
                 <td><span class="weighting">283</span></td>
                 <td><span class="count-mismatch">292</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1200,6 +1295,7 @@
                 <td><span class="date date-old">2024-04-12 20:44:02</span><br><small style="color: #8a8f98;">(762 days ago)</small></td>
                 <td><span class="weighting">282</span></td>
                 <td><span class="count-mismatch">284</span></td>
+                <td><span class="badge-inactive">Inactive</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1211,6 +1307,7 @@
                 <td><span class="date date-old">2025-04-16 04:32:19</span><br><small style="color: #8a8f98;">(394 days ago)</small></td>
                 <td><span class="weighting">282</span></td>
                 <td><span class="count-mismatch">295</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1222,6 +1319,7 @@
                 <td><span class="date date-old">2026-02-06 04:26:42</span><br><small style="color: #8a8f98;">(98 days ago)</small></td>
                 <td><span class="weighting">282</span></td>
                 <td><span class="count-mismatch">293</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1233,6 +1331,7 @@
                 <td><span class="date date-old">2026-01-12 21:55:41</span><br><small style="color: #8a8f98;">(122 days ago)</small></td>
                 <td><span class="weighting">281</span></td>
                 <td><span class="count-mismatch">186</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1244,6 +1343,7 @@
                 <td><span class="date date-old">2021-10-29 00:18:08</span><br><small style="color: #8a8f98;">(1659 days ago)</small></td>
                 <td><span class="weighting">280</span></td>
                 <td><span class="count-mismatch">274</span></td>
+                <td><span class="badge-inactive">Inactive</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1255,6 +1355,7 @@
                 <td><span class="date date-old">2026-02-20 05:28:13</span><br><small style="color: #8a8f98;">(84 days ago)</small></td>
                 <td><span class="weighting">280</span></td>
                 <td><span class="count-mismatch">296</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1266,6 +1367,7 @@
                 <td><span class="date date-old">2026-03-15 01:21:02</span><br><small style="color: #8a8f98;">(61 days ago)</small></td>
                 <td><span class="weighting">280</span></td>
                 <td><span class="count-mismatch">284</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1277,6 +1379,7 @@
                 <td><span class="date date-old">2025-11-10 21:18:18</span><br><small style="color: #8a8f98;">(185 days ago)</small></td>
                 <td><span class="weighting">279</span></td>
                 <td><span class="count-mismatch">291</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1288,6 +1391,7 @@
                 <td><span class="date date-old">2025-11-15 00:55:37</span><br><small style="color: #8a8f98;">(181 days ago)</small></td>
                 <td><span class="weighting">279</span></td>
                 <td><span class="count-mismatch">290</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1299,6 +1403,7 @@
                 <td><span class="date date-old">2025-10-26 22:41:29</span><br><small style="color: #8a8f98;">(200 days ago)</small></td>
                 <td><span class="weighting">278</span></td>
                 <td><span class="count-mismatch">306</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1310,6 +1415,7 @@
                 <td><span class="date date-old">2026-02-18 17:17:35</span><br><small style="color: #8a8f98;">(85 days ago)</small></td>
                 <td><span class="weighting">278</span></td>
                 <td><span class="count-mismatch">286</span></td>
+                <td><span class="badge-inactive">Inactive</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1321,6 +1427,7 @@
                 <td><span class="date date-old">2025-03-11 20:27:18</span><br><small style="color: #8a8f98;">(429 days ago)</small></td>
                 <td><span class="weighting">277</span></td>
                 <td><span class="count-mismatch">291</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1332,6 +1439,7 @@
                 <td><span class="date date-old">2024-05-15 04:17:17</span><br><small style="color: #8a8f98;">(730 days ago)</small></td>
                 <td><span class="weighting">274</span></td>
                 <td><span class="count-mismatch">290</span></td>
+                <td><span class="badge-unknown">Unknown</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1343,6 +1451,7 @@
                 <td><span class="date date-old">2025-07-29 20:19:26</span><br><small style="color: #8a8f98;">(289 days ago)</small></td>
                 <td><span class="weighting">273</span></td>
                 <td><span class="count-mismatch">281</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1354,6 +1463,7 @@
                 <td><span class="date date-old">2026-02-23 17:19:56</span><br><small style="color: #8a8f98;">(80 days ago)</small></td>
                 <td><span class="weighting">269</span></td>
                 <td><span class="count-mismatch">273</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1365,6 +1475,7 @@
                 <td><span class="date date-old">2024-06-15 18:15:46</span><br><small style="color: #8a8f98;">(698 days ago)</small></td>
                 <td><span class="weighting">266</span></td>
                 <td><span class="count-mismatch">271</span></td>
+                <td><span class="badge-inactive">Inactive</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1376,6 +1487,7 @@
                 <td><span class="date date-old">2026-01-05 10:40:31</span><br><small style="color: #8a8f98;">(130 days ago)</small></td>
                 <td><span class="weighting">266</span></td>
                 <td><span class="count-mismatch">277</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1387,6 +1499,7 @@
                 <td><span class="date date-old">2024-05-15 15:37:41</span><br><small style="color: #8a8f98;">(730 days ago)</small></td>
                 <td><span class="weighting">265</span></td>
                 <td><span class="count-mismatch">200</span></td>
+                <td><span class="badge-unknown">Unknown</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1398,6 +1511,7 @@
                 <td><span class="date date-old">2025-12-30 00:09:03</span><br><small style="color: #8a8f98;">(136 days ago)</small></td>
                 <td><span class="weighting">265</span></td>
                 <td><span class="count-mismatch">4</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1409,6 +1523,7 @@
                 <td><span class="date date-old">2026-01-31 07:28:28</span><br><small style="color: #8a8f98;">(104 days ago)</small></td>
                 <td><span class="weighting">265</span></td>
                 <td><span class="count-mismatch">298</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1420,6 +1535,7 @@
                 <td><span class="date date-old">2026-02-26 19:37:40</span><br><small style="color: #8a8f98;">(77 days ago)</small></td>
                 <td><span class="weighting">264</span></td>
                 <td><span class="count-mismatch">270</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1431,6 +1547,7 @@
                 <td><span class="date date-old">2026-03-09 14:25:44</span><br><small style="color: #8a8f98;">(67 days ago)</small></td>
                 <td><span class="weighting">262</span></td>
                 <td><span class="count-mismatch">273</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1442,6 +1559,7 @@
                 <td><span class="date date-old">2023-11-15 08:00:06</span><br><small style="color: #8a8f98;">(912 days ago)</small></td>
                 <td><span class="weighting">261</span></td>
                 <td><span class="count-mismatch">268</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1453,6 +1571,7 @@
                 <td><span class="date date-old">2024-06-28 15:43:19</span><br><small style="color: #8a8f98;">(686 days ago)</small></td>
                 <td><span class="weighting">261</span></td>
                 <td><span class="count-mismatch">271</span></td>
+                <td><span class="badge-inactive">Inactive</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1464,6 +1583,7 @@
                 <td><span class="date date-old">2026-02-26 16:03:29</span><br><small style="color: #8a8f98;">(78 days ago)</small></td>
                 <td><span class="weighting">261</span></td>
                 <td><span class="count-mismatch">284</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1475,6 +1595,7 @@
                 <td><span class="date date-old">2026-01-28 00:23:45</span><br><small style="color: #8a8f98;">(107 days ago)</small></td>
                 <td><span class="weighting">260</span></td>
                 <td><span class="count-mismatch">268</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1486,6 +1607,7 @@
                 <td><span class="date date-old">2026-02-24 04:27:22</span><br><small style="color: #8a8f98;">(80 days ago)</small></td>
                 <td><span class="weighting">260</span></td>
                 <td><span class="count-mismatch">9</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1497,6 +1619,7 @@
                 <td><span class="date date-old">2025-04-16 23:04:42</span><br><small style="color: #8a8f98;">(393 days ago)</small></td>
                 <td><span class="weighting">259</span></td>
                 <td><span class="count-mismatch">257</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1508,6 +1631,7 @@
                 <td><span class="date date-old">2024-05-13 21:11:31</span><br><small style="color: #8a8f98;">(731 days ago)</small></td>
                 <td><span class="weighting">258</span></td>
                 <td><span class="count-mismatch">240</span></td>
+                <td><span class="badge-unknown">Unknown</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1519,6 +1643,7 @@
                 <td><span class="date date-old">2025-07-27 03:07:14</span><br><small style="color: #8a8f98;">(292 days ago)</small></td>
                 <td><span class="weighting">258</span></td>
                 <td><span class="count-mismatch">266</span></td>
+                <td><span class="badge-inactive">Inactive</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1530,6 +1655,7 @@
                 <td><span class="date date-old">2025-10-27 13:46:50</span><br><small style="color: #8a8f98;">(200 days ago)</small></td>
                 <td><span class="weighting">258</span></td>
                 <td><span class="count-mismatch">259</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1541,6 +1667,7 @@
                 <td><span class="date date-old">2025-12-22 15:02:30</span><br><small style="color: #8a8f98;">(144 days ago)</small></td>
                 <td><span class="weighting">252</span></td>
                 <td><span class="count-mismatch">262</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1552,6 +1679,7 @@
                 <td><span class="date date-old">2026-01-24 20:46:46</span><br><small style="color: #8a8f98;">(110 days ago)</small></td>
                 <td><span class="weighting">252</span></td>
                 <td><span class="count-mismatch">8</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1563,6 +1691,7 @@
                 <td><span class="date date-old">2026-02-25 14:22:34</span><br><small style="color: #8a8f98;">(79 days ago)</small></td>
                 <td><span class="weighting">252</span></td>
                 <td><span class="count-mismatch">2</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1574,6 +1703,7 @@
                 <td><span class="date date-old">2026-03-11 14:15:14</span><br><small style="color: #8a8f98;">(65 days ago)</small></td>
                 <td><span class="weighting">252</span></td>
                 <td><span class="count-mismatch">264</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1585,6 +1715,7 @@
                 <td><span class="date date-old">2026-02-12 22:33:04</span><br><small style="color: #8a8f98;">(91 days ago)</small></td>
                 <td><span class="weighting">251</span></td>
                 <td><span class="count-mismatch">268</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1596,6 +1727,7 @@
                 <td><span class="date date-old">2023-09-30 21:18:01</span><br><small style="color: #8a8f98;">(957 days ago)</small></td>
                 <td><span class="weighting">249</span></td>
                 <td><span class="count-mismatch">253</span></td>
+                <td><span class="badge-inactive">Inactive</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1607,6 +1739,7 @@
                 <td><span class="date date-old">2025-08-18 22:53:35</span><br><small style="color: #8a8f98;">(269 days ago)</small></td>
                 <td><span class="weighting">249</span></td>
                 <td><span class="count-mismatch">9</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1618,6 +1751,7 @@
                 <td><span class="date date-old">2026-03-10 19:06:47</span><br><small style="color: #8a8f98;">(65 days ago)</small></td>
                 <td><span class="weighting">246</span></td>
                 <td><span class="count-mismatch">249</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1629,6 +1763,7 @@
                 <td><span class="date date-old">2025-05-10 00:03:45</span><br><small style="color: #8a8f98;">(370 days ago)</small></td>
                 <td><span class="weighting">245</span></td>
                 <td><span class="count-mismatch">247</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1637,9 +1772,10 @@
                 <td><span class="hotel-name">Comfort Inn St. Louis - Westport Event Center</span></td>
                 <td><span class="location">Saint Louis</span></td>
                 <td><span class="country-code">US</span></td>
-                <td><span class="date date-old">2025-12-05 16:47:16</span><br><small style="color: #8a8f98;">(160 days ago)</small></td>
+                <td><span class="date date-old">2025-12-05 16:47:16</span><br><small style="color: #8a8f98;">(161 days ago)</small></td>
                 <td><span class="weighting">245</span></td>
                 <td><span class="count-mismatch">6</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1651,6 +1787,7 @@
                 <td><span class="date date-old">2025-07-23 17:46:20</span><br><small style="color: #8a8f98;">(295 days ago)</small></td>
                 <td><span class="weighting">243</span></td>
                 <td><span class="count-mismatch">256</span></td>
+                <td><span class="badge-inactive">Inactive</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1662,6 +1799,7 @@
                 <td><span class="date date-old">2026-01-19 16:12:47</span><br><small style="color: #8a8f98;">(116 days ago)</small></td>
                 <td><span class="weighting">243</span></td>
                 <td><span class="count-mismatch">267</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1673,6 +1811,7 @@
                 <td><span class="date date-old">2024-08-11 02:33:15</span><br><small style="color: #8a8f98;">(642 days ago)</small></td>
                 <td><span class="weighting">242</span></td>
                 <td><span class="count-mismatch">249</span></td>
+                <td><span class="badge-inactive">Inactive</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1684,6 +1823,7 @@
                 <td><span class="date date-old">2022-11-21 03:57:45</span><br><small style="color: #8a8f98;">(1271 days ago)</small></td>
                 <td><span class="weighting">241</span></td>
                 <td><span class="count-mismatch">256</span></td>
+                <td><span class="badge-inactive">Inactive</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1695,6 +1835,7 @@
                 <td><span class="date date-old">2026-01-14 20:53:30</span><br><small style="color: #8a8f98;">(120 days ago)</small></td>
                 <td><span class="weighting">241</span></td>
                 <td><span class="count-mismatch">245</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1706,6 +1847,7 @@
                 <td><span class="date date-old">2026-02-20 19:18:36</span><br><small style="color: #8a8f98;">(83 days ago)</small></td>
                 <td><span class="weighting">239</span></td>
                 <td><span class="count-mismatch">7</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1717,6 +1859,7 @@
                 <td><span class="date date-old">2026-03-02 21:28:19</span><br><small style="color: #8a8f98;">(73 days ago)</small></td>
                 <td><span class="weighting">239</span></td>
                 <td><span class="count-mismatch">250</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1728,6 +1871,7 @@
                 <td><span class="date date-old">2025-12-19 00:11:56</span><br><small style="color: #8a8f98;">(147 days ago)</small></td>
                 <td><span class="weighting">238</span></td>
                 <td><span class="count-mismatch">257</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1739,6 +1883,7 @@
                 <td><span class="date date-old">2025-05-12 13:29:10</span><br><small style="color: #8a8f98;">(368 days ago)</small></td>
                 <td><span class="weighting">237</span></td>
                 <td><span class="count-mismatch">224</span></td>
+                <td><span class="badge-inactive">Inactive</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1750,6 +1895,7 @@
                 <td><span class="date date-old">2025-07-26 14:53:00</span><br><small style="color: #8a8f98;">(293 days ago)</small></td>
                 <td><span class="weighting">237</span></td>
                 <td><span class="count-mismatch">246</span></td>
+                <td><span class="badge-inactive">Inactive</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1761,6 +1907,7 @@
                 <td><span class="date date-old">2026-02-14 22:54:05</span><br><small style="color: #8a8f98;">(89 days ago)</small></td>
                 <td><span class="weighting">236</span></td>
                 <td><span class="count-mismatch">250</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1772,6 +1919,7 @@
                 <td><span class="date date-old">2025-11-06 17:38:03</span><br><small style="color: #8a8f98;">(189 days ago)</small></td>
                 <td><span class="weighting">235</span></td>
                 <td><span class="count-mismatch">254</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1783,6 +1931,7 @@
                 <td><span class="date date-old">2026-03-11 17:58:04</span><br><small style="color: #8a8f98;">(64 days ago)</small></td>
                 <td><span class="weighting">235</span></td>
                 <td><span class="count-mismatch">232</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1794,6 +1943,7 @@
                 <td><span class="date date-old">2026-03-12 15:56:02</span><br><small style="color: #8a8f98;">(64 days ago)</small></td>
                 <td><span class="weighting">235</span></td>
                 <td><span class="count-mismatch">239</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1805,6 +1955,7 @@
                 <td><span class="date date-old">2025-03-29 04:12:55</span><br><small style="color: #8a8f98;">(412 days ago)</small></td>
                 <td><span class="weighting">234</span></td>
                 <td><span class="count-mismatch">242</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1816,6 +1967,7 @@
                 <td><span class="date date-old">2025-07-23 17:38:09</span><br><small style="color: #8a8f98;">(295 days ago)</small></td>
                 <td><span class="weighting">234</span></td>
                 <td><span class="count-mismatch">242</span></td>
+                <td><span class="badge-inactive">Inactive</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1827,6 +1979,7 @@
                 <td><span class="date date-old">2025-08-23 22:25:11</span><br><small style="color: #8a8f98;">(264 days ago)</small></td>
                 <td><span class="weighting">234</span></td>
                 <td><span class="count-mismatch">151</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1838,6 +1991,7 @@
                 <td><span class="date date-old">2026-02-10 20:48:02</span><br><small style="color: #8a8f98;">(93 days ago)</small></td>
                 <td><span class="weighting">234</span></td>
                 <td><span class="count-mismatch">264</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1849,6 +2003,7 @@
                 <td><span class="date date-old">2021-11-08 01:47:47</span><br><small style="color: #8a8f98;">(1649 days ago)</small></td>
                 <td><span class="weighting">232</span></td>
                 <td><span class="count-mismatch">236</span></td>
+                <td><span class="badge-inactive">Inactive</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1860,6 +2015,7 @@
                 <td><span class="date date-old">2024-05-07 18:37:52</span><br><small style="color: #8a8f98;">(737 days ago)</small></td>
                 <td><span class="weighting">232</span></td>
                 <td><span class="count-mismatch">263</span></td>
+                <td><span class="badge-unknown">Unknown</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1871,6 +2027,7 @@
                 <td><span class="date date-old">2026-02-20 14:25:14</span><br><small style="color: #8a8f98;">(84 days ago)</small></td>
                 <td><span class="weighting">230</span></td>
                 <td><span class="count-mismatch">237</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1882,6 +2039,7 @@
                 <td><span class="date date-old">2026-03-01 17:22:22</span><br><small style="color: #8a8f98;">(74 days ago)</small></td>
                 <td><span class="weighting">230</span></td>
                 <td><span class="count-mismatch">248</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1893,6 +2051,7 @@
                 <td><span class="date date-old">2025-07-30 16:03:15</span><br><small style="color: #8a8f98;">(289 days ago)</small></td>
                 <td><span class="weighting">228</span></td>
                 <td><span class="count-mismatch">239</span></td>
+                <td><span class="badge-inactive">Inactive</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1904,6 +2063,7 @@
                 <td><span class="date date-old">2025-07-30 17:33:50</span><br><small style="color: #8a8f98;">(288 days ago)</small></td>
                 <td><span class="weighting">228</span></td>
                 <td><span class="count-mismatch">236</span></td>
+                <td><span class="badge-inactive">Inactive</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1915,6 +2075,7 @@
                 <td><span class="date date-old">2021-11-21 01:00:53</span><br><small style="color: #8a8f98;">(1636 days ago)</small></td>
                 <td><span class="weighting">227</span></td>
                 <td><span class="count-mismatch">234</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1926,6 +2087,7 @@
                 <td><span class="date date-old">2026-02-18 17:55:30</span><br><small style="color: #8a8f98;">(85 days ago)</small></td>
                 <td><span class="weighting">227</span></td>
                 <td><span class="count-mismatch">233</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1937,6 +2099,7 @@
                 <td><span class="date date-old">2026-03-09 18:05:48</span><br><small style="color: #8a8f98;">(66 days ago)</small></td>
                 <td><span class="weighting">227</span></td>
                 <td><span class="count-mismatch">233</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1948,6 +2111,7 @@
                 <td><span class="date date-old">2026-02-10 18:43:31</span><br><small style="color: #8a8f98;">(93 days ago)</small></td>
                 <td><span class="weighting">226</span></td>
                 <td><span class="count-mismatch">229</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1959,6 +2123,7 @@
                 <td><span class="date date-old">2026-02-20 22:31:44</span><br><small style="color: #8a8f98;">(83 days ago)</small></td>
                 <td><span class="weighting">226</span></td>
                 <td><span class="count-mismatch">208</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1967,9 +2132,10 @@
                 <td><span class="hotel-name">Comfort Inn Saskatoon</span></td>
                 <td><span class="location">Saskatoon</span></td>
                 <td><span class="country-code">CA</span></td>
-                <td><span class="date date-old">2026-02-26 16:22:14</span><br><small style="color: #8a8f98;">(77 days ago)</small></td>
+                <td><span class="date date-old">2026-02-26 16:22:14</span><br><small style="color: #8a8f98;">(78 days ago)</small></td>
                 <td><span class="weighting">226</span></td>
                 <td><span class="count-mismatch">221</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1981,6 +2147,7 @@
                 <td><span class="date date-old">2026-01-15 21:50:05</span><br><small style="color: #8a8f98;">(119 days ago)</small></td>
                 <td><span class="weighting">225</span></td>
                 <td><span class="count-mismatch">239</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -1992,6 +2159,7 @@
                 <td><span class="date date-old">2026-03-06 04:09:38</span><br><small style="color: #8a8f98;">(70 days ago)</small></td>
                 <td><span class="weighting">225</span></td>
                 <td><span class="count-mismatch">240</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2003,6 +2171,7 @@
                 <td><span class="date date-old">2026-03-14 17:49:02</span><br><small style="color: #8a8f98;">(61 days ago)</small></td>
                 <td><span class="weighting">225</span></td>
                 <td><span class="count-mismatch">239</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2014,6 +2183,7 @@
                 <td><span class="date date-old">2025-08-19 22:16:22</span><br><small style="color: #8a8f98;">(268 days ago)</small></td>
                 <td><span class="weighting">224</span></td>
                 <td><span class="count-mismatch">231</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2025,6 +2195,7 @@
                 <td><span class="date date-old">2022-07-21 17:47:07</span><br><small style="color: #8a8f98;">(1393 days ago)</small></td>
                 <td><span class="weighting">223</span></td>
                 <td><span class="count-mismatch">232</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2036,6 +2207,7 @@
                 <td><span class="date date-old">2026-03-04 22:38:54</span><br><small style="color: #8a8f98;">(71 days ago)</small></td>
                 <td><span class="weighting">222</span></td>
                 <td><span class="count-mismatch">238</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2047,6 +2219,7 @@
                 <td><span class="date date-old">2026-02-01 19:45:04</span><br><small style="color: #8a8f98;">(102 days ago)</small></td>
                 <td><span class="weighting">219</span></td>
                 <td><span class="count-mismatch">228</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2058,6 +2231,7 @@
                 <td><span class="date date-old">2026-03-12 01:22:43</span><br><small style="color: #8a8f98;">(64 days ago)</small></td>
                 <td><span class="weighting">219</span></td>
                 <td><span class="count-mismatch">228</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2069,6 +2243,7 @@
                 <td><span class="date date-old">2025-07-17 23:57:08</span><br><small style="color: #8a8f98;">(301 days ago)</small></td>
                 <td><span class="weighting">218</span></td>
                 <td><span class="count-mismatch">237</span></td>
+                <td><span class="badge-inactive">Inactive</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2080,6 +2255,7 @@
                 <td><span class="date date-old">2025-09-20 15:01:15</span><br><small style="color: #8a8f98;">(237 days ago)</small></td>
                 <td><span class="weighting">218</span></td>
                 <td><span class="count-mismatch">177</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2091,6 +2267,7 @@
                 <td><span class="date date-old">2026-03-01 22:05:17</span><br><small style="color: #8a8f98;">(74 days ago)</small></td>
                 <td><span class="weighting">218</span></td>
                 <td><span class="count-mismatch">223</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2102,6 +2279,7 @@
                 <td><span class="date date-old">2024-05-10 20:43:13</span><br><small style="color: #8a8f98;">(734 days ago)</small></td>
                 <td><span class="weighting">217</span></td>
                 <td><span class="count-mismatch">229</span></td>
+                <td><span class="badge-unknown">Unknown</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2113,6 +2291,7 @@
                 <td><span class="date date-old">2024-12-06 17:44:17</span><br><small style="color: #8a8f98;">(524 days ago)</small></td>
                 <td><span class="weighting">217</span></td>
                 <td><span class="count-mismatch">216</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2124,6 +2303,7 @@
                 <td><span class="date date-old">2026-02-10 22:31:56</span><br><small style="color: #8a8f98;">(93 days ago)</small></td>
                 <td><span class="weighting">217</span></td>
                 <td><span class="count-mismatch">228</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2132,9 +2312,10 @@
                 <td><span class="hotel-name">Strater Hotel</span></td>
                 <td><span class="location">Durango</span></td>
                 <td><span class="country-code">US</span></td>
-                <td><span class="date date-old">2026-02-16 16:23:12</span><br><small style="color: #8a8f98;">(87 days ago)</small></td>
+                <td><span class="date date-old">2026-02-16 16:23:12</span><br><small style="color: #8a8f98;">(88 days ago)</small></td>
                 <td><span class="weighting">217</span></td>
                 <td><span class="count-mismatch">238</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2143,9 +2324,10 @@
                 <td><span class="hotel-name">Delta Hotels by Marriott Columbia Northeast</span></td>
                 <td><span class="location">Columbia</span></td>
                 <td><span class="country-code">US</span></td>
-                <td><span class="date date-old">2025-12-30 16:18:02</span><br><small style="color: #8a8f98;">(135 days ago)</small></td>
+                <td><span class="date date-old">2025-12-30 16:18:02</span><br><small style="color: #8a8f98;">(136 days ago)</small></td>
                 <td><span class="weighting">216</span></td>
                 <td><span class="count-mismatch">234</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2157,6 +2339,7 @@
                 <td><span class="date date-old">2026-02-25 18:11:34</span><br><small style="color: #8a8f98;">(78 days ago)</small></td>
                 <td><span class="weighting">216</span></td>
                 <td><span class="count-mismatch">232</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2168,6 +2351,7 @@
                 <td><span class="date date-old">2026-03-13 18:41:53</span><br><small style="color: #8a8f98;">(62 days ago)</small></td>
                 <td><span class="weighting">216</span></td>
                 <td><span class="count-mismatch">221</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2179,6 +2363,7 @@
                 <td><span class="date date-old">2025-06-19 01:50:31</span><br><small style="color: #8a8f98;">(330 days ago)</small></td>
                 <td><span class="weighting">215</span></td>
                 <td><span class="count-mismatch">223</span></td>
+                <td><span class="badge-inactive">Inactive</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2190,6 +2375,7 @@
                 <td><span class="date date-old">2026-02-02 23:37:26</span><br><small style="color: #8a8f98;">(101 days ago)</small></td>
                 <td><span class="weighting">215</span></td>
                 <td><span class="count-mismatch">217</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2201,6 +2387,7 @@
                 <td><span class="date date-old">2026-03-10 22:05:42</span><br><small style="color: #8a8f98;">(65 days ago)</small></td>
                 <td><span class="weighting">215</span></td>
                 <td><span class="count-mismatch">202</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2209,9 +2396,10 @@
                 <td><span class="hotel-name">Four Points by Sheraton Manhattan Chelsea</span></td>
                 <td><span class="location">New York</span></td>
                 <td><span class="country-code">US</span></td>
-                <td><span class="date date-old">2024-10-30 16:26:22</span><br><small style="color: #8a8f98;">(561 days ago)</small></td>
+                <td><span class="date date-old">2024-10-30 16:26:22</span><br><small style="color: #8a8f98;">(562 days ago)</small></td>
                 <td><span class="weighting">213</span></td>
                 <td><span class="count-mismatch">223</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2223,6 +2411,7 @@
                 <td><span class="date date-old">2026-03-04 22:18:01</span><br><small style="color: #8a8f98;">(71 days ago)</small></td>
                 <td><span class="weighting">213</span></td>
                 <td><span class="count-mismatch">225</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2234,6 +2423,7 @@
                 <td><span class="date date-old">2025-06-26 02:53:51</span><br><small style="color: #8a8f98;">(323 days ago)</small></td>
                 <td><span class="weighting">212</span></td>
                 <td><span class="count-mismatch">239</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2242,9 +2432,10 @@
                 <td><span class="hotel-name">Super 8 by Wyndham Bozeman</span></td>
                 <td><span class="location">Bozeman</span></td>
                 <td><span class="country-code">US</span></td>
-                <td><span class="date date-old">2026-02-17 16:55:58</span><br><small style="color: #8a8f98;">(86 days ago)</small></td>
+                <td><span class="date date-old">2026-02-17 16:55:58</span><br><small style="color: #8a8f98;">(87 days ago)</small></td>
                 <td><span class="weighting">212</span></td>
                 <td><span class="count-mismatch">215</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2256,6 +2447,7 @@
                 <td><span class="date date-old">2026-02-26 22:42:33</span><br><small style="color: #8a8f98;">(77 days ago)</small></td>
                 <td><span class="weighting">212</span></td>
                 <td><span class="count-mismatch">281</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2267,6 +2459,7 @@
                 <td><span class="date date-old">2025-12-30 20:00:02</span><br><small style="color: #8a8f98;">(135 days ago)</small></td>
                 <td><span class="weighting">211</span></td>
                 <td><span class="count-mismatch">4</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2278,6 +2471,7 @@
                 <td><span class="date date-old">2026-02-06 17:24:47</span><br><small style="color: #8a8f98;">(97 days ago)</small></td>
                 <td><span class="weighting">210</span></td>
                 <td><span class="count-mismatch">211</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2289,6 +2483,7 @@
                 <td><span class="date date-old">2026-02-17 19:19:12</span><br><small style="color: #8a8f98;">(86 days ago)</small></td>
                 <td><span class="weighting">210</span></td>
                 <td><span class="count-mismatch">225</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2300,6 +2495,7 @@
                 <td><span class="date date-old">2026-02-15 20:30:57</span><br><small style="color: #8a8f98;">(88 days ago)</small></td>
                 <td><span class="weighting">209</span></td>
                 <td><span class="count-mismatch">218</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2311,6 +2507,7 @@
                 <td><span class="date date-old">2026-02-28 17:24:55</span><br><small style="color: #8a8f98;">(75 days ago)</small></td>
                 <td><span class="weighting">209</span></td>
                 <td><span class="count-mismatch">219</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2322,6 +2519,7 @@
                 <td><span class="date date-old">2026-02-03 20:23:21</span><br><small style="color: #8a8f98;">(100 days ago)</small></td>
                 <td><span class="weighting">208</span></td>
                 <td><span class="count-mismatch">211</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2333,6 +2531,7 @@
                 <td><span class="date date-old">2026-03-06 19:34:10</span><br><small style="color: #8a8f98;">(69 days ago)</small></td>
                 <td><span class="weighting">208</span></td>
                 <td><span class="count-mismatch">223</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2341,9 +2540,10 @@
                 <td><span class="hotel-name">Hilton Garden Inn Kalispell</span></td>
                 <td><span class="location">Kalispell</span></td>
                 <td><span class="country-code">US</span></td>
-                <td><span class="date date-old">2026-03-13 16:55:10</span><br><small style="color: #8a8f98;">(62 days ago)</small></td>
+                <td><span class="date date-old">2026-03-13 16:55:10</span><br><small style="color: #8a8f98;">(63 days ago)</small></td>
                 <td><span class="weighting">208</span></td>
                 <td><span class="count-mismatch">214</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2355,6 +2555,7 @@
                 <td><span class="date date-old">2026-02-16 22:55:36</span><br><small style="color: #8a8f98;">(87 days ago)</small></td>
                 <td><span class="weighting">207</span></td>
                 <td><span class="count-mismatch">222</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2366,6 +2567,7 @@
                 <td><span class="date date-old">2026-02-23 22:44:36</span><br><small style="color: #8a8f98;">(80 days ago)</small></td>
                 <td><span class="weighting">207</span></td>
                 <td><span class="count-mismatch">225</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2377,6 +2579,7 @@
                 <td><span class="date date-old">2026-03-12 19:44:03</span><br><small style="color: #8a8f98;">(63 days ago)</small></td>
                 <td><span class="weighting">207</span></td>
                 <td><span class="count-mismatch">146</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2388,6 +2591,7 @@
                 <td><span class="date date-old">2026-02-28 19:25:18</span><br><small style="color: #8a8f98;">(75 days ago)</small></td>
                 <td><span class="weighting">206</span></td>
                 <td><span class="count-mismatch">205</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2399,6 +2603,7 @@
                 <td><span class="date date-old">2026-03-01 04:34:47</span><br><small style="color: #8a8f98;">(75 days ago)</small></td>
                 <td><span class="weighting">206</span></td>
                 <td><span class="count-mismatch">215</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2410,6 +2615,7 @@
                 <td><span class="date date-old">2024-04-30 19:17:34</span><br><small style="color: #8a8f98;">(744 days ago)</small></td>
                 <td><span class="weighting">205</span></td>
                 <td><span class="count-mismatch">40</span></td>
+                <td><span class="badge-inactive">Inactive</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2421,6 +2627,7 @@
                 <td><span class="date date-old">2026-02-04 12:59:37</span><br><small style="color: #8a8f98;">(100 days ago)</small></td>
                 <td><span class="weighting">205</span></td>
                 <td><span class="count-mismatch">194</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2432,6 +2639,7 @@
                 <td><span class="date date-old">2026-02-26 03:08:02</span><br><small style="color: #8a8f98;">(78 days ago)</small></td>
                 <td><span class="weighting">205</span></td>
                 <td><span class="count-mismatch">203</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2443,6 +2651,7 @@
                 <td><span class="date date-old">2026-03-03 03:04:17</span><br><small style="color: #8a8f98;">(73 days ago)</small></td>
                 <td><span class="weighting">205</span></td>
                 <td><span class="count-mismatch">10</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2454,6 +2663,7 @@
                 <td><span class="date date-old">2025-12-06 18:40:17</span><br><small style="color: #8a8f98;">(159 days ago)</small></td>
                 <td><span class="weighting">204</span></td>
                 <td><span class="count-mismatch">1</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2465,6 +2675,7 @@
                 <td><span class="date ">2026-03-15 17:57:41</span><br><small style="color: #8a8f98;">(60 days ago)</small></td>
                 <td><span class="weighting">204</span></td>
                 <td><span class="count-mismatch">209</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2476,6 +2687,7 @@
                 <td><span class="date date-old">2021-03-12 18:04:42</span><br><small style="color: #8a8f98;">(1889 days ago)</small></td>
                 <td><span class="weighting">202</span></td>
                 <td><span class="count-mismatch">203</span></td>
+                <td><span class="badge-inactive">Inactive</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2487,6 +2699,7 @@
                 <td><span class="date date-old">2026-02-12 18:17:44</span><br><small style="color: #8a8f98;">(91 days ago)</small></td>
                 <td><span class="weighting">202</span></td>
                 <td><span class="count-mismatch">221</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2498,6 +2711,7 @@
                 <td><span class="date date-old">2026-02-26 00:18:50</span><br><small style="color: #8a8f98;">(78 days ago)</small></td>
                 <td><span class="weighting">202</span></td>
                 <td><span class="count-mismatch">214</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2509,6 +2723,7 @@
                 <td><span class="date date-old">2026-03-01 12:40:12</span><br><small style="color: #8a8f98;">(75 days ago)</small></td>
                 <td><span class="weighting">202</span></td>
                 <td><span class="count-mismatch">216</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2520,6 +2735,7 @@
                 <td><span class="date date-old">2026-02-10 01:09:06</span><br><small style="color: #8a8f98;">(94 days ago)</small></td>
                 <td><span class="weighting">201</span></td>
                 <td><span class="count-mismatch">238</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2531,6 +2747,7 @@
                 <td><span class="date date-old">2025-10-08 17:36:10</span><br><small style="color: #8a8f98;">(218 days ago)</small></td>
                 <td><span class="weighting">200</span></td>
                 <td><span class="count-mismatch">209</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2542,6 +2759,7 @@
                 <td><span class="date date-old">2025-11-03 17:27:45</span><br><small style="color: #8a8f98;">(192 days ago)</small></td>
                 <td><span class="weighting">200</span></td>
                 <td><span class="count-mismatch">214</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2553,6 +2771,7 @@
                 <td><span class="date date-old">2026-02-14 21:15:36</span><br><small style="color: #8a8f98;">(89 days ago)</small></td>
                 <td><span class="weighting">200</span></td>
                 <td><span class="count-mismatch">1</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2564,6 +2783,7 @@
                 <td><span class="date date-old">2026-03-04 01:04:53</span><br><small style="color: #8a8f98;">(72 days ago)</small></td>
                 <td><span class="weighting">200</span></td>
                 <td><span class="count-mismatch">207</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         
@@ -2575,6 +2795,7 @@
                 <td><span class="date date-old">2026-03-05 03:52:09</span><br><small style="color: #8a8f98;">(71 days ago)</small></td>
                 <td><span class="weighting">200</span></td>
                 <td><span class="count-mismatch">205</span></td>
+                <td><span class="badge-active">Active</span></td>
                 <td><span class=""><span class="reason-empty">-</span></span></td>
             </tr>
         

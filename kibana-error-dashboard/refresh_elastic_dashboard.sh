@@ -50,6 +50,14 @@ echo ""
 echo "[ 1/3 ] Querying Elasticsearch..."
 python3 query_elastic_logs.py "$ARG_FLAG" "$ARG_VAL" --output "$DATA_FILE"
 
+# ── Archive existing index.html ───────────────────────────────────────────────
+if [ -f "$HTML_FILE" ]; then
+  ARCHIVE_TIMESTAMP=$(date '+%Y%m%d_%H%M%S')
+  ARCHIVE_FILE="index_${ARCHIVE_TIMESTAMP}.html"
+  mv "$HTML_FILE" "$ARCHIVE_FILE"
+  echo "Archived existing dashboard → $ARCHIVE_FILE"
+fi
+
 # ── Step 2: Generate Dashboard ────────────────────────────────────────────────
 echo ""
 echo "[ 2/3 ] Generating dashboard HTML..."
@@ -59,9 +67,9 @@ python3 generate_elastic_dashboard.py --input "$DATA_FILE" --output "$HTML_FILE"
 echo ""
 echo "[ 3/3 ] Publishing to GitHub Pages..."
 cd "$REPO_DIR"
-git add kibana-error-dashboard/index.html
+git add kibana-error-dashboard/index.html kibana-error-dashboard/index_*.html
 git commit -m "chore: refresh elastic log dashboard ($ARG_FLAG $ARG_VAL) $(date '+%Y-%m-%d %H:%M EST')"
-git push origin gh-pages
+git push --force origin gh-pages
 
 echo ""
 echo "✅  Done!"

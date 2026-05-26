@@ -68,6 +68,14 @@ else
     echo "Step 2: Skipping research (use --research flag to enable)"
 fi
 
+# Archive existing index.html
+if [ -f "index.html" ]; then
+    ARCHIVE_TIMESTAMP=$(date '+%Y%m%d_%H%M%S')
+    ARCHIVE_FILE="index_${ARCHIVE_TIMESTAMP}.html"
+    mv "index.html" "$ARCHIVE_FILE"
+    echo "Archived existing dashboard → $ARCHIVE_FILE"
+fi
+
 # Generate dashboard
 echo ""
 echo "Step 3: Generating dashboard..."
@@ -83,7 +91,7 @@ echo ""
 echo "Step 4: Publishing to GitHub..."
 if [ -d ../.git ]; then
     cd ..
-    git add hotel-popularity-dashboard/index.html hotel-popularity-dashboard/data.json
+    git add hotel-popularity-dashboard/index.html hotel-popularity-dashboard/index_*.html hotel-popularity-dashboard/data.json
     git commit -m "Update hotel popularity dashboard - $(date '+%Y-%m-%d %H:%M:%S')" || echo "No changes to commit"
     git push origin gh-pages || echo "Push failed"
     echo "Pushed to GitHub"

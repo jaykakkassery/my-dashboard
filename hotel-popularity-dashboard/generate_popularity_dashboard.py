@@ -266,6 +266,33 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             color: #5a5d6a;
         }}
 
+        .badge-active {{
+            background: #4caf50;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }}
+
+        .badge-inactive {{
+            background: #e74c3c;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }}
+
+        .badge-unknown {{
+            background: #5a5d6a;
+            color: #ccc;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }}
+
         .empty-state {{
             text-align: center;
             padding: 60px 20px;
@@ -514,7 +541,16 @@ def generate_table_html(hotels):
         reason = hotel.get('possible_reason', '')
         reason_display = reason if reason else '<span class="reason-empty">-</span>'
         reason_class = 'reason' if reason else ''
-        
+
+        # is_active badge from TST_Hotel_master
+        is_active = hotel.get('is_active')
+        if is_active == 1 or is_active is True:
+            active_badge = '<span class="badge-active">Active</span>'
+        elif is_active == 0 or is_active is False:
+            active_badge = '<span class="badge-inactive">Inactive</span>'
+        else:
+            active_badge = '<span class="badge-unknown">Unknown</span>'
+
         rows_html.append(f"""
             <tr>
                 <td><span class="hotel-id">{hotel['hotel_id']}</span></td>
@@ -524,6 +560,7 @@ def generate_table_html(hotels):
                 <td><span class="date {date_class}">{hotel['last_booking_date']}</span><br><small style="color: #8a8f98;">({days_ago} days ago)</small></td>
                 <td><span class="weighting">{weighting}</span></td>
                 <td><span class="{count_class}">{actual_count}</span></td>
+                <td>{active_badge}</td>
                 <td><span class="{reason_class}">{reason_display}</span></td>
             </tr>
         """)
@@ -539,6 +576,7 @@ def generate_table_html(hotels):
                     <th>Last Booking Date</th>
                     <th>Weighting</th>
                     <th>Actual Count</th>
+                    <th>Active in Master</th>
                     <th>Possible Reason</th>
                 </tr>
             </thead>
