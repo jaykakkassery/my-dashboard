@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Hotel Log Dashboard · Last 6 hours</title>
+<title>Hotel Log Dashboard · Last 1 days</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;600;700&display=swap" rel="stylesheet"/>
 <style>
@@ -307,8 +307,8 @@
     <div class="sub">TST · Elasticsearch · HOTEL · Production</div>
   </div>
   <div class="header-right">
-    <div class="period-pill">Last 6 hours</div>
-    <div class="gen-time">Generated 2026-06-02 13:53 EDT</div>
+    <div class="period-pill">Last 1 days</div>
+    <div class="gen-time">Generated 2026-06-02 10:01 EDT</div>
   </div>
 </header>
 
@@ -318,23 +318,23 @@
   <div class="stat-row">
     <div class="stat-card c-error">
       <div class="stat-label">Errors</div>
-      <div class="stat-value">12,006</div>
+      <div class="stat-value">9,725</div>
     </div>
     <div class="stat-card c-warn">
       <div class="stat-label">Warnings</div>
-      <div class="stat-value">29,351</div>
+      <div class="stat-value">96,607</div>
     </div>
     <div class="stat-card c-info">
       <div class="stat-label">Info</div>
-      <div class="stat-value">1,674,320</div>
+      <div class="stat-value">6,170,372</div>
     </div>
     <div class="stat-card c-total">
       <div class="stat-label">Total Logs</div>
-      <div class="stat-value">1,715,677</div>
+      <div class="stat-value">6,276,704</div>
     </div>
     <div class="stat-card c-size">
       <div class="stat-label">Index Size</div>
-      <div class="stat-value">192.30 GB ~est<div class="stat-sub">172,070,903 docs</div></div>
+      <div class="stat-value">190.86 GB ~est<div class="stat-sub">170,779,448 docs</div></div>
     </div>
   </div>
 
@@ -343,14 +343,14 @@
     <h3>Log Volume Breakdown</h3>
     
     <div class="sev-bar-wrap">
-      <div class="sev-segment seg-error" style="width:0.7%" title="Error 0.7%"></div>
-      <div class="sev-segment seg-warn"  style="width:1.7%" title="Warn 1.7%"></div>
-      <div class="sev-segment seg-info"  style="width:97.6%" title="Info 97.6%"></div>
+      <div class="sev-segment seg-error" style="width:0.2%" title="Error 0.2%"></div>
+      <div class="sev-segment seg-warn"  style="width:1.5%" title="Warn 1.5%"></div>
+      <div class="sev-segment seg-info"  style="width:98.3%" title="Info 98.3%"></div>
     </div>
     <div class="sev-legend">
-      <span class="dot dot-error"></span>Error 0.7%&nbsp;&nbsp;
-      <span class="dot dot-warn"></span>Warn 1.7%&nbsp;&nbsp;
-      <span class="dot dot-info"></span>Info 97.6%
+      <span class="dot dot-error"></span>Error 0.2%&nbsp;&nbsp;
+      <span class="dot dot-warn"></span>Warn 1.5%&nbsp;&nbsp;
+      <span class="dot dot-info"></span>Info 98.3%
     </div>
   </div>
 
@@ -371,88 +371,88 @@
             <div class="msg-text">Exception occurred while calling Priceline API for GET to URL Some …</div>
             <div class="bar-bg"><div class="bar-fill badge-error" style="width:100%"></div></div>
           </td>
-          <td><span class="badge badge-error">3,823</span></td>
+          <td><span class="badge badge-error">2,672</span></td>
         </tr>
 
         <tr>
           <td class="rank">#2</td>
           <td class="msg-cell">
             <div class="msg-text">java.util.concurrent.TimeoutException: Request timeout to api.rezserver.com/ …</div>
-            <div class="bar-bg"><div class="bar-fill badge-error" style="width:42%"></div></div>
+            <div class="bar-bg"><div class="bar-fill badge-error" style="width:49%"></div></div>
           </td>
-          <td><span class="badge badge-error">1,608</span></td>
+          <td><span class="badge badge-error">1,310</span></td>
         </tr>
 
         <tr>
           <td class="rank">#3</td>
           <td class="msg-cell">
-            <div class="msg-text">play.api.UnexpectedException: Unexpected exception …</div>
-            <div class="bar-bg"><div class="bar-fill badge-error" style="width:2%"></div></div>
+            <div class="msg-text">Hybrid Rate Select: Some rates could not be retrieved -- List …</div>
+            <div class="bar-bg"><div class="bar-fill badge-error" style="width:13%"></div></div>
           </td>
-          <td><span class="badge badge-error">91</span></td>
+          <td><span class="badge badge-error">339</span></td>
         </tr>
 
         <tr>
           <td class="rank">#4</td>
           <td class="msg-cell">
-            <div class="msg-text">Hybrid Rate Select: Some rates could not be retrieved -- List …</div>
-            <div class="bar-bg"><div class="bar-fill badge-error" style="width:2%"></div></div>
+            <div class="msg-text">play.api.UnexpectedException: Unexpected exception …</div>
+            <div class="bar-bg"><div class="bar-fill badge-error" style="width:12%"></div></div>
           </td>
-          <td><span class="badge badge-error">89</span></td>
+          <td><span class="badge badge-error">308</span></td>
         </tr>
 
         <tr>
           <td class="rank">#5</td>
           <td class="msg-cell">
-            <div class="msg-text">net.tstllc.exception.Exceptions$$anon$ …</div>
-            <div class="bar-bg"><div class="bar-fill badge-error" style="width:1%"></div></div>
+            <div class="msg-text">Booking failed</div>
+            <div class="bar-bg"><div class="bar-fill badge-error" style="width:6%"></div></div>
           </td>
-          <td><span class="badge badge-error">48</span></td>
+          <td><span class="badge badge-error">150</span></td>
         </tr>
 
         <tr>
           <td class="rank">#6</td>
           <td class="msg-cell">
-            <div class="msg-text">java.util.concurrent.TimeoutException: Request timeout to americas.webservices.travelport.com/ …</div>
-            <div class="bar-bg"><div class="bar-fill badge-error" style="width:1%"></div></div>
+            <div class="msg-text">java.util.concurrent.TimeoutException: Request timeout to api.platform.sabre.com/ …</div>
+            <div class="bar-bg"><div class="bar-fill badge-error" style="width:5%"></div></div>
           </td>
-          <td><span class="badge badge-error">28</span></td>
+          <td><span class="badge badge-error">124</span></td>
         </tr>
 
         <tr>
           <td class="rank">#7</td>
           <td class="msg-cell">
-            <div class="msg-text">java.lang.Exception: Invalid Status Code …</div>
-            <div class="bar-bg"><div class="bar-fill badge-error" style="width:1%"></div></div>
+            <div class="msg-text">ppn bundle is empty. failed to retrieve from cache PropertyAvailabilityRequest …</div>
+            <div class="bar-bg"><div class="bar-fill badge-error" style="width:3%"></div></div>
           </td>
-          <td><span class="badge badge-error">22</span></td>
+          <td><span class="badge badge-error">69</span></td>
         </tr>
 
         <tr>
           <td class="rank">#8</td>
           <td class="msg-cell">
-            <div class="msg-text">Unexpected error. java.lang.IndexOutOfBoundsException: {n} {n}</div>
-            <div class="bar-bg"><div class="bar-fill badge-error" style="width:0%"></div></div>
+            <div class="msg-text">java.lang.Exception: Invalid Status Code …</div>
+            <div class="bar-bg"><div class="bar-fill badge-error" style="width:3%"></div></div>
           </td>
-          <td><span class="badge badge-error">17</span></td>
+          <td><span class="badge badge-error">67</span></td>
         </tr>
 
         <tr>
           <td class="rank">#9</td>
           <td class="msg-cell">
-            <div class="msg-text">Booking failed</div>
-            <div class="bar-bg"><div class="bar-fill badge-error" style="width:0%"></div></div>
+            <div class="msg-text">Unexpected error. java.lang.IndexOutOfBoundsException: {n} {n}</div>
+            <div class="bar-bg"><div class="bar-fill badge-error" style="width:1%"></div></div>
           </td>
-          <td><span class="badge badge-error">15</span></td>
+          <td><span class="badge badge-error">32</span></td>
         </tr>
 
         <tr>
           <td class="rank">#10</td>
           <td class="msg-cell">
             <div class="msg-text">net.liftweb.json.MappingException: No usable value for HotelPriceCheckRS</div>
-            <div class="bar-bg"><div class="bar-fill badge-error" style="width:0%"></div></div>
+            <div class="bar-bg"><div class="bar-fill badge-error" style="width:1%"></div></div>
           </td>
-          <td><span class="badge badge-error">7</span></td>
+          <td><span class="badge badge-error">31</span></td>
         </tr></tbody>
       </table>
     </div>
@@ -471,88 +471,88 @@
             <div class="msg-text">Received hotel ID without prefix …</div>
             <div class="bar-bg"><div class="bar-fill badge-warn" style="width:100%"></div></div>
           </td>
-          <td><span class="badge badge-warn">12,975</span></td>
+          <td><span class="badge badge-warn">39,065</span></td>
         </tr>
 
         <tr>
           <td class="rank">#2</td>
           <td class="msg-cell">
             <div class="msg-text">No Results Found!</div>
-            <div class="bar-bg"><div class="bar-fill badge-warn" style="width:41%"></div></div>
+            <div class="bar-bg"><div class="bar-fill badge-warn" style="width:47%"></div></div>
           </td>
-          <td><span class="badge badge-warn">5,349</span></td>
+          <td><span class="badge badge-warn">18,208</span></td>
         </tr>
 
         <tr>
           <td class="rank">#3</td>
           <td class="msg-cell">
             <div class="msg-text">LocationTokenService: No properties found for location token:</div>
-            <div class="bar-bg"><div class="bar-fill badge-warn" style="width:10%"></div></div>
+            <div class="bar-bg"><div class="bar-fill badge-warn" style="width:14%"></div></div>
           </td>
-          <td><span class="badge badge-warn">1,313</span></td>
+          <td><span class="badge badge-warn">5,501</span></td>
         </tr>
 
         <tr>
           <td class="rank">#4</td>
           <td class="msg-cell">
-            <div class="msg-text">Could not parse this text. Revise the regex ? Some …</div>
+            <div class="msg-text">Filtering Sabre rate for hotel HOT- …</div>
             <div class="bar-bg"><div class="bar-fill badge-warn" style="width:4%"></div></div>
           </td>
-          <td><span class="badge badge-warn">516</span></td>
+          <td><span class="badge badge-warn">1,534</span></td>
         </tr>
 
         <tr>
           <td class="rank">#5</td>
           <td class="msg-cell">
-            <div class="msg-text">Filtering Sabre rate for hotel HOT- …</div>
+            <div class="msg-text">Hotel Hybrid - buildFilterMetadata with …</div>
             <div class="bar-bg"><div class="bar-fill badge-warn" style="width:3%"></div></div>
           </td>
-          <td><span class="badge badge-warn">442</span></td>
+          <td><span class="badge badge-warn">1,080</span></td>
         </tr>
 
         <tr>
           <td class="rank">#6</td>
           <td class="msg-cell">
-            <div class="msg-text">Hotel Hybrid - buildFilterMetadata with …</div>
+            <div class="msg-text">Got error produce response in correlation id …</div>
             <div class="bar-bg"><div class="bar-fill badge-warn" style="width:2%"></div></div>
           </td>
-          <td><span class="badge badge-warn">267</span></td>
+          <td><span class="badge badge-warn">628</span></td>
         </tr>
 
         <tr>
           <td class="rank">#7</td>
           <td class="msg-cell">
-            <div class="msg-text">Got error produce response in correlation id …</div>
+            <div class="msg-text">Unable to retrieve cached search criteria to make sponsored listings call</div>
             <div class="bar-bg"><div class="bar-fill badge-warn" style="width:1%"></div></div>
           </td>
-          <td><span class="badge badge-warn">133</span></td>
+          <td><span class="badge badge-warn">408</span></td>
         </tr>
 
         <tr>
           <td class="rank">#8</td>
           <td class="msg-cell">
-            <div class="msg-text">Unable to retrieve cached search criteria to make sponsored listings call</div>
+            <div class="msg-text">No sponsored listings for: Houston TX cache miss and no response after long wait.</div>
             <div class="bar-bg"><div class="bar-fill badge-warn" style="width:1%"></div></div>
           </td>
-          <td><span class="badge badge-warn">119</span></td>
+          <td><span class="badge badge-warn">290</span></td>
         </tr>
 
         <tr>
           <td class="rank">#9</td>
           <td class="msg-cell">
-            <div class="msg-text">No sponsored listings for: Anaheim CA cache miss and no response after long wait.</div>
+            <div class="msg-text">No sponsored listings for: Covent Garden cache miss and no response after long wait.</div>
             <div class="bar-bg"><div class="bar-fill badge-warn" style="width:1%"></div></div>
           </td>
-          <td><span class="badge badge-warn">108</span></td>
+          <td><span class="badge badge-warn">289</span></td>
         </tr>
 
         <tr>
           <td class="rank">#10</td>
           <td class="msg-cell">
-            <div class="msg-text">{n} bad request, response = {</div>
-            <div class="bar-bg"><div class="bar-fill badge-warn" style="width:1%"></div></div>
+            <div class="msg-text">LocationTokenService: No properties found for location token: NTQuNTI1OTYxNHwxNS4yNTUxMTg3fDE1fENoSUpoZHF0ejRhSTdVWVJlZkQ4cy1hWjczSXxob3RlbHw=</div>
+            <div class="bar-bg"><div class="bar-fill badge-warn" style="width:0%"></div></div>
           </td>
-          <td><span class="badge badge-warn">74</span></td>
+          <td><span class="badge badge-warn">177</span></td>
         </tr></tbody>
       </table>
     </div>
@@ -574,88 +574,88 @@
             <div class="msg-text">Response</div>
             <div class="bar-bg"><div class="bar-fill badge-info" style="width:100%"></div></div>
           </td>
-          <td><span class="badge badge-info">209,819</span></td>
+          <td><span class="badge badge-info">778,148</span></td>
         </tr>
 
         <tr>
           <td class="rank">#2</td>
           <td class="msg-cell">
             <div class="msg-text">Rate Cache: Checking availability of cache with key:</div>
-            <div class="bar-bg"><div class="bar-fill badge-info" style="width:19%"></div></div>
+            <div class="bar-bg"><div class="bar-fill badge-info" style="width:18%"></div></div>
           </td>
-          <td><span class="badge badge-info">39,987</span></td>
+          <td><span class="badge badge-info">140,655</span></td>
         </tr>
 
         <tr>
           <td class="rank">#3</td>
           <td class="msg-cell">
-            <div class="msg-text">HotelAvailabilityV2Service.getFilters()</div>
-            <div class="bar-bg"><div class="bar-fill badge-info" style="width:12%"></div></div>
+            <div class="msg-text">HttpClient.get - URL: {url}</div>
+            <div class="bar-bg"><div class="bar-fill badge-info" style="width:18%"></div></div>
           </td>
-          <td><span class="badge badge-info">25,350</span></td>
+          <td><span class="badge badge-info">138,796</span></td>
         </tr>
 
         <tr>
           <td class="rank">#4</td>
           <td class="msg-cell">
-            <div class="msg-text">HotelSearchRatesContoller.rates()</div>
-            <div class="bar-bg"><div class="bar-fill badge-info" style="width:9%"></div></div>
+            <div class="msg-text">HotelAvailabilityV2Service.getFilters()</div>
+            <div class="bar-bg"><div class="bar-fill badge-info" style="width:12%"></div></div>
           </td>
-          <td><span class="badge badge-info">18,802</span></td>
+          <td><span class="badge badge-info">90,109</span></td>
         </tr>
 
         <tr>
           <td class="rank">#5</td>
           <td class="msg-cell">
-            <div class="msg-text">HotelAvailabilityV2Service.GetHotels() time</div>
+            <div class="msg-text">HotelSearchRatesContoller.rates()</div>
             <div class="bar-bg"><div class="bar-fill badge-info" style="width:9%"></div></div>
           </td>
-          <td><span class="badge badge-info">18,390</span></td>
+          <td><span class="badge badge-info">66,329</span></td>
         </tr>
 
         <tr>
           <td class="rank">#6</td>
           <td class="msg-cell">
-            <div class="msg-text">getImages: {n} totalTime: {n} ms photoTime: {n} masterTime: {n} ms processImageTime {n} ms</div>
-            <div class="bar-bg"><div class="bar-fill badge-info" style="width:7%"></div></div>
+            <div class="msg-text">HotelAvailabilityV2Service.GetHotels() time</div>
+            <div class="bar-bg"><div class="bar-fill badge-info" style="width:8%"></div></div>
           </td>
-          <td><span class="badge badge-info">14,566</span></td>
+          <td><span class="badge badge-info">65,994</span></td>
         </tr>
 
         <tr>
           <td class="rank">#7</td>
           <td class="msg-cell">
-            <div class="msg-text">HttpClient.post - URL: {url}</div>
+            <div class="msg-text">getImages: {n} totalTime: {n} ms photoTime: {n} masterTime: {n} ms processImageTime {n} ms</div>
             <div class="bar-bg"><div class="bar-fill badge-info" style="width:7%"></div></div>
           </td>
-          <td><span class="badge badge-info">14,110</span></td>
+          <td><span class="badge badge-info">53,279</span></td>
         </tr>
 
         <tr>
           <td class="rank">#8</td>
           <td class="msg-cell">
-            <div class="msg-text">Total properties.. {n} hotels {n} vrbos..{n}</div>
+            <div class="msg-text">HttpClient.post - URL: {url}</div>
             <div class="bar-bg"><div class="bar-fill badge-info" style="width:7%"></div></div>
           </td>
-          <td><span class="badge badge-info">13,654</span></td>
+          <td><span class="badge badge-info">51,834</span></td>
         </tr>
 
         <tr>
           <td class="rank">#9</td>
           <td class="msg-cell">
-            <div class="msg-text">Filtered property count {n}</div>
+            <div class="msg-text">Total properties.. {n} hotels {n} vrbos..{n}</div>
             <div class="bar-bg"><div class="bar-fill badge-info" style="width:6%"></div></div>
           </td>
-          <td><span class="badge badge-info">11,831</span></td>
+          <td><span class="badge badge-info">47,561</span></td>
         </tr>
 
         <tr>
           <td class="rank">#10</td>
           <td class="msg-cell">
-            <div class="msg-text">KeyDisclaimer Call... false</div>
-            <div class="bar-bg"><div class="bar-fill badge-info" style="width:4%"></div></div>
+            <div class="msg-text">Filtered property count {n}</div>
+            <div class="bar-bg"><div class="bar-fill badge-info" style="width:6%"></div></div>
           </td>
-          <td><span class="badge badge-info">8,417</span></td>
+          <td><span class="badge badge-info">43,222</span></td>
         </tr></tbody>
     </table>
   </div>
@@ -676,7 +676,7 @@
           <td class="msg-cell">
             <div class="msg-text">play.api.UnexpectedException: Unexpected exception …</div>
           </td>
-          <td><span class="badge badge-error">29,930</span></td>
+          <td><span class="badge badge-error">29,933</span></td>
         </tr>
 
         <tr>
@@ -698,7 +698,7 @@
         <tr>
           <td class="rank">#4</td>
           <td class="msg-cell">
-            <div class="msg-text">play.api.libs.json.JsResultException: JsResultException …</div>
+            <div class="msg-text">Cancel Failed: This reservation cannot be cancelled online. Some reservations may not be cancelled once in full penalty. For additional assistance, please contact us or the hotel directly.</div>
           </td>
           <td><span class="badge badge-error">5</span></td>
         </tr>
@@ -706,9 +706,9 @@
         <tr>
           <td class="rank">#5</td>
           <td class="msg-cell">
-            <div class="msg-text">Cancel Failed: This reservation cannot be cancelled online. Some reservations may not be cancelled once in full penalty. For additional assistance, please contact us or the hotel directly.</div>
+            <div class="msg-text">play.api.libs.json.JsResultException: JsResultException …</div>
           </td>
-          <td><span class="badge badge-error">4</span></td>
+          <td><span class="badge badge-error">5</span></td>
         </tr>
 
         <tr>
@@ -730,7 +730,7 @@
         <tr>
           <td class="rank">#8</td>
           <td class="msg-cell">
-            <div class="msg-text">com.mysql.cj.jdbc.exceptions.MySQLTransactionRollbackException: Deadlock found when trying to get lock; try restarting transaction</div>
+            <div class="msg-text">Missing required credential for TST.HQ.Sabre_Hotel.epr in adapter credential schema net.tstllc.common.model.adapter.credentials.schema.SabreHotelCredentials …</div>
           </td>
           <td><span class="badge badge-error">2</span></td>
         </tr>
@@ -738,17 +738,17 @@
         <tr>
           <td class="rank">#9</td>
           <td class="msg-cell">
-            <div class="msg-text">Missing required credential for TST.HQ.Sabre_Hotel.epr in adapter credential schema net.tstllc.common.model.adapter.credentials.schema.SabreHotelCredentials …</div>
+            <div class="msg-text">Missing required credential for TST.HQ.Sabre_Hotel.group in adapter credential schema net.tstllc.common.model.adapter.credentials.schema.SabreHotelCredentials …</div>
           </td>
-          <td><span class="badge badge-error">1</span></td>
+          <td><span class="badge badge-error">2</span></td>
         </tr>
 
         <tr>
           <td class="rank">#10</td>
           <td class="msg-cell">
-            <div class="msg-text">Missing required credential for TST.HQ.Sabre_Hotel.group in adapter credential schema net.tstllc.common.model.adapter.credentials.schema.SabreHotelCredentials …</div>
+            <div class="msg-text">Missing required credential for TST.HQ.Sabre_Hotel.pcc in adapter credential schema net.tstllc.common.model.adapter.credentials.schema.SabreHotelCredentials …</div>
           </td>
-          <td><span class="badge badge-error">1</span></td>
+          <td><span class="badge badge-error">2</span></td>
         </tr></tbody>
       </table>
     </div>
@@ -764,21 +764,29 @@
         <tr>
           <td class="rank">#1</td>
           <td class="msg-cell">
-            <div class="msg-text">LocationTokenService: No properties found for location token: MjEuNDY5MTEzN3wtNzguNjU2ODk0MnwxNXxDaElKdHppZzFRbmp1WTRSM052RnlqTFBmc1l8aG90ZWx8</div>
+            <div class="msg-text">LocationTokenService: No properties found for location token: NTQuNTI1OTYxNHwxNS4yNTUxMTg3fDE1fENoSUpoZHF0ejRhSTdVWVJlZkQ4cy1hWjczSXxob3RlbHw=</div>
           </td>
-          <td><span class="badge badge-warn">575</span></td>
+          <td><span class="badge badge-warn">1,489</span></td>
         </tr>
 
         <tr>
           <td class="rank">#2</td>
           <td class="msg-cell">
-            <div class="msg-text">No sponsored listings for: San Juan PR cache miss and no response after long wait.</div>
+            <div class="msg-text">LocationTokenService: No properties found for location token: MTguNzM1NjkzfC03MC4xNjI2NTF8MTV8Q2hJSjliYngzamlJcjQ0UjRQY05CaVFQQXFZfGhvdGVsfA==</div>
           </td>
-          <td><span class="badge badge-warn">237</span></td>
+          <td><span class="badge badge-warn">1,254</span></td>
         </tr>
 
         <tr>
           <td class="rank">#3</td>
+          <td class="msg-cell">
+            <div class="msg-text">LocationTokenService: No properties found for location token: MTkuNTQyOTE1MXwtMTU1LjY2NTg1Njh8MTV8Q2hJSldUcjN4Y0huVTNrUk5JSFgtWktrVlJRfGhvdGVsfA==</div>
+          </td>
+          <td><span class="badge badge-warn">687</span></td>
+        </tr>
+
+        <tr>
+          <td class="rank">#4</td>
           <td class="msg-cell">
             <div class="msg-text">Invalid host or domain name: immunefi.com</div>
           </td>
@@ -786,59 +794,51 @@
         </tr>
 
         <tr>
-          <td class="rank">#4</td>
-          <td class="msg-cell">
-            <div class="msg-text">LocationTokenService: No properties found for location token: OC41Mzc5ODF8LTgwLjc4MjEyN3wxNXxDaElKNHl1LXlJTVZwbzhSejV1bEgwM2c3bmt8aG90ZWx8</div>
-          </td>
-          <td><span class="badge badge-warn">190</span></td>
-        </tr>
-
-        <tr>
           <td class="rank">#5</td>
           <td class="msg-cell">
-            <div class="msg-text">Daily rates do not sum to for property Wyndham Grand Jupiter at Harbourside Place and for roomRate MjAyNTEyMTF8MjAyNTEyMTN8V3wyMzV8Mzk5MzM4fERCTC5EWHxTVEEgTlJGfFJPfHwxfjJ+MHxAQk9PS0FCTEVAZmFsc2U= and …</div>
+            <div class="msg-text">Daily rates do not sum to for property Days Inn by Wyndham Edmundston and for roomRate MjAyNTA4MjF8MjAyNTA4MjJ8V3wyNTd8NTU0NjI4fFFVQS5INi0yfElEX0IyQl8yNnxCQnxTV0g1TnwxfjJ+MHxAUkVDSEVDS0BmYWxzZQ== and …</div>
           </td>
-          <td><span class="badge badge-warn">156</span></td>
+          <td><span class="badge badge-warn">54</span></td>
         </tr>
 
         <tr>
           <td class="rank">#6</td>
           <td class="msg-cell">
-            <div class="msg-text">Daily rates do not sum to for property Sura Hagia Sophia Hotel and for roomRate MjAyNjA4MjJ8MjAyNjA4MjR8V3w3N3wzNjQ1MDJ8REJMLlNUfEZJVHxCQnx8MX4yfjB8QEJPT0tBQkxFQGZhbHNl and provider HB Apitude</div>
+            <div class="msg-text">Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.</div>
           </td>
-          <td><span class="badge badge-warn">78</span></td>
+          <td><span class="badge badge-warn">52</span></td>
         </tr>
 
         <tr>
           <td class="rank">#7</td>
           <td class="msg-cell">
-            <div class="msg-text">Daily rates do not sum to for property Sura Hagia Sophia Hotel and for roomRate MjAyNjA4MjJ8MjAyNjA4MjR8V3w3N3wzNjQ1MDJ8VFBMLlNUfEZJVHxCQnx8MX4yfjB8QEJPT0tBQkxFQGZhbHNl and provider HB Apitude</div>
+            <div class="msg-text">Daily rates do not sum to for property Pantheon Hotel and for roomRate MjAyNjA5MDd8MjAyNjA5MDh8V3w0MzZ8MTk2MDkwfERCVC5HVnxGSVQgfEJCfHwxfjJ+MHxAQk9PS0FCTEVAZmFsc2U= and provider HB Apitude</div>
           </td>
-          <td><span class="badge badge-warn">76</span></td>
+          <td><span class="badge badge-warn">44</span></td>
         </tr>
 
         <tr>
           <td class="rank">#8</td>
           <td class="msg-cell">
-            <div class="msg-text">Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.</div>
+            <div class="msg-text">Daily rates do not sum to for property Southbank Hotel Jacksonville Riverwalk and for roomRate MjAyNTA4MDh8MjAyNTA4MTB8V3wyMzV8MTM5MzI2fERCTC4yUXxHQVJ8Uk98fDF+Mn4wfEBCT09LQUJMRUBmYWxzZQ== and …</div>
           </td>
-          <td><span class="badge badge-warn">68</span></td>
+          <td><span class="badge badge-warn">8</span></td>
         </tr>
 
         <tr>
           <td class="rank">#9</td>
           <td class="msg-cell">
-            <div class="msg-text">Daily rates do not sum to for property Pantheon Hotel and for roomRate MjAyNjA5MDN8MjAyNjA5MDR8V3w0MzZ8MTk2MDkwfERCVC5HVnxGSVQgfEJCfHwxfjJ+MHxAQk9PS0FCTEVAZmFsc2U= and provider HB Apitude</div>
+            <div class="msg-text">Daily rates do not sum to for property The WADE and for roomRate MjAyNjA2MTl8MjAyNjA2MjJ8V3wyNTV8MTM1MjczfERCTC5DVi1LR3xGSVQgTk9SfFJPfHwxfjJ+MHxAQk9PS0FCTEVAZmFsc2U= and provider HB Apitude</div>
           </td>
-          <td><span class="badge badge-warn">64</span></td>
+          <td><span class="badge badge-warn">8</span></td>
         </tr>
 
         <tr>
           <td class="rank">#10</td>
           <td class="msg-cell">
-            <div class="msg-text">Daily rates do not sum to for property Pantheon Hotel and for roomRate MjAyNjA5MDd8MjAyNjA5MDh8V3w0MzZ8MTk2MDkwfERCVC5HVnxGSVQgfEJCfHwxfjJ+MHxAQk9PS0FCTEVAZmFsc2U= and provider HB Apitude</div>
+            <div class="msg-text">No sponsored listings for: Claresholm AB cache miss and no response after long wait.</div>
           </td>
-          <td><span class="badge badge-warn">64</span></td>
+          <td><span class="badge badge-warn">7</span></td>
         </tr></tbody>
       </table>
     </div>
@@ -847,7 +847,7 @@
 
 </main>
 
-<footer>TST Hotel Log Dashboard · Auto-generated · 2026-06-02 13:53 EDT · @fields.app: hotel · env: green / blue</footer>
+<footer>TST Hotel Log Dashboard · Auto-generated · 2026-06-02 10:01 EDT · @fields.app: hotel · env: green / blue</footer>
 
 </body>
 </html>
