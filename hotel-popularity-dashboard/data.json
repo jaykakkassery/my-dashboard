@@ -1,10 +1,10 @@
 {
-  "query_timestamp": "2026-06-04 00:00:50 EDT",
+  "query_timestamp": "2026-06-04 12:03:17 EDT",
   "parameters": {
     "min_weighting": 200,
     "months_inactive": 2
   },
-  "total_count": 214,
+  "total_count": 212,
   "hotels": [
     {
       "hotel_id": 14266,
@@ -1137,16 +1137,6 @@
       "is_active": 0
     },
     {
-      "hotel_id": 133376,
-      "hotel_name": "Hampton Inn & Suites Asheville Biltmore Village",
-      "hotel_address_city": "Asheville",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-04-03 21:49:49",
-      "actual_booking_count": 257,
-      "weighting": 249,
-      "is_active": 1
-    },
-    {
       "hotel_id": 60969,
       "hotel_name": "Fairfield Inn & Suites by Marriott Charlottesville North",
       "hotel_address_city": "Charlottesville",
@@ -1983,16 +1973,6 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-03-15 17:57:41",
       "actual_booking_count": 209,
-      "weighting": 204,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 28951,
-      "hotel_name": "Fairfield by Marriott Niagara Falls Canada",
-      "hotel_address_city": "Niagara Falls",
-      "hotel_address_country_code": "CA",
-      "last_booking_date": "2026-03-17 22:06:47",
-      "actual_booking_count": 211,
       "weighting": 204,
       "is_active": 1
     },
