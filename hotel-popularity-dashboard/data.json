@@ -1,5 +1,5 @@
 {
-  "query_timestamp": "2026-06-04 12:03:17 EDT",
+  "query_timestamp": "2026-06-05 00:01:51 EDT",
   "parameters": {
     "min_weighting": 200,
     "months_inactive": 2
@@ -54,6 +54,16 @@
       "last_booking_date": "2026-03-31 17:34:54",
       "actual_booking_count": 1240,
       "weighting": 1201,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 1690312,
+      "hotel_name": "Northwinds Hotel Canmore",
+      "hotel_address_city": "Canmore",
+      "hotel_address_country_code": "CA",
+      "last_booking_date": "2026-04-04 17:03:10",
+      "actual_booking_count": 69,
+      "weighting": 762,
       "is_active": 1
     },
     {
@@ -507,16 +517,6 @@
       "is_active": 1
     },
     {
-      "hotel_id": 161241,
-      "hotel_name": "Grand Hyatt Denver",
-      "hotel_address_city": "Denver",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-02-09 23:59:36",
-      "actual_booking_count": 334,
-      "weighting": 330,
-      "is_active": 1
-    },
-    {
       "hotel_id": 74552,
       "hotel_name": "Slackline Moab Outset Collection by Hilton",
       "hotel_address_city": "Moab",
@@ -557,6 +557,16 @@
       "is_active": 1
     },
     {
+      "hotel_id": 19259,
+      "hotel_name": "Courtyard by Marriott Edmonton Downtown",
+      "hotel_address_city": "Edmonton",
+      "hotel_address_country_code": "CA",
+      "last_booking_date": "2026-04-04 21:14:56",
+      "actual_booking_count": 326,
+      "weighting": 316,
+      "is_active": 1
+    },
+    {
       "hotel_id": 10338,
       "hotel_name": "Renaissance Orlando at SeaWorld",
       "hotel_address_city": "Orlando",
@@ -584,6 +594,16 @@
       "last_booking_date": "2026-02-07 00:51:38",
       "actual_booking_count": 327,
       "weighting": 313,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 1538,
+      "hotel_name": "Holiday Inn Miami West - Airport Area by Ihg",
+      "hotel_address_city": "Hialeah",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-04-04 16:29:30",
+      "actual_booking_count": 355,
+      "weighting": 312,
       "is_active": 1
     },
     {
@@ -1517,6 +1537,16 @@
       "is_active": 1
     },
     {
+      "hotel_id": 59790,
+      "hotel_name": "Courtyard by Marriott Tucson Airport",
+      "hotel_address_city": "Tucson",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-04-05 01:56:10",
+      "actual_booking_count": 226,
+      "weighting": 225,
+      "is_active": 1
+    },
+    {
       "hotel_id": 7702,
       "hotel_name": "The Westin Denver Downtown",
       "hotel_address_city": "Denver",
@@ -1554,16 +1584,6 @@
       "last_booking_date": "2026-03-29 02:02:44",
       "actual_booking_count": 234,
       "weighting": 223,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 71322,
-      "hotel_name": "Best Western B. R. Guest",
-      "hotel_address_city": "Zanesville",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-03-04 22:38:54",
-      "actual_booking_count": 238,
-      "weighting": 222,
       "is_active": 1
     },
     {
@@ -1827,16 +1847,6 @@
       "is_active": 1
     },
     {
-      "hotel_id": 157975,
-      "hotel_name": "Clarion Inn & Suites Miami International Airport",
-      "hotel_address_city": "Miami Springs",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-04-02 20:33:30",
-      "actual_booking_count": 232,
-      "weighting": 213,
-      "is_active": 1
-    },
-    {
       "hotel_id": 22689,
       "hotel_name": "Lompoc Valley Inn and Suites",
       "hotel_address_city": "Lompoc",
@@ -1894,26 +1904,6 @@
       "last_booking_date": "2026-03-12 19:44:03",
       "actual_booking_count": 146,
       "weighting": 207,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 60089,
-      "hotel_name": "Super 8 by Wyndham Kalispell Glacier National Park",
-      "hotel_address_city": "Kalispell",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-02-28 19:25:18",
-      "actual_booking_count": 205,
-      "weighting": 206,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 8247,
-      "hotel_name": "Springhill Suites by Marriott Memphis Downtown",
-      "hotel_address_city": "Memphis",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-03-01 04:34:47",
-      "actual_booking_count": 215,
-      "weighting": 206,
       "is_active": 1
     },
     {
@@ -2004,6 +1994,16 @@
       "last_booking_date": "2026-03-25 02:18:23",
       "actual_booking_count": 14,
       "weighting": 204,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 71845,
+      "hotel_name": "Holiday Inn Resort Galveston-on the Beach by Ihg",
+      "hotel_address_city": "Galveston",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-04-04 18:36:15",
+      "actual_booking_count": 227,
+      "weighting": 203,
       "is_active": 1
     },
     {
