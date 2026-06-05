@@ -1,10 +1,10 @@
 {
-  "query_timestamp": "2026-06-05 00:01:51 EDT",
+  "query_timestamp": "2026-06-05 12:02:05 EDT",
   "parameters": {
     "min_weighting": 200,
     "months_inactive": 2
   },
-  "total_count": 212,
+  "total_count": 210,
   "hotels": [
     {
       "hotel_id": 14266,
@@ -94,16 +94,6 @@
       "last_booking_date": "2026-02-25 23:02:13",
       "actual_booking_count": 575,
       "weighting": 567,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 3453809,
-      "hotel_name": "Row NYC",
-      "hotel_address_city": "New York",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-03-27 20:55:19",
-      "actual_booking_count": 2,
-      "weighting": 555,
       "is_active": 1
     },
     {
@@ -1287,16 +1277,6 @@
       "is_active": 1
     },
     {
-      "hotel_id": 3301188,
-      "hotel_name": "La Quinta Inn & Suites by Wyndham Conference Center Prescott",
-      "hotel_address_city": "Prescott",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-02-20 19:18:36",
-      "actual_booking_count": 7,
-      "weighting": 239,
-      "is_active": 1
-    },
-    {
       "hotel_id": 938120,
       "hotel_name": "Legoland Hotel",
       "hotel_address_city": "Winter Haven",
@@ -1587,6 +1567,16 @@
       "is_active": 1
     },
     {
+      "hotel_id": 41046,
+      "hotel_name": "Omni Royal Orleans Hotel",
+      "hotel_address_city": "New Orleans",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-04-05 04:32:58",
+      "actual_booking_count": 239,
+      "weighting": 223,
+      "is_active": 1
+    },
+    {
       "hotel_id": 12150,
       "hotel_name": "Hampton Inn & Suites National Harbor - Alexandria Area",
       "hotel_address_city": "Oxon Hill",
@@ -1763,16 +1753,6 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-03-31 04:00:21",
       "actual_booking_count": 216,
-      "weighting": 215,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 83161,
-      "hotel_name": "Drury Inn & Suites Las Cruces",
-      "hotel_address_city": "Las Cruces",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-03-31 21:01:22",
-      "actual_booking_count": 219,
       "weighting": 215,
       "is_active": 1
     },
