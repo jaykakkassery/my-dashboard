@@ -1,10 +1,10 @@
 {
-  "query_timestamp": "2026-06-05 12:02:05 EDT",
+  "query_timestamp": "2026-06-06 00:02:15 EDT",
   "parameters": {
     "min_weighting": 200,
     "months_inactive": 2
   },
-  "total_count": 210,
+  "total_count": 209,
   "hotels": [
     {
       "hotel_id": 14266,
@@ -1327,16 +1327,6 @@
       "is_active": 1
     },
     {
-      "hotel_id": 135757,
-      "hotel_name": "Best Western Springfield West Inn",
-      "hotel_address_city": "West Springfield",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-03-25 20:12:24",
-      "actual_booking_count": 249,
-      "weighting": 235,
-      "is_active": 1
-    },
-    {
       "hotel_id": 16537,
       "hotel_name": "Fairfield Inn by Marriott JFK Airport",
       "hotel_address_city": "Jamaica",
@@ -1617,16 +1607,6 @@
       "is_active": 1
     },
     {
-      "hotel_id": 29168,
-      "hotel_name": "Hampton Inn & Suites Palmdale",
-      "hotel_address_city": "Palmdale",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-03-16 14:04:15",
-      "actual_booking_count": 229,
-      "weighting": 219,
-      "is_active": 1
-    },
-    {
       "hotel_id": 55342,
       "hotel_name": "Clarion Pointe Morrow - Atlanta South",
       "hotel_address_city": "Morrow",
@@ -1783,6 +1763,16 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-03-23 20:59:13",
       "actual_booking_count": 218,
+      "weighting": 214,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 37709,
+      "hotel_name": "Renaissance Asheville Downtown Hotel",
+      "hotel_address_city": "Asheville",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-04-05 22:53:10",
+      "actual_booking_count": 219,
       "weighting": 214,
       "is_active": 1
     },
