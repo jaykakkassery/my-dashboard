@@ -1,10 +1,10 @@
 {
-  "query_timestamp": "2026-06-13 00:02:51 EDT",
+  "query_timestamp": "2026-06-13 12:02:52 EDT",
   "parameters": {
     "min_weighting": 200,
     "months_inactive": 2
   },
-  "total_count": 212,
+  "total_count": 209,
   "hotels": [
     {
       "hotel_id": 14266,
@@ -297,16 +297,6 @@
       "is_active": 0
     },
     {
-      "hotel_id": 3292785,
-      "hotel_name": "Best Western Plus Richmond Airport Hotel",
-      "hotel_address_city": "Sandston",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-03-18 02:30:36",
-      "actual_booking_count": 11,
-      "weighting": 402,
-      "is_active": 1
-    },
-    {
       "hotel_id": 79666,
       "hotel_name": "Sheraton Phoenix Crescent",
       "hotel_address_city": "Phoenix",
@@ -425,16 +415,6 @@
       "actual_booking_count": 415,
       "weighting": 367,
       "is_active": null
-    },
-    {
-      "hotel_id": 165704,
-      "hotel_name": "Best Western Plus Truckee-Tahoe Hotel",
-      "hotel_address_city": "Truckee",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-03-12 04:45:41",
-      "actual_booking_count": 370,
-      "weighting": 360,
-      "is_active": 1
     },
     {
       "hotel_id": 27952,
@@ -1084,16 +1064,6 @@
       "last_booking_date": "2026-03-21 20:22:09",
       "actual_booking_count": 267,
       "weighting": 257,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 52254,
-      "hotel_name": "Best Western Lexington Inn",
-      "hotel_address_city": "Lexington",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2025-12-22 15:02:30",
-      "actual_booking_count": 262,
-      "weighting": 252,
       "is_active": 1
     },
     {
