@@ -1,10 +1,10 @@
 {
-  "query_timestamp": "2026-06-13 12:02:52 EDT",
+  "query_timestamp": "2026-06-15 12:01:32 EDT",
   "parameters": {
     "min_weighting": 200,
     "months_inactive": 2
   },
-  "total_count": 209,
+  "total_count": 210,
   "hotels": [
     {
       "hotel_id": 14266,
@@ -447,6 +447,16 @@
       "is_active": 1
     },
     {
+      "hotel_id": 11860,
+      "hotel_name": "Best Western Plus Valdosta Hotel & Suites",
+      "hotel_address_city": "Valdosta",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-04-14 16:51:44",
+      "actual_booking_count": 350,
+      "weighting": 346,
+      "is_active": 1
+    },
+    {
       "hotel_id": 32074,
       "hotel_name": "DoubleTree by Hilton Memphis Downtown",
       "hotel_address_city": "Memphis",
@@ -454,6 +464,16 @@
       "last_booking_date": "2025-11-04 21:58:40",
       "actual_booking_count": 397,
       "weighting": 345,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 73151,
+      "hotel_name": "Holiday Inn Ocean City by Ihg",
+      "hotel_address_city": "Ocean City",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-04-13 18:39:07",
+      "actual_booking_count": 350,
+      "weighting": 337,
       "is_active": 1
     },
     {
@@ -777,6 +797,16 @@
       "is_active": 1
     },
     {
+      "hotel_id": 80923,
+      "hotel_name": "Super 8 by Wyndham Sault Ste Marie",
+      "hotel_address_city": "Sault Sainte Marie",
+      "hotel_address_country_code": "CA",
+      "last_booking_date": "2026-04-13 22:49:59",
+      "actual_booking_count": 296,
+      "weighting": 282,
+      "is_active": 1
+    },
+    {
       "hotel_id": 157653,
       "hotel_name": "Best Western Airport Inn",
       "hotel_address_city": "Phoenix",
@@ -907,13 +937,13 @@
       "is_active": 1
     },
     {
-      "hotel_id": 3292945,
-      "hotel_name": "La Quinta Inn & Suites by Wyndham Tucson Airport",
-      "hotel_address_city": "Tucson",
+      "hotel_id": 72874,
+      "hotel_name": "SpringHill Suites by Marriott St. Petersburg Clearwater",
+      "hotel_address_city": "Clearwater",
       "hotel_address_country_code": "US",
-      "last_booking_date": "2026-04-01 01:22:04",
-      "actual_booking_count": 9,
-      "weighting": 267,
+      "last_booking_date": "2026-04-15 14:08:43",
+      "actual_booking_count": 291,
+      "weighting": 268,
       "is_active": 1
     },
     {
@@ -1167,16 +1197,6 @@
       "is_active": 0
     },
     {
-      "hotel_id": 31291,
-      "hotel_name": "Clarion Pointe Harrisonburg",
-      "hotel_address_city": "Harrisonburg",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-04-11 22:49:22",
-      "actual_booking_count": 208,
-      "weighting": 242,
-      "is_active": 1
-    },
-    {
       "hotel_id": 119563,
       "hotel_name": "Holiday Inn Resort Aruba - Beach Resort & Casino",
       "hotel_address_city": "Noord",
@@ -1194,6 +1214,16 @@
       "last_booking_date": "2026-04-09 16:28:20",
       "actual_booking_count": 257,
       "weighting": 240,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 51129,
+      "hotel_name": "The Westin Philadelphia",
+      "hotel_address_city": "Philadelphia",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-04-13 23:47:55",
+      "actual_booking_count": 247,
+      "weighting": 238,
       "is_active": 1
     },
     {
@@ -1224,16 +1254,6 @@
       "last_booking_date": "2026-04-10 22:43:57",
       "actual_booking_count": 252,
       "weighting": 237,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 16393,
-      "hotel_name": "Best Western Inn at Face Rock",
-      "hotel_address_city": "Bandon",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-02-14 22:54:05",
-      "actual_booking_count": 250,
-      "weighting": 236,
       "is_active": 1
     },
     {
@@ -1517,16 +1537,6 @@
       "is_active": 1
     },
     {
-      "hotel_id": 41046,
-      "hotel_name": "Omni Royal Orleans Hotel",
-      "hotel_address_city": "New Orleans",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-04-05 04:32:58",
-      "actual_booking_count": 239,
-      "weighting": 223,
-      "is_active": 1
-    },
-    {
       "hotel_id": 12150,
       "hotel_name": "Hampton Inn & Suites National Harbor - Alexandria Area",
       "hotel_address_city": "Oxon Hill",
@@ -1583,6 +1593,16 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-03-19 01:04:05",
       "actual_booking_count": 246,
+      "weighting": 219,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 14392,
+      "hotel_name": "Sheraton Waikiki Beach Resort",
+      "hotel_address_city": "Honolulu",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-04-13 17:39:42",
+      "actual_booking_count": 262,
       "weighting": 219,
       "is_active": 1
     },
@@ -1817,16 +1837,6 @@
       "is_active": 1
     },
     {
-      "hotel_id": 1205439,
-      "hotel_name": "Bally's Twin River Lincoln Casino & Hotel",
-      "hotel_address_city": "Lincoln",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-04-06 19:38:07",
-      "actual_booking_count": 211,
-      "weighting": 208,
-      "is_active": 1
-    },
-    {
       "hotel_id": 79490,
       "hotel_name": "Super 8 by Wyndham Billings",
       "hotel_address_city": "Billings",
@@ -1987,6 +1997,16 @@
       "is_active": 1
     },
     {
+      "hotel_id": 3304545,
+      "hotel_name": "SpringHill Suites by Marriott Prescott",
+      "hotel_address_city": "Prescott",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-04-13 17:24:13",
+      "actual_booking_count": 13,
+      "weighting": 203,
+      "is_active": 1
+    },
+    {
       "hotel_id": 54734,
       "hotel_name": "Comfort Suites Prescott Valley",
       "hotel_address_city": "Prescott Valley",
@@ -2013,16 +2033,6 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-02-26 00:18:50",
       "actual_booking_count": 214,
-      "weighting": 202,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 72760,
-      "hotel_name": "Galveston West Beach Hotel",
-      "hotel_address_city": "Galveston",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-03-01 12:40:12",
-      "actual_booking_count": 216,
       "weighting": 202,
       "is_active": 1
     },
