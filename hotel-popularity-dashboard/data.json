@@ -1,10 +1,10 @@
 {
-  "query_timestamp": "2026-06-15 12:01:32 EDT",
+  "query_timestamp": "2026-06-16 12:01:05 EDT",
   "parameters": {
     "min_weighting": 200,
     "months_inactive": 2
   },
-  "total_count": 210,
+  "total_count": 209,
   "hotels": [
     {
       "hotel_id": 14266,
@@ -74,6 +74,16 @@
       "last_booking_date": "2026-02-02 17:13:45",
       "actual_booking_count": 804,
       "weighting": 732,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 67208,
+      "hotel_name": "Pyramid Lake Lodge",
+      "hotel_address_city": "Jasper",
+      "hotel_address_country_code": "CA",
+      "last_booking_date": "2026-04-15 19:14:55",
+      "actual_booking_count": 587,
+      "weighting": 598,
       "is_active": 1
     },
     {
@@ -757,6 +767,16 @@
       "is_active": 1
     },
     {
+      "hotel_id": 38250,
+      "hotel_name": "Cheyenne Mountain Resort, a Destination by Hyatt",
+      "hotel_address_city": "Colorado Springs",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-04-16 15:58:52",
+      "actual_booking_count": 304,
+      "weighting": 284,
+      "is_active": 1
+    },
+    {
       "hotel_id": 24981,
       "hotel_name": "Best Western Durango Inn & Suites",
       "hotel_address_city": "Durango",
@@ -877,6 +897,16 @@
       "is_active": 1
     },
     {
+      "hotel_id": 85410,
+      "hotel_name": "Crowne Plaza Orlando - Lake Buena Vista by Ihg",
+      "hotel_address_city": "Orlando",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-04-16 15:07:35",
+      "actual_booking_count": 309,
+      "weighting": 275,
+      "is_active": 1
+    },
+    {
       "hotel_id": 43430,
       "hotel_name": "Holiday Inn Orlando SW-Celebration Area",
       "hotel_address_city": "Kissimmee",
@@ -903,16 +933,6 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-03-30 18:21:52",
       "actual_booking_count": 310,
-      "weighting": 272,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 271884,
-      "hotel_name": "Hampton Inn & Suites Las Cruces I-10",
-      "hotel_address_city": "Las Cruces",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-04-08 19:48:53",
-      "actual_booking_count": 175,
       "weighting": 272,
       "is_active": 1
     },
@@ -1257,6 +1277,16 @@
       "is_active": 1
     },
     {
+      "hotel_id": 35263,
+      "hotel_name": "Courtyard by Marriott Toledo Rossford/Perrysburg",
+      "hotel_address_city": "Rossford",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-04-15 17:38:24",
+      "actual_booking_count": 242,
+      "weighting": 237,
+      "is_active": 1
+    },
+    {
       "hotel_id": 35400,
       "hotel_name": "Comfort Inn Matthews - Charlotte",
       "hotel_address_city": "Matthews",
@@ -1557,16 +1587,6 @@
       "is_active": 1
     },
     {
-      "hotel_id": 63804,
-      "hotel_name": "SpringHill Suites by Marriott Boston Peabody",
-      "hotel_address_city": "Peabody",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-03-27 14:24:02",
-      "actual_booking_count": 221,
-      "weighting": 220,
-      "is_active": 1
-    },
-    {
       "hotel_id": 156563,
       "hotel_name": "Citadines Connect Fifth Avenue New York",
       "hotel_address_city": "New York",
@@ -1817,16 +1837,6 @@
       "is_active": 1
     },
     {
-      "hotel_id": 74349,
-      "hotel_name": "Holiday Inn Express Hotel & Suites Christiansburg by Ihg",
-      "hotel_address_city": "Christiansburg",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-04-11 16:25:26",
-      "actual_booking_count": 216,
-      "weighting": 211,
-      "is_active": 1
-    },
-    {
       "hotel_id": 3296168,
       "hotel_name": "Travelodge by Wyndham Golden Sportsman Lodge",
       "hotel_address_city": "Golden",
@@ -1853,26 +1863,6 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-03-17 00:22:19",
       "actual_booking_count": 5,
-      "weighting": 206,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 71482,
-      "hotel_name": "Fairfield by Marriott Inn & Suites Uncasville Mohegan Sun Area",
-      "hotel_address_city": "Montville",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-03-19 10:37:52",
-      "actual_booking_count": 232,
-      "weighting": 206,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 32481,
-      "hotel_name": "Hyatt Centric Times Square New York",
-      "hotel_address_city": "New York",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-04-07 23:50:15",
-      "actual_booking_count": 223,
       "weighting": 206,
       "is_active": 1
     },
