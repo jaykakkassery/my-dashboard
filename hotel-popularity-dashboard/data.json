@@ -1,10 +1,10 @@
 {
-  "query_timestamp": "2026-06-16 12:01:05 EDT",
+  "query_timestamp": "2026-06-17 00:01:22 EDT",
   "parameters": {
     "min_weighting": 200,
     "months_inactive": 2
   },
-  "total_count": 209,
+  "total_count": 212,
   "hotels": [
     {
       "hotel_id": 14266,
@@ -627,6 +627,16 @@
       "is_active": 1
     },
     {
+      "hotel_id": 59473,
+      "hotel_name": "Westward Look Wyndham Grand Resort and Spa",
+      "hotel_address_city": "Tucson",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-04-16 21:10:49",
+      "actual_booking_count": 305,
+      "weighting": 309,
+      "is_active": 1
+    },
+    {
       "hotel_id": 77696,
       "hotel_name": "Harrah's Lake Tahoe Resort & Casino",
       "hotel_address_city": "Stateline",
@@ -824,6 +834,16 @@
       "last_booking_date": "2026-04-13 22:49:59",
       "actual_booking_count": 296,
       "weighting": 282,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 13268,
+      "hotel_name": "Courtyard by Marriott Vallejo Napa Valley",
+      "hotel_address_city": "Vallejo",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-04-16 20:33:13",
+      "actual_booking_count": 286,
+      "weighting": 281,
       "is_active": 1
     },
     {
@@ -1117,6 +1137,26 @@
       "is_active": 1
     },
     {
+      "hotel_id": 168389,
+      "hotel_name": "Sheraton Bucks County Langhorne",
+      "hotel_address_city": "Langhorne",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-04-16 22:05:21",
+      "actual_booking_count": 256,
+      "weighting": 253,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 86931,
+      "hotel_name": "Best Western Braddock Inn",
+      "hotel_address_city": "La Vale",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-04-17 00:31:57",
+      "actual_booking_count": 268,
+      "weighting": 251,
+      "is_active": 1
+    },
+    {
       "hotel_id": 16861,
       "hotel_name": "Radisson Hotel Austin - University",
       "hotel_address_city": "Austin",
@@ -1133,16 +1173,6 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-03-23 11:50:07",
       "actual_booking_count": 251,
-      "weighting": 247,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 318874,
-      "hotel_name": "The Westin Nashville",
-      "hotel_address_city": "Nashville",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-04-07 20:24:05",
-      "actual_booking_count": 254,
       "weighting": 247,
       "is_active": 1
     },
@@ -1567,6 +1597,16 @@
       "is_active": 1
     },
     {
+      "hotel_id": 3304381,
+      "hotel_name": "Days Inn & Suites by Wyndham Santa Rosa",
+      "hotel_address_city": "Santa Rosa",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-04-17 03:35:48",
+      "actual_booking_count": 10,
+      "weighting": 223,
+      "is_active": 1
+    },
+    {
       "hotel_id": 12150,
       "hotel_name": "Hampton Inn & Suites National Harbor - Alexandria Area",
       "hotel_address_city": "Oxon Hill",
@@ -1763,16 +1803,6 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-03-04 22:18:01",
       "actual_booking_count": 225,
-      "weighting": 213,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 163847,
-      "hotel_name": "Gravity Haus Jackson Hole",
-      "hotel_address_city": "Teton Village",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-03-16 00:18:23",
-      "actual_booking_count": 243,
       "weighting": 213,
       "is_active": 1
     },
