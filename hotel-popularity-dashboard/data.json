@@ -1,10 +1,10 @@
 {
-  "query_timestamp": "2026-06-17 00:01:22 EDT",
+  "query_timestamp": "2026-06-17 12:02:31 EDT",
   "parameters": {
     "min_weighting": 200,
     "months_inactive": 2
   },
-  "total_count": 212,
+  "total_count": 210,
   "hotels": [
     {
       "hotel_id": 14266,
@@ -997,16 +997,6 @@
       "is_active": 0
     },
     {
-      "hotel_id": 5088,
-      "hotel_name": "Sheraton Phoenix Downtown",
-      "hotel_address_city": "Phoenix",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-03-20 06:10:12",
-      "actual_booking_count": 271,
-      "weighting": 266,
-      "is_active": 1
-    },
-    {
       "hotel_id": 512,
       "hotel_name": "Buffalo Marriott Niagara",
       "hotel_address_city": "Buffalo",
@@ -1833,16 +1823,6 @@
       "hotel_address_country_code": "CA",
       "last_booking_date": "2026-02-26 22:42:33",
       "actual_booking_count": 281,
-      "weighting": 212,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 39093,
-      "hotel_name": "Fairfield Inn & Suites by Marriott Nashville at Opryland",
-      "hotel_address_city": "Nashville",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-04-09 22:55:31",
-      "actual_booking_count": 190,
       "weighting": 212,
       "is_active": 1
     },
