@@ -1,10 +1,10 @@
 {
-  "query_timestamp": "2026-06-17 12:02:31 EDT",
+  "query_timestamp": "2026-06-18 12:02:50 EDT",
   "parameters": {
     "min_weighting": 200,
     "months_inactive": 2
   },
-  "total_count": 210,
+  "total_count": 216,
   "hotels": [
     {
       "hotel_id": 14266,
@@ -144,6 +144,16 @@
       "last_booking_date": "2025-06-08 22:09:26",
       "actual_booking_count": 553,
       "weighting": 521,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 3301036,
+      "hotel_name": "Quality Inn & Suites Albuquerque Midtown - University Area",
+      "hotel_address_city": "Albuquerque",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-04-18 14:28:03",
+      "actual_booking_count": 15,
+      "weighting": 512,
       "is_active": 1
     },
     {
@@ -594,16 +604,6 @@
       "last_booking_date": "2026-04-04 16:29:30",
       "actual_booking_count": 355,
       "weighting": 312,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 16519,
-      "hotel_name": "Signature Temecula",
-      "hotel_address_city": "Temecula",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2025-10-10 14:44:09",
-      "actual_booking_count": 326,
-      "weighting": 310,
       "is_active": 1
     },
     {
@@ -1097,6 +1097,16 @@
       "is_active": 1
     },
     {
+      "hotel_id": 43954,
+      "hotel_name": "Fairfield Inn & Suites by Marriott Ithaca",
+      "hotel_address_city": "Ithaca",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-04-18 02:30:08",
+      "actual_booking_count": 266,
+      "weighting": 259,
+      "is_active": 1
+    },
+    {
       "hotel_id": 160026,
       "hotel_name": "Hyatt Regency DFW",
       "hotel_address_city": "Dallas",
@@ -1134,6 +1144,16 @@
       "last_booking_date": "2026-04-16 22:05:21",
       "actual_booking_count": 256,
       "weighting": 253,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 59306,
+      "hotel_name": "Delta Hotels by Marriott Grand Okanagan Resort",
+      "hotel_address_city": "Kelowna",
+      "hotel_address_country_code": "CA",
+      "last_booking_date": "2026-04-17 20:40:34",
+      "actual_booking_count": 261,
+      "weighting": 252,
       "is_active": 1
     },
     {
@@ -1237,6 +1257,16 @@
       "is_active": 0
     },
     {
+      "hotel_id": 68559,
+      "hotel_name": "Wyndham Phoenix Airport/Tempe",
+      "hotel_address_city": "Tempe",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-04-17 21:40:20",
+      "actual_booking_count": 255,
+      "weighting": 242,
+      "is_active": 1
+    },
+    {
       "hotel_id": 119563,
       "hotel_name": "Holiday Inn Resort Aruba - Beach Resort & Casino",
       "hotel_address_city": "Noord",
@@ -1253,6 +1283,16 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-04-09 16:28:20",
       "actual_booking_count": 257,
+      "weighting": 240,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 32550,
+      "hotel_name": "Spark by Hilton Wilkes Barre",
+      "hotel_address_city": "Wilkes-Barre",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-04-17 17:37:53",
+      "actual_booking_count": 248,
       "weighting": 240,
       "is_active": 1
     },
@@ -1547,13 +1587,13 @@
       "is_active": 1
     },
     {
-      "hotel_id": 7702,
-      "hotel_name": "The Westin Denver Downtown",
-      "hotel_address_city": "Denver",
+      "hotel_id": 57593,
+      "hotel_name": "Centennial Hotel Spokane",
+      "hotel_address_city": "Spokane",
       "hotel_address_country_code": "US",
-      "last_booking_date": "2025-08-19 22:16:22",
-      "actual_booking_count": 231,
-      "weighting": 224,
+      "last_booking_date": "2026-04-18 03:50:06",
+      "actual_booking_count": 236,
+      "weighting": 225,
       "is_active": 1
     },
     {
@@ -1617,6 +1657,16 @@
       "is_active": 1
     },
     {
+      "hotel_id": 78247,
+      "hotel_name": "Holiday Inn Key Largo by Ihg",
+      "hotel_address_city": "Key Largo",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-04-18 15:48:21",
+      "actual_booking_count": 227,
+      "weighting": 221,
+      "is_active": 1
+    },
+    {
       "hotel_id": 156563,
       "hotel_name": "Citadines Connect Fifth Avenue New York",
       "hotel_address_city": "New York",
@@ -1665,6 +1715,16 @@
       "actual_booking_count": 237,
       "weighting": 218,
       "is_active": 0
+    },
+    {
+      "hotel_id": 29945,
+      "hotel_name": "Pinon Court by La Fonda",
+      "hotel_address_city": "Santa Fe",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-04-18 14:55:12",
+      "actual_booking_count": 199,
+      "weighting": 218,
+      "is_active": 1
     },
     {
       "hotel_id": 10042,
@@ -1927,6 +1987,16 @@
       "is_active": 1
     },
     {
+      "hotel_id": 192,
+      "hotel_name": "Comfort Inn Rutland - Killington",
+      "hotel_address_city": "Rutland",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-04-18 14:45:40",
+      "actual_booking_count": 216,
+      "weighting": 205,
+      "is_active": 1
+    },
+    {
       "hotel_id": 3305743,
       "hotel_name": "SpringHill Suites by Marriott Baton Rouge North/Airport",
       "hotel_address_city": "Baton Rouge",
@@ -1943,16 +2013,6 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-03-15 17:57:41",
       "actual_booking_count": 209,
-      "weighting": 204,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 75684,
-      "hotel_name": "Holiday Inn Express Hotel & Suites Swift Current by Ihg",
-      "hotel_address_city": "Swift Current",
-      "hotel_address_country_code": "CA",
-      "last_booking_date": "2026-03-18 21:35:47",
-      "actual_booking_count": 208,
       "weighting": 204,
       "is_active": 1
     },
