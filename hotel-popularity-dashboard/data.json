@@ -1,10 +1,10 @@
 {
-  "query_timestamp": "2026-07-07 12:02:53 EDT",
+  "query_timestamp": "2026-07-08 12:02:08 EDT",
   "parameters": {
     "min_weighting": 200,
     "months_inactive": 2
   },
-  "total_count": 231,
+  "total_count": 237,
   "hotels": [
     {
       "hotel_id": 14266,
@@ -165,6 +165,16 @@
       "actual_booking_count": 553,
       "weighting": 506,
       "is_active": 0
+    },
+    {
+      "hotel_id": 60853,
+      "hotel_name": "Deluxe Inn Wytheville",
+      "hotel_address_city": "Wytheville",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-08 04:39:09",
+      "actual_booking_count": 510,
+      "weighting": 499,
+      "is_active": 1
     },
     {
       "hotel_id": 25499,
@@ -677,6 +687,16 @@
       "is_active": 1
     },
     {
+      "hotel_id": 15296,
+      "hotel_name": "Quality Inn Belgrade - Bozeman Yellowstone Airport",
+      "hotel_address_city": "Belgrade",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-07 20:35:04",
+      "actual_booking_count": 309,
+      "weighting": 306,
+      "is_active": 1
+    },
+    {
       "hotel_id": 3293393,
       "hotel_name": "La Quinta Inn & Suites by Wyndham Springfield",
       "hotel_address_city": "Springfield",
@@ -717,6 +737,16 @@
       "is_active": 1
     },
     {
+      "hotel_id": 375420,
+      "hotel_name": "Hyatt House Virginia Beach / Oceanfront",
+      "hotel_address_city": "Virginia Beach",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-08 11:57:30",
+      "actual_booking_count": 321,
+      "weighting": 303,
+      "is_active": 1
+    },
+    {
       "hotel_id": 59562,
       "hotel_name": "MontBleu Resort Casino & Spa",
       "hotel_address_city": "Stateline",
@@ -725,6 +755,16 @@
       "actual_booking_count": 331,
       "weighting": 302,
       "is_active": 0
+    },
+    {
+      "hotel_id": 38217,
+      "hotel_name": "Courtyard Marriott Victorville",
+      "hotel_address_city": "Hesperia",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-07 21:37:45",
+      "actual_booking_count": 310,
+      "weighting": 300,
+      "is_active": 1
     },
     {
       "hotel_id": 73081,
@@ -773,6 +813,26 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-04-23 10:34:42",
       "actual_booking_count": 13,
+      "weighting": 292,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 23444,
+      "hotel_name": "Hampton Inn & Suites Savannah - I-95 South - Gateway",
+      "hotel_address_city": "Savannah",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-07 19:21:55",
+      "actual_booking_count": 304,
+      "weighting": 292,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 30151,
+      "hotel_name": "Clarion Pointe Biltmore Village",
+      "hotel_address_city": "Asheville",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-07 21:10:38",
+      "actual_booking_count": 297,
       "weighting": 292,
       "is_active": 1
     },
@@ -1007,16 +1067,6 @@
       "is_active": 1
     },
     {
-      "hotel_id": 76251,
-      "hotel_name": "Best Western Plus University Park Inn & Suites",
-      "hotel_address_city": "State College",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-05-02 17:23:41",
-      "actual_booking_count": 281,
-      "weighting": 271,
-      "is_active": 1
-    },
-    {
       "hotel_id": 70433,
       "hotel_name": "Delta Hotels by Marriott Fredericton",
       "hotel_address_city": "Fredericton",
@@ -1053,16 +1103,6 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-04-15 14:08:43",
       "actual_booking_count": 291,
-      "weighting": 268,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 23744,
-      "hotel_name": "Hilton Garden Inn Lake Buena Vista/Orlando",
-      "hotel_address_city": "Orlando",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-05-05 11:12:36",
-      "actual_booking_count": 285,
       "weighting": 268,
       "is_active": 1
     },
@@ -1927,22 +1967,22 @@
       "is_active": 1
     },
     {
+      "hotel_id": 610335,
+      "hotel_name": "Best Western Plus New Barstow Inn & Suites",
+      "hotel_address_city": "Barstow",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-08 12:58:02",
+      "actual_booking_count": 215,
+      "weighting": 214,
+      "is_active": 1
+    },
+    {
       "hotel_id": 86956,
       "hotel_name": "Four Points by Sheraton Manhattan Chelsea",
       "hotel_address_city": "New York",
       "hotel_address_country_code": "US",
       "last_booking_date": "2024-10-30 16:26:22",
       "actual_booking_count": 223,
-      "weighting": 213,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 57036,
-      "hotel_name": "Comfort Inn & Suites Orangeburg",
-      "hotel_address_city": "Orangeburg",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-03-24 15:36:59",
-      "actual_booking_count": 205,
       "weighting": 213,
       "is_active": 1
     },
@@ -2003,6 +2043,16 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-04-09 18:50:45",
       "actual_booking_count": 199,
+      "weighting": 211,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 271000,
+      "hotel_name": "Arlington Court Suites a Clarion Collection Hotel",
+      "hotel_address_city": "Arlington",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-07 17:44:21",
+      "actual_booking_count": 218,
       "weighting": 211,
       "is_active": 1
     },
@@ -2273,6 +2323,16 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-05-05 19:20:41",
       "actual_booking_count": 204,
+      "weighting": 202,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 371677,
+      "hotel_name": "InterContinental Los Angeles Downtown by IHG",
+      "hotel_address_city": "Los Angeles",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-08 01:04:04",
+      "actual_booking_count": 214,
       "weighting": 202,
       "is_active": 1
     },
