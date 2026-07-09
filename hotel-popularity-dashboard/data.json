@@ -1,10 +1,10 @@
 {
-  "query_timestamp": "2026-07-08 12:02:08 EDT",
+  "query_timestamp": "2026-07-09 00:01:56 EDT",
   "parameters": {
     "min_weighting": 200,
     "months_inactive": 2
   },
-  "total_count": 237,
+  "total_count": 233,
   "hotels": [
     {
       "hotel_id": 14266,
@@ -114,6 +114,16 @@
       "last_booking_date": "2026-05-02 14:58:05",
       "actual_booking_count": 352,
       "weighting": 543,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 72810,
+      "hotel_name": "Best Western Inn & Suites San Mateo - San Francisco Airport",
+      "hotel_address_city": "San Mateo",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-09 02:04:29",
+      "actual_booking_count": 544,
+      "weighting": 526,
       "is_active": 1
     },
     {
@@ -897,16 +907,6 @@
       "is_active": 1
     },
     {
-      "hotel_id": 10336,
-      "hotel_name": "Clarion Suites St. George - Convention Center Area",
-      "hotel_address_city": "Saint George",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-04-28 14:13:40",
-      "actual_booking_count": 286,
-      "weighting": 281,
-      "is_active": 1
-    },
-    {
       "hotel_id": 157653,
       "hotel_name": "Best Western Airport Inn",
       "hotel_address_city": "Phoenix",
@@ -1083,16 +1083,6 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-04-08 12:18:04",
       "actual_booking_count": 264,
-      "weighting": 269,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 3302060,
-      "hotel_name": "Wingate by Wyndham Richmond Short Pump",
-      "hotel_address_city": "Richmond",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-04-27 03:09:01",
-      "actual_booking_count": 8,
       "weighting": 269,
       "is_active": 1
     },
@@ -1417,6 +1407,16 @@
       "is_active": 0
     },
     {
+      "hotel_id": 41150,
+      "hotel_name": "La Quinta Inn & Suites by Wyndham Phoenix I-10 West",
+      "hotel_address_city": "Phoenix",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-08 20:52:07",
+      "actual_booking_count": 251,
+      "weighting": 241,
+      "is_active": 1
+    },
+    {
       "hotel_id": 30809,
       "hotel_name": "Wyndham Rochester Downtown",
       "hotel_address_city": "Rochester",
@@ -1557,16 +1557,6 @@
       "is_active": 1
     },
     {
-      "hotel_id": 15169,
-      "hotel_name": "Gateway Hotel Santa Monica",
-      "hotel_address_city": "Santa Monica",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-05-03 14:12:50",
-      "actual_booking_count": 236,
-      "weighting": 234,
-      "is_active": 1
-    },
-    {
       "hotel_id": 16426,
       "hotel_name": "DoubleTree by Hilton Metropolitan Hotel-New York City",
       "hotel_address_city": "New York",
@@ -1617,16 +1607,6 @@
       "is_active": 1
     },
     {
-      "hotel_id": 163451,
-      "hotel_name": "Holiday Inn Express & Suites Kingston Central by Ihg",
-      "hotel_address_city": "Kingston",
-      "hotel_address_country_code": "CA",
-      "last_booking_date": "2026-05-05 03:41:18",
-      "actual_booking_count": 231,
-      "weighting": 229,
-      "is_active": 1
-    },
-    {
       "hotel_id": 43804,
       "hotel_name": "Emerald Hotel and Suites",
       "hotel_address_city": "Calgary",
@@ -1663,16 +1643,6 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-05-06 18:37:24",
       "actual_booking_count": 235,
-      "weighting": 228,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 12208,
-      "hotel_name": "Fairfield Inn & Suites Chicago Downtown/River North",
-      "hotel_address_city": "Chicago",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-05-07 14:04:44",
-      "actual_booking_count": 233,
       "weighting": 228,
       "is_active": 1
     },
@@ -2107,6 +2077,16 @@
       "is_active": 1
     },
     {
+      "hotel_id": 39274,
+      "hotel_name": "SpringHill Suites by Marriott Corona Riverside",
+      "hotel_address_city": "Corona",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-08 16:46:25",
+      "actual_booking_count": 220,
+      "weighting": 207,
+      "is_active": 1
+    },
+    {
       "hotel_id": 3302357,
       "hotel_name": "Best Western Plus Omaha Airport Inn",
       "hotel_address_city": "Carter Lake",
@@ -2123,16 +2103,6 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-04-08 00:19:14",
       "actual_booking_count": 194,
-      "weighting": 206,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 20598,
-      "hotel_name": "Hyatt Place Kansas City/Overland Park/Metcalf",
-      "hotel_address_city": "Overland Park",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-04-10 21:26:39",
-      "actual_booking_count": 214,
       "weighting": 206,
       "is_active": 1
     },
@@ -2293,16 +2263,6 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-02-12 18:17:44",
       "actual_booking_count": 221,
-      "weighting": 202,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 61422,
-      "hotel_name": "Four Points by Sheraton Bakersfield",
-      "hotel_address_city": "Bakersfield",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-02-26 00:18:50",
-      "actual_booking_count": 214,
       "weighting": 202,
       "is_active": 1
     },
