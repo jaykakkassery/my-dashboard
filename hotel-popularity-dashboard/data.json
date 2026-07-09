@@ -1,10 +1,10 @@
 {
-  "query_timestamp": "2026-07-09 00:01:56 EDT",
+  "query_timestamp": "2026-07-09 12:01:08 EDT",
   "parameters": {
     "min_weighting": 200,
     "months_inactive": 2
   },
-  "total_count": 233,
+  "total_count": 234,
   "hotels": [
     {
       "hotel_id": 14266,
@@ -593,6 +593,16 @@
       "hotel_address_country_code": "CA",
       "last_booking_date": "2026-04-29 02:14:21",
       "actual_booking_count": 343,
+      "weighting": 317,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 3291997,
+      "hotel_name": "Best Western Plus Richmond Hill Inn",
+      "hotel_address_city": "Richmond Hill",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-09 15:51:32",
+      "actual_booking_count": 23,
       "weighting": 317,
       "is_active": 1
     },
