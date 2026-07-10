@@ -1,5 +1,5 @@
 {
-  "query_timestamp": "2026-07-09 12:01:08 EDT",
+  "query_timestamp": "2026-07-10 00:01:54 EDT",
   "parameters": {
     "min_weighting": 200,
     "months_inactive": 2
@@ -757,16 +757,6 @@
       "is_active": 1
     },
     {
-      "hotel_id": 375420,
-      "hotel_name": "Hyatt House Virginia Beach / Oceanfront",
-      "hotel_address_city": "Virginia Beach",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-05-08 11:57:30",
-      "actual_booking_count": 321,
-      "weighting": 303,
-      "is_active": 1
-    },
-    {
       "hotel_id": 59562,
       "hotel_name": "MontBleu Resort Casino & Spa",
       "hotel_address_city": "Stateline",
@@ -1097,16 +1087,6 @@
       "is_active": 1
     },
     {
-      "hotel_id": 72874,
-      "hotel_name": "SpringHill Suites by Marriott St. Petersburg Clearwater",
-      "hotel_address_city": "Clearwater",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-04-15 14:08:43",
-      "actual_booking_count": 291,
-      "weighting": 268,
-      "is_active": 1
-    },
-    {
       "hotel_id": 84169,
       "hotel_name": "The Grove at Pismo Beach",
       "hotel_address_city": "Pismo Beach",
@@ -1317,6 +1297,16 @@
       "is_active": 1
     },
     {
+      "hotel_id": 9615,
+      "hotel_name": "Hotel Viking",
+      "hotel_address_city": "Newport",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-09 16:20:57",
+      "actual_booking_count": 273,
+      "weighting": 247,
+      "is_active": 1
+    },
+    {
       "hotel_id": 50934,
       "hotel_name": "SureStay Plus by Best Western Topeka Northwest",
       "hotel_address_city": "Topeka",
@@ -1435,16 +1425,6 @@
       "actual_booking_count": 257,
       "weighting": 240,
       "is_active": 0
-    },
-    {
-      "hotel_id": 32550,
-      "hotel_name": "Spark by Hilton Wilkes Barre",
-      "hotel_address_city": "Wilkes-Barre",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-04-17 17:37:53",
-      "actual_booking_count": 248,
-      "weighting": 240,
-      "is_active": 1
     },
     {
       "hotel_id": 14530,
@@ -1585,6 +1565,16 @@
       "actual_booking_count": 263,
       "weighting": 232,
       "is_active": null
+    },
+    {
+      "hotel_id": 51205,
+      "hotel_name": "Outrigger Kona Resort & Spa at Keauhou Bay",
+      "hotel_address_city": "Kailua-Kona",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-09 19:40:25",
+      "actual_booking_count": 238,
+      "weighting": 232,
+      "is_active": 1
     },
     {
       "hotel_id": 42986,
@@ -2034,6 +2024,16 @@
       "last_booking_date": "2026-05-07 17:44:21",
       "actual_booking_count": 218,
       "weighting": 211,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 1850,
+      "hotel_name": "Red Roof Plus Austin South",
+      "hotel_address_city": "Austin",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-09 19:56:48",
+      "actual_booking_count": 231,
+      "weighting": 210,
       "is_active": 1
     },
     {
