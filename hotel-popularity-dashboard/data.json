@@ -1,10 +1,10 @@
 {
-  "query_timestamp": "2026-07-10 00:01:54 EDT",
+  "query_timestamp": "2026-07-11 00:01:55 EDT",
   "parameters": {
     "min_weighting": 200,
     "months_inactive": 2
   },
-  "total_count": 234,
+  "total_count": 233,
   "hotels": [
     {
       "hotel_id": 14266,
@@ -517,16 +517,6 @@
       "is_active": 1
     },
     {
-      "hotel_id": 23685,
-      "hotel_name": "Howard Johnson by Wyndham Williams",
-      "hotel_address_city": "Williams",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-05-04 02:28:55",
-      "actual_booking_count": 361,
-      "weighting": 343,
-      "is_active": 1
-    },
-    {
       "hotel_id": 3298408,
       "hotel_name": "Hyatt Place Phoenix -North",
       "hotel_address_city": "Phoenix",
@@ -707,16 +697,6 @@
       "is_active": 1
     },
     {
-      "hotel_id": 15296,
-      "hotel_name": "Quality Inn Belgrade - Bozeman Yellowstone Airport",
-      "hotel_address_city": "Belgrade",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-05-07 20:35:04",
-      "actual_booking_count": 309,
-      "weighting": 306,
-      "is_active": 1
-    },
-    {
       "hotel_id": 3293393,
       "hotel_name": "La Quinta Inn & Suites by Wyndham Springfield",
       "hotel_address_city": "Springfield",
@@ -817,6 +797,16 @@
       "is_active": 1
     },
     {
+      "hotel_id": 3379,
+      "hotel_name": "La Quinta Inn & Suites by Wyndham Las Vegas Airport South",
+      "hotel_address_city": "Las Vegas",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-11 03:45:32",
+      "actual_booking_count": 296,
+      "weighting": 293,
+      "is_active": 1
+    },
+    {
       "hotel_id": 3304720,
       "hotel_name": "Delta Hotels by Marriott Orlando Lake Buena Vista",
       "hotel_address_city": "Orlando",
@@ -854,6 +844,16 @@
       "last_booking_date": "2026-04-10 21:58:29",
       "actual_booking_count": 299,
       "weighting": 291,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 13788,
+      "hotel_name": "Fairfield Inn & Suites Tustin Orange County",
+      "hotel_address_city": "Tustin",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-11 03:28:50",
+      "actual_booking_count": 244,
+      "weighting": 286,
       "is_active": 1
     },
     {
@@ -1157,16 +1157,6 @@
       "is_active": 1
     },
     {
-      "hotel_id": 47602,
-      "hotel_name": "The Inn at Lewisburg BW Signature Collection",
-      "hotel_address_city": "Lewisburg",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-04-13 00:46:12",
-      "actual_booking_count": 265,
-      "weighting": 261,
-      "is_active": 1
-    },
-    {
       "hotel_id": 27193,
       "hotel_name": "Residence Inn by Marriott Palm Desert",
       "hotel_address_city": "Palm Desert",
@@ -1267,16 +1257,6 @@
       "is_active": 0
     },
     {
-      "hotel_id": 3299390,
-      "hotel_name": "Best Western Plus Brunswick Bath",
-      "hotel_address_city": "Brunswick",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-05-04 20:32:56",
-      "actual_booking_count": 17,
-      "weighting": 249,
-      "is_active": 1
-    },
-    {
       "hotel_id": 49165,
       "hotel_name": "Holiday Inn Express Mystic by Ihg",
       "hotel_address_city": "Mystic",
@@ -1367,16 +1347,6 @@
       "is_active": 1
     },
     {
-      "hotel_id": 1841425,
-      "hotel_name": "The Brook at Turning Stone Resort Casino",
-      "hotel_address_city": "Verona",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-04-07 19:21:22",
-      "actual_booking_count": 148,
-      "weighting": 243,
-      "is_active": 1
-    },
-    {
       "hotel_id": 86056,
       "hotel_name": "Residence Inn by Marriott Sacramento Cal Expo",
       "hotel_address_city": "Sacramento",
@@ -1417,6 +1387,16 @@
       "is_active": 1
     },
     {
+      "hotel_id": 11473,
+      "hotel_name": "Park Plaza London Riverbank",
+      "hotel_address_city": "London",
+      "hotel_address_country_code": "GB",
+      "last_booking_date": "2026-05-10 19:52:43",
+      "actual_booking_count": 261,
+      "weighting": 241,
+      "is_active": 1
+    },
+    {
       "hotel_id": 30809,
       "hotel_name": "Wyndham Rochester Downtown",
       "hotel_address_city": "Rochester",
@@ -1425,16 +1405,6 @@
       "actual_booking_count": 257,
       "weighting": 240,
       "is_active": 0
-    },
-    {
-      "hotel_id": 14530,
-      "hotel_name": "Best Western Space Shuttle Inn",
-      "hotel_address_city": "Titusville",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-05-06 19:47:15",
-      "actual_booking_count": 257,
-      "weighting": 240,
-      "is_active": 1
     },
     {
       "hotel_id": 51129,
@@ -1582,6 +1552,16 @@
       "hotel_address_city": "Lexington",
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-02-20 14:25:14",
+      "actual_booking_count": 237,
+      "weighting": 230,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 4935,
+      "hotel_name": "Costa Mesa Marriott",
+      "hotel_address_city": "Costa Mesa",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-10 05:52:45",
       "actual_booking_count": 237,
       "weighting": 230,
       "is_active": 1
@@ -1774,6 +1754,16 @@
       "last_booking_date": "2026-04-03 17:10:56",
       "actual_booking_count": 229,
       "weighting": 221,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 50413,
+      "hotel_name": "Days Inn by Wyndham Florence/I-95 North",
+      "hotel_address_city": "Florence",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-10 19:25:22",
+      "actual_booking_count": 229,
+      "weighting": 220,
       "is_active": 1
     },
     {
@@ -2107,16 +2097,6 @@
       "is_active": 1
     },
     {
-      "hotel_id": 154059,
-      "hotel_name": "Hyatt Place Washington DC/White House",
-      "hotel_address_city": "Washington",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-04-08 00:19:14",
-      "actual_booking_count": 194,
-      "weighting": 206,
-      "is_active": 1
-    },
-    {
       "hotel_id": 7288,
       "hotel_name": "Hilton Grand Vacations Club SeaWorld Orlando",
       "hotel_address_city": "Orlando",
@@ -2343,6 +2323,16 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-03-22 00:43:08",
       "actual_booking_count": 202,
+      "weighting": 200,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 81342,
+      "hotel_name": "Embassy Suites by Hilton Tysons Corner",
+      "hotel_address_city": "Vienna",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-10 17:36:56",
+      "actual_booking_count": 203,
       "weighting": 200,
       "is_active": 1
     }
