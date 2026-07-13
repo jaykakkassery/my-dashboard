@@ -1,10 +1,10 @@
 {
-  "query_timestamp": "2026-07-11 12:02:16 EDT",
+  "query_timestamp": "2026-07-13 12:02:49 EDT",
   "parameters": {
     "min_weighting": 200,
     "months_inactive": 2
   },
-  "total_count": 234,
+  "total_count": 241,
   "hotels": [
     {
       "hotel_id": 14266,
@@ -267,16 +267,6 @@
       "is_active": 1
     },
     {
-      "hotel_id": 10139,
-      "hotel_name": "Fairfield Inn & Suites by Marriott Springfield Enfield",
-      "hotel_address_city": "Enfield",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-04-06 13:56:35",
-      "actual_booking_count": 448,
-      "weighting": 424,
-      "is_active": 1
-    },
-    {
       "hotel_id": 51668,
       "hotel_name": "Red Roof Plus Fort Myers",
       "hotel_address_city": "Fort Myers",
@@ -294,16 +284,6 @@
       "last_booking_date": "2026-05-02 16:17:54",
       "actual_booking_count": 432,
       "weighting": 418,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 87195,
-      "hotel_name": "Garner Hotel Wytheville East by Ihg",
-      "hotel_address_city": "Wytheville",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2025-12-22 20:18:50",
-      "actual_booking_count": 423,
-      "weighting": 416,
       "is_active": 1
     },
     {
@@ -457,16 +437,6 @@
       "is_active": null
     },
     {
-      "hotel_id": 10265,
-      "hotel_name": "Best Western Plus Riverfront Hotel & Suites",
-      "hotel_address_city": "Great Falls",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-04-22 17:32:28",
-      "actual_booking_count": 365,
-      "weighting": 361,
-      "is_active": 1
-    },
-    {
       "hotel_id": 2445,
       "hotel_name": "Grande Rockies Resort - Bellstar Hotels & Resorts",
       "hotel_address_city": "Canmore",
@@ -517,6 +487,16 @@
       "is_active": 1
     },
     {
+      "hotel_id": 13342,
+      "hotel_name": "Best Western Empire Towers",
+      "hotel_address_city": "Sioux Falls",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-11 19:53:29",
+      "actual_booking_count": 357,
+      "weighting": 344,
+      "is_active": 1
+    },
+    {
       "hotel_id": 3298408,
       "hotel_name": "Hyatt Place Phoenix -North",
       "hotel_address_city": "Phoenix",
@@ -524,6 +504,16 @@
       "last_booking_date": "2026-02-06 15:23:14",
       "actual_booking_count": 2,
       "weighting": 335,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 10649,
+      "hotel_name": "HOME2 Suites by Hilton Scottsdale Old Town",
+      "hotel_address_city": "Scottsdale",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-12 18:45:12",
+      "actual_booking_count": 351,
+      "weighting": 324,
       "is_active": 1
     },
     {
@@ -617,6 +607,16 @@
       "is_active": 1
     },
     {
+      "hotel_id": 27040,
+      "hotel_name": "Mountaineer Lodge",
+      "hotel_address_city": "Lake Louise",
+      "hotel_address_country_code": "CA",
+      "last_booking_date": "2026-05-11 21:46:46",
+      "actual_booking_count": 344,
+      "weighting": 314,
+      "is_active": 1
+    },
+    {
       "hotel_id": 122583,
       "hotel_name": "Best Western Plus the Charles Hotel",
       "hotel_address_city": "Saint Charles",
@@ -664,6 +664,16 @@
       "last_booking_date": "2026-04-29 17:21:56",
       "actual_booking_count": 315,
       "weighting": 309,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 1649,
+      "hotel_name": "SpringHill Suites Marriott Colorado Springs South",
+      "hotel_address_city": "Colorado Springs",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-12 01:05:45",
+      "actual_booking_count": 310,
+      "weighting": 308,
       "is_active": 1
     },
     {
@@ -797,16 +807,6 @@
       "is_active": 1
     },
     {
-      "hotel_id": 3379,
-      "hotel_name": "La Quinta Inn & Suites by Wyndham Las Vegas Airport South",
-      "hotel_address_city": "Las Vegas",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-05-11 03:45:32",
-      "actual_booking_count": 296,
-      "weighting": 293,
-      "is_active": 1
-    },
-    {
       "hotel_id": 3304720,
       "hotel_name": "Delta Hotels by Marriott Orlando Lake Buena Vista",
       "hotel_address_city": "Orlando",
@@ -854,16 +854,6 @@
       "last_booking_date": "2026-05-11 03:28:50",
       "actual_booking_count": 244,
       "weighting": 286,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 157563,
-      "hotel_name": "Park Inn by Radisson Salt Lake City Midvale",
-      "hotel_address_city": "Midvale",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-03-20 00:18:39",
-      "actual_booking_count": 288,
-      "weighting": 284,
       "is_active": 1
     },
     {
@@ -1017,6 +1007,16 @@
       "is_active": null
     },
     {
+      "hotel_id": 75762,
+      "hotel_name": "Fairfield Inn & Suites Hershey Chocolate Avenue",
+      "hotel_address_city": "Hershey",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-12 17:27:54",
+      "actual_booking_count": 282,
+      "weighting": 274,
+      "is_active": 1
+    },
+    {
       "hotel_id": 51257,
       "hotel_name": "Best Western Ocean City Hotel & Suites",
       "hotel_address_city": "Ocean City",
@@ -1095,6 +1095,16 @@
       "actual_booking_count": 271,
       "weighting": 266,
       "is_active": 0
+    },
+    {
+      "hotel_id": 47512,
+      "hotel_name": "Fairfield Inn and Suites by Marriott Key West",
+      "hotel_address_city": "Key West",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-12 16:01:56",
+      "actual_booking_count": 279,
+      "weighting": 266,
+      "is_active": 1
     },
     {
       "hotel_id": 406047,
@@ -1223,6 +1233,16 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-04-24 19:22:17",
       "actual_booking_count": 261,
+      "weighting": 252,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 22844,
+      "hotel_name": "Fremont Marriott Silicon Valley",
+      "hotel_address_city": "Fremont",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-12 18:58:13",
+      "actual_booking_count": 233,
       "weighting": 252,
       "is_active": 1
     },
@@ -1487,6 +1507,16 @@
       "is_active": 1
     },
     {
+      "hotel_id": 59212,
+      "hotel_name": "Sofitel Athens Airport",
+      "hotel_address_city": "Spata-Artemida",
+      "hotel_address_country_code": "GR",
+      "last_booking_date": "2026-05-11 21:08:01",
+      "actual_booking_count": 244,
+      "weighting": 235,
+      "is_active": 1
+    },
+    {
       "hotel_id": 27864,
       "hotel_name": "Hampton Inn Philadelphia-International Airport",
       "hotel_address_city": "Philadelphia",
@@ -1544,6 +1574,26 @@
       "last_booking_date": "2026-05-09 19:40:25",
       "actual_booking_count": 238,
       "weighting": 232,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 76856,
+      "hotel_name": "Hampton Inn Detroit/Madison Heights/South Troy",
+      "hotel_address_city": "Madison Heights",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-12 17:57:26",
+      "actual_booking_count": 249,
+      "weighting": 232,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 14096,
+      "hotel_name": "Holiday Inn & Suites Clearwater Beach by Ihg",
+      "hotel_address_city": "Clearwater Beach",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-12 00:27:00",
+      "actual_booking_count": 254,
+      "weighting": 231,
       "is_active": 1
     },
     {
@@ -1657,6 +1707,16 @@
       "is_active": 1
     },
     {
+      "hotel_id": 29184,
+      "hotel_name": "Comfort Suites at Virginia Center Commons",
+      "hotel_address_city": "Glen Allen",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-12 19:26:35",
+      "actual_booking_count": 232,
+      "weighting": 227,
+      "is_active": 1
+    },
+    {
       "hotel_id": 3305332,
       "hotel_name": "Best Western Plus Hannaford Inn & Suites",
       "hotel_address_city": "Cincinnati",
@@ -1743,6 +1803,16 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-04-17 03:35:48",
       "actual_booking_count": 10,
+      "weighting": 223,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 57762,
+      "hotel_name": "Aloft Tulsa",
+      "hotel_address_city": "Tulsa",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-12 23:37:47",
+      "actual_booking_count": 225,
       "weighting": 223,
       "is_active": 1
     },
@@ -2117,16 +2187,6 @@
       "is_active": 1
     },
     {
-      "hotel_id": 3302134,
-      "hotel_name": "Hampton Inn & Suites Valdosta/Conference Center",
-      "hotel_address_city": "Valdosta",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-04-29 18:41:28",
-      "actual_booking_count": 9,
-      "weighting": 206,
-      "is_active": 1
-    },
-    {
       "hotel_id": 3293310,
       "hotel_name": "La Quinta Inn & Suites by Wyndham Cincinnati Airpt Florence",
       "hotel_address_city": "Florence",
@@ -2173,16 +2233,6 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-03-03 03:04:17",
       "actual_booking_count": 10,
-      "weighting": 205,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 15076,
-      "hotel_name": "SpringHill Suites by Marriott New Orleans Warehouse Arts District",
-      "hotel_address_city": "New Orleans",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-04-29 18:29:01",
-      "actual_booking_count": 217,
       "weighting": 205,
       "is_active": 1
     },
@@ -2243,6 +2293,16 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-04-13 17:24:13",
       "actual_booking_count": 13,
+      "weighting": 203,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 47124,
+      "hotel_name": "Hilton Garden Inn Anaheim Garden Grove",
+      "hotel_address_city": "Garden Grove",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-12 08:48:35",
+      "actual_booking_count": 208,
       "weighting": 203,
       "is_active": 1
     },
@@ -2343,6 +2403,16 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-05-10 17:36:56",
       "actual_booking_count": 203,
+      "weighting": 200,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 3297657,
+      "hotel_name": "Days Inn by Wyndham Fort Stockton",
+      "hotel_address_city": "Fort Stockton",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-12 03:34:35",
+      "actual_booking_count": 8,
       "weighting": 200,
       "is_active": 1
     }
