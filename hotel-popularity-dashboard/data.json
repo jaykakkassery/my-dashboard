@@ -1,10 +1,10 @@
 {
-  "query_timestamp": "2026-07-13 12:02:49 EDT",
+  "query_timestamp": "2026-07-14 12:02:23 EDT",
   "parameters": {
     "min_weighting": 200,
     "months_inactive": 2
   },
-  "total_count": 241,
+  "total_count": 240,
   "hotels": [
     {
       "hotel_id": 14266,
@@ -597,16 +597,6 @@
       "is_active": 1
     },
     {
-      "hotel_id": 49735,
-      "hotel_name": "Sheraton Erie Bayfront Hotel",
-      "hotel_address_city": "Erie",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-04-25 23:37:21",
-      "actual_booking_count": 319,
-      "weighting": 314,
-      "is_active": 1
-    },
-    {
       "hotel_id": 27040,
       "hotel_name": "Mountaineer Lodge",
       "hotel_address_city": "Lake Louise",
@@ -837,16 +827,6 @@
       "is_active": 1
     },
     {
-      "hotel_id": 27701,
-      "hotel_name": "Hampton Inn & Suites Nashville-Vanderbilt-Elliston Place",
-      "hotel_address_city": "Nashville",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-04-10 21:58:29",
-      "actual_booking_count": 299,
-      "weighting": 291,
-      "is_active": 1
-    },
-    {
       "hotel_id": 13788,
       "hotel_name": "Fairfield Inn & Suites Tustin Orange County",
       "hotel_address_city": "Tustin",
@@ -1053,16 +1033,6 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-04-30 04:26:59",
       "actual_booking_count": 299,
-      "weighting": 272,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 82125,
-      "hotel_name": "Hyatt Regency Chesapeake Bay",
-      "hotel_address_city": "Cambridge",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-05-06 18:57:04",
-      "actual_booking_count": 298,
       "weighting": 272,
       "is_active": 1
     },
@@ -1293,6 +1263,16 @@
       "hotel_address_country_code": "GB",
       "last_booking_date": "2026-04-30 22:24:18",
       "actual_booking_count": 257,
+      "weighting": 248,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 3297591,
+      "hotel_name": "SpringHill Suites by Marriott Bakersfield",
+      "hotel_address_city": "Bakersfield",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-14 04:48:23",
+      "actual_booking_count": 19,
       "weighting": 248,
       "is_active": 1
     },
@@ -1614,16 +1594,6 @@
       "last_booking_date": "2026-05-10 05:52:45",
       "actual_booking_count": 237,
       "weighting": 230,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 3291850,
-      "hotel_name": "Travelodge by Wyndham Redding",
-      "hotel_address_city": "Redding",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-03-30 17:08:11",
-      "actual_booking_count": 4,
-      "weighting": 229,
       "is_active": 1
     },
     {
@@ -2277,6 +2247,16 @@
       "is_active": 1
     },
     {
+      "hotel_id": 84242,
+      "hotel_name": "City Express by Marriott Santa Ana/Orange County Airport",
+      "hotel_address_city": "Santa Ana",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-14 05:53:16",
+      "actual_booking_count": 219,
+      "weighting": 204,
+      "is_active": 1
+    },
+    {
       "hotel_id": 22321,
       "hotel_name": "Holiday Inn Express Nashville Airport by IHG",
       "hotel_address_city": "Nashville",
@@ -2353,6 +2333,16 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-05-08 01:04:04",
       "actual_booking_count": 214,
+      "weighting": 202,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 86456,
+      "hotel_name": "Sonesta Essential Indianapolis Airport",
+      "hotel_address_city": "Plainfield",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-13 22:57:32",
+      "actual_booking_count": 211,
       "weighting": 202,
       "is_active": 1
     },
