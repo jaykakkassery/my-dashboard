@@ -1,10 +1,10 @@
 {
-  "query_timestamp": "2026-07-14 12:02:23 EDT",
+  "query_timestamp": "2026-07-15 12:01:25 EDT",
   "parameters": {
     "min_weighting": 200,
     "months_inactive": 2
   },
-  "total_count": 240,
+  "total_count": 237,
   "hotels": [
     {
       "hotel_id": 14266,
@@ -114,16 +114,6 @@
       "last_booking_date": "2026-05-02 14:58:05",
       "actual_booking_count": 352,
       "weighting": 543,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 72810,
-      "hotel_name": "Best Western Inn & Suites San Mateo - San Francisco Airport",
-      "hotel_address_city": "San Mateo",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-05-09 02:04:29",
-      "actual_booking_count": 544,
-      "weighting": 526,
       "is_active": 1
     },
     {
@@ -315,16 +305,6 @@
       "actual_booking_count": 411,
       "weighting": 398,
       "is_active": 0
-    },
-    {
-      "hotel_id": 47823,
-      "hotel_name": "Best Western Savannah Airport Inn & Suites",
-      "hotel_address_city": "Pooler",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-03-18 17:56:17",
-      "actual_booking_count": 408,
-      "weighting": 397,
-      "is_active": 1
     },
     {
       "hotel_id": 808,
@@ -583,6 +563,16 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-05-09 15:51:32",
       "actual_booking_count": 23,
+      "weighting": 317,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 21815,
+      "hotel_name": "Best Western Hoover Dam Hotel SE Henderson Boulder City",
+      "hotel_address_city": "Boulder City",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-14 22:42:42",
+      "actual_booking_count": 323,
       "weighting": 317,
       "is_active": 1
     },
@@ -957,16 +947,6 @@
       "is_active": 1
     },
     {
-      "hotel_id": 49578,
-      "hotel_name": "Best Western St. Catharines Hotel & Conference Centre",
-      "hotel_address_city": "Saint Catharines",
-      "hotel_address_country_code": "CA",
-      "last_booking_date": "2026-05-06 20:58:37",
-      "actual_booking_count": 295,
-      "weighting": 276,
-      "is_active": 1
-    },
-    {
       "hotel_id": 85410,
       "hotel_name": "Crowne Plaza Orlando - Lake Buena Vista by Ihg",
       "hotel_address_city": "Orlando",
@@ -1094,6 +1074,16 @@
       "last_booking_date": "2026-01-31 07:28:28",
       "actual_booking_count": 298,
       "weighting": 265,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 3302265,
+      "hotel_name": "Fairfield Inn & Suites Jacksonville Airport",
+      "hotel_address_city": "Jacksonville",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-15 14:56:33",
+      "actual_booking_count": 12,
+      "weighting": 263,
       "is_active": 1
     },
     {
@@ -1407,13 +1397,13 @@
       "is_active": 0
     },
     {
-      "hotel_id": 51129,
-      "hotel_name": "The Westin Philadelphia",
-      "hotel_address_city": "Philadelphia",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-04-13 23:47:55",
-      "actual_booking_count": 247,
-      "weighting": 238,
+      "hotel_id": 167912,
+      "hotel_name": "Quality Inn",
+      "hotel_address_city": "Moncton",
+      "hotel_address_country_code": "CA",
+      "last_booking_date": "2026-05-14 23:10:24",
+      "actual_booking_count": 239,
+      "weighting": 239,
       "is_active": 1
     },
     {
@@ -1447,32 +1437,12 @@
       "is_active": 0
     },
     {
-      "hotel_id": 65687,
-      "hotel_name": "Hyatt Place Sarasota/Bradenton Airport",
-      "hotel_address_city": "Sarasota",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-05-04 02:41:00",
-      "actual_booking_count": 244,
-      "weighting": 236,
-      "is_active": 1
-    },
-    {
       "hotel_id": 64758,
       "hotel_name": "The Park Hotel at Meadowlands",
       "hotel_address_city": "East Rutherford",
       "hotel_address_country_code": "US",
       "last_booking_date": "2025-11-06 17:38:03",
       "actual_booking_count": 254,
-      "weighting": 235,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 16537,
-      "hotel_name": "Fairfield Inn by Marriott JFK Airport",
-      "hotel_address_city": "Jamaica",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-03-26 13:30:06",
-      "actual_booking_count": 221,
       "weighting": 235,
       "is_active": 1
     },
@@ -1797,12 +1767,32 @@
       "is_active": 1
     },
     {
+      "hotel_id": 34657,
+      "hotel_name": "Clarion Pointe Winslow I-40",
+      "hotel_address_city": "Winslow",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-14 16:16:27",
+      "actual_booking_count": 231,
+      "weighting": 221,
+      "is_active": 1
+    },
+    {
       "hotel_id": 50413,
       "hotel_name": "Days Inn by Wyndham Florence/I-95 North",
       "hotel_address_city": "Florence",
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-05-10 19:25:22",
       "actual_booking_count": 229,
+      "weighting": 220,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 54298,
+      "hotel_name": "Bourbon Orleans Hotel",
+      "hotel_address_city": "New Orleans",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-15 01:12:15",
+      "actual_booking_count": 220,
       "weighting": 220,
       "is_active": 1
     },
@@ -2177,16 +2167,6 @@
       "is_active": 1
     },
     {
-      "hotel_id": 51439,
-      "hotel_name": "Best Western Ambassador Inn & Suites",
-      "hotel_address_city": "Wisconsin Dells",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-05-06 19:59:06",
-      "actual_booking_count": 212,
-      "weighting": 206,
-      "is_active": 1
-    },
-    {
       "hotel_id": 1681282,
       "hotel_name": "Charlottetown Inn & Conference Centre",
       "hotel_address_city": "Charlottetown",
@@ -2223,16 +2203,6 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2025-12-06 18:40:17",
       "actual_booking_count": 1,
-      "weighting": 204,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 37081,
-      "hotel_name": "Best Western Sicamous Inn",
-      "hotel_address_city": "Sicamous",
-      "hotel_address_country_code": "CA",
-      "last_booking_date": "2026-04-09 20:59:43",
-      "actual_booking_count": 200,
       "weighting": 204,
       "is_active": 1
     },
