@@ -1,10 +1,10 @@
 {
-  "query_timestamp": "2026-07-16 00:01:54 EDT",
+  "query_timestamp": "2026-07-16 12:02:44 EDT",
   "parameters": {
     "min_weighting": 200,
     "months_inactive": 2
   },
-  "total_count": 234,
+  "total_count": 233,
   "hotels": [
     {
       "hotel_id": 14266,
@@ -1807,16 +1807,6 @@
       "is_active": 1
     },
     {
-      "hotel_id": 14392,
-      "hotel_name": "Sheraton Waikiki Beach Resort",
-      "hotel_address_city": "Honolulu",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-04-13 17:39:42",
-      "actual_booking_count": 262,
-      "weighting": 219,
-      "is_active": 1
-    },
-    {
       "hotel_id": 3303490,
       "hotel_name": "Quality Inn & Suites Denver International Airport",
       "hotel_address_city": "Denver",
@@ -1933,6 +1923,16 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-04-02 21:18:48",
       "actual_booking_count": 221,
+      "weighting": 215,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 44269,
+      "hotel_name": "Garner Hotel Idaho Falls Southwest by Ihg",
+      "hotel_address_city": "Idaho Falls",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-16 05:23:58",
+      "actual_booking_count": 218,
       "weighting": 215,
       "is_active": 1
     },
@@ -2223,16 +2223,6 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-04-13 17:24:13",
       "actual_booking_count": 13,
-      "weighting": 203,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 47124,
-      "hotel_name": "Hilton Garden Inn Anaheim Garden Grove",
-      "hotel_address_city": "Garden Grove",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-05-12 08:48:35",
-      "actual_booking_count": 208,
       "weighting": 203,
       "is_active": 1
     },
