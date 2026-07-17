@@ -1,10 +1,10 @@
 {
-  "query_timestamp": "2026-07-16 12:02:44 EDT",
+  "query_timestamp": "2026-07-17 00:01:45 EDT",
   "parameters": {
     "min_weighting": 200,
     "months_inactive": 2
   },
-  "total_count": 233,
+  "total_count": 231,
   "hotels": [
     {
       "hotel_id": 14266,
@@ -154,6 +154,16 @@
       "last_booking_date": "2026-04-18 14:28:03",
       "actual_booking_count": 15,
       "weighting": 512,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 66068,
+      "hotel_name": "Sonesta Essential Orlando",
+      "hotel_address_city": "Orlando",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-16 21:54:34",
+      "actual_booking_count": 547,
+      "weighting": 510,
       "is_active": 1
     },
     {
@@ -727,6 +737,16 @@
       "is_active": 1
     },
     {
+      "hotel_id": 3292515,
+      "hotel_name": "Best Western Westminster Inn",
+      "hotel_address_city": "Westminster",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-17 02:46:29",
+      "actual_booking_count": 7,
+      "weighting": 304,
+      "is_active": 1
+    },
+    {
       "hotel_id": 34005,
       "hotel_name": "Renaissance Wind Creek Aruba Resort",
       "hotel_address_city": "Oranjestad",
@@ -1127,16 +1147,6 @@
       "is_active": 1
     },
     {
-      "hotel_id": 43954,
-      "hotel_name": "Fairfield Inn & Suites by Marriott Ithaca",
-      "hotel_address_city": "Ithaca",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-04-18 02:30:08",
-      "actual_booking_count": 266,
-      "weighting": 259,
-      "is_active": 1
-    },
-    {
       "hotel_id": 160026,
       "hotel_name": "Hyatt Regency DFW",
       "hotel_address_city": "Dallas",
@@ -1164,16 +1174,6 @@
       "last_booking_date": "2026-05-15 16:51:59",
       "actual_booking_count": 267,
       "weighting": 255,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 168389,
-      "hotel_name": "Sheraton Bucks County Langhorne",
-      "hotel_address_city": "Langhorne",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-04-16 22:05:21",
-      "actual_booking_count": 256,
-      "weighting": 253,
       "is_active": 1
     },
     {
@@ -1737,16 +1737,6 @@
       "is_active": 1
     },
     {
-      "hotel_id": 57762,
-      "hotel_name": "Aloft Tulsa",
-      "hotel_address_city": "Tulsa",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-05-12 23:37:47",
-      "actual_booking_count": 225,
-      "weighting": 223,
-      "is_active": 1
-    },
-    {
       "hotel_id": 12150,
       "hotel_name": "Hampton Inn & Suites National Harbor - Alexandria Area",
       "hotel_address_city": "Oxon Hill",
@@ -2063,16 +2053,6 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-05-05 21:48:00",
       "actual_booking_count": 211,
-      "weighting": 209,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 33226,
-      "hotel_name": "Hilton Nashville Downtown",
-      "hotel_address_city": "Nashville",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-05-06 16:57:40",
-      "actual_booking_count": 229,
       "weighting": 209,
       "is_active": 1
     },
