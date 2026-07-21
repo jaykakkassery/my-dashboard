@@ -1,10 +1,10 @@
 {
-  "query_timestamp": "2026-07-17 00:01:45 EDT",
+  "query_timestamp": "2026-07-21 12:03:12 EDT",
   "parameters": {
     "min_weighting": 200,
     "months_inactive": 2
   },
-  "total_count": 231,
+  "total_count": 234,
   "hotels": [
     {
       "hotel_id": 14266,
@@ -104,16 +104,6 @@
       "last_booking_date": "2025-12-04 02:25:27",
       "actual_booking_count": 569,
       "weighting": 547,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 1599179,
-      "hotel_name": "Fairmont Banff Springs",
-      "hotel_address_city": "Banff",
-      "hotel_address_country_code": "CA",
-      "last_booking_date": "2026-05-02 14:58:05",
-      "actual_booking_count": 352,
-      "weighting": 543,
       "is_active": 1
     },
     {
@@ -457,6 +447,16 @@
       "is_active": 1
     },
     {
+      "hotel_id": 72602,
+      "hotel_name": "Hampton Inn Columbia Northeast - Fort Jackson Area",
+      "hotel_address_city": "Columbia",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-18 22:11:37",
+      "actual_booking_count": 371,
+      "weighting": 354,
+      "is_active": 1
+    },
+    {
       "hotel_id": 48810,
       "hotel_name": "The Brookhaven Atlanta Hotel",
       "hotel_address_city": "Atlanta",
@@ -464,16 +464,6 @@
       "last_booking_date": "2025-09-18 23:32:48",
       "actual_booking_count": 415,
       "weighting": 349,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 11860,
-      "hotel_name": "Best Western Plus Valdosta Hotel & Suites",
-      "hotel_address_city": "Valdosta",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-04-14 16:51:44",
-      "actual_booking_count": 350,
-      "weighting": 346,
       "is_active": 1
     },
     {
@@ -563,16 +553,6 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2025-08-09 15:01:24",
       "actual_booking_count": 335,
-      "weighting": 317,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 85795,
-      "hotel_name": "Hilton Garden Inn Toronto Airport West/Mississauga",
-      "hotel_address_city": "Mississauga",
-      "hotel_address_country_code": "CA",
-      "last_booking_date": "2026-04-29 02:14:21",
-      "actual_booking_count": 343,
       "weighting": 317,
       "is_active": 1
     },
@@ -857,6 +837,16 @@
       "is_active": 0
     },
     {
+      "hotel_id": 23583,
+      "hotel_name": "Wildflower Inn at Bell Rock",
+      "hotel_address_city": "Sedona",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-17 15:40:49",
+      "actual_booking_count": 294,
+      "weighting": 283,
+      "is_active": 1
+    },
+    {
       "hotel_id": 9007,
       "hotel_name": "Best Western Plus Airport Inn & Suites",
       "hotel_address_city": "Oakland",
@@ -887,6 +877,16 @@
       "is_active": 1
     },
     {
+      "hotel_id": 396904,
+      "hotel_name": "Fairfield Inn & Suites by Marriott Gatlinburg Downtown",
+      "hotel_address_city": "Gatlinburg",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-19 17:29:47",
+      "actual_booking_count": 295,
+      "weighting": 281,
+      "is_active": 1
+    },
+    {
       "hotel_id": 157653,
       "hotel_name": "Best Western Airport Inn",
       "hotel_address_city": "Phoenix",
@@ -895,16 +895,6 @@
       "actual_booking_count": 274,
       "weighting": 280,
       "is_active": 0
-    },
-    {
-      "hotel_id": 82807,
-      "hotel_name": "Best Western Northwest Lodge",
-      "hotel_address_city": "Boise",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-03-15 01:21:02",
-      "actual_booking_count": 284,
-      "weighting": 280,
-      "is_active": 1
     },
     {
       "hotel_id": 5936,
@@ -987,12 +977,12 @@
       "is_active": null
     },
     {
-      "hotel_id": 75762,
-      "hotel_name": "Fairfield Inn & Suites Hershey Chocolate Avenue",
-      "hotel_address_city": "Hershey",
+      "hotel_id": 3294249,
+      "hotel_name": "Fairfield Inn & Suites Orlando Lake Buena Vista",
+      "hotel_address_city": "Orlando",
       "hotel_address_country_code": "US",
-      "last_booking_date": "2026-05-12 17:27:54",
-      "actual_booking_count": 282,
+      "last_booking_date": "2026-05-18 00:19:33",
+      "actual_booking_count": 19,
       "weighting": 274,
       "is_active": 1
     },
@@ -1013,6 +1003,16 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-04-19 04:49:20",
       "actual_booking_count": 241,
+      "weighting": 273,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 62085,
+      "hotel_name": "Clearwater Beach Sheraton Resort on Sand Key",
+      "hotel_address_city": "Clearwater Beach",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-18 20:08:03",
+      "actual_booking_count": 282,
       "weighting": 273,
       "is_active": 1
     },
@@ -1044,6 +1044,16 @@
       "last_booking_date": "2026-04-08 12:18:04",
       "actual_booking_count": 264,
       "weighting": 269,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 79869,
+      "hotel_name": "Best Western Pony Soldier Inn - Airport",
+      "hotel_address_city": "Portland",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-19 20:26:26",
+      "actual_booking_count": 276,
+      "weighting": 268,
       "is_active": 1
     },
     {
@@ -1147,6 +1157,16 @@
       "is_active": 1
     },
     {
+      "hotel_id": 80306,
+      "hotel_name": "Hyatt Place Waikiki Beach",
+      "hotel_address_city": "Honolulu",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-18 01:03:06",
+      "actual_booking_count": 279,
+      "weighting": 259,
+      "is_active": 1
+    },
+    {
       "hotel_id": 160026,
       "hotel_name": "Hyatt Regency DFW",
       "hotel_address_city": "Dallas",
@@ -1165,6 +1185,16 @@
       "actual_booking_count": 266,
       "weighting": 258,
       "is_active": 0
+    },
+    {
+      "hotel_id": 3295779,
+      "hotel_name": "Best Western Plus Cold Spring",
+      "hotel_address_city": "Plymouth",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-19 00:15:03",
+      "actual_booking_count": 13,
+      "weighting": 258,
+      "is_active": 1
     },
     {
       "hotel_id": 15932,
@@ -1267,16 +1297,6 @@
       "is_active": 1
     },
     {
-      "hotel_id": 50934,
-      "hotel_name": "SureStay Plus by Best Western Topeka Northwest",
-      "hotel_address_city": "Topeka",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-03-26 22:36:25",
-      "actual_booking_count": 251,
-      "weighting": 246,
-      "is_active": 1
-    },
-    {
       "hotel_id": 31706,
       "hotel_name": "Quality Inn & Suites Biltmore East",
       "hotel_address_city": "Asheville",
@@ -1303,6 +1323,16 @@
       "hotel_address_country_code": "CA",
       "last_booking_date": "2026-05-02 14:10:39",
       "actual_booking_count": 9,
+      "weighting": 244,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 57083,
+      "hotel_name": "Sheraton Grand Los Angeles",
+      "hotel_address_city": "Los Angeles",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-18 02:06:50",
+      "actual_booking_count": 246,
       "weighting": 244,
       "is_active": 1
     },
@@ -1393,6 +1423,16 @@
       "hotel_address_country_code": "CA",
       "last_booking_date": "2026-05-14 23:10:24",
       "actual_booking_count": 239,
+      "weighting": 239,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 67510,
+      "hotel_name": "Best Western Patriots Point",
+      "hotel_address_city": "Mount Pleasant",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-20 03:00:13",
+      "actual_booking_count": 242,
       "weighting": 239,
       "is_active": 1
     },
@@ -1527,16 +1567,6 @@
       "is_active": 1
     },
     {
-      "hotel_id": 14096,
-      "hotel_name": "Holiday Inn & Suites Clearwater Beach by Ihg",
-      "hotel_address_city": "Clearwater Beach",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-05-12 00:27:00",
-      "actual_booking_count": 254,
-      "weighting": 231,
-      "is_active": 1
-    },
-    {
       "hotel_id": 42986,
       "hotel_name": "La Quinta Inn & Suites by Wyndham Lexington South / Hamburg",
       "hotel_address_city": "Lexington",
@@ -1557,12 +1587,32 @@
       "is_active": 1
     },
     {
+      "hotel_id": 101659,
+      "hotel_name": "Hilton Garden Inn Washington DC/Georgetown Area",
+      "hotel_address_city": "Washington",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-19 17:33:29",
+      "actual_booking_count": 251,
+      "weighting": 230,
+      "is_active": 1
+    },
+    {
       "hotel_id": 9806,
       "hotel_name": "Stoneridge Mountain Resort",
       "hotel_address_city": "Canmore",
       "hotel_address_country_code": "CA",
       "last_booking_date": "2026-04-25 14:39:11",
       "actual_booking_count": 239,
+      "weighting": 229,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 53356,
+      "hotel_name": "Comfort Inn & Suites Statesville - Mooresville",
+      "hotel_address_city": "Statesville",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-21 00:36:53",
+      "actual_booking_count": 240,
       "weighting": 229,
       "is_active": 1
     },
@@ -1603,6 +1653,16 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-05-06 18:37:24",
       "actual_booking_count": 235,
+      "weighting": 228,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 3291755,
+      "hotel_name": "Wingate by Wyndham Indianapolis Airport-Rockville Rd.",
+      "hotel_address_city": "Indianapolis",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-17 14:23:01",
+      "actual_booking_count": 5,
       "weighting": 228,
       "is_active": 1
     },
@@ -1657,6 +1717,16 @@
       "is_active": 1
     },
     {
+      "hotel_id": 172346,
+      "hotel_name": "Sleep Inn & Suites Page at Lake Powell",
+      "hotel_address_city": "Page",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-21 00:16:04",
+      "actual_booking_count": 234,
+      "weighting": 226,
+      "is_active": 1
+    },
+    {
       "hotel_id": 61251,
       "hotel_name": "Hampton Inn & Suites Pigeon Forge on the Parkway",
       "hotel_address_city": "Pigeon Forge",
@@ -1697,16 +1767,6 @@
       "is_active": 1
     },
     {
-      "hotel_id": 46438,
-      "hotel_name": "The Verve Hotel Boston Natick Tapestry Collection by Hilton",
-      "hotel_address_city": "Natick",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-04-07 17:30:31",
-      "actual_booking_count": 256,
-      "weighting": 225,
-      "is_active": 1
-    },
-    {
       "hotel_id": 1243969,
       "hotel_name": "Kings Inn Anaheim at the Park & Convention Center",
       "hotel_address_city": "Anaheim",
@@ -1714,6 +1774,16 @@
       "last_booking_date": "2026-05-04 04:51:55",
       "actual_booking_count": 175,
       "weighting": 225,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 3293582,
+      "hotel_name": "Best Western San Dimas Hotel & Suites",
+      "hotel_address_city": "San Dimas",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-20 01:53:01",
+      "actual_booking_count": 7,
+      "weighting": 224,
       "is_active": 1
     },
     {
@@ -1737,6 +1807,16 @@
       "is_active": 1
     },
     {
+      "hotel_id": 39735,
+      "hotel_name": "Best Western Plus Austin Central",
+      "hotel_address_city": "Austin",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-17 18:19:25",
+      "actual_booking_count": 237,
+      "weighting": 222,
+      "is_active": 1
+    },
+    {
       "hotel_id": 12150,
       "hotel_name": "Hampton Inn & Suites National Harbor - Alexandria Area",
       "hotel_address_city": "Oxon Hill",
@@ -1754,26 +1834,6 @@
       "last_booking_date": "2026-05-14 16:16:27",
       "actual_booking_count": 231,
       "weighting": 221,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 50413,
-      "hotel_name": "Days Inn by Wyndham Florence/I-95 North",
-      "hotel_address_city": "Florence",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-05-10 19:25:22",
-      "actual_booking_count": 229,
-      "weighting": 220,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 54298,
-      "hotel_name": "Bourbon Orleans Hotel",
-      "hotel_address_city": "New Orleans",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-05-15 01:12:15",
-      "actual_booking_count": 220,
-      "weighting": 220,
       "is_active": 1
     },
     {
@@ -1847,6 +1907,16 @@
       "is_active": 1
     },
     {
+      "hotel_id": 1928,
+      "hotel_name": "City Express by Marriott Tempe",
+      "hotel_address_city": "Tempe",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-17 20:44:30",
+      "actual_booking_count": 221,
+      "weighting": 217,
+      "is_active": 1
+    },
+    {
       "hotel_id": 24998,
       "hotel_name": "Hampton Inn Milford",
       "hotel_address_city": "Milford",
@@ -1867,22 +1937,22 @@
       "is_active": 1
     },
     {
-      "hotel_id": 85663,
-      "hotel_name": "Aiden by Best Western St. George",
-      "hotel_address_city": "Saint George",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-04-27 19:03:17",
-      "actual_booking_count": 219,
-      "weighting": 216,
-      "is_active": 1
-    },
-    {
       "hotel_id": 93768,
       "hotel_name": "Primm Valley Hotel & Casino a Travelodge by Wyndham",
       "hotel_address_city": "Jean",
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-04-30 03:00:42",
       "actual_booking_count": 242,
+      "weighting": 216,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 53999,
+      "hotel_name": "Hilton Garden Inn New York/Manhattan-Chelsea",
+      "hotel_address_city": "New York",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-19 12:55:01",
+      "actual_booking_count": 241,
       "weighting": 216,
       "is_active": 1
     },
@@ -1895,26 +1965,6 @@
       "actual_booking_count": 223,
       "weighting": 215,
       "is_active": 0
-    },
-    {
-      "hotel_id": 20835,
-      "hotel_name": "Best Western Inn of Payson",
-      "hotel_address_city": "Payson",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-02-02 23:37:26",
-      "actual_booking_count": 217,
-      "weighting": 215,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 163689,
-      "hotel_name": "Fairfield Inn by Marriott Medford Long Island",
-      "hotel_address_city": "Medford",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-04-02 21:18:48",
-      "actual_booking_count": 221,
-      "weighting": 215,
-      "is_active": 1
     },
     {
       "hotel_id": 44269,
@@ -1933,16 +1983,6 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-05-04 01:07:31",
       "actual_booking_count": 230,
-      "weighting": 214,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 610335,
-      "hotel_name": "Best Western Plus New Barstow Inn & Suites",
-      "hotel_address_city": "Barstow",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-05-08 12:58:02",
-      "actual_booking_count": 215,
       "weighting": 214,
       "is_active": 1
     },
@@ -2007,16 +2047,6 @@
       "is_active": 1
     },
     {
-      "hotel_id": 118365,
-      "hotel_name": "SpringHill Suites Anaheim Resort/Convention Center",
-      "hotel_address_city": "Anaheim",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-04-09 18:50:45",
-      "actual_booking_count": 199,
-      "weighting": 211,
-      "is_active": 1
-    },
-    {
       "hotel_id": 271000,
       "hotel_name": "Arlington Court Suites a Clarion Collection Hotel",
       "hotel_address_city": "Arlington",
@@ -2024,16 +2054,6 @@
       "last_booking_date": "2026-05-07 17:44:21",
       "actual_booking_count": 218,
       "weighting": 211,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 1850,
-      "hotel_name": "Red Roof Plus Austin South",
-      "hotel_address_city": "Austin",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-05-09 19:56:48",
-      "actual_booking_count": 231,
-      "weighting": 210,
       "is_active": 1
     },
     {
@@ -2197,12 +2217,32 @@
       "is_active": 1
     },
     {
+      "hotel_id": 71931,
+      "hotel_name": "Wingate by Wyndham Erlanger / Florence / Cincinnati South",
+      "hotel_address_city": "Erlanger",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-05-19 14:14:40",
+      "actual_booking_count": 225,
+      "weighting": 204,
+      "is_active": 1
+    },
+    {
       "hotel_id": 3304545,
       "hotel_name": "SpringHill Suites by Marriott Prescott",
       "hotel_address_city": "Prescott",
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-04-13 17:24:13",
       "actual_booking_count": 13,
+      "weighting": 203,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 12721,
+      "hotel_name": "Chateau Saint John Trademark Collection by Wyndham",
+      "hotel_address_city": "Saint John",
+      "hotel_address_country_code": "CA",
+      "last_booking_date": "2026-05-17 18:28:00",
+      "actual_booking_count": 217,
       "weighting": 203,
       "is_active": 1
     },
@@ -2273,16 +2313,6 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2025-11-03 17:27:45",
       "actual_booking_count": 214,
-      "weighting": 200,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 3303220,
-      "hotel_name": "La Quinta Inn & Suites by Wyndham Chattanooga - Lookout MTN",
-      "hotel_address_city": "Chattanooga",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-02-14 21:15:36",
-      "actual_booking_count": 1,
       "weighting": 200,
       "is_active": 1
     },
