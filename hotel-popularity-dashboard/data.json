@@ -1,10 +1,10 @@
 {
-  "query_timestamp": "2026-07-21 12:03:12 EDT",
+  "query_timestamp": "2026-07-22 00:01:40 EDT",
   "parameters": {
     "min_weighting": 200,
     "months_inactive": 2
   },
-  "total_count": 234,
+  "total_count": 229,
   "hotels": [
     {
       "hotel_id": 14266,
@@ -837,16 +837,6 @@
       "is_active": 0
     },
     {
-      "hotel_id": 23583,
-      "hotel_name": "Wildflower Inn at Bell Rock",
-      "hotel_address_city": "Sedona",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-05-17 15:40:49",
-      "actual_booking_count": 294,
-      "weighting": 283,
-      "is_active": 1
-    },
-    {
       "hotel_id": 9007,
       "hotel_name": "Best Western Plus Airport Inn & Suites",
       "hotel_address_city": "Oakland",
@@ -914,16 +904,6 @@
       "last_booking_date": "2026-04-08 19:49:39",
       "actual_booking_count": 288,
       "weighting": 279,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 60066,
-      "hotel_name": "Country Inn & Suites by Radisson Gettysburg",
-      "hotel_address_city": "Gettysburg",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2025-10-26 22:41:29",
-      "actual_booking_count": 306,
-      "weighting": 278,
       "is_active": 1
     },
     {
@@ -1034,16 +1014,6 @@
       "last_booking_date": "2026-04-30 04:26:59",
       "actual_booking_count": 299,
       "weighting": 272,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 12637,
-      "hotel_name": "Sleep Inn & Suites Cave City",
-      "hotel_address_city": "Cave City",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-04-08 12:18:04",
-      "actual_booking_count": 264,
-      "weighting": 269,
       "is_active": 1
     },
     {
@@ -1607,16 +1577,6 @@
       "is_active": 1
     },
     {
-      "hotel_id": 53356,
-      "hotel_name": "Comfort Inn & Suites Statesville - Mooresville",
-      "hotel_address_city": "Statesville",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-05-21 00:36:53",
-      "actual_booking_count": 240,
-      "weighting": 229,
-      "is_active": 1
-    },
-    {
       "hotel_id": 43804,
       "hotel_name": "Emerald Hotel and Suites",
       "hotel_address_city": "Calgary",
@@ -2133,16 +2093,6 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-03-17 00:22:19",
       "actual_booking_count": 5,
-      "weighting": 206,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 7288,
-      "hotel_name": "Hilton Grand Vacations Club SeaWorld Orlando",
-      "hotel_address_city": "Orlando",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-04-29 15:07:26",
-      "actual_booking_count": 220,
       "weighting": 206,
       "is_active": 1
     },
