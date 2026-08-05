@@ -1,5 +1,5 @@
 {
-  "query_timestamp": "2026-08-05 00:01:46 EDT",
+  "query_timestamp": "2026-08-05 12:02:46 EDT",
   "parameters": {
     "min_weighting": 200,
     "months_inactive": 2
@@ -1947,6 +1947,16 @@
       "is_active": 1
     },
     {
+      "hotel_id": 292076,
+      "hotel_name": "Marriott Marquis Houston",
+      "hotel_address_city": "Houston",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-06-05 13:41:40",
+      "actual_booking_count": 230,
+      "weighting": 220,
+      "is_active": 1
+    },
+    {
       "hotel_id": 55342,
       "hotel_name": "Clarion Pointe Morrow - Atlanta South",
       "hotel_address_city": "Morrow",
@@ -2413,16 +2423,6 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-03-04 01:04:53",
       "actual_booking_count": 207,
-      "weighting": 200,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 162232,
-      "hotel_name": "Loews Chicago Hotel",
-      "hotel_address_city": "Chicago",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-03-22 00:43:08",
-      "actual_booking_count": 202,
       "weighting": 200,
       "is_active": 1
     },
