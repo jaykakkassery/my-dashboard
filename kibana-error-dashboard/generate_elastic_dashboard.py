@@ -8,6 +8,7 @@ import json
 import sys
 import argparse
 from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
 
 def load_data(path: str) -> dict:
     with open(path) as f:
@@ -91,11 +92,8 @@ def generate(data: dict) -> str:
     infos  = sc.get("info", 0)
     total  = errors + warns + infos
 
-    # Time in EST (UTC-5) / EDT (UTC-4) — using fixed UTC-5 offset
-    from datetime import timezone, timedelta
-    est = timezone(timedelta(hours=-5))
-    now_est = datetime.now(est)
-    generated = now_est.strftime("%Y-%m-%d %H:%M EST")
+    now_est = datetime.now(ZoneInfo("America/New_York"))
+    generated = now_est.strftime("%Y-%m-%d %H:%M %Z")
 
     # Size display
     size_gb     = data.get("index_size_gb")

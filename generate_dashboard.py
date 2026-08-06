@@ -2,17 +2,18 @@
 """
 generate_dashboard.py
 Generates HTML dashboard from analytics JSON.
-Displays times in EST. Failure reasons as table (top 10).
+Displays times in Eastern Time (ET). Failure reasons as table (top 10).
 Shows active filters (licensee_id, adapter_name) in header.
 Shows licensee breakdown table when no licensee filter is active.
 """
 
 import json
 import argparse
-from datetime import datetime, timezone, timedelta
+from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
 
 
-EST = timezone(timedelta(hours=-5))
+ET = ZoneInfo("America/New_York")
 
 
 def utc_to_est(utc_str):
@@ -21,8 +22,8 @@ def utc_to_est(utc_str):
             utc_str = utc_str[:-4]
         dt = datetime.strptime(utc_str, "%Y-%m-%d %H:%M:%S")
         dt = dt.replace(tzinfo=timezone.utc)
-        est_dt = dt.astimezone(EST)
-        return est_dt.strftime("%Y-%m-%d %I:%M:%S %p EST")
+        et_dt = dt.astimezone(ET)
+        return et_dt.strftime("%Y-%m-%d %I:%M:%S %p %Z")
     except Exception:
         return utc_str
 
@@ -31,8 +32,8 @@ def hourly_label_to_est(utc_str):
     try:
         dt = datetime.strptime(utc_str, "%Y-%m-%d %H:%M:%S")
         dt = dt.replace(tzinfo=timezone.utc)
-        est_dt = dt.astimezone(EST)
-        return est_dt.strftime("%m/%d %I%p")
+        et_dt = dt.astimezone(ET)
+        return et_dt.strftime("%m/%d %I%p")
     except Exception:
         return utc_str[-8:-3]
 
@@ -287,7 +288,7 @@ def generate_html(data):
 <!-- Charts Row -->
 <div class="charts-grid">
   <div class="chart-card">
-    <div class="chart-title">Hourly Trend — Success vs Failed (EST)</div>
+    <div class="chart-title">Hourly Trend — Success vs Failed (ET)</div>
     <div class="chart-wrap"><canvas id="hourlyChart"></canvas></div>
   </div>
   <div class="chart-card">
@@ -325,7 +326,7 @@ def generate_html(data):
 
 <div class="footer">
   TST Hotel Booking Analytics &nbsp;·&nbsp; product_type=hotel &nbsp;·&nbsp;
-  Times shown in EST
+  Times shown in ET
 </div>
 
 <script>
