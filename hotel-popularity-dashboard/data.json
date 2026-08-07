@@ -1,10 +1,10 @@
 {
-  "query_timestamp": "2026-08-05 12:02:46 EDT",
+  "query_timestamp": "2026-08-07 12:01:04 EDT",
   "parameters": {
     "min_weighting": 200,
     "months_inactive": 2
   },
-  "total_count": 243,
+  "total_count": 237,
   "hotels": [
     {
       "hotel_id": 14266,
@@ -303,16 +303,6 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2025-12-07 17:51:51",
       "actual_booking_count": 428,
-      "weighting": 419,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 168595,
-      "hotel_name": "Best Western Plus Fort Stockton Hotel",
-      "hotel_address_city": "Fort Stockton",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-06-04 18:29:35",
-      "actual_booking_count": 434,
       "weighting": 419,
       "is_active": 1
     },
@@ -617,16 +607,6 @@
       "is_active": 1
     },
     {
-      "hotel_id": 21815,
-      "hotel_name": "Best Western Hoover Dam Hotel SE Henderson Boulder City",
-      "hotel_address_city": "Boulder City",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-05-14 22:42:42",
-      "actual_booking_count": 323,
-      "weighting": 317,
-      "is_active": 1
-    },
-    {
       "hotel_id": 50610,
       "hotel_name": "Hyatt Place Sacramento Roseville",
       "hotel_address_city": "Roseville",
@@ -727,16 +707,6 @@
       "is_active": 1
     },
     {
-      "hotel_id": 3292515,
-      "hotel_name": "Best Western Westminster Inn",
-      "hotel_address_city": "Westminster",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-05-17 02:46:29",
-      "actual_booking_count": 7,
-      "weighting": 304,
-      "is_active": 1
-    },
-    {
       "hotel_id": 34005,
       "hotel_name": "Renaissance Wind Creek Aruba Resort",
       "hotel_address_city": "Oranjestad",
@@ -755,6 +725,16 @@
       "actual_booking_count": 331,
       "weighting": 302,
       "is_active": 0
+    },
+    {
+      "hotel_id": 107454,
+      "hotel_name": "Best Western Plus Media Center Inn & Suites",
+      "hotel_address_city": "Burbank",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-06-05 21:17:30",
+      "actual_booking_count": 311,
+      "weighting": 302,
+      "is_active": 1
     },
     {
       "hotel_id": 73081,
@@ -943,6 +923,16 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-05-18 00:19:33",
       "actual_booking_count": 19,
+      "weighting": 274,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 41154,
+      "hotel_name": "Horton Grand Hotel",
+      "hotel_address_city": "San Diego",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-06-06 16:26:38",
+      "actual_booking_count": 268,
       "weighting": 274,
       "is_active": 1
     },
@@ -1137,16 +1127,6 @@
       "is_active": 1
     },
     {
-      "hotel_id": 26121,
-      "hotel_name": "Holiday Inn Melbourne-Viera Conference CTR by Ihg",
-      "hotel_address_city": "Melbourne",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-05-30 15:56:01",
-      "actual_booking_count": 273,
-      "weighting": 258,
-      "is_active": 1
-    },
-    {
       "hotel_id": 761,
       "hotel_name": "Best Western Plus Waltham Boston",
       "hotel_address_city": "Waltham",
@@ -1173,16 +1153,6 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-05-28 05:33:44",
       "actual_booking_count": 255,
-      "weighting": 254,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 80128,
-      "hotel_name": "Hampton Inn & Suites Toledo-Perrysburg",
-      "hotel_address_city": "Rossford",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-05-28 23:18:22",
-      "actual_booking_count": 264,
       "weighting": 254,
       "is_active": 1
     },
@@ -1314,16 +1284,6 @@
       "last_booking_date": "2026-06-04 01:33:08",
       "actual_booking_count": 262,
       "weighting": 247,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 40505,
-      "hotel_name": "Wuksachi Lodge",
-      "hotel_address_city": "Sequoia National Park",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-05-24 13:46:09",
-      "actual_booking_count": 250,
-      "weighting": 246,
       "is_active": 1
     },
     {
@@ -2007,6 +1967,16 @@
       "is_active": 1
     },
     {
+      "hotel_id": 123490,
+      "hotel_name": "Courtyard by Marriott Lyndhurst Meadowlands",
+      "hotel_address_city": "Lyndhurst",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-06-06 04:00:12",
+      "actual_booking_count": 230,
+      "weighting": 218,
+      "is_active": 1
+    },
+    {
       "hotel_id": 10042,
       "hotel_name": "Hilton Garden Inn Washington Downtown",
       "hotel_address_city": "Washington, D.C.",
@@ -2197,16 +2167,6 @@
       "is_active": 1
     },
     {
-      "hotel_id": 24871,
-      "hotel_name": "Fairfield Inn & Suites by Marriott Smithfield Selma/I-95",
-      "hotel_address_city": "Smithfield",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-05-05 21:48:00",
-      "actual_booking_count": 211,
-      "weighting": 209,
-      "is_active": 1
-    },
-    {
       "hotel_id": 62746,
       "hotel_name": "The Diplomat Beach Resort Hollywood Curio Collection by Hilton",
       "hotel_address_city": "Hollywood",
@@ -2247,16 +2207,6 @@
       "is_active": 1
     },
     {
-      "hotel_id": 39274,
-      "hotel_name": "SpringHill Suites by Marriott Corona Riverside",
-      "hotel_address_city": "Corona",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-05-08 16:46:25",
-      "actual_booking_count": 220,
-      "weighting": 207,
-      "is_active": 1
-    },
-    {
       "hotel_id": 75045,
       "hotel_name": "Four Points by Sheraton Manhattan SoHo Village",
       "hotel_address_city": "New York",
@@ -2273,6 +2223,16 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-05-26 22:42:29",
       "actual_booking_count": 215,
+      "weighting": 207,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 75625,
+      "hotel_name": "Eureka Casino Resort",
+      "hotel_address_city": "Mesquite",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-06-05 19:45:19",
+      "actual_booking_count": 213,
       "weighting": 207,
       "is_active": 1
     },
@@ -2317,16 +2277,6 @@
       "is_active": 1
     },
     {
-      "hotel_id": 82099,
-      "hotel_name": "Legacy Resort Hotel & Spa",
-      "hotel_address_city": "San Diego",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-05-05 16:42:02",
-      "actual_booking_count": 218,
-      "weighting": 205,
-      "is_active": 1
-    },
-    {
       "hotel_id": 72439,
       "hotel_name": "Fairfield Inn by Marriott Orangeburg",
       "hotel_address_city": "Orangeburg",
@@ -2343,16 +2293,6 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2025-12-06 18:40:17",
       "actual_booking_count": 1,
-      "weighting": 204,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 69238,
-      "hotel_name": "La Quinta Inn & Suites by Wyndham Orem University Pwy/Provo",
-      "hotel_address_city": "Orem",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-05-02 18:55:43",
-      "actual_booking_count": 214,
       "weighting": 204,
       "is_active": 1
     },
