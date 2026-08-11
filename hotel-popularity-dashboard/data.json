@@ -1,10 +1,10 @@
 {
-  "query_timestamp": "2026-08-11 00:01:51 EDT",
+  "query_timestamp": "2026-08-11 12:00:57 EDT",
   "parameters": {
     "min_weighting": 200,
     "months_inactive": 2
   },
-  "total_count": 247,
+  "total_count": 246,
   "hotels": [
     {
       "hotel_id": 14266,
@@ -487,16 +487,6 @@
       "is_active": 1
     },
     {
-      "hotel_id": 72602,
-      "hotel_name": "Hampton Inn Columbia Northeast - Fort Jackson Area",
-      "hotel_address_city": "Columbia",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-05-18 22:11:37",
-      "actual_booking_count": 371,
-      "weighting": 354,
-      "is_active": 1
-    },
-    {
       "hotel_id": 48810,
       "hotel_name": "The Brookhaven Atlanta Hotel",
       "hotel_address_city": "Atlanta",
@@ -704,16 +694,6 @@
       "last_booking_date": "2026-06-05 21:17:30",
       "actual_booking_count": 311,
       "weighting": 302,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 73081,
-      "hotel_name": "Homewood Suites by Hilton Santa Maria",
-      "hotel_address_city": "Santa Maria",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-02-08 16:56:23",
-      "actual_booking_count": 311,
-      "weighting": 299,
       "is_active": 1
     },
     {
@@ -2243,6 +2223,16 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-06-02 01:17:15",
       "actual_booking_count": 206,
+      "weighting": 211,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 23510,
+      "hotel_name": "3 Palms Tucson North Foothills",
+      "hotel_address_city": "Tucson",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-06-11 06:02:17",
+      "actual_booking_count": 224,
       "weighting": 211,
       "is_active": 1
     },
