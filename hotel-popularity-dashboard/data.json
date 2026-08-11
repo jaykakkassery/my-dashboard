@@ -1,5 +1,5 @@
 {
-  "query_timestamp": "2026-08-10 12:01:08 EDT",
+  "query_timestamp": "2026-08-11 00:01:51 EDT",
   "parameters": {
     "min_weighting": 200,
     "months_inactive": 2
@@ -94,16 +94,6 @@
       "last_booking_date": "2026-04-15 19:14:55",
       "actual_booking_count": 587,
       "weighting": 598,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 8673,
-      "hotel_name": "Best Western Burbank Airport Inn",
-      "hotel_address_city": "North Hollywood",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-04-06 16:59:26",
-      "actual_booking_count": 621,
-      "weighting": 596,
       "is_active": 1
     },
     {
@@ -674,6 +664,16 @@
       "last_booking_date": "2026-04-22 13:10:31",
       "actual_booking_count": 18,
       "weighting": 305,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 62825,
+      "hotel_name": "Doubletree Resort by Hilton Hollywood Beach",
+      "hotel_address_city": "Hollywood",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-06-10 22:06:29",
+      "actual_booking_count": 332,
+      "weighting": 304,
       "is_active": 1
     },
     {
@@ -1427,6 +1427,16 @@
       "is_active": 1
     },
     {
+      "hotel_id": 917072,
+      "hotel_name": "Hotel Centro Sonoma Wine Country Tapestry Collection Hilton",
+      "hotel_address_city": "Rohnert Park",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-06-10 20:41:55",
+      "actual_booking_count": 255,
+      "weighting": 241,
+      "is_active": 1
+    },
+    {
       "hotel_id": 30809,
       "hotel_name": "Wyndham Rochester Downtown",
       "hotel_address_city": "Rochester",
@@ -1687,16 +1697,6 @@
       "is_active": 1
     },
     {
-      "hotel_id": 17043,
-      "hotel_name": "Sheraton Toronto Airport Hotel & Conference Centre",
-      "hotel_address_city": "Toronto",
-      "hotel_address_country_code": "CA",
-      "last_booking_date": "2026-06-09 14:48:11",
-      "actual_booking_count": 237,
-      "weighting": 229,
-      "is_active": 1
-    },
-    {
       "hotel_id": 183711,
       "hotel_name": "SureStay Plus Hotel by Best Western Gold Beach",
       "hotel_address_city": "Gold Beach",
@@ -1923,6 +1923,16 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-06-03 23:26:14",
       "actual_booking_count": 231,
+      "weighting": 222,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 55418,
+      "hotel_name": "Best Western Plus Edmonds Harbor Inn",
+      "hotel_address_city": "Edmonds",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-06-10 18:42:06",
+      "actual_booking_count": 234,
       "weighting": 222,
       "is_active": 1
     },
@@ -2157,6 +2167,16 @@
       "is_active": 1
     },
     {
+      "hotel_id": 3290869,
+      "hotel_name": "Best Western Shadow Inn",
+      "hotel_address_city": "Woodland",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-06-10 16:16:06",
+      "actual_booking_count": 12,
+      "weighting": 214,
+      "is_active": 1
+    },
+    {
       "hotel_id": 86956,
       "hotel_name": "Four Points by Sheraton Manhattan Chelsea",
       "hotel_address_city": "New York",
@@ -2273,16 +2293,6 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-04-18 21:17:28",
       "actual_booking_count": 3,
-      "weighting": 207,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 75045,
-      "hotel_name": "Four Points by Sheraton Manhattan SoHo Village",
-      "hotel_address_city": "New York",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-05-26 20:37:59",
-      "actual_booking_count": 223,
       "weighting": 207,
       "is_active": 1
     },
@@ -2423,16 +2433,6 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-02-12 18:17:44",
       "actual_booking_count": 221,
-      "weighting": 202,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 24762,
-      "hotel_name": "Courtyard by Marriott Richmond Airport",
-      "hotel_address_city": "Sandston",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-03-19 15:28:33",
-      "actual_booking_count": 209,
       "weighting": 202,
       "is_active": 1
     },
