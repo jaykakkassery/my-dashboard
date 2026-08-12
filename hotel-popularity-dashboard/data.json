@@ -1,10 +1,10 @@
 {
-  "query_timestamp": "2026-08-11 12:00:57 EDT",
+  "query_timestamp": "2026-08-12 12:01:08 EDT",
   "parameters": {
     "min_weighting": 200,
     "months_inactive": 2
   },
-  "total_count": 246,
+  "total_count": 247,
   "hotels": [
     {
       "hotel_id": 14266,
@@ -407,6 +407,16 @@
       "is_active": null
     },
     {
+      "hotel_id": 26667,
+      "hotel_name": "Best Western Richfield Inn",
+      "hotel_address_city": "Richfield",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-06-12 06:29:48",
+      "actual_booking_count": 386,
+      "weighting": 378,
+      "is_active": 1
+    },
+    {
       "hotel_id": 407257,
       "hotel_name": "Hilton Garden Inn Washington DC/U.S. Capitol",
       "hotel_address_city": "Washington",
@@ -697,6 +707,16 @@
       "is_active": 1
     },
     {
+      "hotel_id": 41639,
+      "hotel_name": "Best Western Plus Ft. Lauderdale Hollywood Airport Hotel",
+      "hotel_address_city": "Hollywood",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-06-11 19:01:40",
+      "actual_booking_count": 313,
+      "weighting": 299,
+      "is_active": 1
+    },
+    {
       "hotel_id": 3291692,
       "hotel_name": "Best Western Sevierville/Kodak Inn",
       "hotel_address_city": "Kodak",
@@ -793,6 +813,16 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-06-09 22:26:36",
       "actual_booking_count": 6,
+      "weighting": 282,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 32609,
+      "hotel_name": "Quality Inn Santa Cruz Downtown Area",
+      "hotel_address_city": "Santa Cruz",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-06-11 20:53:46",
+      "actual_booking_count": 189,
       "weighting": 282,
       "is_active": 1
     },
@@ -1727,6 +1757,16 @@
       "is_active": 1
     },
     {
+      "hotel_id": 113061,
+      "hotel_name": "SpringHill Suites Anaheim Maingate",
+      "hotel_address_city": "Anaheim",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-06-11 23:57:01",
+      "actual_booking_count": 237,
+      "weighting": 228,
+      "is_active": 1
+    },
+    {
       "hotel_id": 41438,
       "hotel_name": "Days Inn by Wyndham Edmonton South",
       "hotel_address_city": "Edmonton",
@@ -1914,16 +1954,6 @@
       "last_booking_date": "2026-06-10 18:42:06",
       "actual_booking_count": 234,
       "weighting": 222,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 12150,
-      "hotel_name": "Hampton Inn & Suites National Harbor - Alexandria Area",
-      "hotel_address_city": "Oxon Hill",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-04-03 17:10:56",
-      "actual_booking_count": 229,
-      "weighting": 221,
       "is_active": 1
     },
     {
@@ -2137,16 +2167,6 @@
       "is_active": 1
     },
     {
-      "hotel_id": 157975,
-      "hotel_name": "Clarion Inn & Suites Miami International Airport",
-      "hotel_address_city": "Miami Springs",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-06-04 20:08:13",
-      "actual_booking_count": 233,
-      "weighting": 214,
-      "is_active": 1
-    },
-    {
       "hotel_id": 3290869,
       "hotel_name": "Best Western Shadow Inn",
       "hotel_address_city": "Woodland",
@@ -2314,16 +2334,6 @@
       "last_booking_date": "2026-06-08 23:16:11",
       "actual_booking_count": 212,
       "weighting": 207,
-      "is_active": 1
-    },
-    {
-      "hotel_id": 3302357,
-      "hotel_name": "Best Western Plus Omaha Airport Inn",
-      "hotel_address_city": "Carter Lake",
-      "hotel_address_country_code": "US",
-      "last_booking_date": "2026-03-17 00:22:19",
-      "actual_booking_count": 5,
-      "weighting": 206,
       "is_active": 1
     },
     {
