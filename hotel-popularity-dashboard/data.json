@@ -1,10 +1,10 @@
 {
-  "query_timestamp": "2026-08-14 00:01:53 EDT",
+  "query_timestamp": "2026-08-14 12:02:53 EDT",
   "parameters": {
     "min_weighting": 200,
     "months_inactive": 2
   },
-  "total_count": 241,
+  "total_count": 242,
   "hotels": [
     {
       "hotel_id": 14266,
@@ -1733,6 +1733,16 @@
       "hotel_address_country_code": "US",
       "last_booking_date": "2026-06-11 23:57:01",
       "actual_booking_count": 237,
+      "weighting": 228,
+      "is_active": 1
+    },
+    {
+      "hotel_id": 84849,
+      "hotel_name": "Red Roof Plus Gainesville",
+      "hotel_address_city": "Gainesville",
+      "hotel_address_country_code": "US",
+      "last_booking_date": "2026-06-14 15:52:07",
+      "actual_booking_count": 234,
       "weighting": 228,
       "is_active": 1
     },
