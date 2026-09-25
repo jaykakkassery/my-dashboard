@@ -1,0 +1,420 @@
+<title>Consumer Booking Trends</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=Public+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<style>
+  :root {
+    --surface-0: #f7f6f3;
+    --surface-1: #ffffff;
+    --surface-2: #efece6;
+    --text-primary: #1c1a16;
+    --text-secondary: #5c574d;
+    --text-muted: #8a8477;
+    --line: #e2ddd2;
+    --line-strong: #cfc8b8;
+
+    --series-2025: #2a78d6;
+    --series-2026: #eb6834;
+
+    --good: #0ca30c;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --surface-0: #15140f;
+      --surface-1: #1c1a15;
+      --surface-2: #24221c;
+      --text-primary: #f5f3ee;
+      --text-secondary: #c3bdae;
+      --text-muted: #8f8a7b;
+      --line: #333026;
+      --line-strong: #45402f;
+
+      --series-2025: #3987e5;
+      --series-2026: #d95926;
+
+      --good: #35c235;
+    }
+  }
+  :root[data-theme="dark"] {
+    --surface-0: #15140f;
+    --surface-1: #1c1a15;
+    --surface-2: #24221c;
+    --text-primary: #f5f3ee;
+    --text-secondary: #c3bdae;
+    --text-muted: #8f8a7b;
+    --line: #333026;
+    --line-strong: #45402f;
+
+    --series-2025: #3987e5;
+    --series-2026: #d95926;
+
+    --good: #35c235;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--surface-0);
+    color: var(--text-primary);
+    font-family: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 14.5px;
+    line-height: 1.5;
+  }
+  .mono { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; }
+  .tnum { font-variant-numeric: tabular-nums; }
+
+  .page { max-width: 1320px; margin: 0 auto; padding: 40px 24px 72px; }
+
+  header.top { margin-bottom: 30px; }
+  header.top .eyebrow {
+    font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase;
+    color: var(--text-muted); font-weight: 600; margin-bottom: 10px;
+  }
+  header.top h1 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-weight: 700; font-size: 32px; line-height: 1.15;
+    margin: 0 0 12px; letter-spacing: -0.01em; text-wrap: balance;
+    max-width: 800px;
+  }
+  header.top p.lede {
+    color: var(--text-secondary); font-size: 15px; max-width: 720px; margin: 0;
+  }
+  header.top p.lede b { color: var(--text-primary); font-weight: 600; }
+
+  section.charts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 30px;
+  }
+  @media (max-width: 1280px) {
+    section.charts { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 640px) {
+    section.charts { grid-template-columns: 1fr; }
+  }
+
+  .panel {
+    background: var(--surface-1);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 20px 20px 14px;
+  }
+  .panel-head {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    margin-bottom: 4px; gap: 8px;
+  }
+  .panel-head h2 {
+    font-size: 16px; margin: 0; font-weight: 700;
+  }
+  .panel-head .avg-growth {
+    font-size: 12px; font-weight: 700; color: var(--good);
+    background: color-mix(in srgb, var(--good) 14%, transparent);
+    padding: 3px 8px; border-radius: 999px; white-space: nowrap;
+  }
+  .panel-head .avg-growth.neg {
+    color: var(--text-secondary);
+    background: var(--surface-2);
+  }
+  .panel-sub { font-size: 12px; color: var(--text-muted); margin-bottom: 6px; }
+
+  .legend { display: flex; gap: 14px; margin: 10px 0 8px; flex-wrap: wrap; }
+  .legend .item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--text-secondary); }
+  .legend .swatch { width: 9px; height: 9px; border-radius: 3px; }
+  .legend .swatch.y25 { background: var(--series-2025); }
+  .legend .swatch.y26 { background: var(--series-2026); }
+
+  svg.chart { width: 100%; height: auto; overflow: visible; }
+  .gridline { stroke: var(--line); stroke-width: 1; shape-rendering: crispEdges; }
+  .axis-label { fill: var(--text-muted); font-size: 9.5px; font-family: 'Public Sans', sans-serif; }
+  .month-label { fill: var(--text-secondary); font-size: 10.5px; font-weight: 600; font-family: 'Public Sans', sans-serif; }
+  .bar-value { fill: var(--text-primary); font-size: 9px; font-weight: 600; font-family: 'JetBrains Mono', monospace; }
+  .bar-value.dim { fill: var(--text-muted); font-weight: 500; }
+  .delta-label { font-size: 9.5px; font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+  .delta-label.pos { fill: var(--good); }
+  .delta-label.neg { fill: var(--text-muted); }
+
+  .bar { cursor: pointer; }
+  .bar.y25 { fill: var(--series-2025); }
+  .bar.y26 { fill: var(--series-2026); }
+  .hit { fill: transparent; }
+
+  .tooltip {
+    position: fixed;
+    pointer-events: none;
+    background: var(--text-primary);
+    color: var(--surface-1);
+    font-size: 12px;
+    padding: 8px 10px;
+    border-radius: 8px;
+    line-height: 1.45;
+    opacity: 0;
+    transition: opacity 0.08s ease;
+    z-index: 20;
+    max-width: 220px;
+  }
+  .tooltip b { font-weight: 700; }
+  .tooltip .row { display: flex; justify-content: space-between; gap: 14px; }
+
+  .callout {
+    margin: 30px 0 0;
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--series-2026);
+    border-radius: 10px;
+    background: var(--surface-1);
+    padding: 18px 22px;
+  }
+  .callout h3 { margin: 0 0 8px; font-size: 14.5px; font-weight: 700; }
+  .callout p { margin: 0; color: var(--text-secondary); font-size: 13.5px; max-width: 900px; }
+  .callout p + p { margin-top: 8px; }
+
+  footer.note {
+    margin-top: 26px; font-size: 12px; color: var(--text-muted); max-width: 900px;
+  }
+</style>
+
+<div class="page">
+  <header class="top">
+    <div class="eyebrow">Consumer Channel &middot; One-Time Report</div>
+    <h1>Consumer hotel bookings, year over year, across all three providers</h1>
+    <p class="lede">
+      Same month, one year apart, consumer channel only (<span class="mono">agent_id IS NULL</span>).
+      Sabre/Travelport is a provider replacement (2025 Travelport vs. 2026 Sabre); Rapid, Priceline, ATI,
+      and HotelBeds/BedsOnline are unchanged same-adapter comparisons. The last panel is every hotel
+      provider combined, the total consumer demand picture regardless of which adapter it books through.
+    </p>
+  </header>
+
+  <section class="charts">
+    <div class="panel" id="panel-sabre">
+      <div class="panel-head">
+        <h2>Sabre / Travelport</h2>
+        <span class="avg-growth" id="avg-sabre"></span>
+      </div>
+      <div class="panel-sub">2025 Travelport &rarr; 2026 Sabre (replacement)</div>
+      <div class="legend">
+        <span class="item"><span class="swatch y25"></span>2025 Travelport</span>
+        <span class="item"><span class="swatch y26"></span>2026 Sabre</span>
+      </div>
+      <svg class="chart" id="chart-sabre" viewBox="0 0 400 280" preserveAspectRatio="xMidYMid meet"></svg>
+    </div>
+
+    <div class="panel" id="panel-rapid">
+      <div class="panel-head">
+        <h2>Expedia / Rapid</h2>
+        <span class="avg-growth" id="avg-rapid"></span>
+      </div>
+      <div class="panel-sub">2025 Rapid &rarr; 2026 Rapid (no change)</div>
+      <div class="legend">
+        <span class="item"><span class="swatch y25"></span>2025 Rapid</span>
+        <span class="item"><span class="swatch y26"></span>2026 Rapid</span>
+      </div>
+      <svg class="chart" id="chart-rapid" viewBox="0 0 400 280" preserveAspectRatio="xMidYMid meet"></svg>
+    </div>
+
+    <div class="panel" id="panel-priceline">
+      <div class="panel-head">
+        <h2>Priceline</h2>
+        <span class="avg-growth" id="avg-priceline"></span>
+      </div>
+      <div class="panel-sub">2025 Priceline &rarr; 2026 Priceline (no change)</div>
+      <div class="legend">
+        <span class="item"><span class="swatch y25"></span>2025 Priceline</span>
+        <span class="item"><span class="swatch y26"></span>2026 Priceline</span>
+      </div>
+      <svg class="chart" id="chart-priceline" viewBox="0 0 400 280" preserveAspectRatio="xMidYMid meet"></svg>
+    </div>
+
+    <div class="panel" id="panel-ati">
+      <div class="panel-head">
+        <h2>ATI</h2>
+        <span class="avg-growth" id="avg-ati"></span>
+      </div>
+      <div class="panel-sub">2025 ATI &rarr; 2026 ATI (no change)</div>
+      <div class="legend">
+        <span class="item"><span class="swatch y25"></span>2025 ATI</span>
+        <span class="item"><span class="swatch y26"></span>2026 ATI</span>
+      </div>
+      <svg class="chart" id="chart-ati" viewBox="0 0 400 280" preserveAspectRatio="xMidYMid meet"></svg>
+    </div>
+
+    <div class="panel" id="panel-apitude">
+      <div class="panel-head">
+        <h2>HotelBeds / BedsOnline</h2>
+        <span class="avg-growth" id="avg-apitude"></span>
+      </div>
+      <div class="panel-sub">HB_APITUDE + BEDS_ONLINE summed (same supplier, two adapters)</div>
+      <div class="legend">
+        <span class="item"><span class="swatch y25"></span>2025 combined</span>
+        <span class="item"><span class="swatch y26"></span>2026 combined</span>
+      </div>
+      <svg class="chart" id="chart-apitude" viewBox="0 0 400 280" preserveAspectRatio="xMidYMid meet"></svg>
+    </div>
+
+    <div class="panel" id="panel-overall">
+      <div class="panel-head">
+        <h2>All hotel providers</h2>
+        <span class="avg-growth" id="avg-overall"></span>
+      </div>
+      <div class="panel-sub">Every adapter combined (Sabre, Rapid, Priceline, ATI, BedsOnline, &hellip;)</div>
+      <div class="legend">
+        <span class="item"><span class="swatch y25"></span>2025</span>
+        <span class="item"><span class="swatch y26"></span>2026</span>
+      </div>
+      <svg class="chart" id="chart-overall" viewBox="0 0 400 280" preserveAspectRatio="xMidYMid meet"></svg>
+    </div>
+  </section>
+
+  <div class="callout">
+    <h3>HotelBeds/BedsOnline is collapsing, and it's the real story here</h3>
+    <p>
+      Combined HB_APITUDE + BEDS_ONLINE consumer bookings fell <b>56% to 76% YoY every single month</b>,
+      and the decline is getting worse, not better &mdash; from -56% in April to -76% in August. That is
+      a far bigger swing than anything else on this page, Sabre's growth included. ATI moved in a noisy
+      but roughly flat band (-24% to +24%, no clear direction).
+    </p>
+    <p>
+      Sabre is still the one provider with consumer bookings clearly ahead of last year (peaking +51% in
+      August), and Rapid and Priceline were flat-to-declining as noted above. But next to HotelBeds/BedsOnline's
+      collapse, Sabre's gain looks smaller in context: the combined total was down YoY from April through
+      July and only turned positive in August, and HotelBeds/BedsOnline's ongoing decline is the biggest
+      single drag on that total &mdash; worth investigating on its own before reading too much into the
+      provider-replacement story.
+    </p>
+  </div>
+
+  <footer class="note">
+    Source: <span class="mono">book.TRAVEL_BOOKING</span>, product_type = Hotel, status in
+    (Completed, Completed_CRS, Completed_Direct), <span class="mono">agent_id IS NULL</span>.
+    September 2026 is partial (through the 24th) for every panel &mdash; September bars and YoY
+    figures understate the eventual full-month numbers. September 2025 Travelport figure excludes the
+    31 early Sabre-pilot bookings (all agent-channel, not consumer). HotelBeds/BedsOnline sums
+    adapter_name IN (HB_APITUDE, BEDS_ONLINE) &mdash; same supplier, two adapter records &mdash;
+    and excludes the separate HOTEL_BEDS adapter. "All hotel providers" is every adapter_name for
+    product_type = Hotel, not just the ones shown individually. Generated one-time, not part of the
+    recurring dashboard.
+  </footer>
+</div>
+
+<div class="tooltip" id="tooltip"></div>
+
+<script id="report-data" type="application/json">{"months": ["Apr", "May", "Jun", "Jul", "Aug", "Sep"], "sabre": {"2025": [13371, 13718, 13185, 13869, 11081, 9863], "2026": [12608, 14707, 14356, 15672, 16763, 12428]}, "rapid": {"2025": [11904, 12235, 11380, 11945, 10892, 8259], "2026": [8817, 9847, 11372, 12049, 10029, 7713]}, "priceline": {"2025": [4824, 4709, 4264, 3764, 3686, 2879], "2026": [6111, 5055, 4420, 3994, 3178, 2085]}, "ati": {"2025": [527, 712, 781, 743, 651, 628], "2026": [608, 697, 593, 689, 807, 582]}, "apitude": {"2025": [1817, 2043, 1981, 2218, 2255, 1719], "2026": [802, 831, 674, 552, 538, 448]}, "overall": {"2025": [33547, 34429, 32482, 33625, 29372, 24105], "2026": [29030, 31140, 31417, 32956, 31316, 23221]}}</script>
+<script>
+(function () {
+  const data = JSON.parse(document.getElementById('report-data').textContent);
+  const months = data.months;
+  const tooltip = document.getElementById('tooltip');
+
+  function fmt(n) { return n.toLocaleString(); }
+  function pct(a, b) { return ((b - a) / a) * 100; }
+  function pctLabel(p) {
+    const s = p >= 0 ? '+' : '';
+    return s + p.toFixed(1) + '%';
+  }
+
+  function roundedBarPath(x, y, w, h, r) {
+    if (h < r) r = Math.max(h, 0);
+    return `M${x},${y + h} L${x},${y + r} Q${x},${y} ${x + r},${y} L${x + w - r},${y} Q${x + w},${y} ${x + w},${y + r} L${x + w},${y + h} Z`;
+  }
+
+  function buildChart(svgId, series25, series26, label, yr25Label, yr26Label) {
+    const svg = document.getElementById(svgId);
+    const W = 400, H = 280;
+    const padL = 36, padR = 6, padT = 18, padB = 30;
+    const plotW = W - padL - padR;
+    const plotH = H - padT - padB;
+
+    const maxVal = Math.max(...series25, ...series26);
+    const step = maxVal > 10000 ? 4000 : 2000;
+    const niceMax = Math.ceil(maxVal / step) * step;
+    const yScale = v => plotH - (v / niceMax) * plotH;
+
+    const groupW = plotW / months.length;
+    const barW = 18;
+    const gap = 3;
+
+    const svgNS = 'http://www.w3.org/2000/svg';
+    function el(tag, attrs) {
+      const e = document.createElementNS(svgNS, tag);
+      for (const k in attrs) e.setAttribute(k, attrs[k]);
+      return e;
+    }
+
+    const steps = 4;
+    for (let i = 0; i <= steps; i++) {
+      const v = (niceMax / steps) * i;
+      const y = padT + yScale(v);
+      svg.appendChild(el('line', { class: 'gridline', x1: padL, x2: W - padR, y1: y, y2: y }));
+      const t = el('text', { class: 'axis-label tnum', x: padL - 6, y: y + 3, 'text-anchor': 'end' });
+      t.textContent = v >= 1000 ? (v / 1000) + 'k' : v;
+      svg.appendChild(t);
+    }
+
+    months.forEach((m, i) => {
+      const gx = padL + i * groupW;
+      const v25 = series25[i], v26 = series26[i];
+      const cx = gx + groupW / 2;
+      const x25 = cx - gap / 2 - barW;
+      const x26 = cx + gap / 2;
+      const y25 = padT + yScale(v25);
+      const y26 = padT + yScale(v26);
+      const h25 = plotH - yScale(v25);
+      const h26 = plotH - yScale(v26);
+
+      svg.appendChild(el('path', { class: 'bar y25', d: roundedBarPath(x25, y25, barW, h25, 3) }));
+      svg.appendChild(el('path', { class: 'bar y26', d: roundedBarPath(x26, y26, barW, h26, 3) }));
+
+      const delta = pct(v25, v26);
+      const deltaEl = el('text', {
+        class: 'delta-label ' + (delta >= 0 ? 'pos' : 'neg'), x: cx, y: padT - 6, 'text-anchor': 'middle'
+      });
+      deltaEl.textContent = pctLabel(delta);
+      svg.appendChild(deltaEl);
+
+      const monthLabel = el('text', { class: 'month-label', x: cx, y: H - padB + 18, 'text-anchor': 'middle' });
+      monthLabel.textContent = m + (m === 'Sep' ? '*' : '');
+      svg.appendChild(monthLabel);
+
+      const hit25 = el('rect', { class: 'hit', x: x25, y: padT, width: barW, height: plotH });
+      const hit26 = el('rect', { class: 'hit', x: x26, y: padT, width: barW, height: plotH });
+      [[hit25, yr25Label, v25], [hit26, yr26Label, v26]].forEach(([hitEl, yrLabel, val]) => {
+        hitEl.addEventListener('mousemove', (ev) => {
+          tooltip.style.opacity = '1';
+          tooltip.style.left = (ev.clientX + 14) + 'px';
+          tooltip.style.top = (ev.clientY - 10) + 'px';
+          tooltip.innerHTML =
+            '<div class="row"><b>' + m + ' ' + yrLabel + '</b></div>' +
+            '<div class="row"><span>' + label + '</span><span class="tnum">' + fmt(val) + '</span></div>' +
+            '<div class="row"><span>YoY vs same month</span><span class="tnum">' + pctLabel(delta) + '</span></div>';
+        });
+        hitEl.addEventListener('mouseleave', () => { tooltip.style.opacity = '0'; });
+        svg.appendChild(hitEl);
+      });
+    });
+
+    svg.appendChild(el('line', {
+      class: 'gridline', x1: padL, x2: W - padR, y1: padT + plotH, y2: padT + plotH, style: 'stroke: var(--line-strong)'
+    }));
+  }
+
+  function avgGrowth(elId, series25, series26) {
+    const deltas = series25.map((v, i) => pct(v, series26[i]));
+    const avg = deltas.reduce((a, b) => a + b, 0) / deltas.length;
+    const badge = document.getElementById(elId);
+    badge.textContent = 'avg ' + pctLabel(avg) + ' YoY';
+    if (avg < 0) badge.classList.add('neg');
+  }
+
+  buildChart('chart-sabre', data.sabre['2025'], data.sabre['2026'], 'Consumer bookings', '2025 Travelport', '2026 Sabre');
+  buildChart('chart-rapid', data.rapid['2025'], data.rapid['2026'], 'Consumer bookings', '2025 Rapid', '2026 Rapid');
+  buildChart('chart-priceline', data.priceline['2025'], data.priceline['2026'], 'Consumer bookings', '2025 Priceline', '2026 Priceline');
+  buildChart('chart-ati', data.ati['2025'], data.ati['2026'], 'Consumer bookings', '2025 ATI', '2026 ATI');
+  buildChart('chart-apitude', data.apitude['2025'], data.apitude['2026'], 'Consumer bookings', '2025 combined', '2026 combined');
+  buildChart('chart-overall', data.overall['2025'], data.overall['2026'], 'Consumer bookings', '2025 all providers', '2026 all providers');
+
+  avgGrowth('avg-sabre', data.sabre['2025'], data.sabre['2026']);
+  avgGrowth('avg-rapid', data.rapid['2025'], data.rapid['2026']);
+  avgGrowth('avg-priceline', data.priceline['2025'], data.priceline['2026']);
+  avgGrowth('avg-ati', data.ati['2025'], data.ati['2026']);
+  avgGrowth('avg-apitude', data.apitude['2025'], data.apitude['2026']);
+  avgGrowth('avg-overall', data.overall['2025'], data.overall['2026']);
+})();
+</script>
